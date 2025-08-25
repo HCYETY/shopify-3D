@@ -1,0 +1,116 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_ccb3bi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zbt6TF": {
+          "type": "heading",
+          "settings": {
+            "text": "Payment and Installment",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zbt6TF"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "rich_text_wrbrQC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NHUexd": {
+          "type": "heading",
+          "settings": {
+            "text": "Payment",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_erycDL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thank you for choosing Piocreat3d. We appreciate your decision to complete your payment with us. To ensure your online transactions are safe and secure, we use the latest payment encryption technology. Additionally, our website is protected by SSL (Secure Sockets Layer) to prevent any information leakage.<br/><br/>Supported payment methods: <br/>Google Pay / Apple Pay / Affirm / PayPal / Visa / Mastercard / Maestro / American Express / Discover / Klarna</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        },
+        "image_CcQ8yb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/13_4x_9acb1e67-859f-4fbc-af58-84f99ef4d1f5.webp"
+          }
+        },
+        "heading_RgjR4P": {
+          "type": "heading",
+          "settings": {
+            "text": "Installment",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_d3Jftw": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Klarna:</strong> </p><p>With Klarna, you can enjoy the freedom to “Buy Now, Pay Later.” Buy now, pay later allows you to order our products without an upfront payment, and start paying after receiving the products in the agreed installments. Also, you will be able to split your purchase amount and pay over 3/4 interest-free payments to spread the cost over time.</p><p>Klarna Financing empowers you to split the cost of your purchases into small, manageable payments over a period of up to 36 months.</p><p><strong>Affirm:</strong></p><p>Affirm Financing lets you buy now and pay over time with transparent, flexible installment plans. No hidden fees, no surprises. Depending on your eligibility, you can choose a repayment period of 3, 6, 12, or 36 months, with clear interest rates displayed upfront.</p><p><strong>How to use Affirm Installment Payments:</strong></p><p>1.Select Affirm at checkout.<br/>2.Complete a quick eligibility check (soft credit check, does not affect your credit score).<br/>3.Choose your preferred installment plan.<br/>4.Complete your purchase and pay over time.<br/><br/><strong>PayPal:</strong></p><p> Also supports installment payments.<br/>As following steps:<br/><br/>How to use Paypal Installment Payments<br/><br/>For now paypal supports  installment payments in these countries:<br/><br/>Italy-France-Germany-UK- Spain<br/><br/>The policies of each country are different, please refer to the following:<br/><br/>For Italy customers：Paga in 3 rate senza interessi con PayPal<br/><br/>IT：https://www.paypal.com/it/webapps/mpp/paga-in-3-rate<br/><br/>For French customers： Vous pouvez payer en 4X sans frais avec PayPal.<br/>FR: https://www.paypal.com/fr/webapps/mpp/4x<br/><br/>For Germany customers：Bezahlen Sie ganz flexibel in 3, 6, 12 oder 24 Raten<br/><br/>DE: https://www.paypal.com/de/webapps/mpp/paypal-instalments<br/><br/>For UK customers：Buy now and pay later with Pay in 3<br/>UK：https://www.paypal.com/uk/webapps/mpp/paypal-payin3<br/><br/>For Spain customers：Paga en 3 plazos sin intereses con PayPal<br/><br/>ES:https://www.paypal.com/es/webapps/mpp/paga-en-3-plazos<br/><br/>In addition to the above countries, you can select your own country here:<br/>https://www.paypal.com/es/webapps/mpp/country-worldwide</p><p><strong>Google Pay:</strong></p><p>Google Pay allows you to make secure payments quickly and conveniently. In some countries, Google Pay also supports installment options, letting you split your purchase into multiple payments over time. Check availability and terms in your region when you select Google Pay at checkout.</p><p><strong>Apple Pay:</strong></p><p>Apple Pay provides a fast, secure, and private way to pay. With Apple Pay, you can complete your purchase using your iPhone, iPad, or Mac. In supported regions, Apple Pay may offer installment payment options, allowing you to spread the cost of your purchase over several interest-free payments.</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NHUexd",
+        "text_erycDL",
+        "image_CcQ8yb",
+        "heading_RgjR4P",
+        "text_d3Jftw"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_ccb3bi",
+    "rich_text_wrbrQC"
+  ]
+}

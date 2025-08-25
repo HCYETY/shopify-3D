@@ -1,0 +1,121 @@
+.product-list {
+  max-width: 1200px;
+  margin-bottom: var(--margin-bottom-desktop, 30px);
+  margin: 0 auto;
+}
+
+.product-list .section-header .section-header--title {
+  font-family: MiSans;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
+  color: #3D3D3D;
+}
+
+.scrolling-products {
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+}
+
+.flickity-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.flickity-prev {
+  left: 10px;
+}
+
+.flickity-next {
+  right: 10px;
+}
+
+.flickity-nav svg {
+  width: 15px;
+  height: 15px;
+}
+
+.scrolling-products--inner {
+  display: flex;
+}
+
+.scrolling-products--wrapper {
+  display: flex;
+  width: max-content;
+}
+
+/* Flickity styles */
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scrolling-products--item {
+  flex: 0 0 auto;
+  width: 160px;
+  margin-right: 18px;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-details {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0em;
+  padding: 16px 10px 24px 10px;
+}
+
+.product-title {
+  font-family: MiSans;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.product-quantity {
+  font-family: MiSans;
+  color: #000;
+}
+
+@media screen and (max-width: 960px) {
+  .product-list {
+    margin-bottom: var(--margin-bottom-mobile, 20px);
+  }
+
+  .product-list .section-header {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+  } 
+}

@@ -1,0 +1,137 @@
+<div style="background:{{ section.settings.bg_color | default: '#FFF9EF' }};width:100%;">
+  <div
+    class="bestseller-slider-bg"
+    id="resin-bestsellers"
+    style="background:{{ section.settings.content_bg_color | default: '#FFF9EF' }};"
+  >
+    <div class="bestseller-slider-title">
+      <h2 style="color:{{ section.settings.title_color | default: '#000' }}">
+        {{ section.settings.title | default: 'RESIN BESTSELLERS — ON SALE NOW!' }}
+      </h2>
+      <div class="bestseller-slider-subtitle" style="color:{{ section.settings.subtitle_color | default: '#FF9945' }}">
+        {{ section.settings.subtitle | default: '10-Bottle Packs from Just $13.99/Bottle!' }}
+      </div>
+    </div>
+    <div class="bestseller-slider-list">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+          {% if product %}
+            <div class="bestseller-slider-item bestseller-card">
+              <div class="bestseller-card-img">
+                <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+              </div>
+              <div class="bestseller-card-title">{{ product.title }}</div>
+              <div class="bestseller-card-desc">
+                {{
+                  product.description
+                  | strip_html
+                  | truncate: 60, '...'
+                  | default: 'Best choice for your 3D printing needs!'
+                }}
+              </div>
+              {% if product.selected_or_first_available_variant.compare_at_price
+                  > product.selected_or_first_available_variant.price
+              %}
+                <div class="bestseller-card-price">
+                  <span class="old-price">
+                    {{- product.selected_or_first_available_variant.compare_at_price | money -}}
+                  </span>
+                  <span class="sale-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+                </div>
+              {% else %}
+                <div class="bestseller-card-price">
+                  <span class="sale-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+                </div>
+              {% endif %}
+              <button
+                class="bestseller-add-to-cart"
+                data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                style="background:{{ section.settings.btn_bg_color | default: '#FF9945' }};color:{{ section.settings.btn_text_color | default: '#fff' }}"
+              >
+                Add to Cart
+              </button>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div id="resin-bestsellers-end"></div>
+
+{{ 'bestseller-slider.css' | asset_url | stylesheet_tag }}
+{{ 'bestseller-slider.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Bestseller Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "RESIN BESTSELLERS — ON SALE NOW!"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "主标题颜色",
+      "default": "#000"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "10-Bottle Packs from Just $13.99/Bottle!"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "副标题颜色",
+      "default": "#FF9945"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "模块背景色",
+      "default": "#FFF9EF"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "内容背景色",
+      "default": "#FFF9EF"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "按钮背景色",
+      "default": "#FF9945"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "按钮字体颜色",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select product"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    { "name": "Bestseller Slider", "blocks": [{ "type": "product" }, { "type": "product" }, { "type": "product" }] }
+  ]
+}
+{% endschema %}

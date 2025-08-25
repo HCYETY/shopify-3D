@@ -1,0 +1,350 @@
+{{- 'product-introduction-simple.css' | asset_url | stylesheet_tag -}}
+{%- liquid
+  assign full_width = section.settings.full_width
+
+  # 获取所有文案和按钮block
+  assign text_blocks = section.blocks | where: "type", "content_text"
+  assign button_blocks = section.blocks | where: "type", "content_button"
+
+  # 图片配置
+  assign image = section.settings.image
+  assign mobile_image = section.settings.mobile_image
+
+  #内容配置
+  assign content_position = section.settings.content_position
+  assign mobile_content_position = section.settings.mobile_content_position
+
+  assign mobile_image_height = 665
+
+  # 预加载设置
+  assign preload = false
+  if section.index == 1 or section.index == 2
+    assign preload = true
+  endif
+-%}
+<div class="row{% if full_width %} full-width-row {%  else %} full-width-row-false {% endif %}">
+  <div class="small-12 columns">
+    <div class="product-container">
+      <!-- 背景图片 -->
+      {% if image %}
+        <div class="product__background">
+          {%- liquid
+            assign master_width = image.src.width | append: 'x' | append: image.src.height
+            assign variable_widths = '900x,1000x,1100x,1200x,1400x,1600x,' | append: master_width
+            assign width = '375x' | append: mobile_image_height | append: ',' | append: variable_widths
+            assign class = null
+
+            if mobile_image != blank
+              assign class = 'product-image--desktop'
+              assign width = variable_widths
+            endif
+          -%}
+          {%- render 'responsive-image'
+            ,
+ image: image
+            ,
+ sizes: width
+            ,
+ class: class
+            ,
+ priority: preload
+          -%}
+          {%- if mobile_image != blank -%}
+            {%- liquid
+              assign master_width = mobile_image.src.width | append: 'x' | append: mobile_image.src.height
+              assign width = '375x' | append: mobile_image_height | append: ',' | append: master_width
+            -%}
+            {%- render 'responsive-image'
+              ,
+ image: mobile_image
+              ,
+ sizes: width
+              ,
+ class: 'product-image--mobile'
+              ,
+ priority: preload
+            -%}
+          {%- endif -%}
+        </div>
+      {% endif %}
+
+      <!-- 内容区域 -->
+      <div class="product__content content-{{ content_position }} mobile-content-{{ mobile_content_position }}">
+
+        {% if text_blocks.size > 0 %}
+          <div class="product-texts-container">
+            {% for text_block in text_blocks %}
+              {% if text_block.settings.text != blank %}
+                {% assign text = text_block.settings.text %}
+                {% assign text_mobile = text_block.settings.text_mobile | default: text %}
+                {% assign font_size = text_block.settings.font_size %}
+                {% assign font_weight = text_block.settings.font_weight %}
+                {% assign font_color = text_block.settings.font_color %}
+                {% assign text_alignment = text_block.settings.text_alignment %}
+                {% assign text_alignment_mobile = text_block.settings.text_alignment_mobile %}
+                {% assign margin_bottom = text_block.settings.margin_bottom %}
+                {% assign margin_bottom_mobile = text_block.settings.margin_bottom_mobile %}
+                <div class="product-text text-{{ text_alignment }} mobile-text-{{ text_alignment_mobile }}" style="
+                --color: {{ font_color }}; 
+                --font-size: {{ font_size }}px;
+                --font-weight: {{ font_weight }};
+                --margin-bottom: {{ margin_bottom }}px; 
+                --mobile-margin-bottom: {{ margin_bottom_mobile }}px; 
+                ">
+                  <span class="desktop-text">{{ text | newline_to_br }}</span>
+                  <span class="mobile-text">{{ text_mobile | newline_to_br }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if button_blocks.size > 0 %}
+          <div class="product-buttons-container">
+            {% for button_block in button_blocks %}
+              {% if button_block.settings.button_text != blank %}
+                {% assign button_text = button_block.settings.button_text %}
+                {% assign button_type = button_block.settings.button_type %}
+                {% assign button_link = button_block.settings.button_link %}
+                <div class="product-button">
+                  <a
+                    class="button {{ button_type }}"
+                    href="{{ button_link }}"
+                    target="_blank"
+                    role="button"
+                    title="{{ button_text | escape }}">
+                    {{- button_text -}}
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "图文介绍",
+    "class": "product-introduction-simple",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "是否全屏",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "图像"
+      },
+      {
+        "type": "select",
+        "id": "content_position",
+        "label": "内容位置",
+        "options": [
+          {
+            "value": "middle-left",
+            "label": "左"
+          },
+          {
+            "value": "middle-center",
+            "label": "中"
+          },
+          {
+            "value": "middle-right",
+            "label": "右"
+          },
+          {
+            "value": "top-left",
+            "label": "上左"
+          }, {
+            "value": "top-center",
+            "label": "上中"
+          }, {
+            "value": "top-right",
+            "label": "上右"
+          }
+        ],
+        "default": "middle-left"
+      },
+      {
+        "type": "header",
+        "content": "移动端设置"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "移动端图像（可选）"
+      }, {
+        "type": "select",
+        "id": "mobile_content_position",
+        "label": "内容位置",
+        "options": [
+          {
+            "value": "middle-left",
+            "label": "左"
+          },
+          {
+            "value": "middle-center",
+            "label": "中"
+          },
+          {
+            "value": "middle-right",
+            "label": "右"
+          },
+          {
+            "value": "top-left",
+            "label": "上左"
+          }, {
+            "value": "top-center",
+            "label": "上中"
+          }, {
+            "value": "top-right",
+            "label": "上右"
+          }
+        ],
+        "default": "top-center"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "content_text",
+        "name": "文案",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "桌面端文案",
+            "default": "文案"
+          },
+          {
+            "type": "number",
+            "id": "font_size",
+            "label": "字体大小",
+            "default": 16
+          },
+          {
+            "type": "range",
+            "id": "font_weight",
+            "label": "字体粗细",
+            "min": 300,
+            "max": 800,
+            "step": 100,
+            "default": 300
+          },
+          {
+            "type": "color",
+            "id": "font_color",
+            "label": "字体颜色",
+            "default": "#fff"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "字体对齐",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              }, {
+                "value": "center",
+                "label": "居中对齐"
+              }, {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ],
+            "default": "left"
+          }, {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "下边距",
+            "min": 0,
+            "max": 60,
+            "step": 5,
+            "unit": "px",
+            "default": 30
+          }, {
+            "type": "header",
+            "content": "移动设备"
+          }, {
+            "type": "textarea",
+            "id": "text_mobile",
+            "label": "移动端文案（可选）"
+          }, {
+            "type": "select",
+            "id": "text_alignment_mobile",
+            "label": "字体对齐方式",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              }, {
+                "value": "center",
+                "label": "居中对齐"
+              }, {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ],
+            "default": "center"
+          }, {
+            "type": "range",
+            "id": "margin_bottom_mobile",
+            "label": "下边距",
+            "min": 0,
+            "max": 30,
+            "step": 5,
+            "unit": "px",
+            "default": 5
+          }
+        ]
+      }, {
+        "type": "content_button",
+        "name": "按钮",
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "按钮文案"
+          }, {
+            "type": "select",
+            "id": "button_type",
+            "label": "按钮类型",
+            "options": [
+              {
+                "value": "ghost",
+                "label": "ghost"
+              }, {
+                "value": "black",
+                "label": "black"
+              }, {
+                "value": "white",
+                "label": "white"
+              }
+            ],
+            "default": "ghost"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "按钮链接"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 10,
+    "presets": [
+      {
+        "name": "图文介绍",
+        "blocks": [
+          {
+            "type": "content_text"
+          }, {
+            "type": "content_button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

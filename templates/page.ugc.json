@@ -1,0 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "challenge_entry_form_PCrwCq": {
+      "type": "challenge-entry-form",
+      "name": "Challenge Entry Form",
+      "settings": {
+        "image": "shopify://shop_images/7_1x_6981c8e8-e1af-467c-92c5-6b08af735517.png",
+        "mobile_image": "shopify://shop_images/1_1x_3b8e50e1-5770-435a-ba75-50f1a57ef601.png",
+        "rule_content": "<p><strong>How to Join </strong></p><p>1️⃣ <strong>Download </strong> </p><p><a href=\"https://bit.ly/DMStashPioCreatChallenge\" target=\"_blank\">https://bit.ly/DMStashPioCreatChallenge</a></p><p>Discount code ： PCXDM23<br/><br/>2️⃣ <strong>Print </strong> </p><p>Use HALOT-X1 /  HALOT Mage  Series<br/> </p><p>3️⃣ <strong>Share </strong> </p><p>Post On FB, IG, TikTok, Use: #PioCreatChallenge #Chitubox #DMstash</p><p>Tag: @PioCreat @Chitubox @DMstash</p><p>4️⃣<strong> Submit</strong> </p><p>Submit post link via PioCreat website.</p><p><strong>Prizes  </strong></p><p>Join the #PioCreatChallengeShow your resin printing skills & claim your prize!</p><p>🥇<strong> 1st Prize (x1)</strong></p><p>HALOT-X1 combo + $239 Chitubox Pro Team 1 year</p><p>🥈<strong> 2nd Prize (x2)</strong></p><p>HALOT-X1 + $169 Chitubox Pro 1 year</p><p>🥉<strong> 3rd Prize (x3)</strong></p><p>HALOT R6 Resin 3D Printer+ $99 Chitubox advanced</p><p>🥉<strong> 4th Prize (x5)</strong> </p><p>3x 2kg Piocreat Resin +LCD Screen Protector+ $42 Chitubox pro(90Days)</p><p><strong>🎁Special Prize (x50)</strong></p><p>Chitubox pro （30Days）Tip:  Each winner takes home a DM Stash Model Gift Pack!<br/><br/></p>"
+      }
+    },
+    "1755832290a14481f1": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_fTiqB6": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTA1MTc0\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_fTiqB6"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_LVhDR7": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "challenge_entry_form_PCrwCq",
+    "1755832290a14481f1",
+    "spacer_LVhDR7"
+  ]
+}

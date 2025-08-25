@@ -1,0 +1,237 @@
+<!-- 商品促销卡片模块 Section -->
+<section class="product-promo-section-wrapper" id="spend-more" style="background: {{ section.settings.bg_color }};">
+  <div class="product-promo-section">
+    <div class="product-promo-header">
+      <h2 class="product-promo-title" style="color: {{ section.settings.title_color }}">
+        {{ section.settings.title }}
+      </h2>
+      <div class="product-promo-subtitle" style="color: {{ section.settings.subtitle_color }}">
+        {{ section.settings.subtitle }}
+      </div>
+    </div>
+    <div class="product-promo-list">
+      {% comment %} 遍历后台 blocks 选择的商品 {% endcomment %}
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div
+            class="product-card"
+            data-id="{{ product.id }}"
+            data-variant-id="{{ product.variants[0].id }}"
+            data-variants-json="[{% for variant in product.variants %}{"id":{{ variant.id }},"featured_image":{"src":"{{ variant.featured_image | img_url: '400x' }}"},"inventory_quantity":{{ variant.inventory_quantity | default: 9999 }}}{% unless forloop.last %},{% endunless %}{% endfor %}]"
+            data-inventory="{{ product.variants[0].inventory_quantity | default: 9999 }}"
+          >
+            <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}" class="product-image">
+            <div class="product-title">{{ product.title }}</div>
+            <div class="product-colors-row">
+              <span class="color-name"
+                >Color:
+                {%- if color_option -%}{{ color_option.values[0] }}{%- endif -%}
+              </span>
+              <div class="product-colors">
+                {%- assign custom_colors = settings.color_swatches | newline_to_br | split: '<br />' -%}
+                {%- assign key_array = '' -%}
+                {%- assign val_array = '' -%}
+                {%- for color in custom_colors -%}
+                  {%- assign key = color | split: ':' | first | rstrip -%}
+                  {%- assign value = color | split: ':' | last | lstrip -%}
+                  {%- assign key_array = key_array | append: ',' | append: key -%}
+                  {%- assign val_array = val_array | append: ',' | append: value -%}
+                {%- endfor -%}
+                {%- assign key_array = key_array | remove_first: ',' | split: ',' -%}
+                {%- assign val_array = val_array | remove_first: ',' | split: ',' -%}
+                {%- assign color_option = null -%}
+                {%- for option in product.options_with_values -%}
+                  {%- assign option_name = option.name | downcase -%}
+                  {%- if option_name contains 'color'
+                    or option_name contains 'colour'
+                    or option_name contains 'couleur'
+                    or option_name contains 'farbe'
+                  -%}
+                    {%- assign color_option = option -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                {%- if color_option -%}
+                  {%- for value in color_option.values -%}
+                    {%- assign color_value = value | downcase | escape -%}
+                    {%- assign swatch_color = '' -%}
+                    {%- assign swatch_image = '' -%}
+                    {%- assign custom_color = '' -%}
+                    {%- for idx in (0..key_array.size) -%}
+                      {%- assign key = key_array[idx] | downcase | strip -%}
+                      {%- if key == color_value -%}
+                        {%- assign custom_color = val_array[idx] -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- assign variant_obj = null -%}
+                    {%- for variant in product.variants -%}
+                      {%- if variant.options contains value -%}
+                        {%- assign variant_obj = variant -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- if variant_obj and variant_obj.swatch and variant_obj.swatch.image -%}
+                      {%- assign swatch_image = variant_obj.swatch.image | img_url: '80x' -%}
+                    {%- endif -%}
+                    {%- if variant_obj and variant_obj.swatch and variant_obj.swatch.color -%}
+                      {%- assign swatch_color = variant_obj.swatch.color -%}
+                    {%- endif -%}
+                    {%- if custom_color != '' -%}
+                      {%- assign swatch_color = custom_color -%}
+                    {%- endif -%}
+                    {%- if swatch_color == '' and swatch_image == '' and custom_color == '' -%}
+                      {%- assign global_product = all_products[product.handle] -%}
+                      {%- assign global_variant = null -%}
+                      {%- for v in global_product.variants -%}
+                        {%- if v.options contains value -%}
+                          {%- assign global_variant = v -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- if global_variant
+                        and global_variant.metafields.theme
+                        and global_variant.metafields.theme.color
+                      -%}
+                        {%- assign swatch_color = global_variant.metafields.theme.color.value -%}
+                      {%- elsif global_variant
+                        and global_variant.metafields.custom
+                        and global_variant.metafields.custom.color
+                      -%}
+                        {%- assign swatch_color = global_variant.metafields.custom.color.value -%}
+                      {%- elsif global_variant
+                        and global_variant.metafields.color
+                        and global_variant.metafields.color.value
+                      -%}
+                        {%- assign swatch_color = global_variant.metafields.color.value -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                    {%- assign swatch_style = '' -%}
+                    {%- if swatch_image != '' -%}
+                      {%- assign swatch_style = 'background-image:url('
+                        | append: swatch_image
+                        | append: ');background-size:cover;'
+                      -%}
+                    {%- elsif swatch_color != '' -%}
+                      {%- assign swatch_style = 'background:' | append: swatch_color | append: ';' -%}
+                    {%- else -%}
+                      {%- assign swatch_style = 'background:#ccc;' -%}
+                    {%- endif -%}
+                    {%- assign variant_id = null -%}
+                    {%- for variant in product.variants -%}
+                      {%- if variant.options contains value -%}
+                        {%- assign variant_id = variant.id -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    <span
+                      class="color-dot"
+                      title="{{ value }}"
+                      style="{{ swatch_style }}"
+                      data-variant-id="{{ variant_id }}"
+                      data-color-name="{{ value }}"
+                    ></span>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="product-qty">
+              <div class="qty-label">Quantity</div>
+              <div style="border: 1px solid #000; border-radius: 5px;">
+                <button class="qty-btn minus">-</button>
+                <span class="qty-value">1</span>
+                <button class="qty-btn plus">+</button>
+              </div>
+            </div>
+            <div class="product-price">
+              {% if product.compare_at_price > product.price %}
+                <span class="old-price">{{ product.compare_at_price | money }}</span>
+              {% endif %}
+              <span class="new-price">{{ product.price | money }}</span>
+            </div>
+            <button
+              class="add-to-cart"
+              style="background: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+            >
+              Add to Cart
+            </button>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div id="spend-more-end"></div>
+
+{{ 'product-promo-cards.css' | asset_url | stylesheet_tag }}
+{{ 'product-promo-cards.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Product Promo Cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "SPEND MORE, SAVE MORE"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "$10 OFF EVERY $50!"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "模块背景色",
+      "default": "#fff7ec"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "主标题颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "副标题颜色",
+      "default": "#FF9945"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "按钮背景色",
+      "default": "#FF9945"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "按钮字体颜色",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "商品",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "选择商品"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Product Promo Cards",
+      "blocks": [{ "type": "product" }, { "type": "product" }, { "type": "product" }, { "type": "product" }]
+    }
+  ]
+}
+{% endschema %}

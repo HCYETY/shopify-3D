@@ -1,0 +1,133 @@
+{% schema %}
+{
+  "name": "Prime Day Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "textarea",
+      "id": "rules_content",
+      "label": "Rules Content",
+      "default": "<p><strong>Duration:</strong><br>The event begins at 12:00 AM (PDT) on June 3, 2025, and ends at 11:59 PM (PDT) on June 30, 2025.</p><p><strong>Participation rules:</strong><br>1. To enter, simply provide your email address and click the \"Subscribe\" button.<br><br>2. 15 lucky winners will be randomly selected to receive a free e-bike. Among them, 5 winners will also receive a free 7-day trip to China. Each email address is limited to one entry.<br><br>3. Prizes include 15 brand-new e-bikes, randomly selected from the L20 3.0 Boost, EP-2 Boost, and L20 Boost models, as well as 5 spots for a 7-day trip to China. The trip includes round-trip airfare, accommodation, and meals.<br><br>4. Winners will be announced via email and on our website by July 10, 2025.<br><br>5. Winners must respond to the notification email within 2 days to claim their prize. If confirmed, the prize will be shipped according to the timeframe specified in the email. Failure to respond will result in forfeiture.<br><br>6. By providing your email address, you agree to comply with all applicable terms and conditions. You will also be subscribed to ENGWE's marketing emails and updates.<br><br>7. Feel free to share this campaign with like-minded friends and help us spread the word.<br><br>8. This offer is available only to participants in the EU and the UK. Delivery to remote areas and islands is not supported.<br><br>9. No purchase is necessary to enter or win. Making a purchase will not increase your chances of winning.<br><br>10. ENGWE reserves the right to make the final decision regarding the interpretation of these campaign rules."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rules_button",
+      "label": "Show Rules Button",
+      "default": true
+    }
+  ],
+  "presets": [{ "name": "Prime Day Banner" }]
+}
+{% endschema %}
+
+<div
+  class="prime-day-banner"
+  style="background-image: url({{ section.settings.background_image | img_url: 'master' }}); background-size: cover; background-position: center; width: 100%; min-height: 400px; position: relative;"
+>
+  <div class="prime-day-banner-content" style="display: flex; justify-content: center; align-items: flex-start; position: relative; z-index: 2; padding: 140px 0 0 0; width: 100%; margin: 0 auto;">
+    {% if section.settings.show_rules_button %}
+    <button
+      id="prime-day-rules-btn"
+      type="button"
+      class="promotion-event-signup-button"
+    >
+      Rules
+    </button>
+    {% endif %}
+  </div>
+  {% if section.settings.show_rules_button %}
+  <div class="modal-mask" id="primeDayRulesMask">
+    <div class="modal-content">
+      <div
+        class="promotion-event-signup-modal"
+        style="max-height:600px;max-width:90vw;width:100%;padding:24px;box-sizing:border-box;color:#000;position:relative;overflow-y:auto;"
+      >
+        <button
+          class="promotion-event-signup-close"
+          id="primeDayRulesClose"
+          style="position:absolute;top:-14px;right:12px;font-size:3rem;color:#000;background:transparent;border:none;cursor:pointer;line-height:1;"
+        >
+          &times;
+        </button>
+        {{ section.settings.rules_content }}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <div style="position: absolute; inset: 0; background: rgba(255,255,255,0.1); z-index: 1;"></div>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('prime-day-rules-btn');
+    var mask = document.getElementById('primeDayRulesMask');
+    var closeBtn = document.getElementById('primeDayRulesClose');
+    if (btn && mask) {
+      btn.addEventListener('click', function () {
+        mask.classList.add('active');
+      });
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+          mask.classList.remove('active');
+        });
+      }
+      window.addEventListener('click', function (e) {
+        if (e.target === mask) {
+          mask.classList.remove('active');
+        }
+      });
+    }
+  })();
+</script>
+
+<style>
+  .prime-day-banner {
+    position: relative;
+    overflow: hidden;
+  }
+  .prime-day-banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 140px 0 0 0;
+  }
+  .promotion-event-signup-button {
+    color: white;
+    background: #fa5406;
+    font-size: 18px;
+    border: none;
+    line-height: 1;
+    padding: 8px 20px;
+    border-radius: 15px;
+  }
+  .prime-day-rules-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .prime-day-rules-modal .modal-content {
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 100px auto;
+    position: relative;
+  }
+</style>
+
+<link rel="stylesheet" href="{{ 'promotion-event-signup.css' | asset_url }}">

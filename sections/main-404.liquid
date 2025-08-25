@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="small-12 columns">
+    <div class="not-found">
+      <h1>{{ 'sections.404.not_found' | t }}</h1>
+      <p>{{ 'sections.404.not_found_description' | t }}</p>
+
+      <!-- 倒计时重定向提示 -->
+      <div class="countdown-redirect">
+        <p class="countdown-text">The page will jump to the home page in <span id="countdown-timer">5</span> seconds</p>
+        <div class="countdown-progress">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <a href="{{ routes.root_url }}" class="button accent2"
+        ><span>{{ 'general.continue_shopping' | t }}</span></a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let countdown = 5;
+    const countdownTimer = document.getElementById('countdown-timer');
+    const progressBar = document.getElementById('progress-bar');
+
+    function updateCountdown() {
+      countdownTimer.textContent = countdown;
+
+      const progress = ((5 - countdown) / 5) * 100;
+      progressBar.style.width = progress + '%';
+
+      if (countdown === 0) {
+        window.location.href = '{{ routes.root_url }}';
+        clearInterval(interval);
+        return;
+      }
+
+      countdown--;
+    }
+
+    updateCountdown();
+
+    const interval = setInterval(updateCountdown, 1000);
+
+    document.querySelector('.button').addEventListener('click', function () {
+      clearInterval(interval);
+    });
+  });
+</script>
+
+{{ '404.css' | asset_url | stylesheet_tag }}

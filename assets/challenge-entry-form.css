@@ -1,0 +1,502 @@
+.challenge-container {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  margin-bottom: 36px;
+}
+
+.challenge__background {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.challenge__background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* 桌面端和移动端图片显示控制 */
+.challenge-image--desktop {
+  display: block;
+}
+
+.challenge-image--mobile {
+  display: none;
+}
+
+.challenge__content {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.challenge-texts-container {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.challenge-text {
+  font-family: MiSans;
+  line-height: normal;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.challenge-text.title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.challenge-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.challenge-buttons-container .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "MiSans";
+  height: 55px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 12px 40px;
+  letter-spacing: 0em;
+  border-radius: 269px;
+  color: #fff;
+}
+
+.challenge-buttons-container .black {
+  color: #fff;
+  background: #000000;
+}
+
+.challenge-buttons-container .white {
+  border: 2px solid #000000;
+  color: #000;
+  background: #fff;
+}
+
+
+#globo-formbuilder-105174 .g-container{
+  padding: 50px 85px 50px 106px;
+}
+
+#globo-formbuilder-105174 .g-container .message.success,
+#globo-formbuilder-105174 .g-container .message.error,
+#globo-formbuilder-105174 .globo-form-control {
+  margin-bottom: 35px;
+}
+
+#globo-formbuilder-105174 .globo-form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#globo-formbuilder-105174 .globo-form-row-item {
+  min-width: 300px;
+}
+
+#globo-formbuilder-105174 .globo-form-control .help-block.error {
+  font-family: MiSans;
+  font-size: 14px;
+}
+
+#globo-formbuilder-105174 .globo-form-app.boxed-layout {
+  border: 2px solid #b5b5b5;
+  border-radius: 10px;
+  box-shadow: none;
+  margin: auto;
+}
+
+#globo-formbuilder-105174 .globo-heading {
+  font-family: MiSans;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+#globo-formbuilder-105174 .header .globo-description {
+  display: none;
+}
+
+
+/* label */
+#globo-formbuilder-105174 .globo-label {
+  margin-bottom: 12px;
+}
+
+#globo-formbuilder-105174 .globo-label[aria-label="Browse file"] {
+  text-align: center;
+}
+
+#globo-formbuilder-105174 .label-content {
+  font-family: MiSans;
+  font-size: 18px;
+  letter-spacing: 0em;
+  color: #000;
+  margin-bottom: 13px;
+}
+#globo-formbuilder-105174 .text-smaller {
+  color: #d01b1b;
+}
+
+#globo-formbuilder-105174 .help-text {
+  font-family: MiSans;
+  font-size: 18px;
+  letter-spacing: 0em;
+  color: #6a6a6a;
+}
+
+/* 单选 */
+#globo-formbuilder-105174 .globo-form-input {
+  display: block;
+}
+#globo-formbuilder-105174 .globo-form-input ul:has(.radio-wrapper) {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#globo-formbuilder-105174 .globo-form-input ul .globo-list-control:has(.radio-wrapper) {
+  display: block;
+  height: 45px;
+  width: auto;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+}
+
+.globo-form-control .radio-wrapper {
+  height: 100%;
+  padding: 0;
+}
+
+#globo-formbuilder-105174 .globo-form-input .radio-wrapper .radio-label::before,
+#globo-formbuilder-105174 .globo-form-input .radio-wrapper .radio-label::after {
+  display: none;
+}
+
+#globo-formbuilder-105174 .globo-form-input .radio-wrapper .radio-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: MiSans;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0em;
+  color: #b5b5b5;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Radio active state */
+#globo-formbuilder-105174 .globo-form-input .radio-wrapper input[type="radio"]:checked + label {
+  color: #3F72E5;
+}
+
+#globo-formbuilder-105174 .globo-form-input .globo-list-control:has(input[type="radio"]:checked) {
+  border-color: #3F72E5;
+}
+
+/* 输入框 */
+#globo-formbuilder-105174 .globo-form-input input[type="text"]{
+  width: 100%;
+  height: 45px;
+  padding: 10px 12px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  font-family: MiSans;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0em;
+  color: #3F72E5;
+  text-align: left;
+  margin-bottom: 0px;
+  background-color: unset;
+}
+
+#globo-formbuilder-105174 .globo-form-input input[type="text"]:hover,
+#globo-formbuilder-105174 .globo-form-input input[type="text"]:focus {
+  outline: none;
+  border-color: #3F72E5;
+  /* box-shadow: none !important; */
+}
+
+#globo-formbuilder-105174 .globo-form-input input[type="text"]::placeholder {
+  color: #b5b5b5;
+}
+
+#globo-formbuilder-105174 .globo-form-input input[type="text"]:-internal-autofill-previewed,
+#globo-formbuilder-105174 .globo-form-input input[type="text"]:-internal-autofill-selected {
+  -webkit-text-fill-color: #3F72E5;
+  transition: background-color 5000s ease-out 0.5s;
+}
+
+/* 上传 */
+#globo-formbuilder-105174 .globo-form-input .gfb__dropzone {
+  position: relative;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  height: 196px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: unset;
+}
+
+#globo-formbuilder-105174 .globo-form-input .gfb__dropzone:hover {
+  border-color: #3F72E5;
+}
+
+#globo-formbuilder-105174 .gfb__dropzone--placeholder::before {
+    /* 转换后的SVG SVG Data URI */
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none' version='1.1' width='60' height='47' viewBox='0 0 60 47'%3E%3Cg%3E%3Cg%3E%3Cellipse cx='16.875' cy='31.020039558410645' rx='16.875' ry='15.980000495910645' fill='%23D8D8D8' fill-opacity='1'/%3E%3C/g%3E%3Cg%3E%3Cellipse cx='45.156250953674316' cy='32.89998912811279' rx='14.843750953674316' ry='14.100001335144043' fill='%23D8D8D8' fill-opacity='1'/%3E%3C/g%3E%3Cg%3E%3Cellipse cx='30.9375' cy='17.860000610351562' rx='17.8125' ry='17.860000610351562' fill='%23D8D8D8' fill-opacity='1'/%3E%3C/g%3E%3Cg%3E%3Crect x='15' y='33.84002685546875' width='30.000001907348633' height='13.160000801086426' rx='0' fill='%23D8D8D8' fill-opacity='1'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M31.190981,19.0631514L31.190981,37.922848C31.118223,38.537682000000004,30.618015,39,30.026862,39C29.435707,39,28.935499999999998,38.537682000000004,28.862743000000002,37.922848L28.862743000000002,19.0631514L19.9772441,28.37623C19.6862143,28.681263,19.2587647,28.805183,18.85859889,28.690796C18.45843303,28.576408,18.14466675,28.252308,18.040077958,27.832888C17.930941835,27.413465000000002,18.049172636,26.965446,18.3402023,26.660411L29.067373,15.39320824C29.58577,14.86893061,30.408838,14.86893061,30.931782,15.39320824L41.658951,26.636580000000002C42.113684,27.113194999999997,42.113684,27.880547,41.658951,28.3524C41.204216,28.824249000000002,40.472097000000005,28.829014,40.02191,28.3524L31.190981,19.0631514Z' fill='%23F8F9FD' fill-opacity='1' style='mix-blend-mode:passthrough'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.globo-form-control .gfb__dropzone[data-area-previewing=true] .gfb__dropzone--placeholder::before {
+  display: none;
+}
+
+#globo-formbuilder-105174 .gfb__dropzone--placeholder--title {
+  display: none;
+}
+
+#globo-formbuilder-105174 .gfb__dropzone--placeholder--description {
+  font-family: MiSans;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0em;
+  color: #b5b5b5;
+}
+
+#globo-formbuilder-105174 .gfb__dropzone--placeholder--button {
+  font-family: MiSans;
+  font-size: 18px;
+  color: #000;
+}
+
+#globo-formbuilder-105174 .gfb__dropzone--preview--area {
+  z-index: 6;
+}
+
+#globo-formbuilder-105174 .gfb__dropzone--preview--list {
+  display: flex;
+ }
+
+/* 复选框 */
+#globo-formbuilder-105174 .globo-form-control:has(.checkbox-wrapper) .globo-label {
+  display: none;
+}
+
+#globo-formbuilder-105174 .globo-list-control:has(.checkbox-wrapper) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#globo-formbuilder-105174 .checkbox-wrapper .checkbox-label {
+  font-family: MiSans;
+  font-size: 18px;
+  display: inline;
+  margin-bottom: 0px;
+  color: #b5b5b5;
+  text-align: left;
+  cursor: pointer;
+}
+
+#globo-formbuilder-105174 .checkbox-wrapper .checkbox-label:before {
+  border-color: #b5b5b5;
+}
+
+#globo-formbuilder-105174 .checkbox-wrapper input:checked ~ .checkbox-label:before {
+  background-color: #3F72E5;
+  border-color: #3F72E5;
+}
+
+#globo-formbuilder-105174 .checkbox-wrapper:hover .checkbox-label,
+#globo-formbuilder-105174 .checkbox-wrapper input:checked + label {
+  color: #3F72E5; 
+}
+
+/* 按钮 */
+#globo-formbuilder-105174 .gfb__footer .globo-description {
+  display: none;
+}
+
+#globo-formbuilder-105174 .gfb__footer .submit {
+  font-family: MiSans;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  height: 55px;
+  width: max-content;
+  border-radius: 269px;
+  padding: 12px 74px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.challenge-form__submit {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 蒙层样式 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9998;
+}
+
+.modal-overlay.active {
+  display: block;
+}
+
+/* 弹窗样式 */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  max-width: 80vw;
+  max-height: 70vh;
+  width: 1100px;
+  height: 726px;
+  display: none;
+  z-index: 9999;
+}
+
+.modal.active {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 弹窗内容 */
+.modal-content {
+  height: 100%;
+  padding: 50px;
+  padding-right: 14px;
+  position: relative;
+}
+
+/* 关闭按钮 */
+.modal-close {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+/* 弹窗文本 */
+.modal-text {
+  height: 100%;
+  padding-right: 35px;
+  overflow-y: auto;
+  font-family: MiSans;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0em;
+  color: #000000;
+}
+
+@media (max-width: 960px) {
+  .challenge-container {
+    height: 495px;
+  }
+  .challenge__content {
+    justify-content: flex-start;
+    align-items: center;
+    height: 415px;
+    text-align: center;
+  }
+  .challenge-texts-container {
+    margin-bottom: 15px;
+  }
+  .challenge-text.title {
+    font-size: 32px;
+  }
+  .challenge-text.desc {
+    font-size: 18px;
+  }
+  .challenge-buttons-container .button {
+    height: 34px;
+    font-size: 16px;
+    padding: 6px 20px;
+  }
+  .challenge-image--desktop {
+    display: none;
+  }
+  .challenge-image--mobile {
+    display: block;
+  }
+
+  #globo-formbuilder-105174 .g-container {
+    padding: 20px 18px 35px 18px;
+    border: none;
+  }
+
+  .modal {
+    width: 350px;
+    height: 826px;
+  }
+
+  .modal-content {
+    padding: 30px;
+    padding-right: 18px;
+  }
+  .modal-text {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  #globo-formbuilder-105174 .globo-form-input ul:has(.radio-wrapper)  {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

@@ -1,0 +1,1336 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {}
+    },
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "2b609eea-6cce-4efe-b447-c5560de1d797": {
+          "type": "label",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "preorder_title": false,
+            "show_products_rating": false,
+            "show_paypal_laster": true,
+            "show_products_rating_average": false,
+            "show_custom_badges": true,
+            "show_discount-coupon": true,
+            "leftText": "Use Code",
+            "centerText": "PIOCREAT50",
+            "rightText": "Save $30",
+            "markedWords": "",
+            "markedPreWords": ""
+          }
+        },
+        "image_HX8JjT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/13_1x_1.webp",
+            "position": "text-left",
+            "image_link": ""
+          }
+        },
+        "separator_hpYMwi": {
+          "type": "separator",
+          "settings": {}
+        },
+        "coupon_code_8PrU7H": {
+          "type": "coupon_code",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "has_background": true,
+            "text": "<p>First 50 buyers only, get code to enjoy $20 off</p>",
+            "coupon_text": "HALT511",
+            "copy_text": "Copy code",
+            "coupon_box_color": "#cd0f0f",
+            "coupon_box_color_link": "#45474a"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button",
+            "color_picker": true,
+            "color_picker_size": "regular",
+            "color_picker_use_variants": false,
+            "variant_is_disabled": true,
+            "sizing_guide_variant": "Size",
+            "sizing_guide_text": "",
+            "sizing_guide_icon": "ruler",
+            "sizing_guide_page": ""
+          }
+        },
+        "0b3e272b-c86a-4dba-946c-c6912251371c": {
+          "type": "description",
+          "settings": {
+            "seo_text_max_height": 1000,
+            "seo_text_read_more": "Read more",
+            "seo_text_read_less": "Read less"
+          }
+        },
+        "other_products_Ajirhw": {
+          "type": "other_products",
+          "settings": {
+            "title": "Options:",
+            "product_1": "halot-x1-resin-3d-printer-for-miniatures",
+            "product_2": "halot-x1-combo-resin-printer-for-miniatures",
+            "product_3": "",
+            "product_4": "",
+            "product_5": "",
+            "product_6": "",
+            "product_7": "",
+            "product_8": "",
+            "product_9": "",
+            "product_10": ""
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {}
+        },
+        "cross_sell_products_CCYMMz": {
+          "type": "cross_sell_products",
+          "settings": {
+            "title": "Add these items to your cart",
+            "description": "<p>Select additional products to add along with your purchase</p>",
+            "product_1": "uw03-washing-curing-machine",
+            "product_2": "16k-standard-resin-1kg",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "386f7e4a-6127-4141-928b-9cb4614ee18c": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Policy",
+            "open": false,
+            "content": "",
+            "page": "shipping-policy",
+            "custom_liquid": ""
+          }
+        },
+        "d56924f2-0137-4e3b-8c33-49b1f28391c6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return & Warranty",
+            "open": false,
+            "content": "<p>Row content</p>",
+            "page": "return-policy",
+            "custom_liquid": ""
+          }
+        },
+        "4fd23485-293f-46a0-8a4c-34d0e25ea41b": {
+          "type": "share",
+          "settings": {}
+        },
+        "fc6da228-45eb-4a6e-aa68-d6ec477bec34": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "product_list_limit": 6
+          }
+        }
+      },
+      "block_order": [
+        "2b609eea-6cce-4efe-b447-c5560de1d797",
+        "title",
+        "image_HX8JjT",
+        "separator_hpYMwi",
+        "coupon_code_8PrU7H",
+        "variant_picker",
+        "0b3e272b-c86a-4dba-946c-c6912251371c",
+        "other_products_Ajirhw",
+        "quantity",
+        "cross_sell_products_CCYMMz",
+        "buy_buttons",
+        "386f7e4a-6127-4141-928b-9cb4614ee18c",
+        "d56924f2-0137-4e3b-8c33-49b1f28391c6",
+        "4fd23485-293f-46a0-8a4c-34d0e25ea41b",
+        "fc6da228-45eb-4a6e-aa68-d6ec477bec34"
+      ],
+      "custom_css": [],
+      "settings": {
+        "enable_sticky_add_to_cart": true,
+        "show_taxes_included": true,
+        "thumbnail_position": "left",
+        "media_aspect_ratio": "adapt",
+        "display_captions": false,
+        "hide_variants": false,
+        "lightbox": true,
+        "enable_video_looping": false,
+        "media_fullwidth_mobile": true,
+        "media_show_prevnext_mobile": true
+      }
+    },
+    "16623877721f33fb14": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 35,
+        "spacer_desktop": 90,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "navbar_4JDmip": {
+      "type": "navbar",
+      "blocks": {
+        "text_qKbYkC": {
+          "type": "text",
+          "settings": {
+            "title": "Features",
+            "title_id": "Features",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_xGkEpz": {
+          "type": "text",
+          "settings": {
+            "title": "Specification",
+            "title_id": "Specification",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_9pibfA": {
+          "type": "text",
+          "settings": {
+            "title": "What's in Box",
+            "title_id": "What's in Box",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_f9Xhd3": {
+          "type": "text",
+          "settings": {
+            "title": "FAQs",
+            "title_id": "FAQs",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_4wjVjm": {
+          "type": "text",
+          "settings": {
+            "title": "Reviews",
+            "title_id": "Reviews",
+            "item_color": "",
+            "active_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_qKbYkC",
+        "text_xGkEpz",
+        "text_9pibfA",
+        "text_f9Xhd3",
+        "text_4wjVjm"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "show_shadow": false,
+        "default_text_color": "#b2b2b2",
+        "active_text_color": "#000000"
+      }
+    },
+    "17500440253529de19": {
+      "type": "apps",
+      "blocks": {
+        "firework_shoppable_video_ugc_firework_pro_embed_product_Lfcw7n": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-pro-embed-product/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "disabled": true,
+          "settings": {
+            "match_videos": true,
+            "embedConfigId": "W5EkWg_efc"
+          }
+        }
+      },
+      "block_order": [
+        "firework_shoppable_video_ugc_firework_pro_embed_product_Lfcw7n"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "youtube_video_F7fKEG": {
+      "type": "youtubeVideo",
+      "blocks": {
+        "video_slide_w6x8E3": {
+          "type": "video_slide",
+          "settings": {
+            "videoThumbnail": "shopify://shop_images/videoframe_397499_1.png",
+            "videoTitle": "Use Marker Pens to 2D paint 3D Miniatures Printed with The PioCreat HALOT-X1",
+            "videoUrl": "https://www.youtube.com/watch?v=BzF3b1E4YGw",
+            "title_background": "#ebebeb"
+          }
+        },
+        "video_slide_BDeneV": {
+          "type": "video_slide",
+          "settings": {
+            "videoTitle": "The Halot X1: INTERESTING, but is it GOOD?",
+            "videoUrl": "https://www.youtube.com/watch?v=_phG9fhNwAs&t=1s",
+            "title_background": "#ebebeb"
+          }
+        },
+        "video_slide_Bjywpm": {
+          "type": "video_slide",
+          "settings": {
+            "videoThumbnail": "shopify://shop_images/videoframe_231630_1.png",
+            "videoTitle": "2367 Crystal Clear 3D Printing With The HALOT X1 From PioCreat #piocreat #3dprinting",
+            "videoUrl": "https://www.youtube.com/watch?v=sSSgZBMu5zc&t=48s",
+            "title_background": "#ebebeb"
+          }
+        }
+      },
+      "block_order": [
+        "video_slide_w6x8E3",
+        "video_slide_BDeneV",
+        "video_slide_Bjywpm"
+      ],
+      "disabled": true,
+      "name": "YouTube Video Section",
+      "settings": {
+        "headingTitle": "Unboxing & Reviews"
+      }
+    },
+    "video_ftYKTh": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "marker_style": "style1",
+        "description": "",
+        "full_width": false,
+        "video": "https://www.youtube.com/watch?v=ACl8LugLIeU&t=12s",
+        "video_hosted": "shopify://files/videos/HALOT-X1光固化打印机无字幕配音_片尾备注物料以最终为准.mp4",
+        "video_autoplay": true,
+        "aspect_ratio": "16-9",
+        "marker_color": "#fd6262",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "navbar_id_qfmfqY": {
+      "type": "navbar-id",
+      "settings": {
+        "nav-bar-id": "Features"
+      }
+    },
+    "product_pack_NXzFXY": {
+      "type": "product-pack",
+      "blocks": {
+        "package_item_6HFxMw": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/16K_Mono_LCD.jpg",
+            "title": "Smart 10.1-inch 16K Mono LCD",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_FdKKNW": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/New_Motion_Structure.jpg",
+            "title": "New Motion Structure",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_VBcExy": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/True_Leveling-Free.jpg",
+            "title": "Auto Leveling",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_yUzCGW": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/92-Zone_Intelligent_Exposure.jpg",
+            "title": "92 Light Zones Intelligent Exposure",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_XWr4PM": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Twist-to-Release_Build_Plate.jpg",
+            "title": "Quick-Release Build Plate",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_x7AqWy": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/RFID_Identification.jpg",
+            "title": "RFID Tag Identification",
+            "description": "",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "package_item_6HFxMw",
+        "package_item_FdKKNW",
+        "package_item_VBcExy",
+        "package_item_yUzCGW",
+        "package_item_XWr4PM",
+        "package_item_x7AqWy"
+      ],
+      "settings": {
+        "title": "Why Choose HALOT-X1",
+        "title_size": "h2",
+        "columns_per_row": "3"
+      }
+    },
+    "c4204c3f-0267-4094-942b-cbef4c9c0a87": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 0,
+        "spacer_desktop": 50,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "081e2acc-aa6a-4a72-9347-fb8bb370af80": {
+      "type": "scrolling-content",
+      "blocks": {
+        "section_wLCAPj": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/2_865a820f-91a9-40fc-8ae6-c2e3ea979e74.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "Enhanced Stability and Precision",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Tired of print failures caused by shaking or misalignment? With HALOT-X1’s innovative top-down motion system, the resin vat and light source move while the build plate stays still—unlike traditional printers. Dual linear rails and lead screws stabilize every layer. That means smoother prints and fewer surprises.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_PtKxGN": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/3_114066cf-db43-461c-be5f-9279096998dd.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "True Leveling-Free",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Say goodbye to time-consuming leveling calibration. HALOT-X1 arrives pre-leveled with a innovative build plate—no calibration needed. Just unpack, load resin, and start printing.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_XjjhXg": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "92 Light Zones Intelligent Exposure",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>The HALOT-X1 uses 92-zone Intelligent Exposure to activate light only where it’s needed. This saves energy, boosts accuracy, and extends your screen’s life—so your prints stay consistent and your equipment lasts longer.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_CC7qtE": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/4_000a137d-1417-4e31-89f3-cfa0e16fb532.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "Quick-Release Build Plate",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Removing delicate prints without damage can be stressful. HALOT-X1’s quick-release build plate makes it simple—just twist the handles and harvest your prints with ease. No scraping, no broken parts—just clean, safe removal every time.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_PyFXc7": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/7_51236003-aa5b-4f1d-b88a-1bd8bc81ab3d.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "Faster Printing Speed",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Waiting hours for a single model to finish can slow down your workflow and creativity. HALOT-X1 supports a blazing-fast maximum print speed of 170mm/h. Whether you're iterating prototypes or delivering batch production, you'll print more in less time—without sacrificing quality.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_ACmimA": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/49e6fc66c37e4172b03049cb55c7f154.webp",
+            "badge": "",
+            "subheading": "",
+            "heading": "Resin RFID Chip Recognition",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Manually configuration print settings for each resin type is tedious and error-prone. With HALOT-X1, each official resin bottle includes an RFID tag automatically read by the machine. It instantly loads the ideal print parameters from the cloud, giving you optimal results without hassle.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "383ea750-0663-42e7-8ab5-faef83816d22": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/20250408155557.png",
+            "badge": "",
+            "subheading": "",
+            "heading": "Passive Chamber Thermal Circulation",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Efficient Passive Heat Circulation<br/>Maintains stable internal temperature without fans or heaters.<br/>Reduces curing issues, warping, and print failures silently and efficiently.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_rbLbEW": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/1024_576.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "CHITUBOX Pro",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Model prep shouldn’t slow you down. That’s why HALOT-X1 includes a 3-month CHITUBOX Pro subscription (a \\$42 value). Known for its power and ease of use, CHITUBOX Pro helps you slice faster and smarter—whether you’re a beginner or a seasoned maker.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "ef30e1e6-7bf9-4deb-b04b-15075918ba61": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/e217334a7a5b1bf502b437f17432febd_original.webp",
+            "badge": "",
+            "subheading": "",
+            "heading": "Resin Heating",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>Struggling with failed prints in cold environments or thick, sluggish resin? HALOT-X1 heats your resin to 30–45℃ in just 3 minutes. This reduces viscosity and boosts flow, increasing your print success rate—especially when ambient temperatures drop.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        },
+        "section_wXMjtF": {
+          "type": "section",
+          "settings": {
+            "image": "shopify://shop_images/6_e9279a7f-bde4-433f-99cd-19272f96635f.jpg",
+            "badge": "",
+            "subheading": "",
+            "heading": "Handy Resin VAT Latch",
+            "marker_style": "style1",
+            "heading_size": "small",
+            "content": "<p>VAT maintenance shouldn't be a hassle. With a simple swing-to-lock mechanism, HALOT-X1 makes it easy to clean and swap vats. Plus, the upgraded NACF release film lasts longer, handles higher temps, and peels smoother—so you print more with less dow.</p>",
+            "description_size": "h3",
+            "button_text": "",
+            "button_link": "",
+            "marker_color": "#fd6262",
+            "color_bg_badge": "#3f72e5",
+            "color_badge": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "section_wLCAPj",
+        "section_PtKxGN",
+        "section_XjjhXg",
+        "section_CC7qtE",
+        "section_PyFXc7",
+        "section_ACmimA",
+        "383ea750-0663-42e7-8ab5-faef83816d22",
+        "section_rbLbEW",
+        "ef30e1e6-7bf9-4deb-b04b-15075918ba61",
+        "section_wXMjtF"
+      ],
+      "settings": {
+        "desktop_layout": "text_first",
+        "mobile_swipe": true,
+        "dots": false,
+        "color_bg": "#303c43",
+        "color_heading": "#ffffff",
+        "color_text": "#d3d9df",
+        "color_links": "#3f72e5",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "d5ba2a2b-8bd0-4354-b15b-a335dd1b21ad": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 40,
+        "spacer_desktop": 70,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "navbar_id_JmTNDa": {
+      "type": "navbar-id",
+      "settings": {
+        "nav-bar-id": "Specification"
+      }
+    },
+    "product_params_nKwkwA": {
+      "type": "product-params",
+      "blocks": {
+        "parameter_Jr9j9z": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Machine size",
+            "group_id": "",
+            "col1_value": "344mm*331mm*434mm",
+            "col2_value": "256 x 256 x 256 mm³*",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "merged_row_bcLMTx": {
+          "type": "merged_row",
+          "disabled": true,
+          "settings": {
+            "param_name": "Shell",
+            "merged_value": "<strong>Material</strong>"
+          }
+        },
+        "parameter_nA33nK": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Printing size",
+            "group_id": "",
+            "col1_value": "211.68mm*118.37mm*200mm",
+            "col2_value": "",
+            "col3_value": "",
+            "col4_value": "",
+            "col5_value": "",
+            "col6_value": ""
+          }
+        },
+        "parameter_kigGxt": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Package Size",
+            "group_id": "",
+            "col1_value": "430mm*420mm*535mm",
+            "col2_value": "0.4 mm (Included)<br>0.2 mm, 0.6 mm, 0.8 mm (Optional)",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "merged_column_UxmLwc": {
+          "type": "merged_column",
+          "disabled": true,
+          "settings": {
+            "merged_value": "<strong>Temperature Settings</strong>"
+          }
+        },
+        "parameter_LeYPQD": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "N.W.",
+            "group_id": "",
+            "col1_value": "12.93KG",
+            "col2_value": "300℃",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_9NMddd": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "G.W.",
+            "group_id": "",
+            "col1_value": "16.19KG",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_8yw6DB": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Printing Technology",
+            "group_id": "",
+            "col1_value": "LCD",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_XfbRf6": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Light Source",
+            "group_id": "",
+            "col1_value": "Honeycomb Matrix Light Source",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_CyzNcm": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Exposure Intensity",
+            "group_id": "",
+            "col1_value": "6500±10%μW/c㎡",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_f3knT9": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Resolution",
+            "group_id": "",
+            "col1_value": "16K(15120*6230PX)",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_BmcNMA": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Pixel Size",
+            "group_id": "",
+            "col1_value": "14*19μm",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_zk89dB": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Z-axis Accuracy",
+            "group_id": "",
+            "col1_value": "0.01mm",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_RmjNCX": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Layer Thickness",
+            "group_id": "",
+            "col1_value": "0.01~0.2mm",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_KqLk7p": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Printing Speed",
+            "group_id": "",
+            "col1_value": "Max. 170mm/h",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_nBcKJT": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Touch Screen",
+            "group_id": "",
+            "col1_value": "3.98-Inch Capacitive Touch Screen",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_jxWMMw": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Slicing Software",
+            "group_id": "",
+            "col1_value": "HALOT BOX/Chitu Box",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_4HrKYw": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Data Transmission",
+            "group_id": "",
+            "col1_value": "USB/WIFI",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_fwFxNa": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Input Voltage",
+            "group_id": "",
+            "col1_value": "100-120V~200-240V, 50-60Hz",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        },
+        "parameter_CgTHbb": {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Power",
+            "group_id": "",
+            "col1_value": "350W",
+            "col2_value": "-",
+            "col3_value": "-",
+            "col4_value": "-",
+            "col5_value": "-",
+            "col6_value": "-"
+          }
+        }
+      },
+      "block_order": [
+        "parameter_Jr9j9z",
+        "merged_row_bcLMTx",
+        "parameter_nA33nK",
+        "parameter_kigGxt",
+        "merged_column_UxmLwc",
+        "parameter_LeYPQD",
+        "parameter_9NMddd",
+        "parameter_8yw6DB",
+        "parameter_XfbRf6",
+        "parameter_CyzNcm",
+        "parameter_f3knT9",
+        "parameter_BmcNMA",
+        "parameter_zk89dB",
+        "parameter_RmjNCX",
+        "parameter_KqLk7p",
+        "parameter_nBcKJT",
+        "parameter_jxWMMw",
+        "parameter_4HrKYw",
+        "parameter_fwFxNa",
+        "parameter_CgTHbb"
+      ],
+      "settings": {
+        "title": "X1 SPEC",
+        "title_size": "h2",
+        "custom_style": "style1",
+        "tip": "提示",
+        "param_title": "Parameter Title",
+        "download_url": "https://cdn.shopify.com/s/files/1/0580/7482/4865/files/X1_Manual-English_V1.5.pdf?v=1754464907",
+        "download_text": "Download manual",
+        "show_col1": true,
+        "col1_title": "X1",
+        "show_col2": false,
+        "col2_title": "",
+        "show_col3": false,
+        "col3_title": "Column 3",
+        "show_col4": false,
+        "col4_title": "Column 4",
+        "show_col5": false,
+        "col5_title": "Column 5",
+        "show_col6": false,
+        "col6_title": "Column 6"
+      }
+    },
+    "navbar_id_B8te4K": {
+      "type": "navbar-id",
+      "settings": {
+        "nav-bar-id": "What's in Box"
+      }
+    },
+    "spacer_JRNRWF": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 70,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "product_pack_LT4tQz": {
+      "type": "product-pack",
+      "blocks": {
+        "package_item_NYjGBe": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Tray.jpg",
+            "title": "Tray",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_BWrTYf": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Filters.jpg",
+            "title": "Filters",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_iQUHKT": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Gloves.jpg",
+            "title": "Gloves",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_hHtYNJ": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Power_Cable.jpg",
+            "title": "Power Cable",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_gcYmPz": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Plastic_Scraper.jpg",
+            "title": "Plastic Scraper",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_yk39ig": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Lubricant.jpg",
+            "title": "Lubricant",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_9PQqJF": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Hex_Keys.jpg",
+            "title": "Hex Keys",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_dj8LCX": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Qualified_Certificate.jpg",
+            "title": "Qualified Certificate",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_EJdtzP": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/USB_Drive.jpg",
+            "title": "USB Drive",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_JRUC3j": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Metal_Scraper.jpg",
+            "title": "Metal Scraper",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_b7NYWR": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Spare_Screws.jpg",
+            "title": "Spare Screws",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_z9Rgij": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Respirator.jpg",
+            "title": "Respirator",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_AMLDd3": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/After-Sales_Service_Card.jpg",
+            "title": "After Sales Service Card",
+            "description": "",
+            "text_alignment": "center"
+          }
+        },
+        "package_item_FXzDF7": {
+          "type": "package_item",
+          "settings": {
+            "image": "shopify://shop_images/Quick_Start_Guide.jpg",
+            "title": "Quick Start Guide",
+            "description": "",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "package_item_NYjGBe",
+        "package_item_BWrTYf",
+        "package_item_iQUHKT",
+        "package_item_hHtYNJ",
+        "package_item_gcYmPz",
+        "package_item_yk39ig",
+        "package_item_9PQqJF",
+        "package_item_dj8LCX",
+        "package_item_EJdtzP",
+        "package_item_JRUC3j",
+        "package_item_b7NYWR",
+        "package_item_z9Rgij",
+        "package_item_AMLDd3",
+        "package_item_FXzDF7"
+      ],
+      "settings": {
+        "title": "What's in the box",
+        "title_size": "h2",
+        "columns_per_row": "5"
+      }
+    },
+    "navbar_id_tRTUhQ": {
+      "type": "navbar-id",
+      "settings": {
+        "nav-bar-id": "FAQs"
+      }
+    },
+    "1663667029efc274af": {
+      "type": "collapsible-content",
+      "blocks": {
+        "cd3d35fb-4237-4e0c-b360-523aae405e51": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How long does delivery take after shipping?",
+            "open": false,
+            "content": "<p>1. In-stock Product: 3-7 business days for delivery<br/></p><p>2. Pre-order Product: We will ship the product according to the estimated delivery time on the page, after shipment, it takes 3-7 business days for delivery.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "5586f39f-c9cc-41a5-9c79-494141a820e1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What countries do you ship to?",
+            "open": false,
+            "content": "<p>Currently USA, but we'll ship to EU and other countries in the near future. </p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "6ca4af54-3f47-4d4d-9060-0ff238ab6d1a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can I change the delivery address of my package after it has been shipped out?",
+            "open": false,
+            "content": "<p>Unfortunately, we cannot change the shipment once the product is shipped.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_zwQm9M": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How is auto-leveling achieved? Is it reliable?",
+            "open": false,
+            "content": "<p>Auto-leveling is achieved through precision mechanical alignment, ensuring the build platform remains parallel to the exposure surface at all times, eliminating manual leveling.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_E97rCN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is the quick-release build platform connection stable? Will improper installation affect leveling?",
+            "open": false,
+            "content": "<p>The quick-release build platform uses a snap-fit mechanism. Simply slide it into the slot for proper installation—it auto-locks during printing without manual intervention.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "78977bda-88c1-4c5d-a57b-395a8e01f169": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What printing methods are supported by the printer?",
+            "open": false,
+            "content": "<p>USB/Wi-Fi/Creality Cloud.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "6e96805a-0713-4c8f-98b5-f7f2996582ee": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Does the AFU system support all third-party resins? Are all different resin container thread specifications supported?",
+            "open": false,
+            "content": "<p>It supports all 1KG packaged resin bottles (any brand). However, our brand's resin bottles and accessory caps ensure optimal fit.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "1c2b155f-fa55-47b7-b3ac-f2b66737ec17": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the benefits of using intelligent zoning exposure?",
+            "open": false,
+            "content": "<p>The light source panel's LEDs can be independently controlled in zones. The LEDs are selectively lit according to the print area, reducing the UV aging of the LCD screen and lowering the overall power consumption during operation.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_DDffj4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why can the machine be smaller in size compared to others with the same effective printing volume?",
+            "open": false,
+            "content": "<p>We adapt a new type of optical module, significantly reducing the overall height of the machine.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_rJw8eH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there improvements in print speed and detail performance?",
+            "open": false,
+            "content": "<p>By adopting a dual lead screw gantry structure and combining a static build platform with dynamic light source movement, a maximum print speed of 170mm/s is achieved while optimizing print layer texture issues. Paired with the newly equipped 16K high-resolution monochrome LCD (minimum pixel size: 14×19μm), it delivers unprecedented detail.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_EXfLkp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What if models don’t adhere to the build plate?",
+            "open": false,
+            "content": "<p>If the printed model does not stick to the print plate, it may be due to low ambient temperature. It is recommended to adjust the AFU supply module heating temperature to above 30°C, increasing the bottom layer exposure time to 40–60 seconds, and try again.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_hnw63Q": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can I pay without a PayPal account?",
+            "open": false,
+            "content": "<p>Yes! Choose PayPal at checkout → On the PayPal page, click ‘Pay with Debit or Credit Card’ → Enter card details. No PayPal signup required.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "cd3d35fb-4237-4e0c-b360-523aae405e51",
+        "5586f39f-c9cc-41a5-9c79-494141a820e1",
+        "6ca4af54-3f47-4d4d-9060-0ff238ab6d1a",
+        "collapsible_tab_zwQm9M",
+        "collapsible_tab_E97rCN",
+        "78977bda-88c1-4c5d-a57b-395a8e01f169",
+        "6e96805a-0713-4c8f-98b5-f7f2996582ee",
+        "1c2b155f-fa55-47b7-b3ac-f2b66737ec17",
+        "collapsible_tab_DDffj4",
+        "collapsible_tab_rJw8eH",
+        "collapsible_tab_EXfLkp",
+        "collapsible_tab_hnw63Q"
+      ],
+      "settings": {
+        "heading": "FAQs",
+        "marker_style": "style1",
+        "description": "",
+        "color_bg": "#1a1c1d",
+        "color_heading": "#ffffff",
+        "marker_color": "#fd6262",
+        "color_text": "#ffffff",
+        "color_links": "#d2ff28",
+        "color_border": "#6c6f73",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "custom_style": "style1"
+      }
+    },
+    "navbar_id_XJHY6y": {
+      "type": "navbar-id",
+      "settings": {
+        "nav-bar-id": "Reviews"
+      }
+    },
+    "17500635498e4c6d82": {
+      "type": "apps",
+      "blocks": {
+        "trustoo_io_reviews_review_widget_tTBRpG": {
+          "type": "shopify://apps/trustoo-io-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "trustoo_io_reviews_review_widget_tTBRpG"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "description": "<p>Combine your style with these products</p>",
+        "mobile_swipe": true,
+        "product_limit": 4,
+        "columns_desktop": 4,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main-product",
+    "16623877721f33fb14",
+    "navbar_4JDmip",
+    "17500440253529de19",
+    "youtube_video_F7fKEG",
+    "video_ftYKTh",
+    "navbar_id_qfmfqY",
+    "product_pack_NXzFXY",
+    "c4204c3f-0267-4094-942b-cbef4c9c0a87",
+    "081e2acc-aa6a-4a72-9347-fb8bb370af80",
+    "d5ba2a2b-8bd0-4354-b15b-a335dd1b21ad",
+    "navbar_id_JmTNDa",
+    "product_params_nKwkwA",
+    "navbar_id_B8te4K",
+    "spacer_JRNRWF",
+    "product_pack_LT4tQz",
+    "navbar_id_tRTUhQ",
+    "1663667029efc274af",
+    "navbar_id_XJHY6y",
+    "17500635498e4c6d82",
+    "product-recommendations"
+  ]
+}

@@ -1,0 +1,168 @@
+{{- 'product-pack.css' | asset_url | stylesheet_tag -}}
+
+<div class="row">
+  <div class="product-pack-container columns">
+    {% if section.settings.title != blank %}
+      <div class="product-pack-title {{ section.settings.title_size }}">{{ section.settings.title }}</div>
+    {% endif %}
+
+    <div class="product-pack-grid columns-{{ section.settings.columns_per_row }}">
+      {% for block in section.blocks %}
+        {% if block.type == 'package_item' %}
+          <div class="product-pack-item text-{{ block.settings.text_alignment }}" {{ block.shopify_attributes }}>
+            <div class="product-pack-image-container">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 300
+                  | image_tag: class: 'product-pack-image', loading: 'lazy', alt: block.settings.title
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'product-pack-image placeholder' }}
+              {% endif %}
+            </div>
+            {% if block.settings.title != blank %}
+              <h3 class="product-pack-item-title">{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p class="product-pack-item-description">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script></script>
+
+{% schema %}
+{
+  "name": "Product Pack",
+  "class": "product-pack-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "What's in the box"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title Size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Extra Large"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h4",
+          "label": "Small"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "columns_per_row",
+      "label": "Items per row",
+      "options": [
+        {
+          "value": "2",
+          "label": "2 columns"
+        },
+        {
+          "value": "3",
+          "label": "3 columns"
+        },
+        {
+          "value": "4",
+          "label": "4 columns"
+        },
+        {
+          "value": "5",
+          "label": "5 columns"
+        },
+        {
+          "value": "6",
+          "label": "6 columns"
+        }
+      ],
+      "default": "4"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "package_item",
+      "name": "Package Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Item Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Item Name",
+          "default": "Item Name"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Item Description",
+          "info": "Optional additional information about the item"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Pack",
+      "blocks": [
+        {
+          "type": "package_item"
+        },
+        {
+          "type": "package_item"
+        },
+        {
+          "type": "package_item"
+        },
+        {
+          "type": "package_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

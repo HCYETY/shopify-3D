@@ -1,0 +1,122 @@
+<div class="hot-sale-section" id="hot-sale" style="background: {{ section.settings.bg_color }};">
+  <div class="hot-sale-header">
+    <h2 style="color: {{ section.settings.title_color }};">{{ section.settings.title }}</h2>
+    <div class="hot-sale-subtitle" style="color: {{ section.settings.subtitle_color }};">
+      {{ section.settings.subtitle }}
+    </div>
+  </div>
+  <div class="hot-sale-grid">
+    <div class="hot-sale-row">
+      {% assign p = section.blocks[0].settings %}
+      {% assign product = all_products[p.product] %}
+      <div class="hot-sale-img hot-sale-img-large">
+        <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+      </div>
+      <div class="hot-sale-card">
+        {% if p.badge != blank %}
+          <div
+            class="hot-sale-badge"
+            style="background: {{ section.settings.badge_bg_color }}; color: {{ section.settings.badge_text_color }};"
+          >
+            {{ p.badge }}
+          </div>
+        {% endif %}
+        <div class="hot-sale-title">{{ product.title }}</div>
+        <div class="hot-sale-prices">
+          <p class="hot-sale-old">{{ product.compare_at_price | money }}</p>
+          <p class="hot-sale-new">{{ product.price | money }}</p>
+        </div>
+        <button
+          class="hot-sale-btn"
+          data-variant-id="{{ product.variants.first.id }}"
+          style="background: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }};"
+        >
+          {{ p.button_text }}
+        </button>
+      </div>
+    </div>
+    <div class="hot-sale-row">
+      {% assign p = section.blocks[1].settings %}
+      {% assign product = all_products[p.product] %}
+      <div class="hot-sale-card">
+        {% if p.badge != blank %}
+          <div
+            class="hot-sale-badge"
+            style="background: {{ section.settings.badge_bg_color }}; color: {{ section.settings.badge_text_color }};"
+          >
+            {{ p.badge }}
+          </div>
+        {% endif %}
+        <div class="hot-sale-title">{{ product.title }}</div>
+        <div class="hot-sale-prices">
+          <p class="hot-sale-old">{{ product.compare_at_price | money }}</p>
+          <p class="hot-sale-new">{{ product.price | money }}</p>
+        </div>
+        <button
+          class="hot-sale-btn"
+          data-variant-id="{{ product.variants.first.id }}"
+          style="background: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }};"
+        >
+          {{ p.button_text }}
+        </button>
+      </div>
+      <div class="hot-sale-img">
+        <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+      </div>
+    </div>
+  </div>
+</div>
+{{ 'hot-sale-section.css' | asset_url | stylesheet_tag }}
+{{ 'hot-sale-section.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Hot Sale Grid",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "背景色", "default": "#FFF9EF" },
+    { "type": "text", "id": "title", "label": "主标题", "default": "HOT SALE — LIMITED-TIME DEALS!" },
+    { "type": "text", "id": "subtitle", "label": "副标题", "default": "HALOT-X1 Combo Drops to $579 — R6 Just $129!" },
+    { "type": "color", "id": "title_color", "label": "主标题颜色", "default": "#000000" },
+    { "type": "color", "id": "subtitle_color", "label": "副标题颜色", "default": "#f7a94a" },
+    { "type": "color", "id": "badge_bg_color", "label": "Hot Sale徽章背景色", "default": "#FF9945" },
+    { "type": "color", "id": "badge_text_color", "label": "Hot Sale徽章字体色", "default": "#fff" },
+    { "type": "color", "id": "button_bg_color", "label": "按钮背景色", "default": "#FF9945" },
+    { "type": "color", "id": "button_text_color", "label": "按钮字体色", "default": "#fff" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "商品卡片",
+      "settings": [
+        { "type": "product", "id": "product", "label": "选择商品" },
+        { "type": "text", "id": "badge", "label": "标签", "default": "Hot Sale" },
+        { "type": "text", "id": "button_text", "label": "按钮文案", "default": "Add to Cart" }
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Hot Sale Grid",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "product": "halot-x1-combo",
+            "badge": "Hot Sale",
+            "button_text": "Add to Cart"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "product": "halot-r6-resin-3d-printer",
+            "badge": "Hot Sale",
+            "button_text": "Add to Cart"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

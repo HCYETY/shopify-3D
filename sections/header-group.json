@@ -1,0 +1,227 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "955bb93b-7a65-4933-8023-83a64ee46bc2": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "🔥🔥 Flash Sale!   Standard Resin Colored 1Kg — Only $16.99  ->>",
+            "link": "shopify://products/standard-resin-1kg",
+            "color_bg": "#279a4b",
+            "color_text": "#ffffff"
+          }
+        },
+        "888fc484-50e5-4566-bad6-41e835d00d5f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "Installment Payment Options are Available  > >",
+            "link": "shopify://pages/payment-and-installment",
+            "color_bg": "#f79555",
+            "color_text": "#ffffff"
+          }
+        },
+        "acca6658-bd49-4cc7-be9a-c02394ef4917": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "Back to School Sale – Save up to 33%, Limited Time Only >",
+            "link": "shopify://pages/back-to-school-2025-miniature-resin-sale",
+            "color_bg": "#fd6262",
+            "color_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "955bb93b-7a65-4933-8023-83a64ee46bc2",
+        "888fc484-50e5-4566-bad6-41e835d00d5f",
+        "acca6658-bd49-4cc7-be9a-c02394ef4917"
+      ],
+      "custom_css": [],
+      "settings": {
+        "announcement_bar": true,
+        "announcement_bar_homepage_only": false,
+        "announcement_bar_layout": "carousel",
+        "direction": "left",
+        "speed": "20s",
+        "use_block_colors": true,
+        "autoplay": true,
+        "autoplay_length": 5
+      }
+    },
+    "header-secondary-menu": {
+      "type": "header-secondary-menu",
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "secondary_menu": "",
+        "show_language_switcher": false,
+        "show_currency_switcher": true,
+        "show_social_media": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "megamenu_kCgYmT": {
+          "type": "megamenu",
+          "disabled": true,
+          "settings": {
+            "position": "2",
+            "limit_columns": false,
+            "max_columns": "4",
+            "promo_1_image": "shopify://shop_images/HALOT-X1.jpg",
+            "promo_1_heading": "HALOT-X1 16K",
+            "promo_1_content": "Auto-Leveling with 16K Precision",
+            "promo_1_link": "shopify://products/halot-x1-resin-3d-printer-for-miniatures",
+            "promo_2_image": "shopify://shop_images/HALOT_MAGE_S.jpg",
+            "promo_2_heading": "HALOT-MAGE S 14K",
+            "promo_2_content": "\"Dynax+\" Mode, Ultra Fast",
+            "promo_2_link": "shopify://products/halot-mage-s-14k-resin-3d-printer",
+            "promo_3_image": "shopify://shop_images/HAOLOT_R6.jpg",
+            "promo_3_heading": "HALOT R6 2K",
+            "promo_3_content": "Award-winning Value",
+            "promo_3_link": "shopify://products/halot-r6-resin-3d-printer",
+            "promo_4_heading": "Promotion heading",
+            "promo_4_content": "",
+            "promo_4_link": ""
+          }
+        },
+        "megamenu_sidebar_8GXnMP": {
+          "type": "megamenu_sidebar",
+          "disabled": true,
+          "settings": {
+            "position": "4",
+            "content_collection_image": true,
+            "content_product_image": true
+          }
+        },
+        "custom_sidebar_TFkgCw": {
+          "type": "custom_sidebar",
+          "disabled": true,
+          "settings": {
+            "position": "2"
+          }
+        },
+        "custom_sidebar_QiwGEp": {
+          "type": "custom_sidebar",
+          "settings": {
+            "position": "2"
+          }
+        },
+        "custom_sidebar_Wjkepc": {
+          "type": "custom_sidebar",
+          "settings": {
+            "position": "3"
+          }
+        },
+        "megamenu_9mjRKh": {
+          "type": "megamenu",
+          "settings": {
+            "position": "4",
+            "limit_columns": false,
+            "max_columns": "4",
+            "promo_1_heading": "Promotion heading",
+            "promo_1_content": "",
+            "promo_1_link": "",
+            "promo_2_heading": "Promotion heading",
+            "promo_2_content": "",
+            "promo_2_link": "",
+            "promo_3_heading": "Promotion heading",
+            "promo_3_content": "",
+            "promo_3_link": "",
+            "promo_4_heading": "Promotion heading",
+            "promo_4_content": "",
+            "promo_4_link": ""
+          }
+        },
+        "megamenu_QCAhDn": {
+          "type": "megamenu",
+          "settings": {
+            "position": "5",
+            "limit_columns": false,
+            "max_columns": "4",
+            "promo_1_heading": "Promotion heading",
+            "promo_1_content": "",
+            "promo_1_link": "",
+            "promo_2_heading": "Promotion heading",
+            "promo_2_content": "",
+            "promo_2_link": "",
+            "promo_3_heading": "Promotion heading",
+            "promo_3_content": "",
+            "promo_3_link": "",
+            "promo_4_heading": "Promotion heading",
+            "promo_4_content": "",
+            "promo_4_link": ""
+          }
+        },
+        "menu_badge_QpF37i": {
+          "type": "menu_badge",
+          "settings": {
+            "badge_position": "1",
+            "text": "New",
+            "color_bg": "#f37543",
+            "color_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "megamenu_kCgYmT",
+        "megamenu_sidebar_8GXnMP",
+        "custom_sidebar_TFkgCw",
+        "custom_sidebar_QiwGEp",
+        "custom_sidebar_Wjkepc",
+        "megamenu_9mjRKh",
+        "megamenu_QCAhDn",
+        "menu_badge_QpF37i"
+      ],
+      "settings": {
+        "sticky_header": true,
+        "full_width": false,
+        "logo": "shopify://shop_images/logo_3c40ebb8-1303-4bfc-bbe4-c236fa3d621e.svg",
+        "logo_height_range": 22,
+        "logo_height_range_mobile": 23,
+        "style": "style1",
+        "header_shadow": "header--shadow-small",
+        "menu": "main-menu",
+        "cart_icon": "cart",
+        "minimized_search": true,
+        "transparent_header": false,
+        "logo_light": "shopify://shop_images/logo.svg",
+        "show_social_links": true,
+        "show_language_switcher": false,
+        "show_currency_switcher": false
+      }
+    },
+    "header-mobile-navigation": {
+      "type": "header-mobile-navigation",
+      "disabled": true,
+      "settings": {
+        "mobile_nav": "main-menu",
+        "color_links": "#d6d8d9",
+        "color_bg": "#787c80"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header-secondary-menu",
+    "header",
+    "header-mobile-navigation"
+  ]
+}

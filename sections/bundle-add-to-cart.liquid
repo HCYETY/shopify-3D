@@ -1,0 +1,146 @@
+<div class="bundle-bg-section" id="flash-deals-end" style="background: {{ section.settings.bg_color }};">
+  <div class="bundle-top-text">
+    <div class="bundle-top-title" style="color: {{ section.settings.top_title_color }};">
+      {{ section.settings.top_title }}
+    </div>
+    <div class="bundle-top-subtitle" style="color: {{ section.settings.top_subtitle_color }};">
+      {{ section.settings.top_subtitle }}
+    </div>
+    {% assign total_compare_at_price = 0 %}
+    {% assign total_price = 0 %}
+    {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      {% if product.compare_at_price and product.compare_at_price > 0 %}
+        {% assign total_compare_at_price = total_compare_at_price | plus: product.compare_at_price %}
+      {% else %}
+        {% assign total_compare_at_price = total_compare_at_price | plus: product.price %}
+      {% endif %}
+      {% assign total_price = total_price | plus: product.price %}
+    {% endfor %}
+    {% assign total_price = total_price | minus: 5000 %}
+  </div>
+  <div class="bundle-flex-box" style="background: {{ section.settings.content_bg_color }};">
+    <div
+      class="bundle-left bundle-left-desktop"
+      style="background: {{ section.settings.left_bg_color }}; color: {{ section.settings.left_text_color }};"
+    >
+      <div class="bundle-left-title" style="font-size: {{ section.settings.left_title_font_size }}px;">
+        {{ section.settings.left_title }}
+      </div>
+      <div class="bundle-left-prices">
+        {% if total_compare_at_price > total_price %}
+          <span class="bundle-old-price">{{ total_compare_at_price | money_without_currency | prepend: '$' }}</span>
+        {% endif %}
+        <span class="bundle-new-price">Total: {{ total_price | money_without_currency | prepend: '$' }}</span>
+        <button
+          class="bundle-add-btn"
+          id="bundle-cart-btn"
+          style="background: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }};"
+        >
+          {{ section.settings.button_text }}
+        </button>
+      </div>
+    </div>
+    <div class="bundle-right">
+      <div class="bundle-products-wrapper" style="flex: 1">
+        <div class="bundle-products">
+          <div
+            class="bundle-equal"
+            style="background: {{ section.settings.icon_bg_color }}; color: {{ section.settings.icon_text_color }};"
+          >
+            =
+          </div>
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.product] %}
+            <div class="bundle-product-card" data-variant-id="{{ product.variants.first.id }}">
+              {%- render 'responsive-image', image: product.featured_image, sizes: '300x300' -%}
+              <div class="bundle-product-title">{{ product.title }}</div>
+              <div class="bundle-product-description" style="color: #666666; font-size: 12px;">
+                {{ product.description | strip_html | truncate: 60 }}
+              </div>
+              <div class="bundle-product-prices">
+                {% if product.compare_at_price > product.price %}
+                  <p class="bundle-product-old">{{ product.compare_at_price | money }}</p>
+                {% endif %}
+                <p class="bundle-product-new">{{ product.price | money }}</p>
+              </div>
+            </div>
+            {% unless forloop.last %}
+              <div
+                class="bundle-plus"
+                style="background: {{ section.settings.icon_bg_color }}; color: {{ section.settings.icon_text_color }};"
+              >
+                +
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+        <div
+          class="bundle-left bundle-left-mobile"
+          style="background: {{ section.settings.left_bg_color }}; color: {{ section.settings.left_text_color }};"
+        >
+          <div class="bundle-left-title">{{ section.settings.left_title }}</div>
+          <div class="bundle-left-prices">
+            {% if total_compare_at_price > total_price %}
+              <span class="bundle-old-price">{{ total_compare_at_price | money_without_currency | prepend: '$' }}</span>
+            {% endif %}
+            <span class="bundle-new-price" style="line-height: 2;"
+              >Total: {{ total_price | money_without_currency | prepend: '$' -}}
+            </span>
+          </div>
+          <button
+            class="bundle-add-btn"
+            id="bundle-cart-btn-mobile"
+            style="background: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }};"
+          >
+            {{ section.settings.button_text }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ 'bundle-add-to-cart.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bundle-add-to-cart.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Bundle Add To Cart",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "背景色", "default": "#FFF9EF" },
+    { "type": "color", "id": "content_bg_color", "label": "内容卡片背景色", "default": "#FDF4E6" },
+    { "type": "text", "id": "top_title", "label": "顶部主标题", "default": "ALL-IN-ONE PRINTING BUNDLE DEAL!" },
+    {
+      "type": "text",
+      "id": "top_subtitle",
+      "label": "顶部副标题",
+      "default": "Get everything you need in one bundle and save more!"
+    },
+    { "type": "text", "id": "left_title", "label": "左侧主标题", "default": "ALL-IN-ONE PRINTING BUNDLE DEAL!" },
+    { "type": "number", "id": "left_title_font_size", "label": "左侧主标题字体大小（px）", "default": 32 },
+    { "type": "text", "id": "button_text", "label": "按钮文案", "default": "Add to Cart" },
+    { "type": "color", "id": "left_bg_color", "label": "左侧背景色", "default": "#ffa13a" },
+    { "type": "color", "id": "left_text_color", "label": "左侧字体色", "default": "#fff" },
+    { "type": "color", "id": "icon_bg_color", "label": "符号背景色(= + -)", "default": "#ffa13a" },
+    { "type": "color", "id": "icon_text_color", "label": "符号字体色(= + -)", "default": "#fff" },
+    { "type": "color", "id": "top_title_color", "label": "顶部主标题颜色", "default": "#000000" },
+    { "type": "color", "id": "top_subtitle_color", "label": "顶部副标题颜色", "default": "#ff9945" },
+    { "type": "color", "id": "button_bg_color", "label": "按钮背景色", "default": "#FFFFFF" },
+    { "type": "color", "id": "button_text_color", "label": "按钮字体色", "default": "#FF9945" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "商品卡片",
+      "settings": [{ "type": "product", "id": "product", "label": "选择商品" }]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Bundle Add To Cart",
+      "blocks": [{ "type": "product" }, { "type": "product" }, { "type": "product" }]
+    }
+  ]
+}
+{% endschema %}

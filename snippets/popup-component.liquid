@@ -1,0 +1,370 @@
+<style>
+    .popup-component .popup-form .popup-close-btn {
+        cursor: pointer;
+    }
+
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 9998;
+    }
+
+    .popup-component {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 9999;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .popup-component.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popup-overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media (min-width:901px) {
+      .m-image{
+        display:none;
+      }
+        .popup-component {
+            width: 807px;
+            margin: auto;
+            display: flex;
+            padding-right: 40px;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            border-radius: 16px;
+            background: #FFF;
+        }
+
+        .popup-component .popup-component-left-img {
+            height: 460px;
+            flex-shrink: 0;
+            align-self: stretch;
+            aspect-ratio: 1/1;
+            border-radius: 16px;
+        }
+
+        .popup-component .popup-component-left-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3% 0 0 3%;
+        }
+
+        .popup-component .popup-form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 0;
+            align-self: stretch;
+        }
+
+        .popup-component .popup-form .popup-title {
+            color: #1E1E1E;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .popup-component .popup-form .popup-title .popup-close-btn {
+            position: absolute;
+            top: -12px;
+            right: -52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: #f5f6f7;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .popup-component .popup-form .popup-title .popup-close-btn img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .popup-component .popup-form .popup-small-title {
+            color: #51545A;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .popup-component .popup-form .popup-search {
+            width: 100%;
+            margin: 24px 0;
+        }
+
+        .popup-component .popup-form .submit {
+            display: flex;
+            width: 100%;
+            height: 48px;
+            padding: 8px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 44px;
+            background: #3f72e5;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .popup-component .popup-form .field input {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 16px 0;
+        }
+
+        .popup-component .popup-form .popup-container--terms {
+            font-size: 12px;
+            font-weight: 400;
+            color: #a2a7af;
+        }
+
+        .popup-component .popup-form .popup-container--terms span {
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+    }
+
+    @media (max-width:900px) {
+      .pc-image{
+        display:none;
+      }
+        .popup-component {
+            width: 340px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            background: #FFF;
+        }
+
+        .popup-component .popup-component-left-img {
+            height: 157px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .popup-component .popup-component-left-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: top;
+            border-radius: 16px 16px 0 0;
+
+        }
+
+        .popup-component .popup-form .popup-title .popup-close-btn {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: -170px;
+            right: -14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #f5f6f7;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .popup-component .popup-form .popup-title .popup-close-btn img {
+            width: 15px;
+            height: 15px;
+        }
+
+        .popup-component .popup-form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            padding-top: 0px;
+        }
+
+        .popup-component .popup-form .popup-title {
+            color: #1E1E1E;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .popup-component .popup-form .popup-small-title {
+            color: #51545A;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .popup-component .popup-form .popup-search {
+            width: 100%;
+            /* margin: 16px 0; */
+        }
+
+        .popup-component .popup-form .submit {
+            width: 100%;
+            display: flex;
+            height: 44px;
+            padding: 8px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 44px;
+            background: #3f72e5;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .popup-component .popup-form .field input {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .popup-component .popup-form .popup-container--terms {
+            font-size: 12px;
+            font-weight: 400;
+            color: #a2a7af;
+        }
+
+        .popup-component .popup-form .popup-container--terms span {
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+    }
+</style>
+<div class="popup-overlay" id="newsletter-overlay"></div>
+<div class="popup-component" id="newsletter-popup">
+    <div class="popup-component-left-img">
+      <!-- pc -->
+        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/20250820-141630.jpg?v=1755670709" alt="" width="16" height="16" class="pc-image">
+      <!-- m -->
+       <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/20250820-141640.png?v=1755670710" alt="" width="16" height="16" class="m-image">
+    </div>
+    <div class="popup-form" style="padding: 0px">
+        {% form 'customer', class: 'popup-form' %}
+        {%- if form.errors -%}
+        <div class="form-notification error" id="Newsletter-error--{{ section.id }}">
+            {% render 'svg-icons' with 'thb-error' %} {{ form.errors.translated_fields['email'] | capitalize }} {{
+            form.errors.messages['email'] }}
+        </div>
+        {%- endif -%}
+        <div class="popup-title">
+            <div>Join the PioCreat NewsLetter for $5 Off</div>
+            <div class="popup-close-btn">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/close.png?v=1747709152" alt=""  width="16" height="16">
+            </div>
+        </div>
+        <div class="popup-search">
+            <input name="popup-search" type="hidden" value="newsletter" />
+            <div class="field {% if form.errors %}error{% endif %}">
+                <input placeholder="{{ 'newsletter.label' | t }}" type="email" id="NewsletterForm--{{ section.id }}"
+                    name="contact[email]" autocorrect="off" autocapitalize="off" autocomplete="email"
+                    value="{{ form.email }}"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,10})(\]?)$"
+                    title="xxx@xxx.xxx" {% if form.errors %} autofocus aria-invalid="true"
+                    aria-describedby="Newsletter-error--{{ section.id }}" {% elsif form.posted_successfully? %}
+                    aria-describedby="Newsletter-success--{{ section.id }}" {% endif %} required />
+                <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    *Enter your email here
+                </label>
+                {% if form.errors %}
+                <div class="error-message">
+                    {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="popup-container--terms"> View <span>Terms & Conditions</span> and <span>Privacy Policy</span>
+            </div>
+        </div>
+        <button class="submit" type="submit">SUBSCRIBE</button>
+        {% endform %}
+    </div>
+</div>
+
+<script type="module">
+    document.addEventListener('DOMContentLoaded', function () {
+        // 仅首页显示
+        {% if request.path != '/' %}
+            return;
+        {% endif %}
+
+        // 已订阅用户不显示（登录用户由模板判断）
+        {% if customer.accepts_marketing %}
+            return;
+        {% endif %}
+
+        const popup = document.getElementById('newsletter-popup');
+        const closeBtn = document.querySelector('.popup-close-btn');
+        const form = document.querySelector('.popup-form form');
+
+        // 如果用户已登录（customer.id 存在）
+        const isLoggedIn = {{ customer.id | default: 0 }} > 0;
+
+        // 游客已订阅
+        if (!isLoggedIn && localStorage.getItem('guestSubscribed') === 'true') {
+            return;
+        }
+
+        // 24小时内关闭过弹窗（未订阅）
+        const lastCloseTime = localStorage.getItem('newsletterCloseTime');
+        if (lastCloseTime && Date.now() - parseInt(lastCloseTime) < 86400000) {
+            return;
+        }
+
+        // 10秒后显示弹窗
+        const overlay = document.getElementById('newsletter-overlay');
+        setTimeout(() => {
+            popup?.classList.add('active');
+            overlay?.classList.add('active');
+        }, 10000);
+
+        // 关闭弹窗（未订阅）
+        const handleClose = () => {
+            localStorage.setItem('newsletterCloseTime', Date.now().toString());
+            popup?.classList.remove('active');
+            overlay?.classList.remove('active');
+        };
+
+        closeBtn?.addEventListener('click', handleClose);
+        popup?.addEventListener('click', (e) => {
+            if (e.target === popup) handleClose();
+        });
+
+        // 表单提交（订阅成功）
+        form?.addEventListener('submit', function () {
+            if (!isLoggedIn) {
+                localStorage.setItem('guestSubscribed', 'true');
+            }
+            popup?.classList.remove('active');
+            overlay?.classList.remove('active');
+        });
+    });
+</script>

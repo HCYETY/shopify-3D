@@ -1,0 +1,146 @@
+{% comment %} 引入外部CSS和JS {% endcomment %}
+<link rel="stylesheet" href="{{ 'promotion-event-signup.css' | asset_url }}">
+<script src="{{ 'promotion-event-signup.js' | asset_url }}" defer></script>
+<div
+  class="signup-bg"
+  style="background: url({% if section.settings.background_image != blank %}{{ section.settings.background_image | image_url }}{% else %}{{ 'footerBg.png' | asset_url }}{% endif %}) center/cover no-repeat;"
+  id="prime-day"
+>
+  <div class="card" style="background: {{ section.settings.bg_color | default: 'rgba(217, 110, 63, 0.5)' }};">
+    <h2 class="title">{{ section.settings.title_text }}</h2>
+    <p class="text">{{ section.settings.description_text }}</p>
+    <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="input-row" id="ContactForm">
+      <input type="hidden" name="form_type" value="customer">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="email" name="contact[email]" placeholder="Your email" required>
+      <button
+        type="submit"
+        class="singup-button"
+        style="background: {{ section.settings.submit_button_bg_color | default: '#BE380E' }};"
+      >
+        Submit
+      </button>
+      <button type="button" class="rules-btn" id="rulesBtn">Rules</button>
+    </form>
+    <div class="social-row">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link }}" target="_blank" title="{{ block.settings.title }}">
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.alt }}" width="22" height="22">
+          {% elsif block.settings.image != blank %}
+            <img src="{{ block.settings.image | asset_url }}" alt="{{ block.settings.alt }}" width="22" height="22">
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="modal-mask" id="modalMask">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" style="display:none;">&times;</button>
+      <div class="promotion-event-signup-modal">
+        <button class="promotion-event-signup-close">&times;</button>
+        {{ section.settings.rules_content }}
+      </div>
+    </div>
+  </div>
+  <div class="modal-mask" id="thankYouMask">
+    <div class="modal-content">
+      <button class="modal-close" id="thankYouClose" style="display:none;">&times;</button>
+      <div class="promotion-event-signup-modal">
+        <button class="promotion-event-signup-close">&times;</button>
+        {{ section.settings.thank_you_content }}
+      </div>
+    </div>
+  </div>
+</div>
+<div id="prime-day-end"></div>
+
+{% schema %}
+{
+  "name": "Promotion Event Signup",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景色",
+      "default": "rgba(217, 110, 63, 0.5)"
+    },
+    {
+      "type": "color",
+      "id": "submit_button_bg_color",
+      "label": "提交按钮背景色",
+      "default": "#BE380E"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "textarea",
+      "id": "title_text",
+      "label": "Title Text",
+      "default": "Join Now –<br>Enjoy Exclusive Promotion Event!"
+    },
+    {
+      "type": "textarea",
+      "id": "description_text",
+      "label": "Description Text",
+      "default": "Register now to enjoy exclusive access to expert advice, members-only promotions, and the latest updates in the world of 3D printing. Be the first to know about new products, tips, and events – all tailored just for you."
+    },
+    {
+      "type": "textarea",
+      "id": "rules_content",
+      "label": "Promotion Event Rules",
+      "default": "<p><strong>Duration:</strong><br>The event begins at 12:00 AM (PDT) on June 3, 2025, and ends at 11:59 PM (PDT) on June 30, 2025.</p><p><strong>Participation rules:</strong><br>1. To enter, simply provide your email address and click the \"Subscribe\" button.<br><br>2. 15 lucky winners will be randomly selected to receive a free e-bike. Among them, 5 winners will also receive a free 7-day trip to China. Each email address is limited to one entry.<br><br>3. Prizes include 15 brand-new e-bikes, randomly selected from the L20 3.0 Boost, EP-2 Boost, and L20 Boost models, as well as 5 spots for a 7-day trip to China. The trip includes round-trip airfare, accommodation, and meals.<br><br>4. Winners will be announced via email and on our website by July 10, 2025.<br><br>5. Winners must respond to the notification email within 2 days to claim their prize. If confirmed, the prize will be shipped according to the timeframe specified in the email. Failure to respond will result in forfeiture.<br><br>6. By providing your email address, you agree to comply with all applicable terms and conditions. You will also be subscribed to ENGWE's marketing emails and updates.<br><br>7. Feel free to share this campaign with like-minded friends and help us spread the word.<br><br>8. This offer is available only to participants in the EU and the UK. Delivery to remote areas and islands is not supported.<br><br>9. No purchase is necessary to enter or win. Making a purchase will not increase your chances of winning.<br><br>10. ENGWE reserves the right to make the final decision regarding the interpretation of these campaign rules."
+    },
+    {
+      "type": "textarea",
+      "id": "thank_you_content",
+      "label": "Thank You Message Content",
+      "default": "<p>Thank you for subscribing!<br>You've successfully entered our giveaway — check the Rules section next to this message for full details.<br>Plus, you'll now be the first to hear about our latest product updates, exclusive discounts, and special promotions. Stay tuned!</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social",
+      "name": "Social Link",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Social Icon" },
+        { "type": "text", "id": "link", "label": "Link URL", "default": "https://youtube.com" },
+        { "type": "text", "id": "alt", "label": "Image alt text", "default": "YouTube" },
+        { "type": "text", "id": "title", "label": "Link title", "default": "YouTube" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Promotion Event Signup",
+      "blocks": [
+        {
+          "type": "social",
+          "settings": { "image": "", "link": "https://youtube.com", "alt": "YouTube", "title": "YouTube" }
+        },
+        {
+          "type": "social",
+          "settings": { "image": "", "link": "https://facebook.com", "alt": "Facebook", "title": "Facebook" }
+        },
+        {
+          "type": "social",
+          "settings": { "image": "", "link": "https://instagram.com", "alt": "Instagram", "title": "Instagram" }
+        },
+        {
+          "type": "social",
+          "settings": { "image": "", "link": "https://discord.com", "alt": "Discord", "title": "Discord" }
+        },
+        {
+          "type": "social",
+          "settings": { "image": "", "link": "https://tiktok.com", "alt": "TikTok", "title": "TikTok" }
+        },
+        { "type": "social", "settings": { "image": "", "link": "https://x.com", "alt": "X", "title": "X" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

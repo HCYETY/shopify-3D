@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "ebdaaa5c-c47c-42ac-a830-30a799694755": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "column_size": "large",
+            "text_alignment": "left",
+            "title": "",
+            "text": "<p><strong>Text block</strong></p>",
+            "text_size": "medium",
+            "button_text": "",
+            "button_link": "",
+            "show_social_links": false
+          }
+        },
+        "d402e6d5-9d79-43ad-900a-cfaddc6cd9f8": {
+          "type": "menu",
+          "settings": {
+            "column_size": "small",
+            "title": "Products",
+            "menu": "footer-memu"
+          }
+        },
+        "055d0c35-3f11-4f51-9e3d-eab55edb7a9b": {
+          "type": "menu",
+          "settings": {
+            "column_size": "small",
+            "title": "Support",
+            "menu": "footer"
+          }
+        },
+        "menu_KXgNLr": {
+          "type": "menu",
+          "settings": {
+            "column_size": "small",
+            "title": "Company",
+            "menu": "company"
+          }
+        },
+        "2ab8345e-9f63-4c80-b028-f4edae3633b5": {
+          "type": "signup",
+          "settings": {
+            "column_size": "large",
+            "title": "Subscribe to our newsletter",
+            "text": "<p>Be the first to receive our latest product updates</p>"
+          }
+        },
+        "custom_liquid_ryVxEm": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_size": "small",
+            "title": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "ebdaaa5c-c47c-42ac-a830-30a799694755",
+        "d402e6d5-9d79-43ad-900a-cfaddc6cd9f8",
+        "055d0c35-3f11-4f51-9e3d-eab55edb7a9b",
+        "menu_KXgNLr",
+        "2ab8345e-9f63-4c80-b028-f4edae3633b5",
+        "custom_liquid_ryVxEm"
+      ],
+      "custom_css": [],
+      "settings": {
+        "footer_reveal_animation": true,
+        "copyright_text": "All rights reserved.",
+        "show_language_switcher": false,
+        "show_currency_switcher": false,
+        "show_payment_icons": true,
+        "facebook_url": "https://www.facebook.com/Piocreat3d/",
+        "x_url": "https://x.com/Piocreat_3D",
+        "insagram_url": "https://www.instagram.com/piocreat/",
+        "youtube_url": "https://www.youtube.com/@piocreat3d",
+        "enable_follow_on_shop": true,
+        "enable_not_supported_payment_icons": false
+      }
+    },
+    "spacer_Uw36cA": {
+      "type": "spacer",
+      "disabled": true,
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "spacer_Uw36cA"
+  ]
+}

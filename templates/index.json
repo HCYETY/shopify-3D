@@ -1,0 +1,760 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "top-spacer": {
+      "type": "spacer",
+      "disabled": true,
+      "settings": {
+        "spacer_mobile": 15,
+        "spacer_desktop": 0,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "slideshow_EaR38K": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_W8dJNm": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/20250801-180501.png",
+            "mobile_image": "shopify://shop_images/20250811-101149.jpg",
+            "slide_link": "",
+            "video_background": false,
+            "badge_text": "",
+            "subheading": "",
+            "subheading_size": "h4",
+            "mobile_subheading_size": "h5",
+            "subheading_color": "#000000",
+            "heading": "",
+            "heading_size": "h3",
+            "mobile_heading_size": "h3",
+            "heading_color": "#000000",
+            "content": "",
+            "description_size": "large",
+            "mobile_description_size": "small",
+            "price": "",
+            "price_size": "medium",
+            "mobile_price_size": "medium",
+            "description_color": "",
+            "content_position": "bottom-left",
+            "mobile_content_position": "bottom-center",
+            "text_alignment": "left",
+            "mobile_text_alignment": "center",
+            "content_size": "large",
+            "mobile_content_size": "medium",
+            "color_slidebg": "rgba(0,0,0,0)",
+            "color_slidebg_opacity": 0,
+            "color_slidebg_blur": 0,
+            "color_text": "#2c2d2e",
+            "color_badge_bg": "#1c75c5",
+            "color_badge_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(0, 0, 0, 0.4) 100%)",
+            "button_1_text": "Shop Now >",
+            "button_1_color": "accent",
+            "button_1_link": "shopify://pages/back-to-school-2025-miniature-resin-sale",
+            "use_text_button_1": false,
+            "button_2_text": "",
+            "button_2_color": "white",
+            "button_2_link": "",
+            "use_text_button_2": false
+          }
+        },
+        "slide_FQBftL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/11.jpg",
+            "mobile_image": "shopify://shop_images/20250801-101658.png",
+            "slide_link": "",
+            "video_background": false,
+            "badge_text": "",
+            "subheading": "PioCreat HALOT-X1",
+            "subheading_size": "h5",
+            "mobile_subheading_size": "h5",
+            "subheading_color": "#000000",
+            "heading": "Level-Free, Worry-Free",
+            "heading_size": "h2",
+            "mobile_heading_size": "h2",
+            "heading_color": "#000000",
+            "content": "",
+            "description_size": "large",
+            "mobile_description_size": "small",
+            "price": "599",
+            "price_size": "medium",
+            "mobile_price_size": "medium",
+            "description_color": "",
+            "content_position": "middle-left",
+            "mobile_content_position": "top-center",
+            "text_alignment": "left",
+            "mobile_text_alignment": "center",
+            "content_size": "large",
+            "mobile_content_size": "medium",
+            "color_slidebg": "rgba(0,0,0,0)",
+            "color_slidebg_opacity": 0,
+            "color_slidebg_blur": 0,
+            "color_text": "#2c2d2e",
+            "color_badge_bg": "#3f72e5",
+            "color_badge_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(0, 0, 0, 0.4) 100%)",
+            "button_1_text": "Shop Now >",
+            "button_1_color": "accent",
+            "button_1_link": "shopify://products/halot-x1-resin-3d-printer-for-miniatures",
+            "use_text_button_1": false,
+            "button_2_text": "",
+            "button_2_color": "white",
+            "button_2_link": "",
+            "use_text_button_2": false
+          }
+        },
+        "slide_r7bdtd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/7_1x_6981c8e8-e1af-467c-92c5-6b08af735517.png",
+            "slide_link": "",
+            "video_background": false,
+            "badge_text": "",
+            "subheading": "",
+            "subheading_size": "h4",
+            "mobile_subheading_size": "h4",
+            "subheading_color": "#000000",
+            "heading": "#PioCreatChallenge",
+            "heading_size": "h1",
+            "mobile_heading_size": "h1",
+            "heading_color": "#000000",
+            "content": "Show Your Print, Win Big!",
+            "description_size": "medium",
+            "mobile_description_size": "medium",
+            "price": "",
+            "price_size": "medium",
+            "mobile_price_size": "medium",
+            "description_color": "",
+            "content_position": "middle-left",
+            "mobile_content_position": "top-center",
+            "text_alignment": "left",
+            "mobile_text_alignment": "center",
+            "content_size": "large",
+            "mobile_content_size": "medium",
+            "color_slidebg": "rgba(0,0,0,0)",
+            "color_slidebg_opacity": 0,
+            "color_slidebg_blur": 0,
+            "color_text": "#2c2d2e",
+            "color_badge_bg": "#3f72e5",
+            "color_badge_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "",
+            "button_1_text": "Learn More",
+            "button_1_color": "regular",
+            "button_1_link": "shopify://pages/piocreatchallenge",
+            "use_text_button_1": false,
+            "button_2_text": "",
+            "button_2_color": "regular",
+            "button_2_link": "",
+            "use_text_button_2": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_W8dJNm",
+        "slide_FQBftL",
+        "slide_r7bdtd"
+      ],
+      "custom_css": [
+        ".slideshow__slide-inner {max-width: 1200px;}"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "desktop_height": "desktop-height-650",
+        "mobile_height": "mobile-height-450",
+        "full_width": true,
+        "autoplay": true,
+        "autoplay_length": 3,
+        "transition": "slide",
+        "mobile_transition": "slide",
+        "controls": "dots",
+        "mobile_controls": "dots",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "custom_liquid_BhrHe4": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "full_width": true,
+        "custom_liquid": "<h1 style=\"display: none;\">PioCreat Official Store</h1>"
+      }
+    },
+    "featured_collection_xntQyD": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Best Selling",
+        "marker_style": "style1",
+        "description": "",
+        "collection": "best-selling",
+        "display_type": "grid",
+        "product_limit": 5,
+        "columns_desktop": 5,
+        "show_view_all": true,
+        "mobile_swipe": false,
+        "show_progress_bar": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "8f6ed916-ced8-44f6-9ef8-b60fd327ae31": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 0,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c": {
+      "type": "image-with-text-slideshow",
+      "blocks": {
+        "8704fc3b-3e7d-4b1c-8a79-1bb391f43862": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/20250730-162716.png",
+            "subheading": "",
+            "heading": "All-in-One Ecosystem for Seamless Integration",
+            "heading_size": "h3",
+            "content": "HALOT-X1 offers a closed-loop ecosystem that unifies software, hardware, and resin. With 16K Ultra HD resolution and the AFU Auto-Feed System, enjoy smarter resin handling and smoother 3D creation.",
+            "button_text": "Shop Now",
+            "button_link": "shopify://products/halot-x1-resin-3d-printer-for-miniatures",
+            "color_bg": "#f5eadf",
+            "color_text": "#d3643f",
+            "color_button": "#d3643f"
+          }
+        },
+        "e940c5a6-8515-4c8c-86bf-1520e1cb699b": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "subheading": "subheading",
+            "heading": "Slide Heading",
+            "heading_size": "h3",
+            "content": "Add a descriptive text here for your slide.",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "color_bg": "#ffffff",
+            "color_text": "#2c2d2e",
+            "color_button": "#2c2d2e"
+          }
+        }
+      },
+      "block_order": [
+        "8704fc3b-3e7d-4b1c-8a79-1bb391f43862",
+        "e940c5a6-8515-4c8c-86bf-1520e1cb699b"
+      ],
+      "settings": {
+        "mobile_height": "mobile-height-300",
+        "desktop_height": "desktop-height-450",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_position": "text-left",
+        "autoplay": true,
+        "autoplay_length": 10,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "video_H6QrDa": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "marker_style": "style1",
+        "description": "",
+        "full_width": false,
+        "video": "https://www.youtube.com/watch?v=ACl8LugLIeU&t=12s",
+        "video_hosted": "shopify://files/videos/HALOT-X1光固化打印机无字幕配音_片尾备注物料以最终为准.mp4",
+        "video_autoplay": true,
+        "aspect_ratio": "16-9",
+        "marker_color": "#fd6262",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_dchEwH": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 0,
+        "spacer_desktop": 15,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "collection_tabs_hgd4U9": {
+      "type": "collection-tabs",
+      "blocks": {
+        "collection_PV3LTd": {
+          "type": "collection",
+          "settings": {
+            "collection": "resin-3d-printers",
+            "enable_promotion": false,
+            "title": "Promotion",
+            "text": "Advertise a promotion or a sale",
+            "link_label": "Explore",
+            "content_position": "bottom-left",
+            "text_alignment": "left",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        },
+        "collection_dJFdJH": {
+          "type": "collection",
+          "settings": {
+            "collection": "resins",
+            "enable_promotion": false,
+            "title": "Resins",
+            "text": "",
+            "link_label": "Explore",
+            "content_position": "bottom-left",
+            "text_alignment": "left",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        },
+        "collection_BaPJaj": {
+          "type": "collection",
+          "settings": {
+            "collection": "post-processing",
+            "enable_promotion": false,
+            "title": "Promotion",
+            "text": "",
+            "link_label": "Explore",
+            "content_position": "bottom-left",
+            "text_alignment": "left",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        },
+        "collection_9fdFfg": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories",
+            "enable_promotion": false,
+            "title": "Promotion",
+            "text": "Advertise a promotion or a sale",
+            "link_label": "Explore",
+            "content_position": "bottom-left",
+            "text_alignment": "left",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        }
+      },
+      "block_order": [
+        "collection_PV3LTd",
+        "collection_dJFdJH",
+        "collection_BaPJaj",
+        "collection_9fdFfg"
+      ],
+      "settings": {
+        "heading": "Shop by Category",
+        "marker_style": "style1",
+        "description": "",
+        "product_limit": 6,
+        "columns_desktop": 4,
+        "show_progress_bar": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "rich_text_3eMKa4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gr4xmA": {
+          "type": "heading",
+          "settings": {
+            "text": "Explore the Possibilities",
+            "marker_style": "style1",
+            "size": "h2",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_MM4Q7a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unleash your creativity and innovation and turn every idea into reality</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gr4xmA",
+        "text_MM4Q7a"
+      ],
+      "settings": {
+        "text_width": "medium",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "gallery_8w894C": {
+      "type": "gallery",
+      "blocks": {
+        "image_34aAcq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20250718-113953.png",
+            "image3D": "shopify://shop_images/20250718-114000.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Miniatures",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_EKWtRx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_74e45cef-e7c1-4273-9932-e3149bbee123.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Architecture",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_LeDjWw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_cc33cd57-d728-4b43-a94b-a5d8ef73dc06.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Jewelry",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_LJpxJh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_5e003e1a-5bc7-4587-9448-224f11cac58e.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Prototypes",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_BB6LCp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Education",
+            "marker_color": "#fd6262"
+          }
+        }
+      },
+      "block_order": [
+        "image_34aAcq",
+        "image_EKWtRx",
+        "image_LeDjWw",
+        "image_LJpxJh",
+        "image_BB6LCp"
+      ],
+      "settings": {
+        "columns_desktop": 3,
+        "full_width": false,
+        "mobile_swipe": false,
+        "image_ratio": "adapt",
+        "content_position": "bottom-left",
+        "column_spacing": "medium",
+        "heading_size": "h4",
+        "heading_color": "#ffffff",
+        "description_size": "medium",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 12,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "five_image_grid_kLft66": {
+      "type": "five-image-grid",
+      "disabled": true,
+      "name": "Five Image Grid",
+      "settings": {
+        "img1": "shopify://shop_images/3_2x_a1f0c92f-e785-4eaa-a34c-8ff92231ab11.png",
+        "img2": "shopify://shop_images/4_2x_88bf07b2-de1a-4c85-b71f-d7d1267f24a1.png",
+        "img3": "shopify://shop_images/5_2x_f4584126-2b33-47d7-8134-2adc863bb613.png",
+        "img4": "shopify://shop_images/6_2x_d8b6bc37-d3c7-4ad1-979a-0cead7aad5d2.png",
+        "img5": "shopify://shop_images/7_2x_3722cc00-5889-4594-befa-028d22b4cf09.png"
+      }
+    },
+    "testimonials_dFUpXU": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_geGYzB": {
+          "type": "quote",
+          "settings": {
+            "stars": "",
+            "text": "The HALOT-X1 makes high-quality resin printing incredibly simple, perfect for both beginners and experienced makers alike.",
+            "avatar": "shopify://shop_images/VogMan.jpg",
+            "author": "VogMan"
+          }
+        },
+        "quote_xD6W7U": {
+          "type": "quote",
+          "settings": {
+            "stars": "",
+            "text": "The HALOT-X1 has changed my view of resin printers. I used to consider them time consuming and messy with no real advantages over FDM. Using the HALOT-X1 has made me re-evaluate that view and take advantage of their unique properties.",
+            "avatar": "shopify://shop_images/Robert_Murray-Smith.jpg",
+            "author": "Robert Murray-Smith"
+          }
+        },
+        "quote_6bPrDY": {
+          "type": "quote",
+          "settings": {
+            "stars": "",
+            "text": "The HALOT-X1 shows a lot of great potential — with some unique innovations that I hope we see refined and expanded in future updates.",
+            "avatar": "shopify://shop_images/Ross_Graham_FauxHammer.jpg",
+            "author": "Ross Graham, FauxHammer"
+          }
+        },
+        "quote_FmEr7h": {
+          "type": "quote",
+          "settings": {
+            "stars": "",
+            "text": "No more leveling issue and break at printing release with the Halot X1! Enjoy the highest quality without constraint!",
+            "avatar": "shopify://shop_images/channels4_profile_9d418f8a-265b-4c47-9a05-7ddd065c69e6.jpg",
+            "author": "MorgensternPrinting"
+          }
+        },
+        "quote_4AqFDz": {
+          "type": "quote",
+          "settings": {
+            "stars": "",
+            "text": "The HALOT-X1 impressed me with its smart automation features like the AFU and automatic bed lock - combined with the quick-release bed, it made the whole printing process surprisingly smooth and fast.",
+            "avatar": "shopify://shop_images/channels4_profile_105ee7c1-fd51-444c-a7be-82d9a41f2cbd.jpg",
+            "author": "Testimonial author"
+          }
+        }
+      },
+      "block_order": [
+        "quote_geGYzB",
+        "quote_xD6W7U",
+        "quote_6bPrDY",
+        "quote_FmEr7h",
+        "quote_4AqFDz"
+      ],
+      "settings": {
+        "heading": "What Pros say about X1",
+        "full_width": false,
+        "text_size": "large",
+        "font_family": "heading",
+        "pagination": "dots",
+        "autoplay": true,
+        "autoplay_length": 4,
+        "color_bg": "#f5f5f5",
+        "color_text": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "featured_blog_fFxXma": {
+      "type": "featured-blog",
+      "name": "Blog posts",
+      "settings": {
+        "heading": "Latest Blogs",
+        "marker_style": "style1",
+        "description": "",
+        "blog": "latest-blogs",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "blog_cover_1": "shopify://shop_images/20250825-121259.png",
+        "blog_cover_2": "shopify://shop_images/20250821-163526.png",
+        "blog_cover_3": "shopify://shop_images/20250818-093545.png",
+        "mobile_swipe": true,
+        "image_ratio": "square",
+        "show_date": true,
+        "show_excerpt": false,
+        "show_read_more": true,
+        "show_view_all": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_dbjMgA": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "16620983071df6eb29": {
+      "type": "text-with-icons",
+      "blocks": {
+        "1662098307788ca717-0": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/5.webp",
+            "heading": "Fast Shipping",
+            "text": ""
+          }
+        },
+        "1662098307788ca717-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/4.webp",
+            "heading": "100% Secure Payment",
+            "text": ""
+          }
+        },
+        "1662098307788ca717-2": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/1.webp",
+            "heading": "14 Days Return & Refund Service",
+            "text": ""
+          }
+        },
+        "2c4a636c-cb89-4faf-82e6-13a0e7241006": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/2.webp",
+            "heading": "Lifetime Customer Support",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1662098307788ca717-0",
+        "1662098307788ca717-1",
+        "1662098307788ca717-2",
+        "2c4a636c-cb89-4faf-82e6-13a0e7241006"
+      ],
+      "settings": {
+        "title_text": "Why Shop on PioCreat Store",
+        "title_size": "h2",
+        "title_color": "#000000",
+        "title_alignment": "center",
+        "text_alignment": "center",
+        "icon_position": "top",
+        "icon_size": "large",
+        "heading_size": "medium",
+        "mobile_swipe": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "item_color_bg": "#f5f5f5",
+        "color_heading": "#252f35",
+        "color_text": "#303c43",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false,
+        "spacing": "large"
+      }
+    },
+    "spacer_eq7yrY": {
+      "type": "spacer",
+      "disabled": true,
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "email_signup_EJbDiY": {
+      "type": "email-signup",
+      "blocks": {
+        "heading_g8gcam": {
+          "type": "heading",
+          "settings": {
+            "text": "Subscribe to our emails",
+            "heading_size": "h2"
+          }
+        },
+        "text_HnH7Vp": {
+          "type": "text",
+          "settings": {
+            "text": "Sign up and subscribe to US store to receive your exclusive coupon!",
+            "description_size": "large"
+          }
+        },
+        "form_CgLFm6": {
+          "type": "form",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_g8gcam",
+        "text_HnH7Vp",
+        "form_CgLFm6"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "color_bg": "#f5f5f5",
+        "color_text": "#2c2d2e",
+        "color_heading": "#1a1c1d",
+        "color_border": "#d3d3d3",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "top-spacer",
+    "slideshow_EaR38K",
+    "custom_liquid_BhrHe4",
+    "featured_collection_xntQyD",
+    "8f6ed916-ced8-44f6-9ef8-b60fd327ae31",
+    "66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c",
+    "video_H6QrDa",
+    "spacer_dchEwH",
+    "collection_tabs_hgd4U9",
+    "rich_text_3eMKa4",
+    "gallery_8w894C",
+    "five_image_grid_kLft66",
+    "testimonials_dFUpXU",
+    "featured_blog_fFxXma",
+    "spacer_dbjMgA",
+    "16620983071df6eb29",
+    "spacer_eq7yrY",
+    "email_signup_EJbDiY"
+  ]
+}

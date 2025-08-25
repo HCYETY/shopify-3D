@@ -1,0 +1,165 @@
+<style>
+  .event-navbar {
+    background: #fff;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: box-shadow 0.2s;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 24px;
+  }
+  .event-navbar::-webkit-scrollbar {
+    display: none;
+  }
+  .event-navbar ul {
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: max-content;
+    justify-content: center;
+  }
+  .event-navbar a {
+    color: #C2C2C2;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    font-size: 18px;
+    transition: color 0.2s;
+  }
+  .event-navbar a.active {
+    color: #FF9945 !important;
+    border-bottom: 2.5px solid #FF9945;
+    text-shadow: 0 1px 0 rgba(255,153,69,0.08);
+  }
+  .event-navbar--sticky.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 110;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 0;
+    animation: navbarStickyIn 0.25s;
+  }
+  @keyframes navbarStickyIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+  /* 媒体查询：1200px-750px 字体16px */
+  @media (max-width: 1200px) and (min-width: 751px) {
+    .event-navbar a { font-size: 16px; }
+  }
+  /* 600px及以下 字体12px，ul横向滚动，隐藏滚动条 */
+  @media (max-width: 450px) {
+    .event-navbar {
+      justify-content: flex-start;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .event-navbar::-webkit-scrollbar {
+      display: none;
+    }
+    .event-navbar ul {
+      gap: 20px;
+      min-width: max-content;
+      justify-content: flex-start;
+    }
+    .event-navbar a { font-size: 12px; }
+  }
+</style>
+<nav class="event-navbar event-navbar--sticky">
+  <ul>
+    <li><a href="#flash-deals">Flash Deals</a></li>
+    <li><a href="#hot-sale">Hot Sale</a></li>
+    <li><a href="#resin-bestsellers">Resin Bestsellers</a></li>
+    <li><a href="#spend-more">Spend More</a></li>
+    <li><a href="#prime-day">Piocreat3d Prime day</a></li>
+  </ul>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 平滑滚动到锚点
+  document.querySelectorAll('.event-navbar a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var targetId = a.getAttribute('href').replace('#', '');
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // 区间高亮逻辑（需在页面中为每个区间加起止锚点）
+  // 例如：
+  // <div id="flash-deals"></div>
+  // {% section 'flash-deals-banner' %}
+  // {% section 'five-image-grid' %}
+  // {% section 'bundle-add-to-cart' %}
+  // <div id="flash-deals-end"></div>
+  // 其他导航项同理
+  var sectionRanges = [
+    { id: 'flash-deals', endId: 'flash-deals-end' },
+    { id: 'hot-sale', endId: 'hot-sale-end' },
+    { id: 'resin-bestsellers', endId: 'resin-bestsellers-end' },
+    { id: 'spend-more', endId: 'spend-more-end' },
+    { id: 'prime-day', endId: 'prime-day-end' }
+  ];
+
+  function getCurrentSection() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    for (var i = 0; i < sectionRanges.length; i++) {
+      var startEl = document.getElementById(sectionRanges[i].id);
+      var endEl = document.getElementById(sectionRanges[i].endId);
+      if (startEl && endEl) {
+        var start = startEl.getBoundingClientRect().top + scrollY;
+        var end = endEl.getBoundingClientRect().top + scrollY;
+        if (scrollY >= start && scrollY < end) {
+          return sectionRanges[i].id;
+        }
+      }
+    }
+    return '';
+  }
+
+  function scrollHandler() {
+    var current = getCurrentSection();
+    var links = document.querySelectorAll('.event-navbar a');
+    links.forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  document.addEventListener('scroll', scrollHandler);
+  scrollHandler();
+
+  // 吸顶效果（仿 header）
+  var navbar = document.querySelector('.event-navbar--sticky');
+  var navbarOffset = navbar.offsetTop;
+  function stickyNavbarHandler() {
+    if (window.scrollY > navbarOffset) {
+      navbar.classList.add('is-sticky');
+    } else {
+      navbar.classList.remove('is-sticky');
+    }
+  }
+  window.addEventListener('scroll', stickyNavbarHandler, { passive: true });
+  stickyNavbarHandler();
+});
+</script>
+
+{% schema %}
+{
+  "name": "Promotion Event Navbar",
+  "settings": [],
+  "presets": [
+    { "name": "Promotion Event Navbar" }
+  ]
+}
+{% endschema %} 

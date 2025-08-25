@@ -1,0 +1,203 @@
+/* :root {
+  --navbar-height: auto;
+  --navigation-menu-dynamic-header-height: 80px;
+} */
+
+.section-nav-bar {
+  position: sticky;
+  /* background-color: var(--bg-body); */
+  top: calc(var(--header-offset, 30px) + var(--header-height, 80px));
+  z-index: 30;
+  box-sizing: border-box;
+  /* border: 1px solid transparent; */
+  transition: all 0.3s ease;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  /* backdrop-filter: blur(10px); */
+}
+
+.section-nav-bar .nav-bar {
+  position: relative;
+  /* border-radius: 8px; */
+  overflow: hidden;
+}
+
+.section-nav-bar .nav-bar-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-height: 40px;
+  padding: 0 20px;
+  /* 强制隐藏滚动条 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.section-nav-bar .nav-bar-container::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.section-nav-bar .nav-bar .nav-bar-item {
+  color: #b2b2b2;
+  padding: 12px 0;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  position: relative;
+  user-select: none;
+  z-index: 2;
+}
+
+.section-nav-bar .nav-bar .nav-bar-item-text {
+  position: relative;
+  z-index: 3;
+  transition: color 0.3s ease;
+}
+
+.section-nav-bar .nav-bar .nav-bar-item:hover {
+  /* background-color: rgba(0, 0, 0, 0.05); */
+  /* transform: translateY(-1px); */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+.section-nav-bar .nav-bar .nav-bar-item.active {
+  font-weight: 600;
+  /* background-color: rgba(0, 0, 0, 0.08); */
+  transform: translateY(-1px);
+}
+
+/* 滑动指示线 */
+.section-nav-bar .nav-bar-indicator-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  will-change: left, width, background-color;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .section-nav-bar {
+    /* top: 68px; */
+    top: calc(var(--header-offset, 30px) + var(--header-height, 80px));
+    padding: 0 0;
+  }
+
+  .section-nav-bar .nav-bar-container {
+    gap: 20px;
+    padding: 0 16px;
+    justify-content: flex-start;
+  }
+
+  .section-nav-bar .nav-bar .nav-bar-item {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-nav-bar .nav-bar-container {
+    gap: 28px;
+    padding: 0 12px;
+  }
+
+  .section-nav-bar .nav-bar .nav-bar-item {
+    padding: 8px 0;
+    font-size: 13px;
+  }
+}
+
+/* 带背景图片时的样式调整 */
+.section-nav-bar .nav-bar[style*="background-image"] {
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section-nav-bar .nav-bar[style*="background-image"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.section-nav-bar .nav-bar[style*="background-image"] .nav-bar-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-nav-bar .nav-bar[style*="background-image"] .nav-bar-item {
+  color: white;
+}
+
+.section-nav-bar .nav-bar[style*="background-image"] .nav-bar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-nav-bar .nav-bar[style*="background-image"] .nav-bar-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-nav-bar .nav-bar[style*="background-image"] .nav-bar-indicator-line {
+  background-color: white;
+}
+
+/* 动画效果 */
+.section-nav-bar .nav-bar {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 平滑滚动效果 */
+.section-nav-bar .nav-bar-container {
+  scroll-behavior: smooth;
+}
+
+/* 改进的聚焦状态 */
+.section-nav-bar .nav-bar .nav-bar-item:focus {
+  outline: 2px solid rgba(0, 123, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* 悬停时的微动画 */
+.section-nav-bar .nav-bar .nav-bar-item:hover .nav-bar-item-text {
+  transform: scale(1.02);
+}
+
+/* 加载状态 */
+.section-nav-bar .nav-bar-container.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}

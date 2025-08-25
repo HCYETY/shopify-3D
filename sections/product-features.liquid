@@ -1,0 +1,145 @@
+{{- 'product-features.css' | asset_url | stylesheet_tag -}}
+
+<div class="row">
+  <div class="product-features-container" style="--margin-bottom-desktop: {{ section.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ section.settings.margin_bottom_mobile }}px;">
+    {% render 'section-header', section_heading: section.settings.title %}
+
+    <div class="product-features-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'feature_item' %}
+          <div class="product-features-item" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                {%- render 'responsive-image', 
+                image: block.settings.image,
+                sizes: '375x, 500x, 768x',
+                class: 'product-features-image',
+                priority: true
+                -%}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'product-features-image placeholder' }}
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <div class="product-features-overlay-content">
+                  <p class="product-features-item-description">{{- block.settings.description -}}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="product-features-item-title">
+                  <span class="text">{{- block.settings.title -}}</span>
+                  <span class="icon-arrow">{%- render 'svg-icons' with 'thb-collapsible-arrow' -%}</span>
+                  <span class="icon-close">{%- render 'svg-icons' with 'close' -%}</span>
+                </h3>
+              {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "产品特性描述",
+  "class": "product-features-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "区块标题",
+      "default": "产品特性"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 30,
+      "label": "桌面端下边距 (px)"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "label": "移动端下边距 (px)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_item",
+      "name": "特性项",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "特性图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "特性标题"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "特性描述",
+          "info": "可选的特性详细说明"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "产品特性描述",
+      "blocks": [
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "feature_item",
+            "description": "feature_item_description"
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "feature_item",
+            "description": "feature_item_description"
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "feature_item",
+            "description": "feature_item_description"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // 使用事件委托优化事件监听
+  const featuresGrid = document.querySelector('.product-features-grid');
+  if (featuresGrid) {
+    featuresGrid.addEventListener('click', function(event) {
+      const title = event.target.closest('.product-features-item-title');
+      if (title) {
+        // 切换标题的active状态
+        title.classList.toggle('active');
+        const overlayContent = title.previousElementSibling;
+        // 如果覆盖内容存在
+        if (overlayContent && overlayContent.classList.contains('product-features-overlay-content')) {
+          // 切换覆盖内容的active状态
+          overlayContent.classList.toggle('active');
+        }
+      }
+    });
+  }
+});
+</script>

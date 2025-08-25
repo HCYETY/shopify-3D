@@ -1,0 +1,132 @@
+.five-image-grid-wrapper {
+  width: 100%;
+  height: 100%;
+  background: #FFF9EF;
+  padding: 0 24px;
+}
+
+.five-image-grid {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.fig-row {
+  display: flex;
+  gap: 16px;
+}
+
+.fig-row-top {
+  width: 100%;
+}
+
+.fig-item-large1 {
+  flex: 0 0 709px;
+  max-width: 709px;
+  aspect-ratio: 714/400;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+}
+
+.fig-item-large2 {
+  flex: 0 0 475px;
+  max-width: 475px;
+  aspect-ratio: 475/400;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+}
+
+.fig-row-bottom .fig-item-small {
+  flex: 1 1 0;
+  aspect-ratio: 1.2/1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+
+.fig-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.fig-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  padding: 18px 20px 12px 20px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.1) 100%);
+  text-align: left;
+}
+
+.fig-caption h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #FFA13A;
+}
+
+.fig-caption p {
+  margin: 0;
+  font-size: 1em;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .five-image-grid {
+    max-width: 100%;
+    padding: 8px 0;
+  }
+
+  .fig-row {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .fig-row-top,
+  .fig-row-bottom {
+    flex-direction: row;
+  }
+
+  .fig-item-large1 {
+    flex: 0 0 58.2%;
+    max-width: 59.9%;
+  }
+
+  .fig-item-large2 {
+    flex: 0 0 40.1%;
+    max-width: 40.1%;
+  }
+
+  .fig-row-bottom .fig-item-small {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+
+  .fig-item img {
+    width: 100%;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 500px) {
+  .five-image-grid-wrapper {
+    padding: 0 12px;
+  }
+
+  .fig-row {
+    flex-direction: row;
+    gap: 4px;
+  }
+}

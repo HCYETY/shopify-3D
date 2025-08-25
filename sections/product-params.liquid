@@ -1,0 +1,530 @@
+{{- 'product-params.css' | asset_url | stylesheet_tag -}}
+
+<div class="row">
+  <div class="product-params-container columns {% if section.settings.custom_style == 'style2' %} custom_style2 {% endif %}">
+    {% if section.settings.title != blank %}
+      <div class="product-params-title {{ section.settings.title_size }}">{{ section.settings.title }}</div>
+    {% endif %}
+
+    <div class="product-params">
+      <div class="product-params-table-wrapper">
+        <table class="product-params-table">
+          <thead>
+            <tr>
+              <th class="param-header-name">{{ section.settings.param_title }}</th>
+              {% for i in (1..6) %}
+                {% assign column_enabled = 'show_col' | append: i %}
+                {% assign column_title = 'col' | append: i | append: '_title' %}
+                {% if section.settings[column_enabled] %}
+                  <th class="param-header-value">{{ section.settings[column_title] }}</th>
+                {% endif %}
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% assign current_group = '' %}
+            {% assign group_rows = 0 %}
+            {% assign in_group = false %}
+
+            {% for block in section.blocks %}
+              {% if block.type == 'parameter' %}
+                {% assign block_group = block.settings.group_id %}
+
+                {% if block_group != blank and block_group == current_group %}
+                  {% if group_rows == 1 %}
+                    <tr class="group-first-row">
+                      <td rowspan="{{ group_size }}" class="group-cell">{{ group_name }}</td>
+                      {% for i in (1..6) %}
+                        {% assign column_enabled = 'show_col' | append: i %}
+                        {% assign column_value = 'col' | append: i | append: '_value' %}
+                        {% assign column_title = 'col' | append: i | append: '_title' %}
+                        {% if section.settings[column_enabled] %}
+                          <td data-label="{{ section.settings[column_title] }}">
+                            {{ previous_block.settings[column_value] }}
+                          </td>
+                        {% endif %}
+                      {% endfor %}
+                    </tr>
+                  {% endif %}
+                  <tr class="group-row">
+                    {% for i in (1..6) %}
+                      {% assign column_enabled = 'show_col' | append: i %}
+                      {% assign column_value = 'col' | append: i | append: '_value' %}
+                      {% assign column_title = 'col' | append: i | append: '_title' %}
+                      {% if section.settings[column_enabled] %}
+                        <td data-label="{{ section.settings[column_title] }}">{{ block.settings[column_value] }}</td>
+                      {% endif %}
+                    {% endfor %}
+                  </tr>
+                  {% assign group_rows = group_rows | plus: 1 %}
+                {% else %}
+                  {% if block_group != blank and block_group != current_group %}
+                    {% assign current_group = block_group %}
+                    {% assign group_name = block.settings.param_name %}
+                    {% assign group_rows = 1 %}
+                    {% assign group_size = 1 %}
+                    {% assign previous_block = block %}
+
+                    {% for check_block in section.blocks %}
+                      {% if check_block.type == 'parameter' and check_block.settings.group_id == current_group %}
+                        {% assign group_size = group_size | plus: 1 %}
+                      {% endif %}
+                    {% endfor %}
+                    {% assign group_size = group_size | minus: 1 %}
+                  {% else %}
+                    <tr class="param-row">
+                      <td class="param-name">{{ block.settings.param_name }}</td>
+                      {% for i in (1..6) %}
+                        {% assign column_enabled = 'show_col' | append: i %}
+                        {% assign column_value = 'col' | append: i | append: '_value' %}
+                        {% assign column_title = 'col' | append: i | append: '_title' %}
+                        {% if section.settings[column_enabled] %}
+                          <td class="param-value" data-label="{{ section.settings[column_title] }}">
+                            {{ block.settings[column_value] }}
+                          </td>
+                        {% endif %}
+                      {% endfor %}
+                    </tr>
+                  {% endif %}
+                {% endif %}
+              {% elsif block.type == 'merged_row' %}
+                <tr class="merged-row">
+                  <td class="param-name">{{ block.settings.param_name }}</td>
+                  {% assign colspan = 0 %}
+                  {% for i in (1..6) %}
+                    {% assign column_enabled = 'show_col' | append: i %}
+                    {% if section.settings[column_enabled] %}
+                      {% assign colspan = colspan | plus: 1 %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if colspan > 0 %}
+                    <td colspan="{{ colspan }}" class="merged-cell">{{ block.settings.merged_value }}</td>
+                  {% endif %}
+                </tr>
+              {% elsif block.type == 'merged_column' %}
+                <tr class="header-row">
+                  {% assign colspan = 1 %}
+                  {% for i in (1..6) %}
+                    {% assign column_enabled = 'show_col' | append: i %}
+                    {% if section.settings[column_enabled] %}
+                      {% assign colspan = colspan | plus: 1 %}
+                    {% endif %}
+                  {% endfor %}
+                  <td colspan="{{ colspan }}" class="merged-cell full-width">{{ block.settings.merged_value }}</td>
+                </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+        {% if section.settings.tip != blank %}
+          <div class="product-params-tip">{{ section.settings.tip }}</div>
+        {% endif %}
+      </div>
+
+      {% if section.settings.download_url != blank %}
+        <div class="download-button-container">
+          <a href="{{ section.settings.download_url }}" class="download-button" target="_blank" download>
+            <span class="download-icon">{% render 'icon-download' %}</span>
+            {{ section.settings.download_text | default: 'Download AI TDS' }}
+          </a>
+        </div>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+        {% assign button_blocks = section.blocks | where: "type", "button" %}
+        {% if button_blocks.size > 0 %}
+          <div class="buttons-flex">
+            {% for block in button_blocks %}
+              <a href="{{ block.settings.button_link }}" class="custom-button style-{{ block.settings.button_style }}">
+                {{ block.settings.button_text }}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // No need to add data-label - now added directly in the template
+
+    // Check if on mobile and add mobile class to container if width is less than 768px
+    {% comment %} function checkMobile() {
+      const paramContainer = document.querySelector('.product-params');
+      if (paramContainer) {
+        if (window.innerWidth < 768) {
+          paramContainer.classList.add('mobile-view');
+        } else {
+          paramContainer.classList.remove('mobile-view');
+        }
+      }
+    } {% endcomment %}
+
+    // Run on load and on resize
+    {% comment %} checkMobile(); {% endcomment %}
+    {% comment %} window.addEventListener('resize', checkMobile); {% endcomment %}
+  });
+</script>
+
+{% comment %} <script src="{{ 'navbar.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+
+{% schema %}
+{
+  "name": "Product Params",
+  "class": "product-params-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Product Parameters"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title Size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Extra Large"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h4",
+          "label": "Small"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "select",
+      "id": "custom_style",
+      "options": [
+        {
+          "value": "style1",
+          "label": "style1"
+        },
+        {
+          "value": "style2",
+          "label": "style2"
+        }
+      ],
+      "default": "style1",
+      "label": "样式"
+    },
+    {
+      "type": "text",
+      "id": "tip",
+      "label": "提示",
+      "default": "提示"
+    },
+    {
+      "type": "text",
+      "id": "param_title",
+      "label": "Parameter Title",
+      "default": "Parameter Title"
+    },
+    {
+      "type": "header",
+      "content": "Download Button"
+    },
+    {
+      "type": "url",
+      "id": "download_url",
+      "label": "Download File URL"
+    },
+    {
+      "type": "text",
+      "id": "download_text",
+      "label": "Download Button Text",
+      "default": "Download AI TDS"
+    },
+    {
+      "type": "header",
+      "content": "Column 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_col1",
+      "label": "Show Column 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "col1_title",
+      "label": "Column 1 Title",
+      "default": "P1P"
+    },
+    {
+      "type": "header",
+      "content": "Column 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_col2",
+      "label": "Show Column 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "col2_title",
+      "label": "Column 2 Title",
+      "default": "P1S"
+    },
+    {
+      "type": "header",
+      "content": "Column 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_col3",
+      "label": "Show Column 3",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "col3_title",
+      "label": "Column 3 Title",
+      "default": "Column 3"
+    },
+    {
+      "type": "header",
+      "content": "Column 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_col4",
+      "label": "Show Column 4",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "col4_title",
+      "label": "Column 4 Title",
+      "default": "Column 4"
+    },
+    {
+      "type": "header",
+      "content": "Column 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_col5",
+      "label": "Show Column 5",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "col5_title",
+      "label": "Column 5 Title",
+      "default": "Column 5"
+    },
+    {
+      "type": "header",
+      "content": "Column 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_col6",
+      "label": "Show Column 6",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "col6_title",
+      "label": "Column 6 Title",
+      "default": "Column 6"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "parameter",
+      "name": "Parameter Row",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "text",
+          "id": "param_name",
+          "label": "Parameter Name",
+          "default": "Parameter"
+        },
+        {
+          "type": "text",
+          "id": "group_id",
+          "label": "Group ID (for merging rows)",
+          "info": "Add the same Group ID to parameters that should be grouped together. First parameter becomes the group name."
+        },
+        {
+          "type": "html",
+          "id": "col1_value",
+          "label": "Column 1 Value",
+          "default": "-"
+        },
+        {
+          "type": "html",
+          "id": "col2_value",
+          "label": "Column 2 Value",
+          "default": "-"
+        },
+        {
+          "type": "html",
+          "id": "col3_value",
+          "label": "Column 3 Value",
+          "default": "-"
+        },
+        {
+          "type": "html",
+          "id": "col4_value",
+          "label": "Column 4 Value",
+          "default": "-"
+        },
+        {
+          "type": "html",
+          "id": "col5_value",
+          "label": "Column 5 Value",
+          "default": "-"
+        },
+        {
+          "type": "html",
+          "id": "col6_value",
+          "label": "Column 6 Value",
+          "default": "-"
+        }
+      ]
+    },
+    {
+      "type": "merged_row",
+      "name": "Merged Row",
+      "limit": 20,
+      "settings": [
+        {
+          "type": "text",
+          "id": "param_name",
+          "label": "Parameter Name",
+          "default": "Parameter"
+        },
+        {
+          "type": "html",
+          "id": "merged_value",
+          "label": "Merged Cell Value",
+          "default": "Spans all columns"
+        }
+      ]
+    },
+    {
+      "type": "merged_column",
+      "name": "Full Width Row",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "html",
+          "id": "merged_value",
+          "label": "Full Width Value",
+          "default": "Spans entire width"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          },
+          {
+            "type": "select",
+            "id": "button_style",
+            "label": "Button Style",
+            "options": [
+              {
+                "value": "style1",
+                "label": "White text on Black background"
+              },
+              {
+                "value": "style2",
+                "label": "Black text on White background"
+              }
+            ],
+            "default": "style1"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Product Params",
+      "category": "Product Information",
+      "blocks": [
+        {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Build Volume(WxDxH)",
+            "col1_value": "-",
+            "col2_value": "256 x 256 x 256 mm³*"
+          }
+        },
+        {
+          "type": "merged_row",
+          "settings": {
+            "param_name": "Shell",
+            "merged_value": "<strong>Material</strong>"
+          }
+        },
+        {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Nozzle Specifications",
+            "group_id": "nozzle_group",
+            "col1_value": "Type",
+            "col2_value": "Stainless Steel"
+          }
+        },
+        {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Diameter",
+            "group_id": "nozzle_group",
+            "col1_value": "-",
+            "col2_value": "0.4 mm (Included)<br>0.2 mm, 0.6 mm, 0.8 mm (Optional)"
+          }
+        },
+        {
+          "type": "merged_column",
+          "settings": {
+            "merged_value": "<strong>Temperature Settings</strong>"
+          }
+        },
+        {
+          "type": "parameter",
+          "settings": {
+            "param_name": "Max Hot End Temperature",
+            "col1_value": "-",
+            "col2_value": "300℃"
+          }
+        }
+      ],
+      "settings": {
+        "download_text": "Download AI TDS"
+      }
+    }
+  ]
+}
+{% endschema %}

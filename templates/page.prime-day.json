@@ -1,0 +1,691 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "image_with_text_overlay_Gb3Lm7": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/20250715-104558.png",
+        "mobile_image": "shopify://shop_images/20250715-104547.png",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-550",
+        "mobile_height": "mobile-height-400",
+        "full_width": true,
+        "content_width": "medium",
+        "content_position": "bottom-center",
+        "text_alignment": "center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "navbar_c8WJAz": {
+      "type": "navbar",
+      "blocks": {
+        "text_49BKU8": {
+          "type": "text",
+          "settings": {
+            "title": "Flash Deals",
+            "title_id": "1"
+          }
+        },
+        "text_8JaBBk": {
+          "type": "text",
+          "settings": {
+            "title": "Bundle Deal",
+            "title_id": "6"
+          }
+        },
+        "text_CdT9VX": {
+          "type": "text",
+          "settings": {
+            "title": "Hot Sale",
+            "title_id": "2"
+          }
+        },
+        "text_UTbkUB": {
+          "type": "text",
+          "settings": {
+            "title": "Resin Bestsellers",
+            "title_id": "3"
+          }
+        },
+        "text_d4z8gE": {
+          "type": "text",
+          "settings": {
+            "title": "$10 OFF EVERY $50",
+            "title_id": "4"
+          }
+        },
+        "text_HNKn7d": {
+          "type": "text",
+          "settings": {
+            "title": "Sign Up",
+            "title_id": "5"
+          }
+        }
+      },
+      "block_order": [
+        "text_49BKU8",
+        "text_8JaBBk",
+        "text_CdT9VX",
+        "text_UTbkUB",
+        "text_d4z8gE",
+        "text_HNKn7d"
+      ],
+      "name": "NavBar",
+      "settings": {}
+    },
+    "navbar_id_AFKGfA": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "1"
+      }
+    },
+    "flash_deals_banner_kJdYBz": {
+      "type": "flash-deals-banner",
+      "blocks": {
+        "stage_QmK6Nd": {
+          "type": "stage",
+          "settings": {
+            "stage_name": "Preheat Phase",
+            "stage_date": "July 11"
+          }
+        },
+        "stage_hghTmx": {
+          "type": "stage",
+          "settings": {
+            "stage_name": "Official Launch",
+            "stage_date": "July 14"
+          }
+        },
+        "stage_eYYjTL": {
+          "type": "stage",
+          "settings": {
+            "stage_name": "Countdown Begins",
+            "stage_date": "July 18"
+          }
+        },
+        "stage_UykW6f": {
+          "type": "stage",
+          "settings": {
+            "stage_name": "Event Ends",
+            "stage_date": "July 20"
+          }
+        }
+      },
+      "block_order": [
+        "stage_QmK6Nd",
+        "stage_hghTmx",
+        "stage_eYYjTL",
+        "stage_UykW6f"
+      ],
+      "name": "Flash Deals Banner",
+      "settings": {
+        "main_title": "FLASH DEALS",
+        "progress_color_start": "#fd6262",
+        "progress_color_end": "#f7a94a",
+        "timer_bg_color": "#ffe4bd",
+        "timer_label_color": "#f67d19",
+        "timer_time_bg_color": "#f67d19",
+        "timer_time_color": "#ffe4bd",
+        "auto_slide_hours": 6,
+        "ends_in_label": "Ends in",
+        "countdown_start_time": "2025-07-11 00:00:00",
+        "countdown_end_time": "2025-07-20 23:59:59",
+        "title_color": "#ff9945"
+      }
+    },
+    "five_image_grid_4p9P3n": {
+      "type": "five-image-grid",
+      "name": "Five Image Grid",
+      "settings": {
+        "img1": "shopify://shop_images/h-X1_1.png",
+        "img2": "shopify://shop_images/h-X1_2.png",
+        "img3": "shopify://shop_images/h-X1_3.png",
+        "img4": "shopify://shop_images/h-X1_4.png",
+        "img5": "shopify://shop_images/h-X1_5.png"
+      }
+    },
+    "navbar_id_tEGLUd": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "6"
+      }
+    },
+    "bundle_add_to_cart_FHk4iA": {
+      "type": "bundle-add-to-cart",
+      "blocks": {
+        "product_DLmeFr": {
+          "type": "product",
+          "settings": {
+            "product": "halot-x1-combo-resin-printer-for-miniatures"
+          }
+        },
+        "product_gYXWRd": {
+          "type": "product",
+          "settings": {
+            "product": "uw03-washing-curing-machine-bts"
+          }
+        },
+        "product_eFYAhr": {
+          "type": "product",
+          "settings": {
+            "product": "standard-resin-colored-multi-packs-sale"
+          }
+        }
+      },
+      "block_order": [
+        "product_DLmeFr",
+        "product_gYXWRd",
+        "product_eFYAhr"
+      ],
+      "name": "Bundle Add To Cart",
+      "settings": {
+        "top_title": "🔥 ALL-IN-ONE PRINTING BUNDLE DEAL!",
+        "top_subtitle": "💸Get everything you need in one bundle and save more!",
+        "left_title": "Click \"Add to Cart\" below — $50 will be automatically deducted from the total.",
+        "left_title_font_size": 29,
+        "button_text": "Add to Cart",
+        "left_bg_color": "#ffa13a",
+        "left_text_color": "#ffffff",
+        "icon_bg_color": "#ffa13a",
+        "icon_text_color": "#ffffff",
+        "top_title_color": "#000000",
+        "top_subtitle_color": "#828484",
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#ff9945"
+      }
+    },
+    "navbar_id_FcAwPY": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "2"
+      }
+    },
+    "hot_sale_grid_7LjgUp": {
+      "type": "hot-sale-grid",
+      "blocks": {
+        "product_YrHf6G": {
+          "type": "product",
+          "settings": {
+            "product": "halot-x1-combo-resin-printer-for-miniatures-1",
+            "badge": "Hot Sale",
+            "button_text": "Buy Now"
+          }
+        },
+        "product_aCaLwx": {
+          "type": "product",
+          "settings": {
+            "product": "halot-r6-resin-3d-printer-1",
+            "badge": "Hot Sale",
+            "button_text": "Buy Now"
+          }
+        }
+      },
+      "block_order": [
+        "product_YrHf6G",
+        "product_aCaLwx"
+      ],
+      "name": "Hot Sale Grid",
+      "settings": {
+        "title": "🔥 HOT SALE — LIMITED-TIME DEALS!",
+        "subtitle": "💸 HALOT-X1 Combo Drops to $579 ； R6 Just $129!",
+        "title_color": "#000000",
+        "subtitle_color": "#828484",
+        "badge_bg_color": "#ff9945",
+        "badge_text_color": "#ffffff",
+        "button_bg_color": "#ff9945",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "image_with_text_Pb7aMd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rD4qTG": {
+          "type": "heading",
+          "settings": {
+            "text": "HALOT R6 Resin 3D Printer",
+            "marker_style": "style1",
+            "heading_size": "h3",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_NXnpAb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>$129.00</strong></p>"
+          }
+        },
+        "button_KVY6cW": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop Now",
+            "button_link": "shopify://products/halot-r6-resin-3d-printer"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rD4qTG",
+        "text_NXnpAb",
+        "button_KVY6cW"
+      ],
+      "disabled": true,
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/R6.png",
+        "use_video": false,
+        "video": "",
+        "video_autoplay": true,
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "full_width": true,
+        "layout": "image_first",
+        "content_position": "text-left",
+        "column_spacing": "medium",
+        "color_bg": "#ffffff",
+        "color_text": "#2c2d2e",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "carousel_images_xgqpiL": {
+      "type": "carousel-images",
+      "blocks": {
+        "image_Jt9cWB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0671.png"
+          }
+        },
+        "image_GtT6pY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_2x_85ea5db0-2eb0-4f39-90b1-a3eb44b00b07.png"
+          }
+        },
+        "image_bqLgy6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7_2x_c01f60b7-5a0c-4053-96d0-7fe466251b9a.png"
+          }
+        },
+        "image_mVgKkw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0672.png"
+          }
+        },
+        "image_W7iwyq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0675.png"
+          }
+        },
+        "image_XbkDXk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0673.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_Jt9cWB",
+        "image_GtT6pY",
+        "image_bqLgy6",
+        "image_mVgKkw",
+        "image_W7iwyq",
+        "image_XbkDXk"
+      ],
+      "name": "Carousel images",
+      "settings": {
+        "image_ratio": "adapt",
+        "column_spacing": "small",
+        "image_alignment": "top",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "navbar_id_tp6KWT": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "3"
+      }
+    },
+    "bestseller_slider_JHezYm": {
+      "type": "bestseller-slider",
+      "blocks": {
+        "product_JmLTfa": {
+          "type": "product",
+          "settings": {
+            "product": "16k-water-washable-resin-10kg-gray"
+          }
+        },
+        "product_gGfxnt": {
+          "type": "product",
+          "settings": {
+            "product": "standard-resin-10kg"
+          }
+        },
+        "product_tQE4ry": {
+          "type": "product",
+          "settings": {
+            "product": "water-washable-resin-10kg"
+          }
+        }
+      },
+      "block_order": [
+        "product_JmLTfa",
+        "product_gGfxnt",
+        "product_tQE4ry"
+      ],
+      "name": "Bestseller Slider",
+      "settings": {
+        "title": "📦 Big Value, Bigger Savings",
+        "title_color": "#000000",
+        "subtitle": "🔥 Save Up to $70 Off Resin Packs!",
+        "subtitle_color": "#828484",
+        "bg_color": "#fff9ef",
+        "btn_bg_color": "#ff9945",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "navbar_id_3VBiGJ": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "4"
+      }
+    },
+    "product_promo_cards_DWUC4W": {
+      "type": "product-promo-cards",
+      "blocks": {
+        "product_Mf8G3P": {
+          "type": "product",
+          "settings": {
+            "product": "standard-resin-1kg"
+          }
+        },
+        "product_VYECw4": {
+          "type": "product",
+          "settings": {
+            "product": "abs-like-resin-2-0-1kg"
+          }
+        },
+        "product_gGY97H": {
+          "type": "product",
+          "settings": {
+            "product": "water-washable-resin-2-0-1kg"
+          }
+        },
+        "product_Rbc4RJ": {
+          "type": "product",
+          "settings": {
+            "product": "16k-standard-resin-1kg"
+          }
+        }
+      },
+      "block_order": [
+        "product_Mf8G3P",
+        "product_VYECw4",
+        "product_gGY97H",
+        "product_Rbc4RJ"
+      ],
+      "name": "Product Promo Cards",
+      "settings": {
+        "title": "🔥 SPEND MORE, SAVE MORE",
+        "subtitle": "💸 15%  OFF over $50!",
+        "bg_color": "#fff7ec",
+        "title_color": "#000000",
+        "subtitle_color": "#828484",
+        "btn_bg_color": "#ff9945",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "brand_banner_tX4W3p": {
+      "type": "brand-banner",
+      "disabled": true,
+      "name": "Brand Banner",
+      "settings": {}
+    },
+    "scrolling_text_XhJkCA": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text_kaznmc": {
+          "type": "text",
+          "settings": {
+            "text": "PIOCREAT3D",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_nPVnMJ": {
+          "type": "text",
+          "settings": {
+            "text": "PIOCREAT3D",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_9qmwik": {
+          "type": "text",
+          "settings": {
+            "text": "PIOCREAT3D",
+            "link": "",
+            "outline_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_kaznmc",
+        "text_nPVnMJ",
+        "text_9qmwik"
+      ],
+      "disabled": true,
+      "name": "Scrolling text",
+      "settings": {
+        "height": "height-auto",
+        "full_width": true,
+        "direction": "right",
+        "speed": "30s",
+        "rotation": 0,
+        "negative_rotation": true,
+        "font_family": "heading",
+        "text_size": 24,
+        "text_uppercase": false,
+        "image_size": "large",
+        "color_bg": "#dadce0",
+        "color_text": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "scrolling_text_ijCUhc": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text_6px3mq": {
+          "type": "text",
+          "settings": {
+            "text": "PIOCREAT3D",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_YTpdFm": {
+          "type": "text",
+          "settings": {
+            "text": "PIOCREAT3D",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_L9kCqx": {
+          "type": "text",
+          "settings": {
+            "text": "PIOCREAT3D",
+            "link": "",
+            "outline_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_6px3mq",
+        "text_YTpdFm",
+        "text_L9kCqx"
+      ],
+      "disabled": true,
+      "name": "Scrolling text",
+      "settings": {
+        "height": "height-auto",
+        "full_width": true,
+        "direction": "left",
+        "speed": "20s",
+        "rotation": 2,
+        "negative_rotation": false,
+        "font_family": "heading",
+        "text_size": 20,
+        "text_uppercase": false,
+        "image_size": "small",
+        "color_bg": "#f5a149",
+        "color_text": "#ffffff",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "navbar_id_YprA6p": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "5"
+      }
+    },
+    "brand_banner_CwqYW6": {
+      "type": "brand-banner",
+      "name": "Brand Banner",
+      "settings": {}
+    },
+    "promotion_event_signup_KqTKfq": {
+      "type": "promotion-event-signup",
+      "blocks": {
+        "social_pWkwdC": {
+          "type": "social",
+          "settings": {
+            "image": "shopify://shop_images/Youtube.png",
+            "link": "https://www.yout ube.com/@piocre at3d",
+            "alt": "YouTube",
+            "title": "YouTube"
+          }
+        },
+        "social_bJ6LCC": {
+          "type": "social",
+          "settings": {
+            "image": "shopify://shop_images/fb_2x_38e7d43c-6f82-4b4d-98ff-19a132918598.png",
+            "link": "https://www.faceboo k.com/Piocreat3d/",
+            "alt": "Facebook",
+            "title": "Facebook"
+          }
+        },
+        "social_jpybmp": {
+          "type": "social",
+          "settings": {
+            "image": "shopify://shop_images/ins_2x_60656f04-5a13-4899-9bde-798d31d083cf.png",
+            "link": "https://www.instagram.com/piocreat",
+            "alt": "Instagram",
+            "title": "Instagram"
+          }
+        },
+        "social_FNXhRr": {
+          "type": "social",
+          "settings": {
+            "image": "shopify://shop_images/1_2x_24dbd036-f2ed-4c63-963a-e26486bd9324.png",
+            "link": "https://discord.gg/ DzeTCtt7Xf",
+            "alt": "Discord",
+            "title": "Discord"
+          }
+        },
+        "social_43VCeX": {
+          "type": "social",
+          "settings": {
+            "image": "shopify://shop_images/2x.png",
+            "link": "https://www.tik tok.com/@pioc reat_official",
+            "alt": "TikTok",
+            "title": "TikTok"
+          }
+        },
+        "social_kmbwRy": {
+          "type": "social",
+          "settings": {
+            "image": "shopify://shop_images/X_2x_98759128-b23a-4cae-8519-542073855c40.png",
+            "link": "https://x.com/Pioc reat_3D",
+            "alt": "X",
+            "title": "X"
+          }
+        }
+      },
+      "block_order": [
+        "social_pWkwdC",
+        "social_bJ6LCC",
+        "social_jpybmp",
+        "social_FNXhRr",
+        "social_43VCeX",
+        "social_kmbwRy"
+      ],
+      "name": "Promotion Event Signup",
+      "settings": {
+        "background_image": "shopify://shop_images/primeday.png",
+        "title_text": "Sign Up & Join the Fun <br>",
+        "description_text": "Simply subscribe to our newsletter during Prime Day (July 14 – 20), and you'll automatically be entered into our lucky draw.",
+        "rules_content": "<p><strong>Duration:</strong><br>The event:12:00 AM (PDT) , July 14, 2025 - 11:59 PM (PDT),July 20, 2025.</p><p><strong>Participation rules:</strong><br>1.Simply subscribe to our newsletter during Prime Day (July 14 – 20), and you'll automatically be entered into our lucky draw.\n<br><br>Prizes:\n<br>-1. Top 5 winners: Get 2 bottles of Standard Resin 1KG for FREE (Color not customizable)\n<br>-2. Next 5 winners: Receive exclusive STL file packs for premium 3D prints\n\n<br>Winners Announcement:\nAll 10 winning email addresses will be announced on our website and social media right after the campaign ends. Stay tuned!\n\n<br>Note: No purchase required. One entry per email. Only subscriptions made during the event period are eligible.<br><br>2.Pre-Order Shipping Schedule\nProduct: HALOT-X1 Resin 3D Printer\nEstimated Shipping Time: By the end of July 2025.<br><br>3.ALL-IN-ONE PRINTING BUNDLE DEAL\nBundle prices are already discounted — what you see is the final price.No additional coupon codes needed.<br><br>4.$10 OFF when you spend $50 or more on resin products (excludes printers and accessories).\nDiscount is automatically applied at checkout.<br><br>5.Shipping Information\nExcept for our HALOT-X1 Resin 3D Printer, we will ship other products the next day after you place an order, and it is expected to arrive at your address within 3-7 working days.<br><br>6.Additional Notes\nLimited stock available during the campaign — first come, first served.\nPrizes cannot be exchanged for cash or transferred.\nTerms are subject to change; refer to official store announcements for updates.</p>",
+        "thank_you_content": "<p>Thank you for subscribing!<br>You've successfully entered our giveaway — check the Rules section next to this message for full details.<br>Plus, you'll now be the first to hear about our latest product updates, exclusive discounts, and special promotions. Stay tuned!</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_Gb3Lm7",
+    "navbar_c8WJAz",
+    "navbar_id_AFKGfA",
+    "flash_deals_banner_kJdYBz",
+    "five_image_grid_4p9P3n",
+    "navbar_id_tEGLUd",
+    "bundle_add_to_cart_FHk4iA",
+    "navbar_id_FcAwPY",
+    "hot_sale_grid_7LjgUp",
+    "image_with_text_Pb7aMd",
+    "carousel_images_xgqpiL",
+    "navbar_id_tp6KWT",
+    "bestseller_slider_JHezYm",
+    "navbar_id_3VBiGJ",
+    "product_promo_cards_DWUC4W",
+    "brand_banner_tX4W3p",
+    "scrolling_text_XhJkCA",
+    "scrolling_text_ijCUhc",
+    "navbar_id_YprA6p",
+    "brand_banner_CwqYW6",
+    "promotion_event_signup_KqTKfq"
+  ]
+}

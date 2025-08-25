@@ -1,0 +1,325 @@
+/* Hot Sale Section 样式 */
+.hot-sale-section {
+  background: #FFF9EF;
+}
+
+.hot-sale-section>.hot-sale-header,
+.hot-sale-section>.hot-sale-grid {
+  max-width: 1280px;
+}
+
+.hot-sale-header {
+  text-align: center;
+  margin-bottom: 24px;
+  margin: 0 auto;
+}
+
+.hot-sale-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.hot-sale-subtitle {
+  color: #f7a94a;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.hot-sale-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px auto 0 auto !important;
+}
+
+.hot-sale-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+
+
+.hot-sale-img {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-column: span 3 / span 3;
+}
+
+.hot-sale-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: block; */
+}
+
+.hot-sale-card {
+  grid-column: span 2 / span 2;
+  /* flex: 1 1 0; */
+  background: #fff;
+  border-radius: 12px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); */
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hot-sale-badge {
+  display: inline-block;
+  background: #FF9945;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 6px 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  /* width: 106px; */
+}
+
+.hot-sale-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'HarmonyOS_Sans_Bold';
+  margin-bottom: 20px;
+}
+
+.hot-sale-prices {
+  margin-bottom: 18px;
+}
+
+.hot-sale-old {
+  color: #000;
+  text-decoration: line-through;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'HarmonyOS_Sans_Bold';
+}
+
+.hot-sale-new {
+  color: #F94608;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'HarmonyOS_Sans_Bold';
+  margin: 0;
+}
+
+.hot-sale-btn {
+  /* width: 15vw; */
+  background: #FF9945;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 46px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* === Responsive Font Sizes & Spacing for Hot Sale Grid === */
+/* 1. 主标题 */
+.hot-sale-header h2 {
+  font-size: 32px;
+}
+
+/* 2. 副标题 */
+.hot-sale-subtitle {
+  font-size: 24px;
+}
+
+/* 3. 商品主标题和折扣价 */
+.hot-sale-title,
+.hot-sale-new {
+  font-size: 24px;
+}
+
+/* 4. 商品原价 */
+.hot-sale-old {
+  font-size: 16px;
+}
+
+/* 5. 页面padding和margin */
+.hot-sale-section {
+  padding: 32px 24px 40px 24px;
+}
+
+.hot-sale-header {
+  margin-bottom: 24px;
+}
+
+.hot-sale-card {
+  padding: 4%;
+  margin: 0 12px;
+}
+
+.hot-sale-grid {
+  gap: 24px;
+}
+
+@media (max-width: 1200px) and (min-width: 751px) {
+  .hot-sale-header h2 {
+    font-size: 40px;
+  }
+
+  .hot-sale-subtitle {
+    font-size: 28px;
+  }
+
+  .hot-sale-title {
+    font-size: 24px;
+  }
+
+  .hot-sale-new {
+    font-size: 36px;
+  }
+
+  .hot-sale-old {
+    font-size: 24px;
+  }
+
+  .hot-sale-badge {
+    font-size: 15px;
+    padding: 4px 12px;
+    width: 84px;
+  }
+
+  .hot-sale-section {
+    padding: 20px 24px 24px 24px;
+  }
+
+  .hot-sale-header {
+    margin-bottom: 16px;
+  }
+
+  .hot-sale-card {
+    padding: 2%;
+    margin: 0 6px;
+  }
+
+  .hot-sale-grid {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .hot-sale-header h2 {
+    font-size: 24px;
+  }
+
+  .hot-sale-subtitle {
+    font-size: 12px;
+  }
+
+  .hot-sale-title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .hot-sale-new {
+    font-size: 18px;
+  }
+
+  .hot-sale-btn {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .hot-sale-old {
+    font-size: 12px;
+  }
+
+  .hot-sale-badge {
+    font-size: 12px;
+    padding: 2px 8px;
+    width: 70px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .hot-sale-prices {
+    margin-bottom: 2px;
+  }
+
+  .hot-sale-section {
+    padding: 8px 12px 12px 12px;
+  }
+
+  .hot-sale-header {
+    margin-bottom: 8px;
+  }
+
+  .hot-sale-card {
+    align-items: center;
+    padding: 1%;
+    margin: 0 2px;
+  }
+
+  .hot-sale-grid {
+    gap: 6px;
+  }
+
+  .hot-sale-img img {
+    /* width: 100%; */
+    /* height: 200px; */
+    /* display: block; */
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hot-sale-row {
+    /* height: 166px; */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hot-sale-card {
+    grid-column: span 1 / span 1 !important;
+  }
+
+  .hot-sale-img {
+    grid-column: span 1 / span 1 !important;
+  }
+
+  .hot-sale-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hot-sale-title {
+    margin-bottom: 0;
+  }
+
+
+  .hot-sale-btn {
+    /* width: 15vw; */
+    background: #FF9945;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+/* @media (max-width: 500px) {
+  .hot-sale-img img {
+    width: 100%;
+    height: 140px;
+    display: block;
+  }
+} */
+
+/* === End Responsive Font Sizes & Spacing === */

@@ -1,0 +1,135 @@
+{{- 'product-steps.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+  assign section_heading = section.settings.heading
+  assign marker_style = section.settings.marker_style
+  assign columns_desktop = section.settings.columns_desktop | default: 4
+    assign margin_bottom_desktop = section.settings.margin_bottom_desktop | default: 30
+    assign margin_bottom_mobile = section.settings.margin_bottom_mobile | default: 20
+-%}
+<div class="row">
+  <div class="small-12 product-steps" style="--margin-bottom: {{ margin_bottom_desktop }}px; --margin-bottom-mobile: {{ margin_bottom_mobile }}px;">
+    {% render 'section-header'
+      , section_heading: section_heading
+      , marker_style: marker_style %}
+
+    <div class="product-steps--grid" style="--columns: {{ columns_desktop }};">
+      {%- for block in section.blocks -%}
+        <div class="product-steps--item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image -%}
+            <div class="step-image aspect-ratio aspect-ratio--square">
+              {%- render 'responsive-image'
+                , image: block.settings.image
+                , sizes: '400x400'
+                , retina: 1 -%}
+            </div>
+          {%- else -%}
+            <div class="step-image aspect-ratio aspect-ratio--square thb-placeholder">
+              {{ 'product-1' | placeholder_svg_tag }}
+            </div>
+          {%- endif -%}
+          <div class="step-details">
+            {%- if block.settings.description -%}
+              <div class="step-description">{{ block.settings.description }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "产品操作步骤",
+    "class": "section-product-steps",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "标题",
+        "default": "产品操作步骤"
+      }, {
+        "type": "select",
+        "id": "marker_style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Basic"
+          }, {
+            "value": "style2",
+            "label": "Double"
+          }, {
+            "value": "style3",
+            "label": "Squiggle"
+          }, {
+            "value": "style4",
+            "label": "Zigzag"
+          }
+        ],
+        "default": "style1",
+        "label": "Marker"
+      }, {"type": "range",
+        "id": "columns_desktop",
+        "min": 4,
+        "max": 8,
+        "step": 1,
+        "default": 4,
+        "label": "列数"
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom_desktop",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "unit": "px",
+        "default": 30,
+        "label": "桌面端下边距"
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom_mobile",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "unit": "px",
+        "default": 20,
+        "label": "移动端下边距"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "step_item",
+        "name": "步骤项",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "图片"
+          }, {
+            "type": "textarea",
+            "id": "description",
+            "label": "描述"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "产品操作步骤",
+        "blocks": [
+          {
+            "type": "step_item"
+          }, {
+            "type": "step_item"
+          }, {
+            "type": "step_item"
+          }, {
+            "type": "step_item"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

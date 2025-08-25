@@ -1,0 +1,353 @@
+{{- 'navbar.css' | asset_url | stylesheet_tag -}}
+
+<div style="background-color: {{ section.settings.background_color | default: '#ffffff' }};{% unless section.settings.show_shadow %} box-shadow: none;{% endunless %}">
+  <div
+    class="row nav-bar"
+  >
+    <div class="nav-bar-container" data-nav-container>
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign title = block.settings.title
+          assign title_id = block.settings.title_id
+          # 优先使用block设置，如果没有则使用section全局设置
+          assign item_color = block.settings.item_color | default: section.settings.default_text_color | default: '#b2b2b2'
+          assign active_color = block.settings.active_color | default: section.settings.active_text_color | default: '#000000'
+        -%}
+        <div
+          data-id="{{ title_id }}"
+          data-index="{{ forloop.index0 }}"
+          data-color="{{ item_color }}"
+          data-active-color="{{ active_color }}"
+          class="nav-bar-item"
+          style="color: {{ item_color }};"
+        >
+          <span class="nav-bar-item-text">{{ title }}</span>
+        </div>
+      {%- endfor -%}
+
+      <!-- 滑动指示线 -->
+      <div
+        class="nav-bar-indicator-line"
+        data-indicator-line
+        style="background-color: {{ section.settings.active_text_color | default: '#000000' }};"
+      ></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    class NavigationMenu {
+      constructor() {
+        this.container = document.querySelector('[data-nav-container]');
+        this.items = document.querySelectorAll('.nav-bar-item');
+        this.indicatorLine = document.querySelector('[data-indicator-line]');
+        this.activeIndex = 0;
+        this.isProgrammaticScroll = false;
+        this.scrollEndTimer = null;
+        this.dynamicHeaderHeightTimer = null;
+        this.headerHeight = {
+          activeHeight: 0,
+          navHeight: 0,
+          dynamicHeight: 0,
+        };
+
+        this.init();
+      }
+
+      init() {
+        this.setupEventListeners();
+        this.handleResize();
+        this.updateActiveStates();
+        this.updateIndicatorLine();
+        this.setupIntersectionObserver();
+      }
+
+      setupEventListeners() {
+        // 添加点击事件
+        this.items.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            this.handleNavClick(item.getAttribute('data-id'), index);
+          });
+        });
+
+        // 滚动事件
+        window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
+
+        // 滚动结束事件
+        window.addEventListener('scrollend', this.handleScrollEnd.bind(this));
+
+        // 窗口大小变化事件
+        window.addEventListener('resize', this.handleResize.bind(this));
+      }
+
+      setupIntersectionObserver() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (this.isProgrammaticScroll) return;
+
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                const targetId = entry.target.id;
+                const targetItem = document.querySelector(`.nav-bar-item[data-id="${targetId}"]`);
+                if (targetItem) {
+                  const index = parseInt(targetItem.getAttribute('data-index'));
+                  this.setActiveIndex(index);
+                }
+              }
+            });
+          },
+          {
+            root: null,
+            rootMargin: '-20% 0px -20% 0px',
+            threshold: [0.3, 0.5, 0.7],
+          }
+        );
+
+        // 观察所有目标元素
+        this.items.forEach((item) => {
+          const id = item.getAttribute('data-id');
+          const target = document.getElementById(id);
+          if (target) {
+            observer.observe(target);
+          }
+        });
+      }
+
+      handleScroll() {
+        if (this.isProgrammaticScroll) return;
+
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // 检查哪个区域当前在视口中
+        for (let i = 0; i < this.items.length; i++) {
+          const item = this.items[i];
+          const elementId = item.getAttribute('data-id');
+          const element = document.getElementById(elementId);
+
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top + scrollY;
+            const elementBottom = elementTop + rect.height;
+
+            // 如果元素在视窗中心区域
+            if (scrollY >= elementTop - windowHeight / 2 && scrollY < elementBottom - windowHeight / 2) {
+              this.setActiveIndex(i);
+              break;
+            }
+          }
+        }
+      }
+
+      handleNavClick(elementId, index) {
+        if (!elementId) return;
+
+        const element = document.getElementById(elementId);
+        if (!element) return;
+
+        // 设置程序化滚动标志
+        this.isProgrammaticScroll = true;
+
+        // 立即更新激活状态
+        this.setActiveIndex(index);
+
+        // 计算滚动位置
+        const offset = this.calculateHeaderOffset();
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        const paddingTop = parseInt(element.style.paddingTop?.replace('px', '') || '0');
+
+        window.scrollTo({
+          top: elementTop - paddingTop - offset,
+          behavior: 'smooth',
+        });
+
+        // 清除之前的定时器
+        if (this.scrollEndTimer) {
+          clearTimeout(this.scrollEndTimer);
+        }
+
+        // 设置延迟重置标志
+        this.scrollEndTimer = setTimeout(() => {
+          this.isProgrammaticScroll = false;
+        }, 1000);
+      }
+
+      handleScrollEnd() {
+        this.isProgrammaticScroll = false;
+      }
+
+      setActiveIndex(index) {
+        if (this.activeIndex === index) return;
+
+        this.activeIndex = index;
+        this.updateActiveStates();
+        this.updateIndicatorLine();
+        this.scrollToNavItem();
+      }
+
+      updateActiveStates() {
+        this.items.forEach((item, index) => {
+          const isActive = index === this.activeIndex;
+          const defaultColor = item.getAttribute('data-color');
+          const activeColor = item.getAttribute('data-active-color');
+
+          item.classList.toggle('active', isActive);
+          item.style.color = isActive ? activeColor : defaultColor;
+        });
+      }
+
+      updateIndicatorLine() {
+        if (!this.indicatorLine) return;
+
+        const activeItem = this.items[this.activeIndex];
+        if (activeItem) {
+          const activeColor = activeItem.getAttribute('data-active-color');
+          this.indicatorLine.style.left = `${activeItem.offsetLeft}px`;
+          this.indicatorLine.style.width = `${activeItem.offsetWidth}px`;
+          this.indicatorLine.style.backgroundColor = activeColor;
+        }
+      }
+
+      scrollToNavItem() {
+        if (!this.container) return;
+
+        const windowWidth = window.innerWidth;
+        const activeItem = this.items[this.activeIndex];
+
+        if (activeItem) {
+          const { left, right } = activeItem.getBoundingClientRect();
+          const isVisible = left >= 0 && right <= windowWidth;
+
+          if (!isVisible) {
+            // 如果是最后一个项目，滚动到最右边
+            if (this.activeIndex === this.items.length - 1) {
+              this.container.scrollTo({
+                left: this.container.scrollWidth - this.container.clientWidth,
+                behavior: 'smooth',
+              });
+              return;
+            }
+
+            // 否则滚动到中心位置
+            const scrollLeft = activeItem.offsetLeft - windowWidth / 2 + activeItem.offsetWidth / 2;
+            this.container.scrollTo({
+              left: Math.max(0, scrollLeft),
+              behavior: 'smooth',
+            });
+          }
+        }
+      }
+
+      handleResize() {
+        if (!this.container) return;
+
+        // 根据内容宽度调整对齐方式
+        if (this.container.clientWidth >= this.container.scrollWidth) {
+          this.container.style.justifyContent = 'center';
+        } else {
+          this.container.style.justifyContent = 'flex-start';
+        }
+
+        // 更新指示线位置
+        this.updateIndicatorLine();
+      }
+
+      calculateHeaderOffset() {
+        // 计算动态头部高度
+        const headerHeightStr = getComputedStyle(document.documentElement).getPropertyValue('--header-height').trim();
+        const navHeightStr = getComputedStyle(document.documentElement).getPropertyValue('--header-offset').trim();
+
+        const headerHeightNumber = Number(headerHeightStr);
+        const navHeightNumber = Number(navHeightStr);
+
+        const headerHeight = isNaN(headerHeightNumber) ? 80 : headerHeightNumber;
+        const navHeight = isNaN(navHeightNumber) ? 60 : navHeightNumber;
+
+        return headerHeight + navHeight;
+      }
+    }
+
+    // 初始化导航菜单
+    new NavigationMenu();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "导航栏",
+  "class": "section-nav-bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "导航栏外观设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shadow",
+      "label": "显示阴影效果",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "默认文字颜色"
+    },
+    {
+      "type": "color",
+      "id": "default_text_color",
+      "label": "默认文字颜色",
+      "default": "#b2b2b2",
+      "info": "所有导航项的默认颜色，可在单个导航项中覆盖"
+    },
+    {
+      "type": "color",
+      "id": "active_text_color",
+      "label": "激活时文字颜色",
+      "default": "#000000",
+      "info": "当前激活导航项的颜色，同时也是指示线的颜色"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "导航项",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "导航项标题"
+        },
+        {
+          "type": "text",
+          "id": "title_id",
+          "label": "目标元素ID",
+          "info": "要跳转到的页面元素ID，需要配合 NavBarID 组件使用"
+        },
+        {
+          "type": "header",
+          "content": "自定义颜色（可选）"
+        },
+        {
+          "type": "color",
+          "id": "item_color",
+          "label": "自定义默认颜色",
+          "info": "留空则使用全局默认颜色设置"
+        },
+        {
+          "type": "color",
+          "id": "active_color",
+          "label": "自定义激活颜色",
+          "info": "留空则使用全局激活颜色设置"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "导航栏" }]
+}
+{% endschema %}

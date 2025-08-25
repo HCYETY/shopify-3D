@@ -1,0 +1,129 @@
+{{- 'product-introduction-multiple.css' | asset_url | stylesheet_tag -}}
+
+{% liquid
+  assign full_width = section.settings.full_width
+%}
+<div class="row{% if full_width %} full-width-row {% else %} full-width-row-false {% endif %}">
+  <div class="small-12 columns">
+    <div class="product-introduction-multiple-container">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          {% assign image = block.settings.image %}
+          {% assign title = block.settings.title %}
+          {% assign description = block.settings.description %}
+          {% assign text = block.settings.text %}
+          {% assign width = block.settings.width %}
+          {% assign height = block.settings.height %}
+          {% assign mobile_width = block.settings.mobile_width %}
+          {% assign mobile_height = block.settings.mobile_height %}
+
+          {% if image != blank %}
+            <div class="image-text-block" style="width: {{ width }}px; height: {{ height }}px; --mobile-width: {{ mobile_width }}px; --mobile-height: {{ mobile_height }}px;" >
+              <div class="image-container" style="height: 100%;">
+                {%- liquid
+                  assign master_width = image.src.width | append: 'x' | append: image.src.height
+                  assign variable_widths = '300x,400x,500x,600x,700x,800x,' | append: master_width
+                -%}
+                {%- render 'responsive-image',
+                  image: image,
+                  sizes: variable_widths,
+                  class: 'block-image',
+                  priority: true
+                -%}
+              </div>
+              <div class="text-container">
+                <div class="text-title">
+                  {{ title }}  
+                </div>
+                <div class="text-description">
+                  {{ description }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <div class="no-blocks-placeholder">
+          <p>请添加图文内容块</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "产品介绍多图",
+    "class": "product-introduction-multiple",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "是否全屏",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image_text",
+        "name": "图文块",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "图像"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "标题",
+            "default": "标题内容"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "描述",
+            "default": "描述内容"
+          },
+          {
+            "type": "number",
+            "id": "width",
+            "label": "宽度",
+            "default": 300
+          },
+          {
+            "type": "number",
+            "id": "height",
+            "label": "高度",
+            "default": 300
+          },
+          {
+            "type": "number",
+            "id": "mobile_width",
+            "label": "移动宽度",
+            "default": 300
+          },
+          {
+            "type": "number",
+            "id": "mobile_height",
+            "label": "移动高度",
+            "default": 300
+          }
+        ]
+      }
+    ],
+    "max_blocks": 20,
+    "presets": [
+      {
+        "name": "图文块集合",
+        "blocks": [
+          {
+            "type": "image_text"
+          },
+          {
+            "type": "image_text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,310 @@
+.bestseller-slider-bg {
+  background: #FFF9EF;
+  padding: 40px 24px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bestseller-slider-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.bestseller-slider-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.bestseller-slider-title h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.bestseller-slider-subtitle {
+  color: #f7a94a;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.bestseller-slider {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.bestseller-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 0 0 32px 0;
+  text-align: center;
+  min-width: 260px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.bestseller-card-img {
+  border-radius: 8px 8px 0 0;
+  margin: 0 0 12px 0;
+  padding: 24px 12px 0 12px;
+  min-height: 220px;
+  background: #fff;
+}
+
+.bestseller-card-img img {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+}
+
+.bestseller-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin-top: 0;
+  padding: 0 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bestseller-card-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+}
+
+.bestseller-card-price {
+  margin-top: 10px;
+}
+
+.bestseller-card-price .old-price {
+  text-decoration: line-through;
+  color: #222;
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bestseller-card-desc {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 4px;
+  line-height: 1.4;
+  padding: 0 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+
+.bestseller-card-price .sale-price {
+  color: #f75a1a;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-top: 2px;
+}
+
+.bestseller-add-to-cart {
+  background: #FF9945;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 260px;
+  display: block;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(255, 169, 74, 0.08);
+  transition: background 0.2s;
+}
+
+@media (max-width: 900px) {
+  .bestseller-slider {
+    max-width: 100%;
+  }
+
+  .bestseller-card {
+    min-width: 200px;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+
+  .bestseller-slider-subtitle {
+    font-size: 20px;
+  }
+
+  .bestseller-card-img {
+    min-height: 140px;
+    padding: 16px 4px 0 4px;
+  }
+
+  .bestseller-slider-list {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .bestseller-slider-bg {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* === Responsive Font Sizes & Spacing for Bestseller Slider === */
+/* 1. 主标题 */
+.bestseller-slider-title h2 {
+  font-size: 32px;
+}
+
+/* 2. 副标题 */
+.bestseller-slider-subtitle {
+  font-size: 24px;
+}
+
+/* 3. 商品主标题、折扣价、add to cart按钮 */
+.bestseller-card-title,
+.bestseller-card-price .sale-price,
+.bestseller-add-to-cart {
+  font-size: 18px;
+}
+
+/* 4. 商品原价 */
+.bestseller-card-price .old-price {
+  font-size: 16px;
+}
+
+/* 5. 页面padding和margin */
+.bestseller-slider-bg {
+  padding: 40px 0;
+}
+
+.bestseller-slider-title {
+  margin-bottom: 24px;
+}
+
+.bestseller-card {
+  padding: 0 0 32px 0;
+  margin-right: 30px;
+}
+
+@media (max-width: 1200px) and (min-width: 751px) {
+  .bestseller-slider-title h2 {
+    font-size: 40px;
+  }
+
+  .bestseller-slider-subtitle {
+    font-size: 28px;
+  }
+
+  .bestseller-card-title,
+  .old-price {
+    font-size: 24px;
+  }
+
+  .bestseller-card-desc {
+    font-size: 20px;
+  }
+
+  .sale-price {
+    font-size: 30px;
+  }
+
+  .bestseller-add-to-cart {
+    font-size: 24px;
+  }
+
+  .bestseller-slider-bg {
+    padding: 40px 24px 24px 24px;
+  }
+
+  .bestseller-slider-title {
+    margin-bottom: 16px;
+  }
+
+  .bestseller-card {
+    padding: 0 0 20px 0;
+    margin-right: 16px;
+    flex: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .bestseller-slider-title h2 {
+    font-size: 24px;
+  }
+
+  .bestseller-slider-subtitle {
+    font-size: 12px;
+  }
+
+  .bestseller-card-price {
+    font-size: 12px;
+  }
+
+  .bestseller-card-title {
+    font-size: 16px;
+    padding: 0 12px;
+  }
+
+  .bestseller-card-desc {
+    padding: 0 12px;
+  }
+
+  .sale-price,
+  .bestseller-add-to-cart {
+    font-size: 18px;
+  }
+
+  .bestseller-card-price .old-price {
+    font-size: 12px;
+  }
+
+  .bestseller-slider-bg {
+    padding: 40px 12px 0 12px;
+  }
+
+  .bestseller-slider-title {
+    margin-bottom: 8px;
+  }
+
+  .bestseller-card {
+    padding: 0 0 10px 0;
+    margin-right: 24px;
+  }
+
+
+}
+
+/* 6. 商品主标题和描述多行省略 */
+.bestseller-card-title,
+.bestseller-card-desc {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+/* === End Responsive Font Sizes & Spacing === */

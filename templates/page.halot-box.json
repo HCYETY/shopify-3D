@@ -1,0 +1,236 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_gGWKXg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DTKmwi": {
+          "type": "heading",
+          "settings": {
+            "text": "HALOT BOX",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DTKmwi"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "image_with_text_LbMgWn": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KLT4nr": {
+          "type": "heading",
+          "settings": {
+            "text": "HALOT BOX",
+            "marker_style": "style1",
+            "heading_size": "h3",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_ijGcKE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>HALOT BOX is a powerful resin slicing software designed for efficient desktop 3D printing workflows.<br\/>It enables you to slice 3D models locally, fine-tune printing and slicing parameters, and manage model files with ease. You can save sliced files directly to your computer or transfer them to your printer via USB or Wi-Fi. You can also import and export slice files through Creality Cloud, allowing for seamless remote control and job management. With support for 14 languages, HALOT BOX is built to serve users around the world—and it’s continuously evolving to offer even more flexibility and functionality.<br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KLT4nr",
+        "text_ijGcKE"
+      ],
+      "disabled": true,
+      "name": "Image with text",
+      "settings": {
+        "use_video": false,
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "full_width": false,
+        "layout": "image_first",
+        "content_position": "text-left",
+        "column_spacing": "medium",
+        "color_bg": "#ffffff",
+        "color_text": "#2c2d2e",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_e7U3bQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_JapLjL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>HALOT BOX is a powerful resin slicing software designed for efficient desktop 3D printing workflows.<br\/>It enables you to slice 3D models locally, fine-tune printing and slicing parameters, and manage model files with ease. You can save sliced files directly to your computer or transfer them to your printer via USB or Wi-Fi. You can also import and export slice files through Creality Cloud, allowing for seamless remote control and job management. With support for 14 languages, HALOT BOX is built to serve users around the world—and it’s continuously evolving to offer even more flexibility and functionality.<br\/><br\/><\/p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        },
+        "image_kcYNxN": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/halot_box.jpg"
+          }
+        },
+        "button_T7XJbU": {
+          "type": "button",
+          "settings": {
+            "link_label": "Download",
+            "link": "https:\/\/u.pcloud.link\/publink\/show?code=kZ2nWj5ZtlYz4uDn64FbtuSC3iWT2H5LspAy"
+          }
+        }
+      },
+      "block_order": [
+        "text_JapLjL",
+        "image_kcYNxN",
+        "button_T7XJbU"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "#ffffff",
+        "color_heading": "#1a1c1d",
+        "color_text": "#36393c",
+        "color_links": "#ffffff",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "multicolumn_8wH9mW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cPemyy": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "image_link": "",
+            "title": "Auto Model Repair",
+            "text": "<p>Detects and fixes mesh defects automatically to ensure smoother slicing and printing.<br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bXKiEr": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "image_link": "",
+            "title": "One-Click Auto Layout",
+            "text": "<p>Effortlessly arrange multiple models on the build plate with a single click. Optimized spacing and alignment save you time and hassle.<br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YRYdAP": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "image_link": "",
+            "title": "Flexible Support Options",
+            "text": "<p>Generate supports automatically for speed, or switch to manual mode for detailed control. Whether fast or fine-tuned, the choice is yours.<br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Dkm8QX": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "image_link": "",
+            "title": "Cloud Integration",
+            "text": "<p>Easily upload or import sliced files via Creality Cloud. Enjoy a seamless workflow across devices and platforms.<br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TEWh7n": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "image_link": "",
+            "title": "Device Management via Wi-Fi",
+            "text": "<p>Bind your printer through Wi-Fi scanning and send print jobs wirelessly. No cables, no complications.<br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MFXqYx": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "image_link": "",
+            "title": "Zoning Preview for Energy Efficiency",
+            "text": "<p>Preview exposure zones before printing—perfectly matched with HALOT-X1. Helps reduce energy use and prolong screen lifespan.<br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_cPemyy",
+        "column_bXKiEr",
+        "column_YRYdAP",
+        "column_Dkm8QX",
+        "column_TEWh7n",
+        "column_MFXqYx"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "heading": "Feature Hights",
+        "marker_style": "style1",
+        "description": "",
+        "columns_desktop": 3,
+        "mobile_swipe": true,
+        "image_ratio": "adapt",
+        "text_alignment": "center",
+        "heading_size": "h5",
+        "color_heading": "#1a1c1d",
+        "marker_color": "#fd6262",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_gGWKXg",
+    "image_with_text_LbMgWn",
+    "rich_text_e7U3bQ",
+    "multicolumn_8wH9mW"
+  ]
+}

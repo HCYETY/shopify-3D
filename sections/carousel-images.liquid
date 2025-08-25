@@ -1,0 +1,164 @@
+{{ 'carousel-images.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign image_ratio = section.settings.image_ratio
+  assign column_spacing = section.settings.column_spacing
+  assign image_alignment = section.settings.image_alignment
+  assign disable_top_spacing = section.settings.disable_top_spacing
+  assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+  assign size = section.blocks.size | plus: 0
+-%}
+<div class="carousel-bg" id="hot-sale-end"> 
+  <div class="carousel-bg-inner">
+    <div class="scrolling-images {% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" id="carousel-images-{{ section.id }}">
+      <div class="scrolling-images--inner scrolling-images--{{ image_alignment }} scrolling-images--spacing-{{ column_spacing }} direction-left" style="--marquee-speed: 20s;">
+        {% capture scrolling_text %}
+          <div>
+            {%- for i in (1..size) -%}
+              {% assign index = i | minus: 1 %}
+              {%- liquid
+                assign image = section.blocks[index].settings.image
+                assign ratio = 1
+                if image_ratio == 'adapt' and image
+                  assign ratio = image.aspect_ratio
+                endif
+                assign sizes = '300x'
+                if image
+                  assign sizes = image.src.width | append: 'x' | append: image.src.height
+                endif
+              -%}
+              <div class="scrolling-images--item" {{ section.blocks[index].shopify_attributes }}>
+                <div class="scrolling-images--image aspect-ratio aspect-ratio--{{ image_ratio }}">
+                  {%- if image -%}
+                    {%- render 'responsive-image', image: image, sizes: sizes, retina: 1 -%}
+                  {%- else -%}
+                    <div class="thb-placeholder">
+                      {{ 'collection-1' | placeholder_svg_tag }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {% endcapture %}
+        {{ scrolling_text }}{{ scrolling_text }}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.carousel-bg-outer {
+  width: 100vw;
+}
+.carousel-bg-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .carousel-bg-inner {
+    max-width: 100vw;
+    padding: 0 0;
+  }
+}
+.scrolling-images--image {
+  width: 228px !important;
+  height: 292px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.scrolling-images--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+{% schema %}
+{
+  "name": "Carousel images",
+  "class": "section-carousel-images",
+  "settings": [
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        { "value": "adapt", "label": "Adapt to image" },
+        { "value": "portrait", "label": "Portrait" },
+        { "value": "landscape", "label": "Landscape" },
+        { "value": "square", "label": "Square" }
+      ],
+      "default": "adapt",
+      "label": "Image ratio"
+    },
+    {
+      "type": "select",
+      "id": "column_spacing",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "small",
+      "label": "Column spacing"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "top",
+      "label": "Vertical alignment"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_top_spacing",
+      "default": false,
+      "label": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_bottom_spacing",
+      "default": false,
+      "label": "Remove bottom spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel images",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %} 

@@ -1,0 +1,536 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "image_with_text_overlay_xUChwh": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/20250620-182107.jpg",
+        "mobile_image": "shopify://shop_images/20250620-182117.jpg",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-450",
+        "mobile_height": "mobile-height-500",
+        "full_width": true,
+        "content_width": "medium",
+        "content_position": "bottom-center",
+        "text_alignment": "center",
+        "text_color": "#ffffff",
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "navbar_F9DPWb": {
+      "type": "navbar",
+      "blocks": {
+        "text_LwYdKx": {
+          "type": "text",
+          "settings": {
+            "title": "3D Printer Series Bundles Sale",
+            "title_id": "1"
+          }
+        },
+        "text_TafeHd": {
+          "type": "text",
+          "settings": {
+            "title": "10Kg Resin Value Pack",
+            "title_id": "2"
+          }
+        },
+        "text_QGEJrQ": {
+          "type": "text",
+          "settings": {
+            "title": "5KG Resin Essential Pack",
+            "title_id": "3"
+          }
+        },
+        "text_UDTFMA": {
+          "type": "text",
+          "settings": {
+            "title": "4Kg Resin Mini Value Pack",
+            "title_id": "4"
+          }
+        }
+      },
+      "block_order": [
+        "text_LwYdKx",
+        "text_TafeHd",
+        "text_QGEJrQ",
+        "text_UDTFMA"
+      ],
+      "custom_css": [],
+      "name": "NavBar",
+      "settings": {}
+    },
+    "navbar_id_DCqpD4": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "1"
+      }
+    },
+    "single_image_rQ8mtn": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/20250618-152827.jpg",
+        "image_mobile": "shopify://shop_images/20250618-152827.jpg",
+        "full_width": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "175021294459790ea3": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_n3DgQ3": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "acf-film-for-halot-x1"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_n3DgQ3"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_PPLJKr": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "17502272082d619fbe": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_tAyNbK": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "uw03-washing-curing-machine"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_tAyNbK"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_UEWkkw": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "navbar_id_ywKUic": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "2"
+      }
+    },
+    "single_image_XtCgUx": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/20250618-155603.jpg",
+        "image_mobile": "shopify://shop_images/20250618-155603.jpg",
+        "full_width": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "175021474887cd9a00": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_PiiEG8": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "standard-resin-1kg"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_PiiEG8"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_V9LjxT": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "navbar_id_3a6KP6": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "3"
+      }
+    },
+    "single_image_GGjWXK": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/20250618-155609.jpg",
+        "image_mobile": "shopify://shop_images/20250618-155609.jpg",
+        "full_width": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "17502151739501c31e": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_VRAjDj": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "abs-like-resin-2-0-1kg"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_VRAjDj"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_xLaGUL": {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "navbar_id_H99k4q": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "4"
+      }
+    },
+    "single_image_VU77hU": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/20250618-155614.jpg",
+        "image_mobile": "shopify://shop_images/20250618-155614.jpg",
+        "full_width": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "1750215178f362efea": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_FwtPfU": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "16k-water-washable-resin-1kg"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_FwtPfU"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "apps_dLrpkC": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_JzwTqg": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "afu-feed-unit-for-halot-x1"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_JzwTqg"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "apps_AQWgrn": {
+      "type": "apps",
+      "blocks": {
+        "upsell_koala_bundles_bundle_app_block_WFGdJB": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "16k-standard-resin-1kg"
+          }
+        }
+      },
+      "block_order": [
+        "upsell_koala_bundles_bundle_app_block_WFGdJB"
+      ],
+      "custom_css": [
+        ".koala-deal__bundle-product__separator {background-color: #81817f; width: 21px; height: 20px; font-size: 21px;}",
+        ".koala-deal--horizontal .koala-deal__bundle-product--one-third {width: 300px !important;}",
+        ".koala-deal--horizontal .koala-deal__bundle-products {justify-content: center;}",
+        ".koala-deal__bundle-total {width: 22%; background-color: #e3e3e3 !important; border-radius: 15px !important;}",
+        ".koala-deal .koala-deal__bundle .koala-deal__bundle-action__button {width: 22%; height: 54px; border-radius: 15px;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "text_with_icons_kMzWWx": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_fw46cc": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/20250620-164009.png",
+            "heading": "Fast Shipping",
+            "text": ""
+          }
+        },
+        "icon_LGtgxG": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/20250620-164012.png",
+            "heading": "100% Secure Payment",
+            "text": ""
+          }
+        },
+        "icon_hRBBiX": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/20250620-164019.png",
+            "heading": "14 Days Return & Refund Service",
+            "text": ""
+          }
+        },
+        "icon_GhPx9K": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/20250620-164016.png",
+            "heading": "Lifetime Customer Support",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_fw46cc",
+        "icon_LGtgxG",
+        "icon_hRBBiX",
+        "icon_GhPx9K"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "title_text": "Why Shop on PioCreat Store",
+        "title_size": "h4",
+        "title_color": "#000000",
+        "title_alignment": "center",
+        "text_alignment": "center",
+        "icon_position": "top",
+        "icon_size": "large",
+        "heading_size": "medium",
+        "mobile_swipe": true,
+        "color_bg": "#f5f5f5",
+        "item_color_bg": "#f5f5f5",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
+        "spacing": "large"
+      }
+    },
+    "email_signup_gxVWrf": {
+      "type": "email-signup",
+      "blocks": {
+        "heading_CJpDic": {
+          "type": "heading",
+          "settings": {
+            "text": "Join Now – Enjoy Exclusive Summer Deals!",
+            "heading_size": "h3"
+          }
+        },
+        "text_Y8kEcd": {
+          "type": "text",
+          "settings": {
+            "text": "Register now to enjoy exclusive access to expert advice, members-only promotions, and the latest updates in the world of 3D printing. Be the first to know about new products, tips, and events – all tailored just for you.",
+            "description_size": "small"
+          }
+        },
+        "form_zDQQaz": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_CJpDic",
+        "text_Y8kEcd",
+        "form_zDQQaz"
+      ],
+      "name": "Newsletter",
+      "settings": {
+        "full_width": true,
+        "background_image": "shopify://shop_images/20250618-165607.jpg",
+        "color_bg": "#2c2d2e",
+        "color_text": "#ffffff",
+        "color_heading": "#ffffff",
+        "color_border": "#ffffff",
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_CAJcMY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7iPtwU": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Note:</strong><br/>1.Summer Sale Period: June 23rd – June 30th.<br/>2.Pre-Order Available: Orders can be placed in advance. Estimated shipping time is by the end of July.<br/>3.Fixed Color for 5KG Resin Essential Pack: Each bottle of resin in this bundle comes in Sea Mist Gray. Color selection is not customizable.<br/>4.Fixed Color for 3D Printer Series Bundles Sale: Resin included in this bundle is also Sea Mist Gray, and color choice is not available.</p>",
+            "custom_liquid": "",
+            "size": "text-size-small"
+          }
+        }
+      },
+      "block_order": [
+        "text_7iPtwU"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "#f5f5f5",
+        "color_heading": "#1a1c1d",
+        "color_text": "#959595",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_xUChwh",
+    "navbar_F9DPWb",
+    "navbar_id_DCqpD4",
+    "single_image_rQ8mtn",
+    "175021294459790ea3",
+    "spacer_PPLJKr",
+    "17502272082d619fbe",
+    "spacer_UEWkkw",
+    "navbar_id_ywKUic",
+    "single_image_XtCgUx",
+    "175021474887cd9a00",
+    "spacer_V9LjxT",
+    "navbar_id_3a6KP6",
+    "single_image_GGjWXK",
+    "17502151739501c31e",
+    "spacer_xLaGUL",
+    "navbar_id_H99k4q",
+    "single_image_VU77hU",
+    "1750215178f362efea",
+    "apps_dLrpkC",
+    "apps_AQWgrn",
+    "text_with_icons_kMzWWx",
+    "email_signup_gxVWrf",
+    "rich_text_CAJcMY"
+  ]
+}

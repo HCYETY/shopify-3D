@@ -1,0 +1,592 @@
+ .bundle-bg-section {
+   background: #FFF9EF;
+   padding: 20px 0;
+ }
+
+ .bundle-top-text {
+   text-align: center;
+   margin-bottom: 18px;
+ }
+
+ .bundle-top-title {
+   font-weight: bold;
+   letter-spacing: 0.08rem;
+   margin-bottom: 6px;
+ }
+
+ .bundle-top-subtitle {
+   color: #ff9945;
+   font-size: 1.2rem;
+   margin-bottom: 8px;
+ }
+
+ .bundle-flex-box {
+   display: flex;
+   align-items: stretch;
+   background: #FDF4E6;
+   max-width: 1280px;
+   margin: 32px auto;
+   border-radius: 12px;
+   border: none;
+   padding: 0;
+ }
+
+ .bundle-left {
+   background: #ffa13a;
+   color: #fff;
+   width: 240px;
+   min-width: 220px;
+   border-radius: 12px 0 0 12px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 32px 16px;
+   text-align: left;
+ }
+
+ .bundle-left-title {
+   font-size: 2rem;
+   font-weight: bold;
+   line-height: 1.3;
+ }
+
+ .bundle-left-prices {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+ }
+
+ .bundle-old-price {
+   text-decoration: line-through;
+   color: #fff;
+   font-size: 1rem;
+   opacity: 0.7;
+   margin-top: 2px;
+ }
+
+ .bundle-new-price {
+   display: block;
+   font-size: 1.125rem;
+   font-weight: bold;
+   margin: 0;
+
+ }
+
+ .bundle-add-btn {
+   width: 100%;
+   margin: 16px auto 0 auto;
+   background: #FFFFFF;
+   color: #FF9945;
+   border: none;
+   border-radius: 8px;
+   padding: 16px 24px;
+   font-size: 1.1rem;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background 0.2s, color 0.2s;
+ }
+
+ .bundle-add-btn:hover {
+   background: #ffe4bd;
+   color: #ff9945;
+ }
+
+ .bundle-right {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   padding: 18px 24px;
+   position: relative;
+ }
+
+ .bundle-equal,
+ .bundle-plus {
+   flex-shrink: 0;
+   font-size: 2rem;
+   color: #fff;
+   font-weight: bold;
+   align-self: center;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: left;
+   background: #ffa13a;
+   border-radius: 50%;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 2px 8px rgba(255, 161, 58, 0.08);
+ }
+
+ .bundle-equal-exception {
+   margin-right: 19px;
+ }
+
+ .bundle-products {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-around;
+ }
+
+ .bundle-product-card {
+   background: #fff;
+   border-radius: 12px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+   padding: 16px;
+   width: 226px;
+   text-align: left;
+   border: none;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin: 0 12px;
+   text-wrap: nowrap;
+   height: 361px;
+ }
+
+ .bundle-product-card img {
+   width: 226px;
+   height: 218px;
+   object-fit: contain;
+   margin-bottom: 8px;
+   align-self: center;
+ }
+
+ .bundle-product-title {
+   font-weight: bold;
+   font-size: 1.2rem;
+   margin-bottom: 2px;
+   color: #000;
+   text-align: center;
+   width: 200px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+ }
+
+ .bundle-product-description {
+   width: 200px;
+   text-align: center;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+ }
+
+ .bundle-product-subtitle {
+   font-size: 0.75em;
+   color: #666666;
+   margin-bottom: 8px;
+   text-align: left;
+ }
+
+ .bundle-product-prices {
+   width: 100%;
+   margin-top: 8px;
+   text-align: center;
+ }
+
+ .bundle-product-old {
+   text-decoration: line-through;
+   color: #000;
+   margin: 0;
+   font-size: 1rem;
+   font-weight: bold;
+   font-family: 'HarmonyOS_Sans_Bold';
+ }
+
+ .bundle-product-new {
+   color: #F94608;
+   font-weight: bold;
+   font-size: 1.2rem;
+   margin-bottom: 10px;
+   font-family: 'HarmonyOS_Sans_Bold';
+ }
+
+ /* @media (max-width: 900px) {
+  .bundle-flex-box {
+    flex-direction: column;
+    padding: 0;
+  }
+  .bundle-left {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    padding: 24px 8px;
+  }
+  .bundle-right {
+    flex-direction: column;
+    padding: 0 8px 24px 8px;
+  }
+  .bundle-products {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .bundle-product-card {
+    width: 100%;
+    min-width: 0;
+  }
+  .bundle-equal, .bundle-plus {
+    margin: 12px auto;
+  }
+} */
+ @media (min-width: 750px) and (max-width: 948px) {
+   .bundle-bg-section {
+     padding: 20px 12px;
+   }
+
+   .bundle-left {
+     min-height: 170px;
+   }
+
+   .bundle-left-desktop {
+     display: none !important;
+   }
+
+   .bundle-left-mobile {
+     display: flex !important;
+     margin-top: 16px;
+     text-align: center;
+     align-items: center;
+     width: 100%;
+     border-radius: 12px;
+   }
+
+   .bundle-equal {
+     display: none !important;
+   }
+
+   .bundle-products-wrapper {
+     padding-bottom: 8px;
+   }
+
+   .bundle-products {
+     display: flex;
+     flex-wrap: nowrap;
+     min-width: 320px;
+   }
+
+   .bundle-product-card {
+     flex: 0 0 auto;
+     background: #fff;
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+     margin-bottom: 0;
+   }
+
+   .bundle-plus {
+     align-self: center;
+     font-size: 20px;
+     color: #bbb;
+     flex: 0 0 auto;
+   }
+
+   .bundle-right {
+     display: block;
+   }
+
+   .bundle-add-btn {
+     border-radius: 50px;
+     width: 40vw;
+   }
+
+   .bundle-left-title {
+     text-align: center;
+   }
+
+   .bundle-left-prices {
+     display: flex;
+     flex-direction: row;
+     text-align: left;
+   }
+ }
+
+ @media (max-width: 750px) {
+   .bundle-left {
+     min-height: 150px;
+   }
+
+   .bundle-left-prices {
+     display: flex;
+     flex-direction: row;
+     text-align: left;
+   }
+
+   .bundle-left-desktop {
+     display: none !important;
+   }
+
+   .bundle-left-mobile {
+     display: flex !important;
+     margin-top: 16px;
+     text-align: center;
+     align-items: center;
+     width: 100%;
+     border-radius: 12px;
+   }
+
+   .bundle-equal {
+     display: none !important;
+   }
+
+   .bundle-products-wrapper {
+     padding-bottom: 8px;
+   }
+
+   .bundle-products {
+     display: flex;
+     flex-wrap: nowrap;
+     gap: 12px;
+     min-width: 320px;
+   }
+
+   .bundle-product-new {
+     margin-bottom: 0;
+   }
+
+   .bundle-product-card {
+     width: 200px;
+     height: 300px;
+     flex: 0 0 auto;
+     background: #fff;
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+     margin-bottom: 0;
+   }
+
+   .bundle-product-title,
+   .bundle-product-description {
+     width: 100%;
+   }
+
+   .bundle-equal,
+   .bundle-plus {
+     width: 30px;
+     height: 30px;
+   }
+
+   .bundle-product-card img {
+     width: 180px;
+     height: 180px;
+   }
+
+   .bundle-plus {
+     align-self: center;
+     font-size: 20px;
+     color: #bbb;
+     flex: 0 0 auto;
+   }
+
+   .bundle-right {
+     display: block;
+     overflow: hidden;
+   }
+
+   .bundle-products {
+     overflow: hidden;
+     overflow-x: auto;
+     scrollbar-width: none;
+   }
+
+   .bundle-add-btn {
+     border-radius: 50px;
+     width: 40vw;
+   }
+
+   .bundle-old-price {
+     margin-top: 12px;
+   }
+ }
+
+ .bundle-left-mobile {
+   display: none;
+ }
+
+ /* === Responsive Font Sizes for Bundle Add To Cart === */
+ /* 1. 主标题 .bundle-top-title */
+ .bundle-top-title {
+   font-size: 32px;
+ }
+
+ /* 2. 副标题 .bundle-top-subtitle */
+ .bundle-top-subtitle {
+   font-size: 24px;
+ }
+
+ /* 3. 商品主标题 .bundle-product-title 和商品折扣价 .bundle-product-new */
+ .bundle-product-title,
+ .bundle-product-new {
+   font-size: 18px;
+ }
+
+ /* 4. 商品原价 .bundle-product-old { 1200px以上默认1rem，媒体查询覆盖 } */
+
+ @media (max-width: 1200px) and (min-width: 751px) {
+   .bundle-top-title {
+     font-size: 40px;
+   }
+
+   .bundle-top-subtitle {
+     font-size: 28px;
+   }
+
+   .bundle-product-title {
+     font-size: 16px;
+   }
+
+   .bundle-product-new {
+     font-size: 24px;
+   }
+
+   .bundle-product-old {
+     font-size: 16px;
+   }
+ }
+
+ @media (max-width: 750px) {
+   .bundle-top-title {
+     font-size: 24px;
+   }
+
+   .bundle-top-subtitle {
+     font-size: 12px;
+   }
+
+   .bundle-product-title {
+     font-size: 16px;
+   }
+
+   .bundle-product-new {
+     font-size: 18px;
+   }
+
+   .bundle-product-old {
+     font-size: 12px;
+   }
+ }
+
+ /* === End Responsive Font Sizes === */
+
+ /* === Responsive Padding & Margin for Bundle Add To Cart === */
+
+ .bundle-flex-box {
+   margin: 32px auto;
+   padding: 0;
+ }
+
+ .bundle-left {
+   padding: 32px 16px;
+ }
+
+ /* .bundle-right {
+   padding: 0 24px;
+ } */
+
+ .bundle-product-card {
+   padding: 16px;
+   margin: 0 12px;
+ }
+
+ @media (max-width: 1200px) and (min-width: 751px) {
+   .bundle-bg-section {
+     padding: 32px 8px;
+   }
+
+   .bundle-flex-box {
+     margin: 16px auto;
+     padding: 0 4px;
+     overflow: hidden;
+     overflow-x: auto;
+   }
+ }
+
+ .bundle-left {
+   padding: 30px 20px;
+ }
+
+ /* .bundle-right {
+   padding: 0 8px;
+ } */
+
+ .bundle-product-card {
+   padding: 10px;
+   margin: 0 6px;
+ }
+
+ @media (max-width: 750px) {
+   .bundle-bg-section {
+     padding: 12px;
+   }
+
+   .bundle-flex-box {
+     margin: 8px auto;
+     padding: 0 2px;
+   }
+
+   .bundle-left {
+     padding: 10px 4px;
+   }
+
+   .bundle-right {
+     padding: 0 2px;
+   }
+
+   .bundle-product-card {
+     padding: 6px;
+     margin: 10px 2px;
+   }
+ }
+
+ /* === End Responsive Padding & Margin === */
+
+ /* === Responsive Font Sizes for Left Title & Total Price === */
+ @media (max-width: 1200px) and (min-width: 751px) {
+   .bundle-left-title {
+     font-size: 32px;
+   }
+
+   .bundle-new-price {
+     font-size: 18px;
+   }
+ }
+
+ @media (max-width: 750px) {
+
+   .bundle-left-title,
+   .bundle-new-price {
+     font-size: 22px;
+   }
+ }
+
+ /* === End Responsive Font Sizes for Left Title & Total Price === */
+
+ /* === Optimize Add to Cart Button on Small Screens === */
+ @media (max-width: 1200px) {
+   .bundle-add-btn {
+     width: 200px;
+     padding: 12px 24px;
+     font-size: 18px;
+     display: block;
+     margin: 16px auto 0 auto;
+   }
+ }
+
+ @media (max-width: 948px) {
+   .bundle-add-btn {
+     font-size: 16px;
+     padding: 10px 18px;
+     width: 330px;
+   }
+ }
+
+ @media (max-width: 750px) {
+   .bundle-add-btn {
+     font-size: 15px;
+     padding: 8px 12px;
+     width: 220px;
+     min-width: 0;
+     margin: 0px auto 0 auto;
+   }
+ }
+
+ /* === End Optimize Add to Cart Button === */

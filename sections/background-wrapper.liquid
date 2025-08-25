@@ -1,0 +1,41 @@
+<style>
+  {% comment %} #main-content {
+    position: relative;
+    background-size: 100% 100%; /* 需JS动态计算 */
+  } {% endcomment %}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      const container = document.querySelector('#main-content');
+      const children = container.querySelectorAll('.section-flash-deals-banner');
+      const thirdChild = children[0];
+
+      {% comment %} 获取距离父元素的距离 {% endcomment %}
+      const startOffset = thirdChild?.offsetTop - container?.offsetTop;
+
+      container.style.backgroundImage =
+        'url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/nnn.jpg?v=1753768729")';
+      container.style.backgroundPosition = `0 ${startOffset}px`;
+      container.style.backgroundRepeat = 'no-repeat';
+      container.style.backgroundSize = 'cover';
+    } catch (error) {
+      console.error('Error setting background:', error);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "页面背景",
+  "class": "section-background-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "页面背景设置"
+    }
+  ],
+  "presets": [{ "name": "页面背景图容器" }]
+}
+{% endschema %}

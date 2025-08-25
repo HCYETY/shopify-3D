@@ -1,0 +1,164 @@
+{{- 'challenge-entry-form.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+  assign section_heading = section.settings.heading
+  assign rule_content = section.settings.rule_content
+
+  # 图片配置
+  assign image = section.settings.image
+  assign mobile_image = section.settings.mobile_image
+  assign mobile_image_height = 665
+-%}
+
+
+<div class="challenge-container">
+  <!-- 背景图片 -->
+  {% if image %}
+    <div class="challenge__background">
+      {%- liquid
+        assign master_width = image.src.width | append: 'x' | append: image.src.height
+        assign variable_widths = '900x,1000x,1100x,1200x,1400x,1600x,' | append: master_width
+        assign width = '375x' | append: mobile_image_height | append: ',' | append: variable_widths
+        assign class = null
+
+        if mobile_image != blank
+          assign class = 'challenge-image--desktop'
+          assign width = variable_widths
+        endif
+      -%}
+      {%- render 'responsive-image',
+            image: image,
+            sizes: width,
+            class: class,
+            priority: preload
+      -%}
+      {%- if mobile_image != blank -%}
+        {%- liquid
+          assign master_width = mobile_image.src.width | append: 'x' | append: mobile_image.src.height
+          assign width = '375x' | append: mobile_image_height | append: ',' | append: master_width
+        -%}
+        {%- render 'responsive-image',
+              image: mobile_image,
+              sizes: width,
+              class: 'challenge-image--mobile',
+              priority: preload
+        -%}
+      {%- endif -%}
+    </div>
+  {% endif %}
+
+  <!-- 内容区域 -->
+  <div class="challenge__content">
+    <div class="challenge-texts-container">
+      <div class="challenge-text title">
+        #PioCreatChallenge
+      </div>
+      <div class="challenge-text desc">
+        Show Your Print, Win Big!
+      </div>
+    </div>
+    <div class="challenge-buttons-container">
+      <div class="challenge-button">
+        <button
+          id="submit-challenge-button"
+          class="button black"
+          title="Submit Now">
+          Submit Now
+        </button>
+      </div>
+      <div class="challenge-button">
+        <button
+          class="button white"
+          id="rulesButton"
+          title="Rules">
+          Rules
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rules Modal and Overlay -->
+<div id="rulesOverlay" class="modal-overlay"></div>
+<div id="rulesModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-close" id="closeRulesModal">&times;</div>
+    <div class="modal-text">
+      {{ rule_content }}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Rules Modal Functionality
+  const rulesButton = document.getElementById('rulesButton');
+  const rulesOverlay = document.getElementById('rulesOverlay');
+  const rulesModal = document.getElementById('rulesModal');
+  const closeRulesModal = document.getElementById('closeRulesModal');
+
+  // Submit Challenge Button Functionality
+  const submitChallengeButton = document.getElementById('submit-challenge-button');
+
+  submitChallengeButton.addEventListener('click', function() {
+      // 阻止默认提交行为
+      event.preventDefault();
+      // 找到目标元素
+      const targetElement = document.getElementById('globo-formbuilder-105174');
+      if (targetElement) {
+        // 滚动到目标元素
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+  });
+
+  function openModal() {
+    rulesOverlay.classList.add('active');
+    rulesModal.classList.add('active');
+  }
+
+  function closeModal() {
+    rulesOverlay.classList.remove('active');
+    rulesModal.classList.remove('active');
+  }
+
+  rulesButton.addEventListener('click', openModal);
+  closeRulesModal.addEventListener('click', closeModal);
+  rulesOverlay.addEventListener('click', closeModal);
+
+  // Close modal when Escape key is pressed
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Challenge Entry Form",
+    "class": "section-challenge-form",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "图像"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "移动端图像（可选）"
+      },
+      {
+        "type": "richtext",
+        "id": "rule_content",
+        "label": "规则",
+        "default": "<p>1. 规则1</p><p>2. 规则2</p><p>3. 规则3</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Challenge Entry Form"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,225 @@
+.carousel-bg {
+  background: #FFF9EF;
+  width: 100%;
+  padding: 1px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  padding: 60px 0;
+}
+.carousel-swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-swiper .swiper-wrapper {
+  min-height: 1px;
+}
+.carousel-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+.carousel-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: block;
+}
+.carousel-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.carousel-placeholder {
+  width: 350px;
+  height: 200px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.swiper-pagination {
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.swiper-button-prev { left: 10px; }
+.swiper-button-next { right: 10px; }
+@media (max-width: 900px) {
+  .carousel-image, .carousel-placeholder { max-width: 220px; }
+  .swiper-button-next, .swiper-button-prev { width: 32px; height: 32px; font-size: 16px; }
+}
+@media (max-width: 600px) {
+  .carousel-image, .carousel-placeholder { max-width: 100%; }
+  .swiper-button-next, .swiper-button-prev { width: 24px; height: 24px; font-size: 12px; }
+  .carousel-swiper { padding: 0 4px; }
+}
+/* 修正swiper-slide宽度和间距 */
+/* @media (min-width: 947px) {
+  .carousel-swiper .swiper-slide {
+    width: 229px !important;
+    margin-right: 14px !important;
+  }
+  .carousel-image {
+    width: 229px !important;
+    height: 292px !important;
+  }
+} */
+/* @media (max-width: 946px) {
+  .carousel-swiper .swiper-slide {
+    width: 315px !important;
+    margin-right: 14px !important;
+  }
+  .carousel-image {
+    width: 315px !important;
+    height: 404px !important;
+  }
+} */
+/* 修正swiper-slide布局，防止所有图片一行展示 */
+.carousel-swiper .swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.carousel-swiper .swiper-slide {
+  flex-shrink: 0;
+}
+
+/* 强制修复轮播区域及子元素显示问题 */
+.carousel-swiper,
+.carousel-swiper .swiper-wrapper,
+.carousel-swiper .swiper-slide,
+.carousel-swiper .carousel-image {
+  min-height: 100px !important;
+  min-width: 100px !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.scrolling-images--image {
+  isolation: isolate;
+  border-radius: var(--block-border-radius, 16px);
+}
+
+.scrolling-images {
+  position: relative;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.scrolling-images--inner {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+.scrolling-images--inner.direction-left > div {
+  animation: marquee-left var(--marquee-speed) linear infinite;
+}
+.scrolling-images--inner.direction-right > div {
+  animation: marquee-right var(--marquee-speed) linear infinite;
+}
+.scrolling-images--inner > div {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.scrolling-images--spacing-small .scrolling-images--item {
+  margin: 0 5px;
+}
+.scrolling-images--spacing-medium .scrolling-images--item {
+  margin: 0 5px;
+}
+@media only screen and (min-width: 768px) {
+  .scrolling-images--spacing-medium .scrolling-images--item {
+    margin: 0 10px;
+  }
+}
+.scrolling-images--spacing-large .scrolling-images--item {
+  margin: 0 5px;
+}
+@media only screen and (min-width: 768px) {
+  .scrolling-images--spacing-large .scrolling-images--item {
+    margin: 0 15px;
+  }
+}
+.scrolling-images--top > div {
+  align-items: flex-start;
+}
+.scrolling-images--bottom > div {
+  align-items: flex-end;
+}
+.scrolling-images--item {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.scrolling-images--image {
+  position: relative;
+  max-width: 70vw;
+}
+@media only screen and (min-width: 768px) {
+  .scrolling-images--image {
+    max-width: 100%;
+  }
+}
+.scrolling-images--content {
+  margin-top: 30px;
+}
+.scrolling-images--content h6 {
+  margin-bottom: 10px;
+}
+.scrolling-images--link {
+  display: inline-flex;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+} 

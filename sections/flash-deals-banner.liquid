@@ -1,0 +1,160 @@
+{{ 'flash-deals-banner.css' | asset_url | stylesheet_tag }}
+{{ 'flash-deals-banner.js' | asset_url | script_tag }}
+
+<div
+  class="flash-deals-banner-wrapper"
+  id="flash-deals"
+  style="background: {{ section.settings.background_color | default: '#fff9ef' }};"
+>
+  <h2 class="flash-deals-title" style="color: {{ section.settings.title_color | default: '#FF9945' }};">
+    {{ section.settings.main_title }}
+  </h2>
+  <div
+    class="flash-deals-banner"
+    data-countdown-start="{{ section.settings.countdown_start_time }}"
+    data-countdown-end="{{ section.settings.countdown_end_time }}"
+    data-auto-slide-hours="{{ section.settings.auto_slide_hours }}"
+    style="background: {{ section.settings.timer_bg_color | default: '#FFE4BD' }};"
+  >
+    <div class="flash-deals-timer-block">
+      <div
+        class="flash-deals-timer-label"
+        style="color: {{ section.settings.timer_label_color | default: '#F67D19' }};"
+      >
+        {{ section.settings.ends_in_label }}
+        <span class="fd-time-group">
+          <span
+            class="fd-time"
+            style="background: {{ section.settings.timer_time_bg_color | default: '#F67D19' }}; color: {{ section.settings.timer_time_color | default: '#FFE4BD' }};"
+            ><span id="fd-days">00</span></span
+          >
+          <span class="fd-unit" style="color: {{ section.settings.timer_label_color | default: '#F67D19' }};">D</span>
+          <span
+            class="fd-time"
+            style="background: {{ section.settings.timer_time_bg_color | default: '#F67D19' }}; color: {{ section.settings.timer_time_color | default: '#FFE4BD' }};"
+            ><span id="fd-hours">00</span></span
+          >
+          <span class="fd-unit" style="color: {{ section.settings.timer_label_color | default: '#F67D19' }};">H</span>
+          <span
+            class="fd-time"
+            style="background: {{ section.settings.timer_time_bg_color | default: '#F67D19' }}; color: {{ section.settings.timer_time_color | default: '#FFE4BD' }};"
+            ><span id="fd-minutes">00</span></span
+          >
+          <span class="fd-unit" style="color: {{ section.settings.timer_label_color | default: '#F67D19' }};">M</span>
+          <span
+            class="fd-time"
+            style="background: {{ section.settings.timer_time_bg_color | default: '#F67D19' }}; color: {{ section.settings.timer_time_color | default: '#FFE4BD' }};"
+            ><span id="fd-seconds">00</span></span
+          >
+          <span class="fd-unit" style="color: {{ section.settings.timer_label_color | default: '#F67D19' }};">S</span>
+        </span>
+      </div>
+      <div
+        class="fd-divider fd-divider-top"
+        style="background: {{ section.settings.timer_time_bg_color | default: '#F67D19' }};"
+      ></div>
+    </div>
+    <div class="flash-deals-progress">
+      <div class="fd-progress-row">
+        {% assign default_names = 'Preheat Phase,Official Launch,Countdown Begins,Event Ends' | split: ',' %}
+        {% for i in (0..3) %}
+          {% assign block = section.blocks[i] %}
+          <div
+            class="fd-step-label fd-step-label-{{ i | plus: 1 }}"
+            style="--color: {{ section.settings.step_label_color | default: '#888' }}; --active-color: {{ section.settings.step_label_active_color | default: '#f77c1c' }};"
+          >
+            {{ block.settings.stage_name | default: default_names[i] }}
+          </div>
+        {% endfor %}
+      </div>
+      <div
+        class="fd-progress-bar-bg"
+        style="background: {{ section.settings.progress_bar_bg_color | default: '#fff' }};"
+      >
+        <div
+          class="fd-progress-bar"
+          id="fd-bar"
+          style="background: linear-gradient(90deg, {{ section.settings.progress_color_start }}, {{ section.settings.progress_color_end }});"
+        ></div>
+        {% for i in (0..3) %}
+          {% assign percent = i | times: 100 | divided_by: 3 %}
+          <div
+            class="fd-progress-dot fd-progress-dot-{{ i | plus: 1 }}"
+            style="left: {{ percent }}%; --dot-active-bg: {{ section.settings.dot_active_background_color | default: '#F8DAA4' }}; --dot-active-border: {{ section.settings.dot_active_border_color | default: '#F67D19' }};"
+          ></div>
+        {% endfor %}
+      </div>
+      <div class="fd-progress-row fd-progress-dates">
+        {% assign default_dates = 'July 11,July 14,July 18,July 20' | split: ',' %}
+        {% for i in (0..3) %}
+          {% assign block = section.blocks[i] %}
+          <div
+            class="fd-step-date fd-step-date-{{ i | plus: 1 }}"
+            style="--color: {{ section.settings.step_label_color | default: '#888' }}; --active-color: {{ section.settings.step_label_active_color | default: '#f77c1c' }};"
+          >
+            {{ block.settings.stage_date | default: default_dates[i] }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Flash Deals Banner",
+  "class": "section-flash-deals-banner",
+  "settings": [
+    { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#fff9ef" },
+    { "type": "text", "id": "main_title", "label": "主标题", "default": "FLASH DEALS" },
+    { "type": "color", "id": "progress_color_start", "label": "进度条渐变起始色", "default": "#FD6262" },
+    { "type": "color", "id": "progress_color_end", "label": "进度条渐变结束色", "default": "#F7A94A" },
+    { "type": "color", "id": "progress_bar_bg_color", "label": "进度条背景色", "default": "#fff" },
+    { "type": "color", "id": "timer_bg_color", "label": "倒计时块背景色", "default": "#FFE4BD" },
+    { "type": "color", "id": "timer_label_color", "label": "倒计时label字体颜色", "default": "#F67D19" },
+    { "type": "color", "id": "timer_time_bg_color", "label": "倒计时时间背景色", "default": "#F67D19" },
+    { "type": "color", "id": "timer_time_color", "label": "倒计时时间字体颜色", "default": "#FFE4BD" },
+    { "type": "number", "id": "auto_slide_hours", "label": "自动滑动间隔（小时）", "default": 6 },
+    { "type": "text", "id": "ends_in_label", "label": "倒计时前缀文案", "default": "Ends in" },
+    {
+      "type": "text",
+      "id": "countdown_start_time",
+      "label": "倒计时开始时间（YYYY-MM-DD HH:mm:ss）",
+      "default": "2024-07-11 00:00:00"
+    },
+    {
+      "type": "text",
+      "id": "countdown_end_time",
+      "label": "倒计时结束时间（YYYY-MM-DD HH:mm:ss）",
+      "default": "2024-07-20 23:59:59"
+    },
+    { "type": "color", "id": "step_label_color", "label": "阶段标签字体颜色", "default": "#888" },
+    { "type": "color", "id": "step_label_active_color", "label": "阶段标签激活字体颜色", "default": "#f77c1c" },
+    { "type": "color", "id": "dot_active_background_color", "label": "进度点激活背景色", "default": "#F8DAA4" },
+    { "type": "color", "id": "dot_active_border_color", "label": "进度点激活边框色", "default": "#F67D19" },
+    { "type": "color", "id": "title_color", "label": "主标题字体颜色", "default": "#FF9945" }
+  ],
+  "blocks": [
+    {
+      "type": "stage",
+      "name": "阶段",
+      "settings": [
+        { "type": "text", "id": "stage_name", "label": "阶段名称", "default": "Preheat Phase" },
+        { "type": "text", "id": "stage_date", "label": "阶段日期", "default": "July 11" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Flash Deals Banner",
+      "blocks": [
+        { "type": "stage", "settings": { "stage_name": "Preheat Phase", "stage_date": "July 11" } },
+        { "type": "stage", "settings": { "stage_name": "Official Launch", "stage_date": "July 14" } },
+        { "type": "stage", "settings": { "stage_name": "Countdown Begins", "stage_date": "July 18" } },
+        { "type": "stage", "settings": { "stage_name": "Event Ends", "stage_date": "July 20" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

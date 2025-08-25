@@ -1,0 +1,42 @@
+{% comment %}
+  Brand Banner Section: 双横幅品牌滚动条
+  - 上层横幅向左滚动
+  - 下层横幅向右滚动
+  - 样式和脚本均外部引入
+{% endcomment %}
+
+<div class="brand-banner-container">
+  <div class="brand-banner brand-banner-left">
+    <div class="brand-banner-track">
+      <img src="{{ 'ribbon1.png' | asset_url }}" alt="ribbon1" />
+      <img src="{{ 'ribbon1.png' | asset_url }}" alt="ribbon1" />
+      <img src="{{ 'ribbon1.png' | asset_url }}" alt="ribbon1" />
+      <!-- 可根据需要添加更多 logo -->
+    </div>
+  </div>
+  <div class="brand-banner brand-banner-right">
+    <div class="brand-banner-track">
+      <img src="{{ 'ribbon2.png' | asset_url }}" alt="ribbon2" />
+      <img src="{{ 'ribbon2.png' | asset_url }}" alt="ribbon2" />
+      <img src="{{ 'ribbon2.png' | asset_url }}" alt="ribbon2" />
+      <!-- 可根据需要添加更多 logo -->
+    </div>
+  </div>
+</div>
+
+{{ 'brand-banner.css' | asset_url | stylesheet_tag }}
+{{ 'brand-banner.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Brand Banner",
+  "tag": "section",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Brand Banner"
+    }
+  ]
+}
+{% endschema % %} 

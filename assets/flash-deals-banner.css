@@ -1,0 +1,279 @@
+.flash-deals-banner-wrapper {
+  /* background: #fff9ef; */
+  padding: 50px 24px;
+}
+
+.flash-deals-banner {
+  background: #FFE4BD;
+  padding: 32px 58px 40px 58px;
+  max-width: 1280px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.flash-deals-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #FF9945;
+}
+
+.flash-deals-subtitle {
+  text-align: center;
+  color: #f7a94a;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.flash-deals-timer-block {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.flash-deals-timer-label {
+  color: #F67D19;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fd-time-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.fd-time {
+  background: #F67D19;
+  color: #FFE4BD;
+  border-radius: 10px;
+  padding: 2px 14px;
+  font-size: 22px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 2px;
+  font-family: inherit;
+}
+
+.fd-unit {
+  color: #F67D19;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 6px 0 0;
+  display: inline-block;
+}
+
+.fd-divider {
+  height: 1px;
+  /* background: #f7a94a; */
+  margin: 8px 0;
+}
+
+.flash-deals-progress {
+  margin-top: 24px;
+}
+
+.fd-progress-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.fd-step-label {
+  font-size: 16px;
+  color: var(--color);
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.fd-step-label.active {
+  color: var(--active-color);
+  font-weight: bold;
+}
+
+.fd-progress-bar-bg {
+  position: relative;
+  height: 17px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 16px 0 8px 0;
+}
+
+.fd-progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 1;
+  width: 0%;
+  min-width: 1px;
+}
+
+.fd-progress-dot {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--dot-active-bg);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.fd-progress-dot-1 {
+  width: 20px;
+  height: 20px;
+  background: #F8DAA4;
+  border: 3px solid #F67D19;
+}
+
+.fd-progress-dot-active {
+  width: 20px;
+  height: 20px;
+  background: var(--dot-active-bg);
+  border: 3px solid var(--dot-active-border);
+  animation: dotActivate 0.3s ease-in-out;
+}
+
+@keyframes dotActivate {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+.fd-progress-dot-active::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--dot-active-border);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+
+.fd-progress-dates .fd-step-date {
+  font-size: 16px;
+  color: var(--color);
+  margin-top: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fd-progress-dates .fd-step-date.active {
+  color: var(--active-color);
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) and (min-width: 751px) {
+  .flash-deals-title {
+    font-size: 60px;
+  }
+
+  .fd-step-label,
+  .fd-progress-dates .fd-step-date,
+  .flash-deals-timer-label {
+    font-size: 14px;
+  }
+
+  .fd-time,
+  .fd-unit {
+    font-size: 15px;
+  }
+
+  .flash-deals-banner {
+    padding: 20px 24px 28px 24px;
+  }
+}
+
+@media (max-width: 750px) {
+  .flash-deals-title {
+    font-size: 24px;
+  }
+
+  .fd-step-label,
+  .fd-progress-dates .fd-step-date,
+  .flash-deals-timer-label {
+    font-size: 12px;
+  }
+
+  .fd-time,
+  .fd-unit {
+    font-size: 12px;
+  }
+
+  .flash-deals-banner-wrapper {
+    padding: 16px 12px;
+  }
+
+  .flash-deals-banner {
+    padding: 10px 4px 16px 4px;
+  }
+
+  .fd-progress-bar-bg {
+    height: 10px;
+    margin: 16px 8px 8px 8px;
+  }
+
+  .fd-progress-dot-active::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .fd-progress-dot-active {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--dot-active-border);
+  }
+}
+
+@media (max-width: 900px) {
+  .flash-deals-banner {
+    padding: 16px 16px 24px 16px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .fd-time {
+    max-width: 30px;
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  .flash-deals-banner {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}

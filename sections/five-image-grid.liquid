@@ -1,0 +1,66 @@
+<div class="five-image-grid-wrapper">
+  <div class="five-image-grid">
+  <div class="fig-row fig-row-top">
+    <div class="fig-item fig-item-large1">
+      {% if section.settings.img1 %}
+        {% render 'responsive-image', image: section.settings.img1, sizes: '375x0,714x0,1428x0' %}
+      {% else %}
+        <img src="{{ 'placeholder-images-image_large.png' | asset_url }}" width="714" height="400" alt="Image 1">
+      {% endif %}
+    </div>
+    <div class="fig-item fig-item-large2">
+      {% if section.settings.img2 %}
+        {% render 'responsive-image', image: section.settings.img2, sizes: '375x0,475x0,950x0' %}
+      {% else %}
+        <img src="{{ 'placeholder-images-image_large.png' | asset_url }}" width="475" height="400" alt="Image 2">
+      {% endif %}
+    </div>
+  </div>
+  <div class="fig-row fig-row-bottom">
+    <div class="fig-item fig-item-small">
+      {% if section.settings.img3 %}
+        {% render 'responsive-image', image: section.settings.img3, sizes: '80x0,160x0,320x0,480x0' %}
+      {% else %}
+        <img src="{{ 'placeholder-images-image.png' | asset_url }}" alt="Image 3">
+      {% endif %}
+    </div>
+    <div class="fig-item fig-item-small">
+      {% if section.settings.img4 %}
+        {% render 'responsive-image', image: section.settings.img4, sizes: '80x0,160x0,320x0,480x0' %}
+      {% else %}
+        <img src="{{ 'placeholder-images-image.png' | asset_url }}" alt="Image 4">
+      {% endif %}
+    </div>
+    <div class="fig-item fig-item-small">
+      {% if section.settings.img5 %}
+        {% render 'responsive-image', image: section.settings.img5, sizes: '80x0,160x0,320x0,480x0' %}
+      {% else %}
+        <img src="{{ 'placeholder-images-image.png' | asset_url }}" alt="Image 5">
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+{{ 'five-image-grid.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Five Image Grid",
+  "settings": [
+    { "type": "image_picker", "id": "img1", "label": "Top Left Image" },
+    { "type": "image_picker", "id": "img2", "label": "Top Right Image" },
+    { "type": "image_picker", "id": "img3", "label": "Bottom Left Image" },
+    { "type": "image_picker", "id": "img4", "label": "Bottom Center Image" },
+    { "type": "image_picker", "id": "img5", "label": "Bottom Right Image" }
+  ],
+  "presets": [
+    {
+      "name": "Five Image Grid"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}

@@ -1,0 +1,287 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "image_with_text_overlay_xUChwh": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/20250623-180351.jpg",
+        "mobile_image": "shopify://shop_images/20250623-180341.jpg",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-450",
+        "mobile_height": "mobile-height-500",
+        "full_width": true,
+        "content_width": "medium",
+        "content_position": "bottom-center",
+        "text_alignment": "center",
+        "text_color": "#ffffff",
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "navbar_F9DPWb": {
+      "type": "navbar",
+      "blocks": {
+        "text_LwYdKx": {
+          "type": "text",
+          "settings": {
+            "title": "3D Printer Series Bundles Sale",
+            "title_id": "1"
+          }
+        },
+        "text_TafeHd": {
+          "type": "text",
+          "settings": {
+            "title": "10Kg Resin Value Pack",
+            "title_id": "2"
+          }
+        },
+        "text_QGEJrQ": {
+          "type": "text",
+          "settings": {
+            "title": "5KG Resin Essential Pack",
+            "title_id": "3"
+          }
+        }
+      },
+      "block_order": [
+        "text_LwYdKx",
+        "text_TafeHd",
+        "text_QGEJrQ"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "NavBar",
+      "settings": {}
+    },
+    "navbar_id_DCqpD4": {
+      "type": "navbar-id",
+      "disabled": true,
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "1"
+      }
+    },
+    "featured_collection_9FWLG7": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "heading": "Resin Summer Sale",
+        "marker_style": "style4",
+        "description": "",
+        "collection": "checkout-black",
+        "display_type": "grid",
+        "product_limit": 5,
+        "columns_desktop": 4,
+        "show_view_all": true,
+        "mobile_swipe": true,
+        "show_progress_bar": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "featured_collection_R6UPMP": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "heading": "Resin 3D Printer Hot Sale",
+        "marker_style": "style1",
+        "description": "",
+        "collection": "summer-sale",
+        "display_type": "grid",
+        "product_limit": 4,
+        "columns_desktop": 4,
+        "show_view_all": true,
+        "mobile_swipe": true,
+        "show_progress_bar": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_xLaGUL": {
+      "type": "spacer",
+      "disabled": true,
+      "name": "Spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "navbar_id_H99k4q": {
+      "type": "navbar-id",
+      "disabled": true,
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "4"
+      }
+    },
+    "text_with_icons_kMzWWx": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_fw46cc": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/5_66e2d0b9-236f-467b-bd2e-b4414aa00769.webp",
+            "heading": "Fast Shipping",
+            "text": ""
+          }
+        },
+        "icon_LGtgxG": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/4_c4dd48c5-31d4-440f-8436-e01849473e0c.webp",
+            "heading": "100% Secure Payment",
+            "text": ""
+          }
+        },
+        "icon_hRBBiX": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/1_addf3b5c-498d-4ae8-bfaf-05a8a3009584.webp",
+            "heading": "14 Days Return & Refund Service",
+            "text": ""
+          }
+        },
+        "icon_GhPx9K": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "image": "shopify://shop_images/2_70aee358-0f51-4100-bc69-63c1dedf62ff.webp",
+            "heading": "Lifetime Customer Support",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_fw46cc",
+        "icon_LGtgxG",
+        "icon_hRBBiX",
+        "icon_GhPx9K"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "title_text": "Why Shop on PioCreat Store",
+        "title_size": "h4",
+        "title_color": "#000000",
+        "title_alignment": "center",
+        "text_alignment": "center",
+        "icon_position": "top",
+        "icon_size": "large",
+        "heading_size": "medium",
+        "mobile_swipe": true,
+        "color_bg": "#f5f5f5",
+        "item_color_bg": "#f5f5f5",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
+        "spacing": "large"
+      }
+    },
+    "email_signup_gxVWrf": {
+      "type": "email-signup",
+      "blocks": {
+        "heading_CJpDic": {
+          "type": "heading",
+          "settings": {
+            "text": "Join Now – Enjoy Exclusive Summer Deals!",
+            "heading_size": "h3"
+          }
+        },
+        "text_Y8kEcd": {
+          "type": "text",
+          "settings": {
+            "text": "Register now to enjoy exclusive access to expert advice, members-only promotions, and the latest updates in the world of 3D printing. Be the first to know about new products, tips, and events – all tailored just for you.",
+            "description_size": "small"
+          }
+        },
+        "form_zDQQaz": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_CJpDic",
+        "text_Y8kEcd",
+        "form_zDQQaz"
+      ],
+      "disabled": true,
+      "name": "Newsletter",
+      "settings": {
+        "full_width": true,
+        "background_image": "shopify://shop_images/20250618-165607.jpg",
+        "color_bg": "#2c2d2e",
+        "color_text": "#ffffff",
+        "color_heading": "#ffffff",
+        "color_border": "#ffffff",
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_CAJcMY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7iPtwU": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Note:</strong><br/>1.Summer Sale Period: <strong>June 24rd – June 30th.</strong><br/>2.Pre-Order Available: Orders can be placed in advance.<strong> Resin 3D Printer estimated shipping time is by the end of July.<br/>Resin and UW03,R6 are  in stock.</strong><br/>3.Fixed Color for 10KG Resin Essential Pack: Each bottle of resin in this bundle comes in Gray. Color selection is not customizable.<br/>4.Fixed Color for 4KG Resin Essential Pack: Standard Resin(Gray) X2 +ABS-like Resin 2.0(Gray) X2. 16K Standard Resin: <br/>Sea Mist Gray X2 +Sunset Red) X2.<br/>Color selection is not customizable.</p>",
+            "custom_liquid": "",
+            "size": "text-size-small"
+          }
+        }
+      },
+      "block_order": [
+        "text_7iPtwU"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "#f5f5f5",
+        "color_heading": "#1a1c1d",
+        "color_text": "#959595",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_xUChwh",
+    "navbar_F9DPWb",
+    "navbar_id_DCqpD4",
+    "featured_collection_9FWLG7",
+    "featured_collection_R6UPMP",
+    "spacer_xLaGUL",
+    "navbar_id_H99k4q",
+    "text_with_icons_kMzWWx",
+    "email_signup_gxVWrf",
+    "rich_text_CAJcMY"
+  ]
+}

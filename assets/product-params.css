@@ -1,0 +1,492 @@
+.product-params-container {
+  width: 100%;
+}
+
+.product-params {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.product-params-table-wrapper {
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  overflow-x: auto;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); */
+}
+
+.product-params-table-wrapper table {
+  margin-bottom: 0;
+}
+
+.product-params-table {
+
+  /* width: 100%; */
+  border-collapse: collapse;
+  /* margin-top: 20px; */
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .product-params-table {
+    width: 600px;
+  }
+}
+
+.product-params-table th {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  font-weight: 600;
+}
+
+.product-params-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.product-params-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.product-params-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.product-params-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.product-params-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.param-header-name {
+  width: 25%;
+}
+
+.param-name {
+  font-weight: 600;
+}
+
+.param-value {
+  text-align: center;
+}
+
+.product-params-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-params-title {
+  /* font-size: 24px; */
+  /* font-weight: bold; */
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+/* Merged cell styles */
+.merged-cell {
+  text-align: center;
+}
+
+.full-width {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Group row styles */
+.group-cell {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.group-row td {
+  border-top: none;
+}
+
+.group-first-row td {
+  border-bottom: none;
+}
+
+.header-row td {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Download button styles */
+.download-button-container {
+  text-align: center;
+  margin: 30px auto 10px;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.download-icon {
+  margin-right: 8px;
+  display: inline-flex;
+}
+
+.download-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Desktop and tablet styles */
+@media only screen and (min-width: 768px) {
+  /* .product-params-title.h1 {
+    font-size: 32px;
+  }
+  
+  .product-params-title.h2 {
+    font-size: 28px;
+  }
+  
+  .product-params-title.h3 {
+    font-size: 24px;
+  }
+  
+  .product-params-title.h4 {
+    font-size: 20px;
+  } */
+
+  .product-params-table th,
+  .product-params-table td {
+    padding: 12px 15px;
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+  .product-params {
+    margin: 40px 0;
+  }
+
+  .product-params-table-wrapper {
+    overflow-x: auto;
+    /* Allow horizontal scrolling on narrow screens */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    border-radius: 6px;
+    /* Slightly smaller border radius on mobile */
+  }
+
+  .product-params-table {
+    font-size: 14px;
+    min-width: 100%;
+    /* Ensures table takes full width */
+    border-radius: 6px;
+  }
+
+  .product-params-table th,
+  .product-params-table td {
+    padding: 8px;
+  }
+
+  .download-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Card-style layout for mobile */
+  .mobile-view .product-params-table-wrapper {
+    overflow-x: visible;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .mobile-view .product-params-table {
+    border: none;
+    background: none;
+    display: block;
+    border-radius: 0;
+  }
+
+  .mobile-view .product-params-table thead {
+    display: none;
+  }
+
+  .mobile-view .product-params-table tbody {
+    display: block;
+  }
+
+  .mobile-view .product-params-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .mobile-view .product-params-table tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .mobile-view .product-params-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 10px 12px;
+    border-radius: 0;
+  }
+
+  .mobile-view .product-params-table td:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-view .product-params-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 8px;
+    flex: 0 0 40%;
+    text-align: left;
+  }
+
+  /* Special handling for merged cells on mobile */
+  .mobile-view .product-params-table td.merged-cell {
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .mobile-view .product-params-table td.merged-cell:before {
+    display: none;
+  }
+
+  .mobile-view .product-params-table .header-row td {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 12px;
+    margin-top: -1px;
+    border-radius: 0;
+  }
+
+  /* Special handling for group cells on mobile */
+  .mobile-view .product-params-table td.group-cell {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .mobile-view .product-params-table .group-row td {
+    position: relative;
+    padding-left: 15px;
+  }
+
+  .mobile-view .product-params-table .group-row td:before {
+    flex: 0 0 auto;
+  }
+
+  .mobile-view .product-params-table .param-name {
+    background-color: #f3f3f3;
+  }
+
+  /* Download button mobile styles */
+  .download-button-container {
+    margin: 25px auto 8px;
+  }
+
+  .download-button {
+    width: 80%;
+    max-width: 250px;
+    padding: 12px 16px;
+  }
+
+  .download-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* 自定义样式2 */
+.custom_style2.product-params-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.custom_style2 .product-params {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.custom_style2 .product-params-title {
+  font-family: MiSans;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  letter-spacing: 0em;
+  color: #3D3D3D;
+  margin-bottom: 30px;
+}
+
+.custom_style2 .product-params-table-wrapper {
+  border-radius: 0px;
+}
+
+.custom_style2 .product-params-table {
+  width: 100%;
+  border-radius: 0px;
+  border: none;
+}
+
+.custom_style2 .product-params-table th {
+  font-family: MiSans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  letter-spacing: 0em;
+  background: #C5C5C5;
+  height: 49px;
+  color: #3D3D3D;
+  border: none;
+  padding: 0px 0px 0px 140px;
+}
+
+.custom_style2 .param-header-name {
+  width: 50%;
+}
+
+.custom_style2 .product-params-table td {
+  font-size: 20px;
+  border: none;
+  padding: 0px 0px 0px 140px;
+}
+
+.custom_style2 .product-params-table tr:last-child td:last-child,
+.custom_style2 .product-params-table tr:last-child td:first-child,
+.custom_style2 .product-params-table th:first-child,
+.custom_style2 .product-params-table td:first-child,
+.custom_style2 .product-params-table th:last-child,
+.custom_style2 .product-params-table td:last-child {
+  border-radius: 0px;
+}
+
+.custom_style2 .product-params-table tr:nth-child(odd) {
+  background: #F5F5F5;
+}
+
+.custom_style2 .product-params-table tr:nth-child(even) {
+  background: #EBEBEB;
+}
+
+.custom_style2 .param-row .param-name {
+  font-family: MiSans;
+  font-weight: normal;
+  line-height: 48px;
+  letter-spacing: 0em;
+  color: #3D3D3D;
+}
+
+.custom_style2 .param-row .param-value {
+  font-family: MiSans;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3D3D3D;
+}
+
+.custom_style2 .product-params-tip {
+  font-family: MiSans;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0em;
+  color: #797979;
+  text-align: center;
+  margin-top: 30px;
+  padding: 0px 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .custom_style2 .product-params-title {
+    text-align: center;
+  }
+
+  .custom_style2 .product-params-table th {
+    padding-left: 20px;
+  }
+
+  .custom_style2 .product-params-table td {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+}
+
+/* 自定义样式2 结束 */
+.buttons-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.custom-button {
+  border-radius: 96px;
+  font-family: MiSans, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 0em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 38px;
+  width: max-content;
+}
+
+.custom-button.style-style1 {
+  color: #fff;
+  background: #0C0C0C;
+  border: 1px solid #0C0C0C;
+}
+
+.custom-button.style-style1:hover {
+  background: #222;
+}
+
+.custom-button.style-style2 {
+  color: #0C0C0C;
+  background: #fff;
+  border: 1px solid #0C0C0C;
+}
+
+.custom-button.style-style2:hover {
+  background: #f5f5f5;
+}

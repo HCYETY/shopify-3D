@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_apTezF": {
+      "type": "page",
+      "settings": {
+        "page": "contact-us",
+        "show_page_title": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "1661619382b4020fa2": {
+      "type": "rich-text",
+      "blocks": {
+        "166161938159ca8988-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Technical Support Inquiry",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#FD6262"
+          }
+        },
+        "166161938159ca8988-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For technical assistance with 3D printing equipment, kindly submit your inquiry through the designated form below or direct correspondence to our dedicated support: after@piocreat3d.com</p>",
+            "custom_liquid": "",
+            "size": "text-size-small"
+          }
+        }
+      },
+      "block_order": [
+        "166161938159ca8988-1",
+        "166161938159ca8988-2"
+      ],
+      "settings": {
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "1652268757b7c53383": {
+      "type": "contact-form",
+      "blocks": {
+        "dropdown_field_bYLW3L": {
+          "type": "dropdown_field",
+          "settings": {
+            "title": "Country",
+            "values": "US, CA, EU, Other"
+          }
+        },
+        "dropdown_field_Ebnj66": {
+          "type": "dropdown_field",
+          "settings": {
+            "title": "Product Type",
+            "values": "HALOT-X1, Resin & Post processing, Parts and Accessories"
+          }
+        },
+        "text_field_tBd6wi": {
+          "type": "text_field",
+          "settings": {
+            "title": "Order Number",
+            "use_long_text": false,
+            "is_required": false
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_field_bYLW3L",
+        "dropdown_field_Ebnj66",
+        "text_field_tBd6wi"
+      ],
+      "settings": {
+        "heading": "",
+        "marker_style": "style1",
+        "description": "",
+        "show_phone_number": false,
+        "marker_color": "#FD6262",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "page_apTezF",
+    "1661619382b4020fa2",
+    "1652268757b7c53383"
+  ]
+}
