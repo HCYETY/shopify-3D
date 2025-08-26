@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+          "product_features_demo": {
+        "type": "product-features-two-column",
+        "settings": {
+          "title": "Product Features",
+          "section_width": "1170",
+          "section_padding": 80,
+          "group_gap": 60,
+          "margin_bottom_desktop": 80,
+          "margin_bottom_mobile": 50,
+          "background_color": "#f8f9fa",
+          "background_opacity": 100
+        },
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Universal Printer Compatibility",
+            "description": "Whether you're working with the HALOT-01 or another Creality 3D printer, this resin integrates seamlessly into your setup. It's also available in multiple colors, making it easy to match your creative vision or production needs.",
+            "layout_mode": "horizontal",
+            "layout_direction": "image_first",
+            "content_gap": 60,
+            "text_alignment": "left",
+            "text_position": "left",
+            "image_alignment": "center",
+            "image_border_radius": 12
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Smooth Flow, Clean Release",
+            "description": "With optimized fluidity and low viscosity, the resin flows easily into fine details and cures efficiently, improving print success rates and reducing adhesion to the FEP film — for smoother printing and easier model removal.",
+            "layout_mode": "horizontal",
+            "layout_direction": "text_first",
+            "content_gap": 70,
+            "text_alignment": "center",
+            "text_position": "center",
+            "image_alignment": "right",
+            "image_border_radius": 20
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "High Precision & Detail",
+            "description": "Achieve exceptional print quality with our advanced resin formula. Perfect for intricate designs, miniatures, and detailed prototypes that require the highest level of precision and surface finish.",
+            "layout_mode": "vertical",
+            "layout_direction": "image_first",
+            "content_gap": 40,
+            "text_alignment": "left",
+            "text_position": "left",
+            "image_alignment": "left",
+            "image_border_radius": 0
+          }
+        },
+        "feature_4": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Fast Curing & Efficiency",
+            "description": "Experience rapid curing times with our optimized resin formula. Perfect for production environments where speed and quality are equally important, reducing overall print time while maintaining excellent results.",
+            "layout_mode": "vertical",
+            "layout_direction": "text_first",
+            "content_gap": 50,
+            "text_alignment": "right",
+            "text_position": "right",
+            "image_alignment": "center",
+            "image_border_radius": 25
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "product_features_demo"
+  ]
+}
