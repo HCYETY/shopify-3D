@@ -1,0 +1,125 @@
+{% style %}
+  .h-blogs .title {
+    font-family: Montserrat;
+    font-size: 32px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .h-blogs .v-slider-container .swiper {
+    width: 100vw;
+    max-width: 100vw;
+    /* 8px no need to vw */
+    padding: 0 calc(50vw - 50% - 8px);
+    margin-left: calc(-50vw + 50% + 8px);
+  }
+
+  .h-blogs .swiper .swiper-slide {
+    margin-right: 16px;
+  }
+
+  .h-blogs .swiper .swiper-pagination {
+    margin-bottom: 60px;
+    bottom: 0;
+  }
+
+  .h-blogs .v-slider-container .swiper-button-next,
+  .h-blogs .v-slider-container .swiper-button-prev {
+    /* top: 0;
+    margin-top: 0; */
+  }
+
+  @media (max-width: 900px) {
+    .h-blogs {
+      margin: 12.8vw 0;
+    }
+
+    .h-blogs .container {
+      padding: 0 6.4vw;
+    }
+
+    .h-blogs .title {
+      font-size: 6.4vw;
+      margin-bottom: 6.4vw;
+    }
+
+    .h-blogs .swiper .swiper-pagination {
+      margin-bottom: 6.4vw;
+    }
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1920px) {
+      .container {
+          margin: 0 auto;
+          max-width: 1200px;
+          width: 1200px;
+      }
+  }
+
+  @media (min-width: 1920px) {
+    .h-blogs {
+      margin: 2.5vw 0 4.167vw;
+    }
+    .h-blogs .title {
+      font-size: 1.667vw;
+      margin-bottom: 1.667vw;
+    }
+    .h-blogs .swiper .swiper-pagination {
+      margin-bottom: 3.125vw;
+    }
+  }
+{% endstyle %}
+
+<div class="h-blogs">
+  <div class="container">
+    <h2 class="title">{{ section.settings.title }}</h2>
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home S Blogs or Other",
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "Blogs or Other"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Blogs or Other",
+      "blocks": [
+        {
+          "type": "v-slider",
+          "settings": {
+            "show_pagination": false,
+            "show_nav": true
+          },
+          "blocks": [
+            {
+              "type": "home-blog-card"
+            },
+            {
+              "type": "home-blog-card"
+            },
+            {
+              "type": "home-blog-card"
+            },
+            {
+              "type": "home-blog-card"
+            },
+            {
+              "type": "home-blog-card"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

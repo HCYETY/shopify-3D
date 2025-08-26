@@ -1,0 +1,404 @@
+/* V Slider 基础样式 */
+.v-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.v-slider__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.v-slider__wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.v-slider__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+/* 幻灯片样式 */
+.v-slider__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 图片样式 */
+.v-slider__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.v-slider__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 占位符样式 */
+.v-slider__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-slider__placeholder .placeholder-svg {
+  width: 120px;
+  height: 120px;
+  opacity: 0.3;
+  color: white;
+}
+
+/* 内容样式 */
+.v-slider__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.v-slider__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.v-slider__desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  opacity: 0.9;
+}
+
+.v-slider__button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  margin-right: 15px;
+}
+
+.v-slider__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.v-slider__compare-button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.v-slider__compare-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 导航箭头样式 */
+.v-slider__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+.v-slider__nav:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.v-slider__nav--prev {
+  left: 20px;
+}
+
+.v-slider__nav--next {
+  right: 20px;
+}
+
+.v-slider__nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 导航位置样式 */
+.nav-position--inside .v-slider__nav--prev {
+  left: 20px;
+}
+
+.nav-position--inside .v-slider__nav--next {
+  right: 20px;
+}
+
+.nav-position--outside .v-slider__nav--prev {
+  left: -28px;
+}
+
+.nav-position--outside .v-slider__nav--next {
+  right: -28px;
+}
+
+/* 分页指示器样式 */
+.v-slider__pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+}
+
+.pagination-position--inside .v-slider__pagination {
+  bottom: 30px;
+}
+
+.pagination-position--outside .v-slider__pagination {
+  bottom: -40px;
+}
+
+.v-slider__pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.v-slider__pagination-dot:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.v-slider__pagination-dot.active {
+  background: white;
+  border-color: white;
+  transform: scale(1.2);
+}
+
+/* 滚动条样式 */
+.v-slider__scrollbar {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.v-slider__scrollbar-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.v-slider__scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+  width: 33.33%; /* 默认宽度 */
+  transition: width 0.3s ease;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .v-slider__wrapper {
+    height: 400px;
+  }
+  
+  .v-slider__title {
+    font-size: 2rem;
+  }
+  
+  .v-slider__desc {
+    font-size: 1rem;
+  }
+  
+  .v-slider__content {
+    padding: 30px;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .v-slider__wrapper {
+    height: 350px;
+  }
+  
+  .v-slider__title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .v-slider__desc {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .v-slider__content {
+    padding: 20px;
+    max-width: 90%;
+  }
+  
+  .v-slider__nav {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .nav-position--outside .v-slider__nav--prev {
+    left: -22px;
+  }
+  
+  .nav-position--outside .v-slider__nav--next {
+    right: -22px;
+  }
+  
+  .v-slider__pagination {
+    bottom: 20px;
+    gap: 8px;
+  }
+  
+  .pagination-position--outside .v-slider__pagination {
+    bottom: -35px;
+  }
+  
+  .v-slider__pagination-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .v-slider__button,
+  .v-slider__compare-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .v-slider__wrapper {
+    height: 300px;
+  }
+  
+  .v-slider__title {
+    font-size: 1.25rem;
+  }
+  
+  .v-slider__desc {
+    font-size: 0.85rem;
+  }
+  
+  .v-slider__content {
+    padding: 15px;
+  }
+  
+  .v-slider__button,
+  .v-slider__compare-button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .v-slider__nav {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .v-slider__nav svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .nav-position--outside .v-slider__nav--prev {
+    left: -18px;
+  }
+  
+  .nav-position--outside .v-slider__nav--next {
+    right: -18px;
+  }
+}
+
+/* 无障碍支持 */
+.v-slider__nav:focus,
+.v-slider__pagination-dot:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  .v-slider__nav {
+    opacity: 1;
+  }
+  
+  .v-slider__pagination-dot {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

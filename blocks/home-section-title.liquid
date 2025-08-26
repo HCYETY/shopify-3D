@@ -1,0 +1,123 @@
+{% style %}
+  #block-{{ block.id }} {
+    margin: {{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom }}px;
+  }
+  .home-s-section-title .title-layout-center {
+    text-align: center;
+  }
+  .home-s-section-title .title-layout-right {
+    text-align: right;
+  }
+  .home-s-section-title .title-layout-left {
+    text-align: left;
+  }
+
+  .home-s-section-title .title {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #1e1e1e;
+    margin-bottom: 12px;
+  }
+
+  .home-s-section-title .sub_title {
+    font-family: Montserrat;
+    color: #8d9095;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  @media (max-width: 900px) {
+    #block-{{ block.id }} {
+      margin: {{ block.settings.margin_top | divided_by: 3.75 }}vw 0 {{ block.settings.margin_bottom | divided_by: 3.75 }}vw;
+    }
+
+    .home-s-section-title .title {
+      font-size: 6.4vw;
+      margin-bottom: 3.2vw;
+    }
+
+    .home-s-section-title .sub_title {
+      font-size: 4.267vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    #block-{{ block.id }} {
+      margin: {{ block.settings.margin_top | divided_by: 19.2 }}vw 0 {{ block.settings.margin_bottom | divided_by: 19.2 }}vw;
+    }
+
+    .home-s-section-title .title {
+      font-size: 1.667vw;
+      margin-bottom: 0.625vw;
+    }
+    .home-s-section-title .sub_title {
+      font-size: 0.833vw;
+    }
+  }
+{% endstyle %}
+
+<div id="block-{{ block.id }}" class="home-s-section-title">
+  <div class="container title-layout-{{ block.settings.layout }}">
+    <h2 class="title">{{ block.settings.title }}</h2>
+    <h2 class="sub_title">{{ block.settings.sub_title }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home S Section Title",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "布局",
+      "options": [
+        { "value": "left", "label": "左对齐" },
+        { "value": "center", "label": "居中" },
+        { "value": "right", "label": "右对齐" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "副标题",
+      "default": "Sub Title"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Section Title"
+    }
+  ]
+}
+{% endschema %}

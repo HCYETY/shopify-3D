@@ -1,0 +1,809 @@
+{% style %}
+  .home-product-list-tabs {
+    margin: 32px 0;
+  }
+
+  .home-product-list-tabs .tab-list {
+    display: flex;
+    column-gap: 32px;
+    max-width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .home-product-list-tabs .tab-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-product-list-tabs .tab-list-item {
+    color: #8d9095;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 14px;
+    padding-bottom: 16px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .home-product-list-tabs .tab-list-item .item-bar {
+    background-color: #0bb3fb;
+    border-radius: 18px;
+    bottom: 0;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .home-product-list-tabs .tab-list-item.active {
+    color: #0bb3fb;
+  }
+
+  .home-product-list-tabs .tab-list-item.active .item-bar {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .home-product-list-tabs .tab-panels {
+    position: relative;
+  }
+
+  .home-product-list-tabs .tab-panel {
+    display: none;
+  }
+
+  .home-product-list-tabs .tab-panel.active {
+    display: block;
+  }
+
+  .home-product-list-tabs .swiper .swiper-wrapper {
+    padding: 24px 0;
+  }
+
+  .home-product-list-tabs .swiper .swiper-slide {
+    height: auto;
+    /* margin-right: 16px; */
+    width: 288px;
+  }
+  /* navigation button */
+  .slider-container:hover [class*='swiper-button'] {
+    /* opacity: 1; */
+    visibility: visible;
+  }
+  .slider-container .swiper-button-next,
+  .slider-container .swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #1e1e1e;
+  }
+  .slider-container .swiper-button-next.swiper-button-disabled,
+  .slider-container .swiper-button-prev.swiper-button-disabled {
+    pointer-events: initial;
+  }
+  .slider-container .swiper-button-next:after,
+  .slider-container .swiper-button-prev:after {
+    display: none;
+  }
+
+  .slider-container .swiper-button-prev.inside {
+    left: 12px;
+  }
+  .slider-container .swiper-button-prev.outside {
+    left: 0;
+    transform: translateX(calc(-100% - 12px));
+  }
+
+  .slider-container .swiper-button-next.inside {
+    right: 12px;
+    transform: rotate(180deg);
+  }
+  .slider-container .swiper-button-next.outside {
+    right: 0;
+    transform: translateX(calc(100% + 12px)) rotate(180deg);
+  }
+  .slider-container .swiper-button-prev svg,
+  .slider-container .swiper-button-next svg {
+    fill: none;
+    stroke: #fff;
+  }
+
+  .slider-container .swiper-button-prev svg {
+    /* transform: translateX(-1px) scale(1.5); */
+    transform-origin: center;
+  }
+  .slider-container .swiper-button-next svg {
+    /* transform: translateX(1px) scale(1.5); */
+    transform-origin: center;
+  }
+
+  .home-product-list-tabs .product-item {
+    border-radius: 16px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .home-product-list-tabs .product-item .discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 5px 6px 5px 8px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    z-index: 1;
+    background-color: #fa4f47;
+    text-align: center;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .home-product-list-tabs .product-item .discount-badge .discount-text {
+    color: #fff;
+  }
+
+  .home-product-list-tabs .product-item .save {
+    background-color: #f7e7e7;
+    border-radius: 16px 0;
+    color: #f13a3a;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    left: -1px;
+    padding: 4px 12px;
+    position: absolute;
+    top: -1px;
+    z-index: 80;
+  }
+
+  .home-product-list-tabs .product-item:hover {
+    -webkit-box-shadow: 0 4px 24px #1416201a;
+    box-shadow: 0 4px 24px #1416201a;
+  }
+
+  .home-product-list-tabs .product-item:hover .item-img {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .home-product-list-tabs .product-item:hover .active-img {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .home-product-list-tabs .product-item:hover .button {
+    background-color: #1e1e1e;
+  }
+
+  .home-product-list-tabs .product-item:hover .button svg path {
+    fill: #fff;
+  }
+
+  .home-product-list-tabs .product-item .active-img {
+    height: 288px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    visibility: hidden;
+    width: 288px;
+  }
+
+  .home-product-list-tabs .product-item .active-img img {
+    border-radius: 18px 16px 0 0;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .home-product-list-tabs .product-item .item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .home-product-list-tabs .product-item img {
+    height: 256px;
+    width: 256px;
+    object-fit: cover;
+  }
+
+  .home-product-list-tabs .product-item .item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px 16px;
+  }
+
+  .home-product-list-tabs .product-item .item-content .title {
+    color: #1e1e1e;
+    display: -webkit-box;
+    font-family: Montserrat;
+    font-weight: 700;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  .home-product-list-tabs .product-item .item-content .title .item-content-tag {
+    color: #fa4f47;
+    font-size: 12px;
+    height: 18px;
+    margin-bottom: 4px;
+  }
+
+  .home-product-list-tabs .product-item .item-content .title .item-content-name {
+    line-height: 120%;
+  }
+
+  .home-product-list-tabs .product-item .item-content .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .home-product-list-tabs .product-item .content .variants-popup {
+    display: none;
+  }
+
+  .home-product-list-tabs .product-item .button {
+    border-radius: 50%;
+    padding: 8px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #f5f6f7;
+    min-width: unset;
+    border: none;
+  }
+
+  .home-product-list-tabs .product-item .button svg {
+    height: 24px;
+    width: 24px;
+    margin: 0;
+  }
+
+  .home-product-list-tabs .product-item .button svg path {
+    fill: #1e1e1e;
+    stroke: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .home-product-list-tabs .product-item .compareAtPrice {
+    display: block;
+    font-size: 12px;
+  }
+
+  .home-product-list-tabs .product-item .price {
+    color: #1e1e1e;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .home-product-list-tabs .product-item .product-item-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 14px;
+    color: var(--custom-badge-color);
+    background-color: var(--custom-badge-bg);
+  }
+
+  @media (max-width: 900px) {
+    .home-product-list-tabs {
+      margin: 8.533vw 0;
+    }
+    .home-product-list-tabs .tab-list {
+      column-gap: 8.533vw;
+    }
+    .home-product-list-tabs .tab-list-item {
+      font-size: 3.733vw;
+      padding-bottom: 4.267vw;
+    }
+    .home-product-list-tabs .tab-list-item .item-bar {
+      border-radius: 4.8vw;
+      height: 1.067vw;
+    }
+    .home-product-list-tabs .swiper .swiper-wrapper {
+      padding: 6.4vw 0;
+    }
+    .home-product-list-tabs .swiper .swiper-slide {
+      width: 76.8vw;
+    }
+    .slider-container .swiper-button-next,
+    .slider-container .swiper-button-prev {
+      width: 12.8vw;
+      height: 12.8vw;
+    }
+    .slider-container .swiper-button-prev.inside {
+      left: 3.2vw;
+    }
+    .slider-container .swiper-button-prev.outside {
+      transform: translateX(calc(-100% - 3.2vw));
+    }
+    .slider-container .swiper-button-next.inside {
+      right: 3.2vw;
+    }
+    .slider-container .swiper-button-next.outside {
+      transform: translateX(calc(100% + 3.2vw)) rotate(180deg);
+    }
+    .home-product-list-tabs .product-item {
+      position: relative;
+      border-radius: 4.267vw;
+      row-gap: 2.133vw;
+    }
+    .home-product-list-tabs .product-item .save {
+      border-radius: 4.267vw 0;
+      font-size: 3.733vw;
+      left: -0.267vw;
+      padding: 1.067vw 3.2vw;
+      top: -0.267vw;
+    }
+    .home-product-list-tabs .product-item:hover {
+      -webkit-box-shadow: 0 1.067vw 6.4vw #1416201a;
+      box-shadow: 0 1.067vw 6.4vw #1416201a;
+    }
+    .home-product-list-tabs .product-item .active-img {
+      height: 76.8vw;
+      width: 76.8vw;
+    }
+    .home-product-list-tabs .product-item .active-img img {
+      border-radius: 4.8vw 4.267vw 0 0;
+    }
+    .home-product-list-tabs .product-item .item-img {
+      padding: 5.333vw 0;
+    }
+    .home-product-list-tabs .product-item img {
+      height: 68.267vw;
+      width: 68.267vw;
+    }
+    .home-product-list-tabs .product-item .item-content {
+      padding: 0 4.267vw 4.267vw;
+    }
+    .home-product-list-tabs .product-item .item-content .title {
+      font-size: 5.333vw;
+      margin-bottom: 9.333vw;
+    }
+    .home-product-list-tabs .product-item .item-content .title .item-content-tag {
+      font-size: 3.2vw;
+      height: 4.8vw;
+      margin-bottom: 1.067vw;
+    }
+    .home-product-list-tabs .product-item .button {
+      padding: 2.133vw;
+    }
+    .home-product-list-tabs .product-item .button svg {
+      height: 6.4vw;
+      width: 6.4vw;
+    }
+    .home-product-list-tabs .product-item .compareAtPrice {
+      font-size: 3.2vw;
+    }
+    .home-product-list-tabs .product-item .price {
+      font-size: 3.733vw;
+    }
+
+    /* mobile */
+    .home-product-list-tabs .slider-container {
+      height: calc(74.133vw * 2 + 2.133vw + 12.8vw);
+    }
+    .home-product-list-tabs .swiper {
+      height: 100%;
+    }
+    .home-product-list-tabs .swiper .swiper-slide {
+      width: 42.4vw;
+      height: 74.133vw;
+    }
+    .home-product-list-tabs .product-item {
+      position: relative;
+      row-gap: 0vw;
+      border-radius: 2.133vw;
+    }
+    .home-product-list-tabs .product-item .item-img {
+      padding: 0;
+    }
+    .home-product-list-tabs .product-item img {
+      padding: 2.133vw;
+      width: 100%;
+      height: 42.4vw;
+    }
+    .home-product-list-tabs .product-item .active-img {
+      display: none;
+    }
+    .home-product-list-tabs .product-item .item-content {
+      padding: 1.067vw 3.2vw 3.2vw;
+    }
+    .home-product-list-tabs .product-item .item-content .title .item-content-tag {
+      font-size: 3.2vw;
+      margin-bottom: 0;
+    }
+    .home-product-list-tabs .product-item .item-content .title {
+      margin-bottom: 3.2vw;
+      font-size: 4.267vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .home-product-list-tabs {
+      margin: 1.667vw 0;
+    }
+    .home-product-list-tabs .tab-list {
+      column-gap: 1.667vw;
+    }
+    .home-product-list-tabs .tab-list-item {
+      font-size: 0.729vw;
+      padding-bottom: 0.833vw;
+    }
+    .home-product-list-tabs .tab-list-item .item-bar {
+      border-radius: 0.938vw;
+      height: 0.208vw;
+    }
+    .home-product-list-tabs .swiper .swiper-wrapper {
+      padding: 1.25vw 0;
+    }
+    .home-product-list-tabs .swiper .swiper-slide {
+      width: 15vw;
+    }
+    .slider-container .swiper-button-next,
+    .slider-container .swiper-button-prev {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+    .slider-container .swiper-button-prev.inside {
+      left: 0.625vw;
+    }
+    .slider-container .swiper-button-prev.outside {
+      transform: translateX(calc(-100% - 0.625vw));
+    }
+    .slider-container .swiper-button-next.inside {
+      right: 0.625vw;
+    }
+    .slider-container .swiper-button-next.outside {
+      transform: translateX(calc(100% + 0.625vw)) rotate(180deg);
+    }
+    .home-product-list-tabs .product-item {
+      position: relative;
+      border-radius: 0.833vw;
+      row-gap: 0.417vw;
+    }
+    .home-product-list-tabs .product-item .save {
+      border-radius: 0.833vw 0;
+      font-size: 0.729vw;
+      left: -0.052vw;
+      padding: 0.208vw 0.625vw;
+      top: -0.052vw;
+    }
+    .home-product-list-tabs .product-item:hover {
+      -webkit-box-shadow: 0 0.208vw 1.25vw #1416201a;
+      box-shadow: 0 0.208vw 1.25vw #1416201a;
+    }
+    .home-product-list-tabs .product-item .active-img {
+      height: 15vw;
+      width: 15vw;
+    }
+    .home-product-list-tabs .product-item .active-img img {
+      border-radius: 0.938vw 0.833vw 0 0;
+    }
+    .home-product-list-tabs .product-item .item-img {
+      padding: 1.042vw 0;
+    }
+    .home-product-list-tabs .product-item img {
+      height: 13.333vw;
+      width: 13.333vw;
+    }
+    .home-product-list-tabs .product-item .item-content {
+      padding: 0 0.833vw 0.833vw;
+    }
+    .home-product-list-tabs .product-item .item-content .title {
+      font-size: 1.042vw;
+      margin-bottom: 1.823vw;
+    }
+    .home-product-list-tabs .product-item .item-content .title .item-content-tag {
+      font-size: 0.625vw;
+      height: 0.938vw;
+      margin-bottom: 0.208vw;
+    }
+    .home-product-list-tabs .product-item .button {
+      padding: 0.417vw;
+    }
+    .home-product-list-tabs .product-item .button svg {
+      height: 1.25vw;
+      width: 1.25vw;
+    }
+    .home-product-list-tabs .product-item .compareAtPrice {
+      font-size: 0.625vw;
+    }
+    .home-product-list-tabs .product-item .price {
+      font-size: 0.729vw;
+    }
+
+    .home-product-list-tabs .product-item .discount-badge {
+      position: absolute;
+      top: 1.172vw;
+      left: 0;
+      padding: 0.391vw 0.46875vw 0.391vw 0.625vw;
+      font-size: 0.9375vw;
+      border-radius: 0 0.104vw 0.104vw 0;
+    }
+  }
+{% endstyle %}
+
+<div id="{{ block.id }}" class="home-product-list-tabs">
+  <div class="tab-list">
+    {% for link in block.settings.menu.links %}
+      <div class="tab-list-item {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index }}">
+        {{ link.title }}
+        <div class="item-bar"></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="tab-panels">
+    {% for link in block.settings.menu.links %}
+      <div
+        class="tab-panel slider-container {% if forloop.first %}active{% endif %}"
+        data-panel="{{ forloop.index }}"
+      >
+        {% assign collection = collections[link.object.handle] %}
+        {% if collection != blank %}
+          <div id="{{ block.id }}-swiper" class="swiper">
+            <div class="swiper-wrapper">
+              {% for product in collection.products %}
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <a data-discover="true" class="item-img" href="{{ product.url }}" target="_self">
+                      {% render 'responsive-image',
+                        image: product.featured_image,
+                        size: '256x256'
+                        retina: true
+                      %}
+{% comment %} 
+                      <img
+                        alt="{{ product.title }}"
+                        decoding="async"
+                        loading="lazy"
+                        src="{{ product.featured_image | img_url: 'master' }}"
+                        width="100%"
+                        height="100%"
+                      > {% endcomment %}
+                    </a>
+                    <a data-discover="true" class="active-img" href="{{ product.url }}" target="_self">
+                      {% render 'responsive-image',
+                        image: product.images[1],
+                        size: '256x256'
+                        retina: true
+                      %}
+{% comment %} 
+                      <img
+                        alt="{{ product.title }}"
+                        decoding="async"
+                        loading="lazy"
+                        src="{{ product.images[1] | img_url: 'master' }}"
+                        width="100%"
+                        height="100%"
+                      > {% endcomment %}
+                    </a>
+                    <div class="item-content">
+                      <a data-discover="true" class="title" href="{{ product.url }}" target="_self">
+                        <div class="item-content-tag">
+                          {% if product.metafields.custom.show_new_tag %}
+                            New
+                          {% endif %}
+                        </div>
+                        <div class="item-content-name">{{ product.title }}</div>
+                      </a>
+                      <div class="content">
+                        <div class="product-price">
+                          {% if product.compare_at_price > product.price %}
+                            <s class="compareAtPrice">{{ product.compare_at_price | money }}</s>
+                          {% endif %}
+                          <span class="price">{{ product.price | money }}</span>
+                        </div>
+
+                        {% comment %} <div class="card-action"> {% endcomment %}
+                        {% render 'add-to-cart-form-new-home',
+                          product: product,
+                          id: 'form',
+                          position: position,
+                          sectionId: sectionId
+                        %}
+                        {% comment %} </div> {% endcomment %}
+                        {% comment %}
+                          <form method="post" action="/cart">
+                            <input
+                              type="hidden"
+                              name="cartFormInput"
+                              value="{&quot;action&quot;:&quot;LinesAdd&quot;,&quot;inputs&quot;:{&quot;lines&quot;:[{&quot;merchandiseId&quot;:&quot;gid://shopify/ProductVariant/51876540219757&quot;,&quot;quantity&quot;:1,&quot;selectedVariant&quot;:{&quot;availableForSale&quot;:false,&quot;compareAtPrice&quot;:{&quot;amount&quot;:&quot;146.33&quot;,&quot;currencyCode&quot;:&quot;USD&quot;},&quot;id&quot;:&quot;gid://shopify/ProductVariant/51876540219757&quot;,&quot;image&quot;:{&quot;id&quot;:&quot;gid://shopify/ProductImage/53503822037357&quot;,&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/3_64e86972-25b7-4150-890a-5c0480c6892b.jpg?v=1743997779&quot;,&quot;altText&quot;:null,&quot;width&quot;:1000,&quot;height&quot;:1000},&quot;price&quot;:{&quot;amount&quot;:&quot;129.0&quot;,&quot;currencyCode&quot;:&quot;USD&quot;},&quot;product&quot;:{&quot;title&quot;:&quot;Ender-5 Max Enclosure&quot;,&quot;handle&quot;:&quot;ender-5-max-enclosure&quot;,&quot;id&quot;:&quot;gid://shopify/Product/14671576957293&quot;,&quot;vendor&quot;:&quot;Creality USA&quot;,&quot;productType&quot;:&quot;&quot;,&quot;descriptionHtml&quot;:&quot;<div data-line=\&quot;true\&quot; data-line-index=\&quot;0\&quot; data-zone-id=\&quot;0\&quot;>\n<ul>\n<li>\n<span><strong>Constant Temperature</strong>: </span>Maintaining a stable printing environment enhances model adhesion for outstanding print quality.</li>\n<li>\n<strong>Noise Reduce</strong>: Block out printing noise and enjoy a smooth, quiet printing experience.</li>\n<li>\n<strong>Isolates Dust</strong>:&nbsp;Prevents dust from entering the printer enclosure, keeping the printing environment consistently clean.</li>\n<li>\n<strong>Quick Assembly</strong>: No complicated steps—easy and straightforward to set up.</li>\n</ul>\n</div>&quot;,&quot;images&quot;:{&quot;nodes&quot;:[{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/3_64e86972-25b7-4150-890a-5c0480c6892b.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/EN2.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/EN3.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/EN4.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/EN5.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/EN6.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/EN1.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/6_7adca412-0303-454f-8fc6-199a29690e1d.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/1_5e7b8cf8-519a-4863-b281-77dd3c39e7e6.jpg?v=1743997779&quot;},{&quot;url&quot;:&quot;https://cdn.shopify.com/s/files/1/0893/0603/8637/files/2_a90a22dd-f454-4567-b484-38b4a13ff489.jpg?v=1743997759&quot;}]},&quot;accessoriesMetafield&quot;:null,&quot;subtitleMetafield&quot;:null,&quot;shippingTimeMetafield&quot;:null,&quot;buyPointMetafield&quot;:null,&quot;activeHoverMetafield&quot;:null,&quot;shortTitleMetafield&quot;:null,&quot;tagMetafield&quot;:null},&quot;selectedOptions&quot;:[{&quot;name&quot;:&quot;Title&quot;,&quot;value&quot;:&quot;Default Title&quot;}],&quot;sku&quot;:&quot;4005010097&quot;,&quot;title&quot;:&quot;Default Title&quot;,&quot;unitPrice&quot;:null,&quot;labelMetafield&quot;:null,&quot;giftMetafield&quot;:null,&quot;accessoryDescriptionMetafield&quot;:null}}]}}"
+
+                            ><input name="analytics" type="hidden" value=""
+                            ><button type="submit" class="add-to-cart" disabled="">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+                              </svg>
+                            </button>
+                          </form>
+                        {% endcomment %}
+                      </div>
+                    </div>
+                    <!--
+                      {% if product.compare_at_price > product.price %}
+                        <div class="discount-badge">
+                          {% assign discount_amount = product.compare_at_price | minus: product.price %}
+                          {% assign discount_percentage = discount_amount
+                            | times: 100
+                            | divided_by: product.compare_at_price
+                          %}
+                          <p class="discount-text">-{{ discount_percentage }}%</p>
+                        </div>
+                      {% endif %}
+                    -->
+                    {% if product.metafields.custom.product_badge_text != blank %}
+                      <div class="product-item-badge">
+                        {{ product.metafields.custom.product_badge_text }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div
+            id="{{ block.id }}-swiper-button-prev"
+            class="swiper-button-prev inside"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M12.9165 3.3335L6.24984 10.0002L12.9165 16.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div
+            id="{{ block.id }}-swiper-button-next"
+            class="swiper-button-next inside"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M12.9165 3.3335L6.24984 10.0002L12.9165 16.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script
+  defer
+>
+  console.log('tabs init');
+
+  // 为特定block实现tabs功能
+  function initTabs(blockId) {
+    const container = document.getElementById(blockId);
+    if (!container) return;
+
+    const tabItems = container.querySelectorAll('.tab-list-item');
+    const tabPanels = container.querySelectorAll('.tab-panel');
+
+    // 绑定点击事件
+    tabItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const tabIndex = item.dataset.tab;
+
+        // 切换tab项的active状态
+        tabItems.forEach((tab) => {
+          tab.classList.remove('active');
+        });
+        item.classList.add('active');
+
+        // 切换panel的active状态
+        tabPanels.forEach((panel) => {
+          panel.classList.remove('active');
+          if (panel.dataset.panel === tabIndex) {
+            panel.classList.add('active');
+          }
+        });
+      });
+    });
+
+    console.log(`${blockId} tabs已初始化`);
+  }
+
+  function init() {
+    // 初始化当前block的tabs
+    initTabs('{{ block.id }}');
+
+    // 初始化轮播
+    if (typeof Swiper !== 'undefined') {
+      const swiperContainer = document.getElementById('{{ block.id }}-swiper');
+      if (swiperContainer) {
+        new Swiper('#{{ block.id }}-swiper', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          // loop: true,
+          navigation: {
+            nextEl: '#{{ block.id }}-swiper-button-next',
+            prevEl: '#{{ block.id }}-swiper-button-prev',
+          },
+          // autoplay: {
+          //   delay: 2000,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // },
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 8,
+              grid: {
+                fill: 'row',
+                rows: 2,
+              },
+            },
+            900: {
+              slidesPerView: 'auto',
+              spaceBetween: 16,
+              grid: {
+                rows: 1,
+              },
+            },
+          },
+        });
+        console.log('{{ block.id }} swiper已初始化');
+      }
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // Shopify动态加载时初始化
+  document.addEventListener('shopify:block:load', function (event) {
+    // 延迟执行确保DOM完全加载
+    setTimeout(init, 100);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Home Product List Tabs",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "菜单",
+      "info": "每个菜单项对应一个collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Product List Tabs"
+    },
+    {
+      "name": "Home 产品列表标签页"
+    }
+  ]
+}
+{% endschema %}

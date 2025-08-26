@@ -1,0 +1,82 @@
+{% style %}
+  .home-s-product-list {
+    margin: 48px 0 80px;
+  }
+
+  .home-s-product-list .title {
+    font-family: Montserrat;
+    font-size: 32px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  @media (max-width: 900px) {
+    .home-s-product-list {
+      margin: 12.8vw 0;
+    }
+
+    .home-s-product-list .container {
+      padding: 0 6.4vw;
+    }
+
+    .home-s-product-list .title {
+      font-size: 6.4vw;
+      margin-bottom: 6.4vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .home-s-product-list {
+      margin: 2.5vw 0 4.167vw;
+    }
+    .home-s-product-list .title {
+      font-size: 1.667vw;
+      margin-bottom: 1.667vw;
+    }
+  }
+{% endstyle %}
+
+<div class="home-s-product-list">
+  <div class="container">
+    <h2 class="title">{{ section.settings.title }}</h2>
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home S Product List",
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "Products"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Product List",
+      "blocks": [
+        {
+          "type": "v-slider",
+          "settings": {
+            "show_pagination": false,
+            "show_nav": false
+          },
+          "blocks": [
+            {
+              "type": "home-banner-card-medium"
+            }
+          ]
+        },
+        {
+          "type": "home-product-list-tabs"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

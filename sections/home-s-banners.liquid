@@ -1,0 +1,67 @@
+{% style %}
+  .home-s-banners {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  /* .home-s-banners .v-slider-container {
+    height: 100%;
+  }
+  .home-s-banners .swiper {
+    height: 100%;
+  } */
+
+  @media (max-width: 900px) {
+    .home-s-banners {
+      height: 130.667vw; /* 130.667vw = 490px */
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .home-s-banners {
+      height: 31.25vw; /* 31.25vw = 600px */
+    }
+  }
+{% endstyle %}
+<!-- START SEO -->
+<link rel="alternate" hreflang="en-au" href="https://au.crealityfalcon.com/"
+><link rel="alternate" hreflang="en-gb" href="https://uk.crealityfalcon.com/"
+><link rel="alternate" hreflang="en" href="https://www.crealityfalcon.com/"
+><link rel="alternate" hreflang="x-default" href="https://www.crealityfalcon.com/">
+<!-- END SEO -->
+<div class="home-s-banners">
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Home S Banners",
+  "blocks": [{ "type": "@theme" }],
+  "presets": [
+    {
+      "name": "Home S Banners",
+      "blocks": [
+        {
+          "type": "v-slider",
+          "settings": {
+            "show_pagination": true,
+            "pagination_position": "inside",
+            "show_nav": false
+          },
+          "blocks": [
+            {
+              "type": "home-banner-card-big"
+            },
+            {
+              "type": "home-banner-card-big"
+            },
+            {
+              "type": "home-banner-card-big"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

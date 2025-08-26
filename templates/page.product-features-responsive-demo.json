@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "home_s_blogs_YD4VnB": {
+      "type": "home-s-blogs",
+      "blocks": {
+        "v_slider_b3mmpM": {
+          "type": "v-slider",
+          "settings": {
+            "autoplay": true,
+            "delay": 3000,
+            "loop": false,
+            "show_nav": true,
+            "nav_position": "inside",
+            "show_pagination": true,
+            "pagination_position": "outside",
+            "show_scrollbar": false
+          },
+          "blocks": {
+            "home_blog_card_Ptzjwt": {
+              "type": "home-blog-card",
+              "settings": {
+                "image": "shopify://shop_images/laser-engraved-tumbler.jpg",
+                "title": "High Stability and Hardness",
+                "sub_title": "With enhanced stability and hardness, 16K Standard Resin delivers the right balance of strength and rigidity — so your prints not only look accurate but hold up under pressure.",
+                "link": "shopify://blogs/news/laser-engraved-tumbler"
+              },
+              "blocks": {}
+            },
+            "home_blog_card_mRqaNY": {
+              "type": "home-blog-card",
+              "settings": {
+                "image": "shopify://shop_images/laser-cut-christmas-cards.jpg",
+                "title": "Low Odor, Comfortable to Use",
+                "sub_title": "Formulated with a low-odor recipe, this resin creates a safer, more pleasant printing environment from start to finish.",
+                "link": "shopify://blogs/crealityfalcon-tutorial/christmas-cards-with-laser-engraver"
+              },
+              "blocks": {}
+            },
+            "home_blog_card_TMPCjW": {
+              "type": "home-blog-card",
+              "settings": {
+                "image": "shopify://shop_images/laser-air-assist.jpg",
+                "title": "Precision Printing, Consistent Accuracy",
+                "sub_title": "Designed for excellent dimensional accuracy, this resin features low volume shrinkage for smooth surfaces, sharp details, and reliable precision.",
+                "link": "shopify://blogs/crealityfalcon-tutorial/laser-air-assist-enhancing-efficiency-safety-crealityfalcon"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_blog_card_Ptzjwt",
+            "home_blog_card_mRqaNY",
+            "home_blog_card_TMPCjW"
+          ]
+        }
+      },
+      "block_order": [
+        "v_slider_b3mmpM"
+      ],
+      "custom_css": [],
+      "name": "Home S Blogs or Other",
+      "settings": {
+        "title": ""
+      }
+    },
+    "product_features_responsive": {
+      "type": "product-features-responsive",
+      "settings": {
+        "title": "",
+        "background_color": "#F1F1F1",
+        "group_gap_desktop": 20,
+        "group_gap_mobile": 35,
+        "margin_bottom_desktop": 40,
+        "margin_bottom_mobile": 30
+      },
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Universal Printer Compatibility",
+            "description": "Whether you're working with the HALOT-X1 or another LCD/DLP 3D printer, this resin integrates seamlessly into your setup. It's also available in multiple colors, making it easy to match your creative vision or production needs.",
+            "image_position": "right"
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Smooth Flow, Clean Release",
+            "description": "With optimized fluidity and low viscosity, the resin flows easily into fine details and cures efficiently, improving print success rates and reducing adhesion to the FEP film — for smoother printing and easier model removal.",
+            "image_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "home_s_blogs_YD4VnB",
+    "product_features_responsive"
+  ]
+}

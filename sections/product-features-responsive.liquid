@@ -1,0 +1,162 @@
+{{- 'product-features-responsive.css' | asset_url | stylesheet_tag -}}
+
+<div class="row">
+  <div class="product-features-responsive-container" style="--margin-bottom-desktop: {{ section.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ section.settings.margin_bottom_mobile }}px; --group-gap-desktop: {{ section.settings.group_gap_desktop }}px; --group-gap-mobile: {{ section.settings.group_gap_mobile }}px; --background-color: {{ section.settings.background_color }};">
+    {% render 'section-header', section_heading: section.settings.title %}
+
+    <div class="product-features-responsive-content">
+      {% for block in section.blocks %}
+        {% if block.type == 'feature_item' %}
+          <div class="product-features-responsive-item {% if block.settings.image_position == 'right' %}image-right{% else %}image-left{% endif %}" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              <div class="product-features-responsive-image-wrapper">
+                {%- render 'responsive-image', 
+                image: block.settings.image,
+                sizes: '375x, 500x, 768x',
+                class: 'product-features-responsive-image',
+                priority: true
+                -%}
+              </div>
+            {% else %}
+              <div class="product-features-responsive-image-wrapper">
+                {{ 'image' | placeholder_svg_tag: 'product-features-responsive-image placeholder' }}
+              </div>
+            {% endif %}
+            
+            <div class="product-features-responsive-text-container">
+              <div class="product-features-responsive-text">
+                {% if block.settings.title != blank %}
+                  <h3 class="product-features-responsive-title">{{- block.settings.title -}}</h3>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <div class="product-features-responsive-description">{{- block.settings.description -}}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "图片文字卡片",
+  "class": "product-features-responsive-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "区块标题",
+      "default": "产品特性"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "整体背景颜色",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "range",
+      "id": "group_gap_desktop",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "default": 60,
+      "label": "PC端组间距"
+    },
+    {
+      "type": "range",
+      "id": "group_gap_mobile",
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "default": 40,
+      "label": "移动端组间距"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 30,
+      "label": "桌面端下边距"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "label": "移动端下边距"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_item",
+      "name": "特性项",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "图片位置",
+          "options": [
+            {
+              "value": "left",
+              "label": "左侧"
+            },
+            {
+              "value": "right",
+              "label": "右侧"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "标题"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "描述",
+          "default": "详细描述内容"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图片文字布局",
+      "blocks": [
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "通用打印机兼容性",
+            "description": "无论您使用的是HALOT-X1还是其他LCD/DLP 3D打印机，这种树脂都能无缝集成到您的设置中。它还提供多种颜色，便于匹配您的创意愿景或生产需求。",
+            "image_position": "left"
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "流畅流动，清洁释放",
+            "description": "凭借优化的流动性和低粘度，树脂能够轻松流入精细细节并高效固化，提高打印成功率并减少对FEP膜的粘附——实现更流畅的打印和更容易的模型移除。",
+            "image_position": "right"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

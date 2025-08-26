@@ -1,0 +1,170 @@
+{% style %}
+  .ticker-block-{{ block.id }} {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+  }
+  .ticker-block-{{ block.id }} .ticker-list {
+    display: flex;
+    transform: translateX({{ block.settings.offset }}px);
+    will-change: transform;
+  }
+  .ticker-block-{{ block.id }} .ticker-list.animate {
+    animation: ticker-{{ block.id }} {{ block.settings.duration }}s infinite linear;
+    {% if block.settings.is_reverse %}
+      animation-direction: reverse;
+    {% endif %}
+  }
+  .ticker-block-{{ block.id }}:hover .ticker-list {
+    animation-play-state: paused;
+  }
+  .ticker-block-{{ block.id }} .ticker-list > * {
+    margin-right: {{ block.settings.gap }}px;
+  }
+
+  @keyframes ticker-{{ block.id }} {
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .ticker-block-{{ block.id }} .ticker-list > * {
+      margin-right: {{ block.settings.gap | divided_by: 3.75 }}vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .ticker-block-{{ block.id }} .ticker-list > * {
+      margin-right: {{ block.settings.gap | divided_by: 19.2 }}vw;
+    }
+  }
+{% endstyle %}
+
+<div class="ticker-block ticker-block-{{ block.id }}" data-ticker-id="{{ block.id }}">
+  <div class="ticker-list">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% javascript %}
+  function initTicker(tickerId) {
+    const tickerBlock = document.querySelector(`.ticker-block-${tickerId}`);
+    if (!tickerBlock) return;
+
+    // 首先清除可能存在的克隆元素
+    const existingClones = tickerBlock.querySelectorAll('.ticker-list-clone');
+    existingClones.forEach(clone => clone.remove());
+    
+    const tickerList = tickerBlock.querySelector('.ticker-list');
+    if (!tickerList) return;
+    
+    const tickerListClone = tickerList.cloneNode(true);
+    const tickerListClone2 = tickerList.cloneNode(true);
+    
+    tickerListClone.classList.add('ticker-list-clone');
+    tickerListClone2.classList.add('ticker-list-clone');
+
+    tickerBlock.appendChild(tickerListClone);
+    tickerBlock.appendChild(tickerListClone2);
+
+    // 等待下一帧渲染后添加动画
+    requestAnimationFrame(() => {
+      tickerList.classList.add('animate');
+      tickerListClone.classList.add('animate');
+      tickerListClone2.classList.add('animate');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 初始化所有ticker
+    document.querySelectorAll('.ticker-block').forEach(ticker => {
+      const tickerId = ticker.dataset.tickerId;
+      if (tickerId) {
+        initTicker(tickerId);
+      }
+    });
+  });
+
+  // 支持Shopify section的刷新事件
+  document.addEventListener('shopify:section:load', function(event) {
+    // 初始化所有ticker
+    event.target.querySelectorAll('.ticker-block').forEach(ticker => {
+      const tickerId = ticker.dataset.tickerId;
+      if (tickerId) {
+        initTicker(tickerId);
+      }
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "弹幕滚动",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "滚动设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_reverse",
+      "label": "是否反向滚动",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "offset",
+      "label": "初始偏移量（px）",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "duration",
+      "label": "单次滚动时间（秒）",
+      "default": 10
+    },
+    {
+      "type": "number",
+      "id": "gap",
+      "label": "每项间距（px）",
+      "default": 28
+    }
+  ],
+  "presets": [
+    {
+      "name": "用户感言弹幕滚动",
+      "blocks": [
+        {
+          "type": "commendation"
+        },
+        {
+          "type": "commendation"
+        }
+      ]
+    },
+    {
+      "name": "作品gallery弹幕滚动",
+      "blocks": [
+        {
+          "type": "home-gallery-card"
+        },
+        {
+          "type": "home-gallery-card"
+        },
+        {
+          "type": "home-gallery-card"
+        },
+        {
+          "type": "home-gallery-card"
+        },
+        {
+          "type": "home-gallery-card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

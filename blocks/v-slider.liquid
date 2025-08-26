@@ -1,0 +1,382 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% style %}
+  .v-slider-container {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* #{{ block.id }}-swiper {
+    width: 100%;
+  } */
+  .v-slider {
+    /* height: fit-content; */
+    overflow: hidden;
+  }
+
+  /* navigation button */
+  .v-slider-container:hover [class*='swiper-button'] {
+    /* opacity: 1; */
+    visibility: visible;
+  }
+  .v-slider-container .swiper-button-next,
+  .v-slider-container .swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #1e1e1e;
+  }
+  .v-slider-container .swiper-button-next.swiper-button-disabled,
+  .v-slider-container .swiper-button-prev.swiper-button-disabled {
+    pointer-events: initial;
+  }
+  .v-slider-container .swiper-button-next:after,
+  .v-slider-container .swiper-button-prev:after {
+    display: none;
+  }
+
+  .v-slider-container .swiper-button-prev.inside {
+    left: 12px;
+  }
+  .v-slider-container .swiper-button-prev.outside {
+    left: 0;
+    transform: translateX(calc(-100% - 12px));
+  }
+
+  .v-slider-container .swiper-button-next.inside {
+    right: 12px;
+    transform: rotate(180deg);
+  }
+  .v-slider-container .swiper-button-next.outside {
+    right: 0;
+    transform: translateX(calc(100% + 12px)) rotate(180deg);
+  }
+  .v-slider-container .swiper-button-prev svg,
+  .v-slider-container .swiper-button-next svg {
+    fill: none;
+    stroke: #fff;
+  }
+
+  .v-slider-container .swiper-button-prev svg {
+    /* transform: translateX(-1px) scale(1.5); */
+    transform-origin: center;
+  }
+  .v-slider-container .swiper-button-next svg {
+    /* transform: translateX(1px) scale(1.5); */
+    transform-origin: center;
+  }
+
+  /* scrollbar styles */
+  .v-slider-container .swiper-scrollbar {
+    height: 6px;
+    background-color: rgba(212, 141, 2, 0.1);
+    border-radius: 3px;
+    position: relative;
+    margin-top: 15px;
+  }
+  .v-slider-container .swiper-scrollbar-drag {
+    height: 100%;
+    background-color: #d48d02;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .v-slider-container .swiper-pagination.inside {
+    position: absolute;
+  }
+  .v-slider-container .swiper-pagination.outside {
+    position: relative;
+  }
+
+  .v-slider-container .swiper-pagination .swiper-pagination-bullet {
+    background-color: #bec0c2;
+    border-radius: 16px;
+    width: 8px;
+    height: 4px;
+    margin: 0 4px;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  /* 默认状态下的激活样式 */
+  .v-slider-container .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #1e1e1e;
+  }
+
+  /* 自动轮播时的激活样式 */
+  .v-slider-container.autoplay-enabled .swiper-pagination .swiper-pagination-bullet-active {
+    position: relative;
+    width: 48px;
+    background-color: #bec0c2;
+  }
+
+  .v-slider-container.autoplay-enabled .swiper-pagination .swiper-pagination-bullet-active:after {
+    -webkit-animation: width {{ block.settings.delay }}ms linear;
+    animation: width {{ block.settings.delay }}ms linear;
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+  }
+
+  @keyframes width {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .v-slider-container .swiper-button-prev,
+    .v-slider-container .swiper-button-next {
+      display: none;
+    }
+
+    .v-slider-container .swiper-scrollbar {
+      height: 1.6vw;
+      border-radius: 0.8vw;
+      margin-top: 4vw;
+    }
+    .v-slider-container .swiper-scrollbar-drag {
+      border-radius: 0.8vw;
+    }
+    .v-slider-container .swiper-pagination .swiper-pagination-bullet {
+      border-radius: 4.267vw;
+      width: 2.133vw;
+      height: 1.067vw;
+      margin: 0 1.067vw;
+    }
+    .v-slider-container.autoplay-enabled .swiper-pagination .swiper-pagination-bullet-active {
+      width: 12.8vw;
+    }
+    .v-slider-container.autoplay-enabled .swiper-pagination .swiper-pagination-bullet-active:after {
+      border-radius: 4.267vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .v-slider-container .swiper-button-next,
+    .v-slider-container .swiper-button-prev {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+    .v-slider-container .swiper-button-prev.inside {
+      left: 0.625vw;
+    }
+    .v-slider-container .swiper-button-prev.outside {
+      transform: translateX(calc(-100% - 0.625vw));
+    }
+    .v-slider-container .swiper-button-next.inside {
+      right: 0.625vw;
+    }
+    .v-slider-container .swiper-button-next.outside {
+      transform: translateX(calc(100% + 0.625vw)) rotate(180deg);
+    }
+    .v-slider-container .swiper-button-prev svg {
+      transform: translateX(-0.052vw) scale(1.5);
+    }
+    .v-slider-container .swiper-button-next svg {
+      transform: translateX(0.052vw) scale(1.5);
+    }
+    .v-slider-container .swiper-scrollbar {
+      height: 0.313vw;
+      border-radius: 0.156vw;
+      margin-top: 0.781vw;
+    }
+    .v-slider-container .swiper-scrollbar-drag {
+      border-radius: 0.156vw;
+    }
+    .v-slider-container .swiper-pagination .swiper-pagination-bullet {
+      border-radius: 0.833vw;
+      width: 0.417vw;
+      height: 0.208vw;
+      margin: 0 0.208vw;
+    }
+    .v-slider-container.autoplay-enabled .swiper-pagination .swiper-pagination-bullet-active {
+      width: 2.5vw;
+    }
+    .v-slider-container.autoplay-enabled .swiper-pagination .swiper-pagination-bullet-active:after {
+      border-radius: 0.833vw;
+    }
+  }
+{% endstyle %}
+
+<div class="v-slider-container {% if block.settings.autoplay %}autoplay-enabled{% endif %}">
+  <div id="{{ block.id }}-swiper" class="swiper v-slider">
+    <div class="swiper-wrapper">
+      {% content_for 'blocks' %}
+    </div>
+    <!-- 分页器 -->
+    {% if block.settings.show_pagination %}
+      <div
+        id="{{ block.id }}-swiper-pagination"
+        class="swiper-pagination {% if block.settings.pagination_position == 'inside' %}inside{% else %}outside{% endif %}"
+      ></div>
+    {% endif %}
+    <!-- 滚动条 -->
+    {% if block.settings.show_scrollbar %}
+      <div id="{{ block.id }}-swiper-scrollbar" class="swiper-scrollbar"></div>
+    {% endif %}
+  </div>
+
+  <!-- 导航按钮容器 -->
+  {% if block.settings.show_nav %}
+    <div
+      id="{{ block.id }}-swiper-button-prev"
+      class="swiper-button-prev {% if block.settings.nav_position == 'inside' %}inside{% else %}outside{% endif %}"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M12.9165 3.3335L6.24984 10.0002L12.9165 16.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div
+      id="{{ block.id }}-swiper-button-next"
+      class="swiper-button-next {% if block.settings.nav_position == 'inside' %}inside{% else %}outside{% endif %}"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M12.9165 3.3335L6.24984 10.0002L12.9165 16.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  {% endif %}
+</div>
+
+<script defer>
+  function init() {
+    if (typeof Swiper !== 'undefined') {
+      swiper = new Swiper('#{{ block.id }}-swiper', {
+        slidesPerView: 'auto',
+        loop: {{ block.settings.loop }},
+        navigation: {
+          nextEl: '#{{ block.id }}-swiper-button-next',
+          prevEl: '#{{ block.id }}-swiper-button-prev',
+        },
+        pagination: {
+          el: '#{{ block.id }}-swiper-pagination',
+          clickable: true,
+        },
+        scrollbar: {
+          el: '#{{ block.id }}-swiper-scrollbar',
+          draggable: true,
+        },
+        autoplay: {{ block.settings.autoplay }} ? {
+          delay: {{ block.settings.delay }},
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        } : false,
+      });
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // shopify block load
+  document.addEventListener('shopify:block:load', init);
+</script>
+
+{% schema %}
+{
+  "name": "轮播图(手动添加子项)",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "自动轮播",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "delay",
+      "label": "自动轮播间隔(ms)",
+      "default": 3000
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "循环轮播",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "导航按钮"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nav",
+      "label": "显示导航按钮",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "nav_position",
+      "label": "导航按钮位置",
+      "options": [
+        {
+          "value": "inside",
+          "label": "内部"
+        },
+        {
+          "value": "outside",
+          "label": "外部"
+        }
+      ],
+      "default": "inside"
+    },
+    {
+      "type": "header",
+      "content": "分页器"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "label": "显示分页器",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "pagination_position",
+      "label": "分页器位置",
+      "options": [
+        {
+          "value": "inside",
+          "label": "内部"
+        },
+        {
+          "value": "outside",
+          "label": "外部"
+        }
+      ],
+      "default": "outside"
+    },
+    {
+      "type": "header",
+      "content": "滚动条"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scrollbar",
+      "label": "显示滚动条",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "轮播图(手动添加子项)",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

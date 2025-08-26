@@ -1,0 +1,307 @@
+{% style %}
+  #{{ block.id }} {
+    /* 定义标题和副标题的颜色变量 */
+    --subtitle-color: {{ block.settings.subtitle_color }}; /* 副标题颜色变量 */
+    --title-color: {{ block.settings.title_color }}; /* 标题颜色变量 */
+    --desc-color: {{ block.settings.desc_color }}; /* 描述文字颜色变量 */
+  }
+
+  .h-banner-card-big.swiper-slide {
+    position: relative;
+    height: 600px;
+  }
+
+  .h-banner-card-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .h-banner-card-big .abs-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .h-banner-card-big a {
+    display: flex;
+  }
+
+  .h-banner-card-big a:hover {
+    color: #1e1e1e;
+    text-decoration: none;
+  }
+
+  .h-banner-card-big .content {
+    position: relative;
+    margin: auto;
+    margin-top: 138px;
+  }
+
+  .h-banner-card-big .content .subtitle {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 4px;
+    color: var(--subtitle-color);
+  }
+
+  .h-banner-card-big .content .title {
+    color: var(--title-color);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  .h-banner-card-big .content .desc {
+    color: var(--desc-color);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  .h-banner-card-big .content .btn {
+    display: flex;
+    width: fit-content;
+    height: 48px;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 44px;
+    background: linear-gradient(0deg, #41c4fc 0%, #0bb3fb 100%);
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  .h-banner-card-big .content .btn:hover {
+    opacity: 0.8;
+  }
+
+  .h-banner-card-big .mobile-img {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    #{{ block.id }} {
+      --subtitle-color: {{ block.settings.subtitle_color_mobile }};
+      --title-color: {{ block.settings.title_color_mobile }};
+      --desc-color: {{ block.settings.desc_color_mobile }};
+    }
+    .h-banner-card-big.swiper-slide {
+      height: 130.667vw; /* 130.667vw = 490px */
+    }
+
+    .h-banner-card-big .pc-img {
+      display: none;
+    }
+    .h-banner-card-big .mobile-img {
+      display: block;
+    }
+
+    .h-banner-card-big .content {
+      margin-top: 10.667vw;
+    }
+    .h-banner-card-big .content .subtitle {
+      font-size: 3.733vw;
+      margin-bottom: 0.533vw;
+      text-align: center;
+    }
+    .h-banner-card-big .content .title {
+      font-size: 6.4vw;
+      text-align: center;
+    }
+    .h-banner-card-big .content .desc {
+      font-size: 3.733vw;
+      text-align: center;
+    }
+    .h-banner-card-big .content .btn {
+      margin: 0 auto;
+      height: 8.533vw;
+      padding: 2.133vw 4.267vw;
+      font-size: 3.733vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .h-banner-card-big.swiper-slide {
+      height: 31.25vw; /* 31.25vw = 600px */
+    }
+    .h-banner-card-big .content {
+      margin-top: 7.187vw !important;
+    }
+    .h-banner-card-big .content .subtitle {
+      font-size: 1.042vw;
+      margin-bottom: 0.208vw;
+    }
+    .h-banner-card-big .content .title {
+      font-size: 2.5vw;
+      margin-bottom: 0.833vw;
+    }
+    .h-banner-card-big .content .desc {
+      font-size: 1.25vw;
+      margin-bottom: 0.833vw;
+    }
+    .h-banner-card-big .content .btn {
+      height: 2.5vw;
+      padding: 0.417vw 1.25vw;
+      border-radius: 2.292vw;
+      font-size: 0.833vw;
+    }
+  }
+{% endstyle %}
+
+<div id="{{ block.id }}" class="swiper-slide h-banner-card-big">
+  <img
+    alt="{{ block.settings.title }}"
+    decoding="async"
+    loading="lazy"
+    class="pc-img"
+    src="{{ block.settings.image | img_url: 'master' }}"
+    width="100%"
+    height="100%"
+  >
+  <img
+    alt="{{ block.settings.title }}"
+    decoding="async"
+    loading="lazy"
+    class="mobile-img"
+    src="{{ block.settings.image_mobile | img_url: 'master' }}"
+    width="100%"
+    height="100%"
+  >
+  <a href="{{ block.settings.link }}" class="abs-wrap">
+    <div class="content container">
+      <p class="subtitle">{{ block.settings.subtitle }}</p>
+      <p class="title">{{ block.settings.title }}</p>
+      <p class="desc">{{ block.settings.desc }}</p>
+      {% if block.settings.btn_text!=blank %}}
+      <div class="btn">{{ block.settings.btn_text }}</div>
+        {% endif %}
+    </div>
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Home Banner Card Big",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "背景图片",
+      "info": "1x 尺寸：1920 * 600"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "背景图片(移动端)",
+      "info": "1x 尺寸：375 * 490"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "链接地址"
+    },
+    {
+      "type": "header",
+      "content": "小标题"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "小标题",
+      "default": "Mar.3-Mar.9 | SAVE UP TO 52%"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "小标题颜色",
+      "default": "#f96d32"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color_mobile",
+      "label": "小标题颜色(移动端)",
+      "default": "#f96d32"
+    },
+    {
+      "type": "header",
+      "content": "主标题"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "Work Smart, Create More"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "主标题颜色",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "title_color_mobile",
+      "label": "主标题颜色(移动端)",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "描述文字"
+    },
+    {
+      "type": "text",
+      "id": "desc",
+      "label": "描述文字",
+      "default": "Power Up Your Creativity. Power Up Your Creativity"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "描述文字颜色",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "desc_color_mobile",
+      "label": "描述文字颜色(移动端)",
+      "default": "#BEC0C2"
+    },
+    {
+      "type": "header",
+      "content": "按钮"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "按钮文字",
+      "default": "Shop Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Banner Card Big"
+    },
+    {
+      "name": "Home Banner 大卡片"
+    }
+  ]
+}
+{% endschema %}

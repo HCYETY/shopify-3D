@@ -1,0 +1,196 @@
+{% style %}
+  .swiper-slide.h-blog-card {
+    width: 390px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* 确保滑块容器正确显示 */
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 优化滚动体验 */
+  .swiper-slide.h-blog-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .h-blog-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .h-blog-card .bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    user-select: none;
+  }
+
+  .h-blog-card:hover .bg-image {
+    transform: scale(1.05);
+  }
+
+  .h-blog-card .title-block {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    width: 70%;
+    padding: 24px;
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    // backdrop-filter: blur(8px);
+    // -webkit-backdrop-filter: blur(8px);
+    text-align: center;
+  }
+
+  .h-blog-card .main-title {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 24px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .h-blog-card .sub-title {
+    color: #f5f6f7;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  @media (max-width: 900px) {
+    /* .swiper-slide .h-blog-card {
+      width: 260px;
+      height: 370px;
+    }
+
+    .h-blog-card .title-block {
+      padding: 20px;
+    }
+
+    .h-blog-card .main-title {
+      font-size: 20px;
+    }
+
+    .h-blog-card .sub-title {
+      font-size: 12px;
+    } */
+    .swiper-slide .h-blog-card {
+      width: 69.333vw;
+      height: 98.667vw;
+    }
+    .h-blog-card .title-block {
+      padding: 5.333vw;
+    }
+    .h-blog-card .main-title {
+      font-size: 5.333vw;
+    }
+    .h-blog-card .sub-title {
+      font-size: 3.2vw;
+    }
+    .swiper-slide.h-blog-card {
+      width: 365px;
+      height: 665px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .swiper-slide.h-blog-card {
+      width: 970px;
+      height: 400px;
+    }
+    .h-blog-card .title-block {
+      padding: 24px;
+    }
+    .h-blog-card .main-title {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .h-blog-card .sub-title {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .swiper-slide.h-blog-card {
+      width: 970px;
+      height: 400px;
+    }
+    .h-blog-card .title-block {
+      padding: 24px;
+    }
+    .h-blog-card .main-title {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .h-blog-card .sub-title {
+      font-size: 16px;
+    }
+  }
+{% endstyle %}
+
+<div class="swiper-slide h-blog-card ">
+  <a href="{{ block.settings.link }}">
+    <img
+      class="bg-image"
+      src="{{ block.settings.image | img_url: 'master' }}"
+      alt="{{ block.settings.title }}"
+      loading="lazy"
+      width="100%"
+      height="100%"
+    >
+    <div class="title-block">
+      <h3 class="main-title">{{ block.settings.title }}</h3>
+      <p class="sub-title">{{ block.settings.sub_title }}</p>
+    </div>
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "博客或其他卡片",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "背景图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "title"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "副标题",
+      "default": "sub title"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "链接地址"
+    }
+  ],
+  "presets": [
+    {
+      "name": "博客或其他卡片"
+    },
+    {
+      "name": "blog card or other"
+    }
+  ]
+}
+{% endschema %}

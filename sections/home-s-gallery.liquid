@@ -1,0 +1,159 @@
+{% if section.settings.mode == 'gallery' %}
+  <link rel="stylesheet" href="{{ 'fancybox-5.0.36.css' | asset_url }}">
+  <script src="{{ 'fancybox-5.0.36.umd.js' | asset_url }}" defer></script>
+{% endif %}
+
+{% style %}
+  .home-s-gallery {
+    margin-bottom: 40px;
+  }
+  .home-s-gallery .ticker-block {
+    margin-bottom: 16px;
+  }
+  .home-s-gallery .ticker-block:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .home-s-gallery {
+      margin-bottom: 10.667vw;
+    }
+    .home-s-gallery .ticker-block {
+      margin-bottom: 4.267vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .home-s-gallery {
+      margin-bottom: 2.083vw;
+    }
+    .home-s-gallery .ticker-block {
+      margin-bottom: 0.833vw;
+    }
+  }
+{% endstyle %}
+
+<div class="home-s-gallery">
+  {% content_for 'blocks' %}
+</div>
+
+{% if section.settings.mode == 'gallery' %}
+  <script defer>
+    function initFancybox() {
+      if (typeof Fancybox === 'undefined') {
+        console.error('Fancybox库未加载成功');
+        return;
+      }
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        compact: false,
+        Thumbs: false,
+        contentClick: 'iterateZoom',
+        Images: {
+          Panzoom: {
+            maxScale: 2,
+          },
+        },
+        Toolbar: {
+          display: {
+            left: ['infobar'],
+            middle: [],
+            right: ['close'],
+          },
+        },
+      });
+    }
+    document.addEventListener('DOMContentLoaded', initFancybox);
+    document.addEventListener('shopify:block:load', initFancybox);
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Home S Gallery",
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Mode",
+      "info": "Gallery: 点击图片会弹窗展示图片, Link: 点击图片会跳转链接",
+      "options": [
+        { "value": "gallery", "label": "Gallery" },
+        { "value": "link", "label": "Link" }
+      ],
+      "default": "gallery"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Gallery",
+      "blocks": [
+        {
+          "type": "home-section-title"
+        },
+        {
+          "type": "ticker",
+          "settings": {
+            "duration": 30,
+            "offset": 0,
+            "gap": 16
+          },
+          "blocks": [
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            }
+          ]
+        },
+        {
+          "type": "ticker",
+          "settings": {
+            "duration": 30,
+            "is_reverse": true,
+            "offset": 0,
+            "gap": 16
+          },
+          "blocks": [
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            },
+            {
+              "type": "home-gallery-card"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
