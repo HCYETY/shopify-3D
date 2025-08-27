@@ -70,12 +70,12 @@
       data-mobile-transition="{{ mobile_transition }}"
       style="--dot-speed: {{ autoplay | divided_by: 1000 | append: 's' }};--color-text: #fff;"
     >
-      {%- if autoplay -%}
+      {% comment %} {%- if autoplay -%}
         {%- assign first_color = section.blocks[0].settings.color_text -%}
         <div class="slideshow--autoplay-progress" style="--color-body: {{ first_color }}">
           {%- render 'svg-icons' with 'thb-slideshow-progress' -%}
         </div>
-      {%- endif -%}
+      {%- endif -%} {% endcomment %}
       {%- for block in section.blocks -%}
         {%- liquid
           assign content_position = block.settings.content_position

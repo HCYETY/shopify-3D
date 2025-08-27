@@ -773,4 +773,20 @@
   .slideshow.mobile-transition--zoom .carousel__slide {
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
+  
+  /* 移动端自动播放防重复滑动修复 */
+  .slideshow[data-mobile-first-slide-fixed="true"] .carousel__slide {
+    /* 只禁用过渡动画，不强制设置位置 */
+    transition: none !important;
+  }
+  
+  /* 移动端触摸事件优化 */
+  .slideshow .flickity-viewport {
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  /* 移动端自动播放时的特殊处理 */
+  .slideshow[data-autoplay] .flickity-slider {
+    will-change: transform;
+  }
 }

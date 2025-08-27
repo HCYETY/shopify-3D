@@ -40,6 +40,21 @@ if (!customElements.get('slide-show')) {
           on: {}
         };
       this.paused = false;
+      
+      // 移动端防重复滑动初始化
+      slideshow.dataset.mobileFirstSlideFixed = 'false';
+      slideshow.dataset.isMobile = window.innerWidth <= 768 ? 'true' : 'false';
+      
+      // 监听窗口大小变化，更新移动端状态
+      window.addEventListener('resize', () => {
+        slideshow.dataset.isMobile = window.innerWidth <= 768 ? 'true' : 'false';
+      });
+      
+      // 移动端触摸事件优化
+      if (slideshow.dataset.isMobile === 'true') {
+        slideshow.dataset.touchActive = 'false';
+      }
+      
       if (custom_dots) {
         args.pageDots = false;
       }
@@ -136,8 +151,14 @@ if (!customElements.get('slide-show')) {
             let flkty = this,
               previousIndex = fizzyUIUtils.modulo(flkty.selectedIndex - 1, flkty.slides.length);
 
-            // Animations.
-            if (animations_enabled) {
+            // 移动端自动播放防重复滑动修复 - 使用智能检测方法
+            let mobileTransitionResult = slideshow.handleMobileSlideTransition(slideshow, flkty, index, previousIndex);
+            
+            // 根据检测结果决定处理方式
+            let shouldSkipAnimation = mobileTransitionResult === 'skip_animation_only';
+
+            // Animations - 只在不需要跳过动画时执行
+            if (animations_enabled && !shouldSkipAnimation) {
               slideshow.animateReverse(previousIndex, slideshow, animations);
               slideshow.animateSlides(index, slideshow, animations);
             }
@@ -362,6 +383,31 @@ if (!customElements.get('slide-show')) {
       slideshow.addEventListener('mouseleave', function () {
         slideshow.autoPlayProgressTL.play();
       });
+    }
+
+    // 移动端防重复滑动的增强处理方法
+    handleMobileSlideTransition(slideshow, flkty, currentIndex, previousIndex) {
+      if (slideshow.dataset.isMobile !== 'true') return false;
+      
+      // 检查是否是从最后一张回到第一张
+      if (currentIndex === 0 && previousIndex === flkty.slides.length - 1) {
+        // 检查是否已经处理过这种情况
+        if (slideshow.dataset.mobileFirstSlideFixed === 'true') {
+          return 'skip_animation_only'; // 只跳过重复的动画，保持滑动效果
+        }
+        
+        // 设置标志，防止重复处理
+        slideshow.dataset.mobileFirstSlideFixed = 'true';
+        
+        // 延迟重置标志
+        setTimeout(() => {
+          slideshow.dataset.mobileFirstSlideFixed = 'false';
+        }, 1000);
+        
+        return 'skip_animation_only'; // 只跳过重复的动画，保持滑动效果
+      }
+      
+      return false; // 未处理
     }
 
     videoPause(video_container) {
