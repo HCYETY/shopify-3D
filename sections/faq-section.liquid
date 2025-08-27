@@ -1,0 +1,412 @@
+{{- 'faq-section.css' | asset_url | stylesheet_tag -}}
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="faq-section section-spacing" style="--color-bg: {{ section.settings.color_bg }}; --color-heading: {{ section.settings.color_heading }}; --color-text: {{ section.settings.color_text }}; --color-border: {{ section.settings.color_border }};">
+      {% if section.settings.heading != blank %}
+        <div class="faq-section__header">
+          <h2 class="faq-section__title">{{ section.settings.heading }}</h2>
+        </div>
+      {% endif %}
+      
+      <div class="faq-section__content">
+        <div class="faq-navigation">
+          <div class="faq-categories">
+            {% assign categories = section.blocks | where: "type", "faq_category" %}
+            {% for category in categories %}
+              <div class="faq-category-item {% if forloop.first %}active{% endif %}" 
+                   data-category="{{ category.id }}" 
+                   onclick="switchFaqCategory('{{ category.id }}')">
+                {{ category.settings.category_name }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="faq-content">
+          {% for category in categories %}
+            <div class="faq-category-content {% if forloop.first %}active{% endif %}" id="content-{{ category.id }}">
+              <div class="faq-questions">
+                {% comment %} 获取属于当前分类的所有问题 {% endcomment %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'faq_question' and block.settings.category_id == category.id %}
+                    <div class="faq-question-item" {{ block.shopify_attributes }}>
+                      <div class="faq-question" onclick="toggleFaqAnswer('{{ block.id }}-{{ section.id }}')">
+                        <div class="faq-question-text">{{ block.settings.question }}</div>
+                        <div class="faq-arrow" id="arrow-{{ block.id }}-{{ section.id }}">▼</div>
+                      </div>
+                      <div class="faq-answer" id="answer-{{ block.id }}-{{ section.id }}">
+                        {{ block.settings.answer }}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              
+              {% if category.settings.show_more_link %}
+                <div class="faq-more-link">
+                  <span class="faq-more-text">
+                    {{ category.settings.more_link_text | default: 'find more >' }}
+                  </span>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchFaqCategory(categoryId) {
+  // 隐藏所有内容
+  document.querySelectorAll('.faq-category-content').forEach(content => {
+    content.classList.remove('active');
+  });
+  
+  // 移除所有导航项的active状态
+  document.querySelectorAll('.faq-category-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // 显示选中的内容
+  const selectedContent = document.getElementById('content-' + categoryId);
+  if (selectedContent) {
+    selectedContent.classList.add('active');
+  }
+  
+  // 激活选中的导航项
+  const selectedNav = document.querySelector(`[data-category="${categoryId}"]`);
+  if (selectedNav) {
+    selectedNav.classList.add('active');
+  }
+}
+
+function toggleFaqAnswer(questionId) {
+  const answer = document.getElementById('answer-' + questionId);
+  const arrow = document.getElementById('arrow-' + questionId);
+  
+  if (answer.style.display === 'block') {
+    answer.style.display = 'none';
+    arrow.style.transform = 'rotate(0deg)';
+  } else {
+    answer.style.display = 'block';
+    arrow.style.transform = 'rotate(180deg)';
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "FAQ 常见问题",
+  "class": "section-faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "General FAQ"
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_heading",
+      "label": "标题颜色",
+      "default": "#EAF2FF"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "文字颜色",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "color",
+      "id": "color_border",
+      "label": "边框颜色",
+      "default": "#DADCE0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_category",
+      "name": "FAQ分类",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "分类名称",
+          "default": "Logistics Related"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_more_link",
+          "label": "显示更多链接",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "more_link_text",
+          "label": "更多链接文字",
+          "default": "find more >"
+        },
+        {
+          "type": "url",
+          "id": "more_link_url",
+          "label": "更多链接地址"
+        }
+      ]
+    },
+    {
+      "type": "faq_question",
+      "name": "FAQ问题",
+      "settings": [
+        {
+          "type": "select",
+          "id": "category_id",
+          "label": "所属分类",
+          "options": [
+            {
+              "value": "logistics_category",
+              "label": "Logistics Related"
+            },
+            {
+              "value": "preorder_category",
+              "label": "Pre-order"
+            },
+            {
+              "value": "coupon_category",
+              "label": "Coupon & Payment"
+            },
+            {
+              "value": "returns_category",
+              "label": "Returns & Exchanges"
+            },
+            {
+              "value": "software_category",
+              "label": "Software problem"
+            },
+            {
+              "value": "hardware_category",
+              "label": "Hardware problem"
+            },
+            {
+              "value": "print_quality_category",
+              "label": "Print Quality"
+            }
+          ],
+          "default": "logistics_category"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "问题",
+          "default": "Q1: Why only receive a partial of the order?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "答案"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "default": false,
+          "label": "默认展开"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ 常见问题",
+      "blocks": [
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Logistics Related"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Pre-order"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Coupon & Payment"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Returns & Exchanges"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Software problem"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Hardware problem"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Print Quality"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q1: Why only receive a partial of the order?",
+            "answer": "<p>Sometimes orders may be split into multiple shipments due to inventory availability or shipping restrictions. You will receive notification for each shipment.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q2: When can I expect to receive my package?",
+            "answer": "<p>Standard shipping typically takes 3-7 business days. Express shipping takes 1-3 business days. You will receive tracking information once your order ships.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q3: No shipping movement for days",
+            "answer": "<p>Shipping delays can occur due to weather, holidays, or carrier issues. Please allow extra time for delivery during peak periods.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q4: Is there a shipment notification email?",
+            "answer": "<p>Yes, you will receive an email confirmation when your order ships, including tracking information and estimated delivery date.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q5: How to track my package?",
+            "answer": "<p>You can track your package using the tracking number provided in your shipping confirmation email. Visit the carrier's website or use our tracking tool.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q6: What if my package is lost?",
+            "answer": "<p>If your package is lost, please contact our customer service team. We'll work with the carrier to locate your package or provide a replacement.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "preorder_category",
+            "question": "Q1: How does pre-order work?",
+            "answer": "<p>Pre-orders allow you to reserve items before they're officially released. You'll be charged when the item ships, not when you place the order.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "preorder_category",
+            "question": "Q2: When will pre-order items ship?",
+            "answer": "<p>Pre-order items typically ship on or shortly after the official release date. You'll receive updates on any changes to the shipping timeline.</p>"
+          }
+        },
+                 {
+           "type": "faq_question",
+           "settings": {
+             "category_id": "preorder_category",
+             "question": "Q3: Can I cancel my pre-order?",
+             "answer": "<p>Yes, you can cancel your pre-order at any time before it ships. Once shipped, normal return policies apply.</p>"
+           }
+         },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "coupon_category",
+            "question": "Q1: How to use coupon codes?",
+            "answer": "<p>Enter your coupon code during checkout in the designated field. Valid codes will automatically apply discounts to your order total.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "coupon_category",
+            "question": "Q2: What payment methods do you accept?",
+            "answer": "<p>We accept major credit cards, PayPal, and other secure payment methods. All transactions are encrypted for your security.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "coupon_category",
+            "question": "Q3: Are there any hidden fees?",
+            "answer": "<p>No hidden fees. The price you see is the price you pay, plus applicable taxes and shipping costs.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "returns_category",
+            "question": "Q1: What is your return policy?",
+            "answer": "<p>We offer a 30-day return policy for most items. Products must be unused and in original packaging. Some restrictions apply.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "software_category",
+            "question": "Q1: How to update printer firmware?",
+            "answer": "<p>Download the latest firmware from our website and follow the step-by-step instructions. Always backup your settings before updating.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "hardware_category",
+            "question": "Q1: What if my printer won't turn on?",
+            "answer": "<p>Check the power supply, ensure all connections are secure, and verify the power switch is in the correct position. Contact support if issues persist.</p>"
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "print_quality_category",
+            "question": "Q1: How to improve print quality?",
+            "answer": "<p>Ensure proper bed leveling, use high-quality filament, maintain optimal temperature settings, and regularly clean your printer components.</p>"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}

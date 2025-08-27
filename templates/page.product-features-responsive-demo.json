@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "compliance_standards": {
@@ -149,12 +158,205 @@
         "feature_1",
         "feature_2"
       ]
+    },
+    "faq_section": {
+      "type": "faq-section",
+      "settings": {
+        "heading": "General FAQ",
+        "color_bg": "#ffffff",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_border": "#DADCE0"
+      },
+      "blocks": {
+        "logistics_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Logistics Related",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "preorder_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Pre-order",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "coupon_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Coupon & Payment",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "returns_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Returns & Exchanges",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "software_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Software problem",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "hardware_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Hardware problem",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "print_quality_category": {
+          "type": "faq_category",
+          "settings": {
+            "category_name": "Print Quality",
+            "show_more_link": true,
+            "more_link_text": "find more >",
+            "more_link_url": ""
+          }
+        },
+        "logistics_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q1: Why only receive a partial of the order?",
+            "answer": "<p>Sometimes orders may be split into multiple shipments due to inventory availability or shipping restrictions. You will receive notification for each shipment.</p>"
+          }
+        },
+        "logistics_q2": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q2: When can I expect to receive my package?",
+            "answer": "<p>Standard shipping typically takes 3-7 business days. Express shipping takes 1-3 business days. You will receive tracking information once your order ships.</p>"
+          }
+        },
+        "logistics_q3": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q3: No shipping movement for days",
+            "answer": "<p>Shipping delays can occur due to weather, holidays, or carrier issues. Please allow extra time for delivery during peak periods.</p>"
+          }
+        },
+        "logistics_q4": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "logistics_category",
+            "question": "Q4: Is there a shipment notification email?",
+            "answer": "<p>Yes, you will receive an email confirmation when your order ships, including tracking information and estimated delivery date.</p>"
+          }
+        },
+        "preorder_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "preorder_category",
+            "question": "Q1: How does pre-order work?",
+            "answer": "<p>Pre-orders allow you to reserve items before they're officially released. You'll be charged when the item ships, not when you place the order.</p>"
+          }
+        },
+        "preorder_q2": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "preorder_category",
+            "question": "Q2: When will pre-order items ship?",
+            "answer": "<p>Pre-order items typically ship on or shortly after the official release date. You'll receive updates on any changes to the shipping timeline.</p>"
+          }
+        },
+        "coupon_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "coupon_category",
+            "question": "Q1: How to use coupon codes?",
+            "answer": "<p>Enter your coupon code during checkout in the designated field. Valid codes will automatically apply discounts to your order total.</p>"
+          }
+        },
+        "coupon_q2": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "coupon_category",
+            "question": "Q2: What payment methods do you accept?",
+            "answer": "<p>We accept major credit cards, PayPal, and other secure payment methods. All transactions are encrypted for your security.</p>"
+          }
+        },
+        "returns_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "returns_category",
+            "question": "Q1: What is your return policy?",
+            "answer": "<p>We offer a 30-day return policy for most items. Products must be unused and in original packaging. Some restrictions apply.</p>"
+          }
+        },
+        "software_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "software_category",
+            "question": "Q1: How to update printer firmware?",
+            "answer": "<p>Download the latest firmware from our website and follow the step-by-step instructions. Always backup your settings before updating.</p>"
+          }
+        },
+        "hardware_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "hardware_category",
+            "question": "Q1: What if my printer won't turn on?",
+            "answer": "<p>Check the power supply, ensure all connections are secure, and verify the power switch is in the correct position. Contact support if issues persist.</p>"
+          }
+        },
+        "print_quality_q1": {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "print_quality_category",
+            "question": "Q1: How to improve print quality?",
+            "answer": "<p>Ensure proper bed leveling, use high-quality filament, maintain optimal temperature settings, and regularly clean your printer components.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "logistics_category",
+        "preorder_category",
+        "coupon_category",
+        "returns_category",
+        "software_category",
+        "hardware_category",
+        "print_quality_category",
+        "logistics_q1",
+        "logistics_q2",
+        "logistics_q3",
+        "logistics_q4",
+        "preorder_q1",
+        "preorder_q2",
+        "coupon_q1",
+        "coupon_q2",
+        "returns_q1",
+        "software_q1",
+        "hardware_q1",
+        "print_quality_q1"
+      ]
     }
   },
   "order": [
     "compliance_standards",
     "product_hero_banner",
     "home_s_blogs_YD4VnB",
-    "product_features_responsive"
+    "product_features_responsive",
+    "faq_section"
   ]
 }
