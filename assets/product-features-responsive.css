@@ -1,7 +1,7 @@
 .product-features-responsive-container {
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: var(--margin-bottom-desktop, 30px);
+  margin: var(--section-margin, 30px);
   background-color: var(--background-color, #F1F1F1);
 }
 
@@ -93,9 +93,6 @@
 
 /* 响应式布局调整 */
 @media screen and (max-width: 960px) {
-  .product-features-responsive-container {
-    margin-bottom: var(--margin-bottom-mobile, 20px) !important;
-  }
 
   .product-features-responsive-content {
     gap: var(--group-gap-mobile, 37px);

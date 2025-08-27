@@ -1,8 +1,59 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {}
+    "compliance_standards": {
+      "type": "compliance-standards",
+      "settings": {
+        "title": "",
+        "background_color": "#ffffff",
+        "heading_color": "#000000",
+        "text_color": "#333333"
+      },
+      "blocks": {
+        "rohs_compliant": {
+          "type": "compliance_item",
+          "settings": {
+            "title": "RoHS Compliant",
+            "description": "Restricted Substances Safe. Meets EU standards for hazardous material limits in electronics.",
+            "indicator_color": "#28a745",
+            "indicator_shape": "circle",
+            "logo_text": "RoHS COMPLIANT"
+          }
+        },
+        "reach_compliant": {
+          "type": "compliance_item",
+          "settings": {
+            "title": "REACH Compliant",
+            "description": "Chemical Safety Assured. Fully meets EU regulations for safe chemical use in manufacturing.",
+            "indicator_color": "#fd7e14",
+            "indicator_shape": "square",
+            "logo_text": "REACH COMPLIANT"
+          }
+        },
+        "msds_available": {
+          "type": "compliance_item",
+          "settings": {
+            "title": "MSDS Available",
+            "description": "Material Safety Data Sheet. Transparent safety and handling info for responsible resin use.",
+            "indicator_color": "#007bff",
+            "indicator_shape": "square",
+            "logo_text": "MSDS MATERIAL SAFETY DATA SHEET"
+          }
+        }
+      },
+      "block_order": [
+        "rohs_compliant",
+        "reach_compliant",
+        "msds_available"
+      ]
+    },
+    "product_hero_banner": {
+      "type": "product-hero-banner",
+      "settings": {
+        "main_title": "16K Standard Resin",
+        "sub_title": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red",
+        "background_color": "#ffffff",
+        "section_padding": 0
+      }
     },
     "home_s_blogs_YD4VnB": {
       "type": "home-s-blogs",
@@ -74,8 +125,7 @@
         "background_color": "#F1F1F1",
         "group_gap_desktop": 20,
         "group_gap_mobile": 35,
-        "margin_bottom_desktop": 40,
-        "margin_bottom_mobile": 30
+        "section_margin": 0
       },
       "blocks": {
         "feature_1": {
@@ -102,7 +152,8 @@
     }
   },
   "order": [
-    "main",
+    "compliance_standards",
+    "product_hero_banner",
     "home_s_blogs_YD4VnB",
     "product_features_responsive"
   ]

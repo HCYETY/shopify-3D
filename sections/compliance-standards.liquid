@@ -1,0 +1,194 @@
+{{ 'compliance-standards.css' | asset_url | stylesheet_tag }}
+
+<div class="compliance-standards" style="--color-bg: {{ section.settings.background_color }}; --color-heading: {{ section.settings.heading_color }}; --color-text: {{ section.settings.text_color }}">
+  <div class="compliance-standards__inner">
+    {% if section.settings.title != blank %}
+      <h2 class="compliance-standards__title">{{ section.settings.title }}</h2>
+    {% endif %}
+    
+    <div class="compliance-standards__grid">
+      {% for block in section.blocks %}
+        <div class="compliance-standards__card" {{ block.shopify_attributes }}>
+          <div class="compliance-standards__card-left">
+            <div class="compliance-standards__card-header">
+                             <div class="compliance-standards__indicator compliance-standards__indicator--{{ block.settings.indicator_shape }}" 
+                    {% if block.settings.indicator_shape == 'triangle' %}
+                      style="border-bottom-color: {{ block.settings.indicator_color }};"
+                    {% elsif block.settings.indicator_shape == 'star' %}
+                      style="color: {{ block.settings.indicator_color }};"
+                    {% else %}
+                      style="background-color: {{ block.settings.indicator_color }};"
+                    {% endif %}></div>
+              <h3 class="compliance-standards__card-title">{{ block.settings.title }}</h3>
+            </div>
+            
+            <div class="compliance-standards__card-content">
+              <p>{{ block.settings.description }}</p>
+            </div>
+          </div>
+          
+          <div class="compliance-standards__card-logo">
+            {% if block.settings.logo_image != blank %}
+              <img 
+                src="{{ block.settings.logo_image | image_url }}" 
+                alt="{{ block.settings.logo_image.alt | escape }}"
+                width="120"
+                height="60"
+                loading="lazy"
+              >
+            {% else %}
+              <div class="compliance-standards__logo-placeholder">
+                <span>{{ block.settings.logo_text | default: block.settings.title }}</span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "合规标准",
+  "class": "section-compliance-standards",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "header",
+      "content": "标题设置"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "产品合规标准"
+    },
+    {
+      "type": "header",
+      "content": "样式设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文本颜色",
+      "default": "#333333"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "compliance_item",
+      "name": "合规标准项",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "RoHS Compliant"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "描述",
+          "default": "Restricted Substances Safe. Meets EU standards for hazardous material limits in electronics."
+        },
+        {
+          "type": "color",
+          "id": "indicator_color",
+          "label": "指示器颜色",
+          "default": "#28a745"
+        },
+        {
+          "type": "select",
+          "id": "indicator_shape",
+          "label": "指示器形状",
+          "options": [
+            {
+              "value": "circle",
+              "label": "圆形"
+            },
+            {
+              "value": "square",
+              "label": "正方形"
+            },
+            {
+              "value": "diamond",
+              "label": "菱形"
+            },
+            {
+              "value": "triangle",
+              "label": "三角形"
+            },
+            {
+              "value": "star",
+              "label": "星形"
+            }
+          ],
+          "default": "circle"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo图片",
+          "info": "建议尺寸: 120x60px"
+        },
+        {
+          "type": "text",
+          "id": "logo_text",
+          "label": "Logo文本",
+          "info": "如果没有上传图片，将显示此文本"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "合规标准",
+      "blocks": [
+                 {
+           "type": "compliance_item",
+           "settings": {
+             "title": "RoHS Compliant",
+             "description": "Restricted Substances Safe. Meets EU standards for hazardous material limits in electronics.",
+             "indicator_color": "#28a745",
+             "indicator_shape": "circle"
+           }
+         },
+         {
+           "type": "compliance_item",
+           "settings": {
+             "title": "REACH Compliant",
+             "description": "Chemical Safety Assured. Fully meets EU regulations for safe chemical use in manufacturing.",
+             "indicator_color": "#fd7e14",
+             "indicator_shape": "square"
+           }
+         },
+         {
+           "type": "compliance_item",
+           "settings": {
+             "title": "MSDS Available",
+             "description": "Material Safety Data Sheet. Transparent safety and handling info for responsible resin use.",
+             "indicator_color": "#007bff",
+             "indicator_shape": "square"
+           }
+         }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{% endschema %}

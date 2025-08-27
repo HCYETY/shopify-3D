@@ -1,7 +1,7 @@
 {{- 'product-features-responsive.css' | asset_url | stylesheet_tag -}}
 
 <div class="row">
-  <div class="product-features-responsive-container" style="--margin-bottom-desktop: {{ section.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ section.settings.margin_bottom_mobile }}px; --group-gap-desktop: {{ section.settings.group_gap_desktop }}px; --group-gap-mobile: {{ section.settings.group_gap_mobile }}px; --background-color: {{ section.settings.background_color }};">
+  <div class="product-features-responsive-container" style="--section-margin: {{ section.settings.section_margin }}px; --group-gap-desktop: {{ section.settings.group_gap_desktop }}px; --group-gap-mobile: {{ section.settings.group_gap_mobile }}px; --background-color: {{ section.settings.background_color }};">
     {% render 'section-header', section_heading: section.settings.title %}
 
     <div class="product-features-responsive-content">
@@ -54,8 +54,17 @@
     {
       "type": "color",
       "id": "background_color",
-      "label": "整体背景颜色",
+      "label": "背景颜色",
       "default": "#F5F5F5"
+    },
+    {
+      "type": "range",
+      "id": "section_margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 30,
+      "label": "内边距"
     },
     {
       "type": "range",
@@ -74,24 +83,6 @@
       "step": 5,
       "default": 40,
       "label": "移动端组间距"
-    },
-    {
-      "type": "range",
-      "id": "margin_bottom_desktop",
-      "min": 0,
-      "max": 50,
-      "step": 5,
-      "default": 30,
-      "label": "桌面端下边距"
-    },
-    {
-      "type": "range",
-      "id": "margin_bottom_mobile",
-      "min": 0,
-      "max": 50,
-      "step": 5,
-      "default": 20,
-      "label": "移动端下边距"
     }
   ],
   "blocks": [

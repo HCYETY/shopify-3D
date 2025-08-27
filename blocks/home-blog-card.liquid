@@ -38,17 +38,22 @@
     transform: scale(1.05);
   }
 
-  .h-blog-card .title-block {
+  .h-blog-card .title-block-container {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 10%);
-    width: 70%;
+    width: 100%;
     padding: 24px;
     // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
     // backdrop-filter: blur(8px);
     // -webkit-backdrop-filter: blur(8px);
     text-align: center;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  .h-blog-card .title-block {
+    width: 70%;
+    margin: auto;
   }
 
   .h-blog-card .main-title {
@@ -74,7 +79,7 @@
       height: 370px;
     }
 
-    .h-blog-card .title-block {
+    .h-blog-card .title-block-container {
       padding: 20px;
     }
 
@@ -89,7 +94,7 @@
       width: 69.333vw;
       height: 98.667vw;
     }
-    .h-blog-card .title-block {
+    .h-blog-card .title-block-container {
       padding: 5.333vw;
     }
     .h-blog-card .main-title {
@@ -99,8 +104,8 @@
       font-size: 3.2vw;
     }
     .swiper-slide.h-blog-card {
-      width: 365px;
-      height: 665px;
+      width: 345px;
+      height: 645px;
     }
   }
 
@@ -109,7 +114,7 @@
       width: 970px;
       height: 400px;
     }
-    .h-blog-card .title-block {
+    .h-blog-card .title-block-container {
       padding: 24px;
     }
     .h-blog-card .main-title {
@@ -126,7 +131,7 @@
       width: 970px;
       height: 400px;
     }
-    .h-blog-card .title-block {
+    .h-blog-card .title-block-container {
       padding: 24px;
     }
     .h-blog-card .main-title {
@@ -149,9 +154,11 @@
       width="100%"
       height="100%"
     >
-    <div class="title-block">
-      <h3 class="main-title">{{ block.settings.title }}</h3>
-      <p class="sub-title">{{ block.settings.sub_title }}</p>
+    <div class="title-block-container">
+      <div class="title-block">
+        <h3 class="main-title">{{ block.settings.title }}</h3>
+        <p class="sub-title">{{ block.settings.sub_title }}</p>
+      </div>
     </div>
   </a>
 </div>
