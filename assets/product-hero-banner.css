@@ -1,6 +1,6 @@
 .product-hero-banner-container {
   background-color: var(--background-color, #ffffff);
-  padding: var(--section-padding, 40px) 0;
+  padding: var(--section-padding, 20px) 0;
   width: 100%;
 }
 
@@ -10,206 +10,35 @@
   position: relative;
 }
 
-.product-hero-banner-mask {
+/* 图片容器 */
+.product-hero-banner-image-wrapper {
   width: 100%;
-  height: 688.3px; 
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background: linear-gradient(180deg, #D6D8DB 0%, #D6D8DB 23%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* 上方大图片区域 */
-.product-hero-banner-main-image-wrapper {
-  width: 100%;
-  height: 803px;
+  height: 100%;
   overflow: hidden;
   position: relative;
-  z-index: 10;
+  transition: height 0.3s ease;
 }
 
-.product-hero-banner-main-image {
+/* 图片基础样式 */
+.product-hero-banner-image {
   width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.product-hero-banner-image__img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.product-hero-banner-main-image:hover {
+.product-hero-banner-image__img:hover {
   transform: scale(1.02);
 }
 
-/* 移动端和PC端图片显示控制 */
-.product-hero-banner-main-image-mobile,
-.product-hero-banner-bottom-image-mobile {
-  display: none;
-}
-
-.product-hero-banner-main-image-desktop,
-.product-hero-banner-bottom-image-desktop {
-  display: block;
-}
-.product-hero-banner-main-image-mobile .product-hero-banner-main-image {
-  height: 100%;
-}
-
-/* 下方小图片和标题区域 */
-.product-hero-banner-bottom-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 44px 0 33px 0;
-  position: relative;
-  z-index: 10;
-}
-
-.product-hero-banner-bottom-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 4px;
-  max-width: 100%;
-}
-
-/* 底部小图片 */
-.product-hero-banner-bottom-image-wrapper {
-  width: 245px;
-  height: 273px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.product-hero-banner-bottom-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.product-hero-banner-bottom-image:hover {
-  transform: scale(1.05);
-}
-
-/* 标题区域 */
-.product-hero-banner-text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: center;
-}
-
-.product-hero-banner-main-title {
-  font-family: MiSans;
-  font-size: 64px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0em;
-
-  font-variation-settings: "opsz" auto;
-  font-feature-settings: "kern" on;
-  color: #3D3D3D;
-  margin: 0;
-}
-
-.product-hero-banner-sub-title {
-  font-family: MiSans;
-  font-size: 34px;
-  font-weight: normal;
-  line-height: normal;
-  text-align: center;
-  letter-spacing: 0em;
-    
-  font-variation-settings: "opsz" auto;
-  font-feature-settings: "kern" on;
-  color: #797979;
-  margin: 0;
-}
-
-/* 响应式设计 - 平板 */
-@media screen and (max-width: 768px) {
-  .product-hero-banner-main-image-wrapper {
-    height: 325px;
-  }
-  
-  .product-hero-banner-mask {
-    height: 325px; /* 与平板端主图高度一致 */
-  }
-  
-  .product-hero-banner-bottom-content {
-    gap: 4px;
-  }
-  
-  .product-hero-banner-bottom-image-wrapper {
-    width: 180px;
-    height: 135px;
-  }
-  
-  .product-hero-banner-main-title {
-    font-size: 32px;
-  }
-  
-  .product-hero-banner-sub-title {
-    font-size: 16px;
-    max-width: 263px;
-  }
-}
-
-/* 响应式设计 - 移动端 */
-@media screen and (max-width: 480px) {
-  .product-hero-banner-main-image-wrapper {
-    height: 330px;
-  }
-  
-  .product-hero-banner-mask {
-    height: 305px; /* 与移动端主图高度一致 */
-    top: 45%;
-  }
-  
-  .product-hero-banner-bottom-section {
-    padding: 18px;
-  }
-  
-  .product-hero-banner-bottom-content {
-    gap: 24px;
-  }
-  
-  .product-hero-banner-bottom-image-wrapper {
-    width: 109px;
-    height: 121px;
-  }
-  
-  .product-hero-banner-main-title {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  
-  .product-hero-banner-sub-title {
-    font-size: 18px;
-    font-weight: 300;
-    max-width: 263px;
-  }
-  
-  /* 移动端图片显示，PC端图片隐藏 */
-  .product-hero-banner-main-image-mobile,
-  .product-hero-banner-bottom-image-mobile {
-    display: block;
-  }
-  
-  .product-hero-banner-main-image-desktop,
-  .product-hero-banner-bottom-image-desktop {
-    display: none;
-  }
-
-  .product-hero-banner-main-image-mobile {
-    height: 100%;
-  }
-}
-
-/* 占位符样式 */
-.product-hero-banner-main-image.placeholder,
-.product-hero-banner-bottom-image.placeholder {
+/* 占位图片样式 */
+.product-hero-banner-image--placeholder {
   background-color: #f8f9fa;
   border: 2px dashed #dee2e6;
   display: flex;
@@ -217,4 +46,49 @@
   justify-content: center;
   color: #6c757d;
   font-size: 14px;
+}
+
+/* 移动端和PC端图片显示控制 */
+.product-hero-banner-image--mobile {
+  display: none;
+}
+
+.product-hero-banner-image--desktop {
+  display: block;
+}
+
+/* 响应式设计 - 移动端图片显示控制 */
+@media screen and (max-width: 767px) {
+  /* 移动端显示移动端图片，隐藏PC端图片 */
+  .product-hero-banner-image--mobile {
+    display: block;
+  }
+  
+  .product-hero-banner-image--desktop {
+    display: none;
+  }
+}
+
+/* 横屏模式优化 */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .product-hero-banner-image-wrapper {
+    height: 200px;
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  .product-hero-banner-image-wrapper {
+    height: auto;
+    max-height: 400px;
+  }
+}
+
+/* 性能优化 */
+.product-hero-banner-image-wrapper {
+  will-change: height;
+}
+
+.product-hero-banner-image__img {
+  will-change: transform;
 }

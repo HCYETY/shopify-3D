@@ -2,102 +2,48 @@
 
 <div class="product-hero-banner-container" style="--background-color: {{ section.settings.background_color }}; --section-padding: {{ section.settings.section_padding }}px;">
   <div class="product-hero-banner-content">
-    <!-- 上方大图片区域 -->
+    <!-- 主图片区域 -->
     {% if section.settings.main_image != blank or section.settings.mobile_main_image != blank %}
-      <div class="product-hero-banner-main-image-wrapper">
+      <div class="product-hero-banner-image-wrapper">
         {% if section.settings.main_image != blank %}
-          <!-- PC端主图片 -->
-          <div class="product-hero-banner-main-image-desktop">
+          <!-- PC端图片 -->
+          <div class="product-hero-banner-image product-hero-banner-image--desktop">
             {%- render 'responsive-image', 
             image: section.settings.main_image,
             sizes: '1200x, 800x, 600x',
-            class: 'product-hero-banner-main-image',
+            class: 'product-hero-banner-image__img',
             priority: true
             -%}
           </div>
         {% endif %}
         
         {% if section.settings.mobile_main_image != blank %}
-          <!-- 移动端主图片 -->
-          <div class="product-hero-banner-main-image-mobile">
+          <!-- 移动端图片 -->
+          <div class="product-hero-banner-image product-hero-banner-image--mobile">
             {%- render 'responsive-image', 
             image: section.settings.mobile_main_image,
             sizes: '800x, 600x, 400x',
-            class: 'product-hero-banner-main-image',
+            class: 'product-hero-banner-image__img',
             priority: true
             -%}
           </div>
         {% endif %}
 
         {% if section.settings.main_image == blank and section.settings.mobile_main_image == blank %}
-          <div class="product-hero-banner-main-image-placeholder">
-            {{ 'image' | placeholder_svg_tag: 'product-hero-banner-main-image placeholder' }}
+          <!-- 占位图片 -->
+          <div class="product-hero-banner-image product-hero-banner-image--placeholder">
+            {{ 'image' | placeholder_svg_tag: 'product-hero-banner-image__img placeholder' }}
           </div>
         {% endif %}
       </div>
     {% else %}
-      <div class="product-hero-banner-main-image-wrapper">
-        {{ 'image' | placeholder_svg_tag: 'product-hero-banner-main-image placeholder' }}
-      </div>
-    {% endif %}
-
-    <!-- 下方小图片和标题区域 -->
-    <div class="product-hero-banner-bottom-section">
-      <div class="product-hero-banner-bottom-content">
-        <!-- 小图片 -->
-        {% if section.settings.bottom_image != blank or section.settings.mobile_bottom_image != blank %}
-          <div class="product-hero-banner-bottom-image-wrapper">
-            {% if section.settings.bottom_image != blank %}
-              <!-- PC端底部图片 -->
-              <div class="product-hero-banner-bottom-image-desktop">
-                {%- render 'responsive-image', 
-                image: section.settings.bottom_image,
-                sizes: '400x, 300x, 200x',
-                class: 'product-hero-banner-bottom-image',
-                priority: false
-                -%}
-              </div>
-            {% endif %}
-            
-            {% if section.settings.mobile_bottom_image != blank %}
-              <!-- 移动端底部图片 -->
-              <div class="product-hero-banner-bottom-image-mobile">
-                {%- render 'responsive-image', 
-                image: section.settings.mobile_bottom_image,
-                sizes: '300x, 200x, 150x',
-                class: 'product-hero-banner-bottom-image',
-                priority: false
-                -%}
-              </div>
-            {% endif %}
-            
-            {% if section.settings.bottom_image == blank and section.settings.mobile_bottom_image == blank %}
-              <div class="product-hero-banner-bottom-image-placeholder">
-                {{ 'image' | placeholder_svg_tag: 'product-hero-banner-bottom-image placeholder' }}
-              </div>
-            {% endif %}
-          </div>
-        {% else %}
-          <div class="product-hero-banner-bottom-image-wrapper">
-            {{ 'image' | placeholder_svg_tag: 'product-hero-banner-bottom-image placeholder' }}
-          </div>
-        {% endif %}
-
-        <!-- 标题区域 -->
-        <div class="product-hero-banner-text-content">
-          {% if section.settings.main_title != blank %}
-            <h1 class="product-hero-banner-main-title">{{ section.settings.main_title }}</h1>
-          {% endif %}
-          
-          {% if section.settings.sub_title != blank %}
-            <h2 class="product-hero-banner-sub-title">{{ section.settings.sub_title }}</h2>
-          {% endif %}
+      <!-- 默认占位图片 -->
+      <div class="product-hero-banner-image-wrapper">
+        <div class="product-hero-banner-image product-hero-banner-image--placeholder">
+          {{ 'image' | placeholder_svg_tag: 'product-hero-banner-image__img placeholder' }}
         </div>
       </div>
-    </div>
-
-    <!-- 渐变遮罩 -->
-    <div class="product-hero-banner-mask"></div>
+    {% endif %}
   </div>
 </div>
 
@@ -109,34 +55,12 @@
     {
       "type": "image_picker",
       "id": "main_image",
-      "label": "PC端主图片（大图）"
+      "label": "PC端图片"
     },
     {
       "type": "image_picker",
       "id": "mobile_main_image",
-      "label": "移动端主图片（大图）"
-    },
-    {
-      "type": "image_picker",
-      "id": "bottom_image",
-      "label": "PC端底部小图片"
-    },
-    {
-      "type": "image_picker",
-      "id": "mobile_bottom_image",
-      "label": "移动端底部小图片"
-    },
-    {
-      "type": "text",
-      "id": "main_title",
-      "label": "主标题",
-      "default": "16K Standard Resin"
-    },
-    {
-      "type": "text",
-      "id": "sub_title",
-      "label": "副标题",
-      "default": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red"
+      "label": "移动端图片"
     },
     {
       "type": "color",
@@ -150,17 +74,13 @@
       "min": 0,
       "max": 100,
       "step": 5,
-      "default": 0,
+      "default": 20,
       "label": "内边距"
     }
   ],
   "presets": [
     {
-      "name": "产品横幅",
-      "settings": {
-        "main_title": "16K Standard Resin",
-        "sub_title": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red"
-      }
+      "name": "产品横幅"
     }
   ]
 }
