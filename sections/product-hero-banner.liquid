@@ -28,7 +28,7 @@
             -%}
           </div>
         {% endif %}
-        
+
         {% if section.settings.main_image == blank and section.settings.mobile_main_image == blank %}
           <div class="product-hero-banner-main-image-placeholder">
             {{ 'image' | placeholder_svg_tag: 'product-hero-banner-main-image placeholder' }}
@@ -95,6 +95,9 @@
         </div>
       </div>
     </div>
+
+    <!-- 渐变遮罩 -->
+    <div class="product-hero-banner-mask"></div>
   </div>
 </div>
 

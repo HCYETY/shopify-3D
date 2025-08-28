@@ -221,16 +221,25 @@
       <p class="title">{{ block.settings.title }}</p>
       <p class="desc">{{ block.settings.desc }}</p>
       <div class="btn-wrap">
-        {% if block.settings.btn_text != blank %}
+        {% if block.settings.btn_text != blank and block.settings.link != blank %}
         <a href="{{ block.settings.link }}" class="btn">{{ block.settings.btn_text }}</a>
-          {% endif %}
-        {% if block.settings.show_compare_btn %}
+        {% elsif block.settings.btn_text != blank %}
+        <span class="btn no-link">{{ block.settings.btn_text }}</span>
+        {% endif %}
+        {% if block.settings.show_compare_btn and block.settings.compare_link != blank %}
           <a href="{{ block.settings.compare_link }}" class="btn compare-btn">
             {{- block.settings.compare_btn_text }}
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
               <path d="M7.5835 3.33337L14.2502 10L7.5835 16.6667" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
+        {% elsif block.settings.show_compare_btn %}
+          <span class="btn compare-btn no-link">
+            {{- block.settings.compare_btn_text }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="21"20" viewBox="0 0 21 20" fill="none">
+              <path d="M7.5835 3.33337L14.2502 10L7.5835 16.6667" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
         {% endif %}
       </div>
     </div>

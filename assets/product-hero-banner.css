@@ -7,7 +7,18 @@
 .product-hero-banner-content {
   width: 100%;
   margin: 0;
-  background: linear-gradient(180deg, #D6D8DB 23%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+}
+
+.product-hero-banner-mask {
+  width: 100%;
+  height: 688.3px; 
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: linear-gradient(180deg, #D6D8DB 0%, #D6D8DB 23%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* 上方大图片区域 */
@@ -15,6 +26,8 @@
   width: 100%;
   height: 803px;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
 .product-hero-banner-main-image {
@@ -45,6 +58,8 @@
   justify-content: center;
   align-items: center;
   padding: 44px 0 33px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .product-hero-banner-bottom-content {
@@ -116,6 +131,10 @@
     height: 400px;
   }
   
+  .product-hero-banner-mask {
+    height: 400px; /* 与平板端主图高度一致 */
+  }
+  
   .product-hero-banner-bottom-content {
     gap: 4px;
   }
@@ -142,6 +161,10 @@
   
   .product-hero-banner-main-image-wrapper {
     height: 330px;
+  }
+  
+  .product-hero-banner-mask {
+    height: 305px; /* 与移动端主图高度一致 */
   }
   
   .product-hero-banner-bottom-section {

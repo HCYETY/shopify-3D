@@ -181,7 +181,11 @@
 {% endstyle %}
 
 <div class="swiper-slide h-blog-card ">
+  {% if block.settings.link != blank %}
   <a href="{{ block.settings.link }}">
+  {% else %}
+  <div class="no-link">
+  {% endif %}
     {% if block.settings.image != blank %}
       <!-- PC端图片 -->
       <img
@@ -224,7 +228,11 @@
         <p class="sub-title">{{ block.settings.sub_title }}</p>
       </div>
     </div>
+  {% if block.settings.link != blank %}
   </a>
+  {% else %}
+  </div>
+  {% endif %}
 </div>
 
 {% schema %}

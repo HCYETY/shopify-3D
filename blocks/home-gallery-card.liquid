@@ -52,15 +52,18 @@
   }
 {% endstyle %}
 
+{% if block.settings.link != blank %}
 <a
   class="home-gallery-card"
-  {% if block.settings.link %}
-    href="{{ block.settings.link }}"
-  {% else %}
-    data-fancybox="gallery"
-    data-src="{{ block.settings.image | img_url: 'master' }}"
-  {% endif %}
+  href="{{ block.settings.link }}"
 >
+{% else %}
+<div
+  class="home-gallery-card no-link"
+  data-fancybox="gallery"
+  data-src="{{ block.settings.image | img_url: 'master' }}"
+>
+{% endif %}
   {% if block.settings.image != blank %}
     <!-- PC端图片 -->
     <img 
@@ -93,7 +96,11 @@
       alt="Placeholder Image"
     >
   {% endif %}
+{% if block.settings.link != blank %}
 </a>
+{% else %}
+</div>
+{% endif %}
 
 {% schema %}
 {

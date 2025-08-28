@@ -16,7 +16,7 @@
     "navigation_uppercase": false,
     "button_letter_spacing": 0,
     "button_uppercase": false,
-    "color_body_bg": "#ffffff",
+    "color_body_bg": "#f1f1f1",
     "color_body": "#2c2d2e",
     "color_heading": "#1a1c1d",
     "color_accent": "#3f72e5",
@@ -175,11 +175,6 @@
       },
       "2353461558643755616": {
         "type": "shopify://apps/tinyseo/blocks/breadcrumbs-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "7924418359578431505": {
-        "type": "shopify://apps/seoant-ai-seo/blocks/seoant-core/8e57283b-dcb0-4f7b-a947-fb5c57a0d59d",
         "disabled": false,
         "settings": {}
       }
