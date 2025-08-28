@@ -58,12 +58,8 @@
     "product_hero_banner": {
       "type": "product-hero-banner",
       "settings": {
-        "main_image": "shopify://shop_images/45_1x_d0d04463-c31f-452d-be83-52cc732ba719.webp",
-        "mobile_main_image": "shopify://shop_images/7_1x_1.png",
-        "bottom_image": "shopify://shop_images/16_1x_ba4c818a-6e20-46bc-96a1-8c48846602bf.webp",
-        "mobile_bottom_image": "shopify://shop_images/16_1x_087a19b9-7c54-4b7d-bf7e-80502c889ae8.png",
-        "main_title": "16K Standard Resin",
-        "sub_title": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red",
+        "main_image": "shopify://shop_images/45_1x_c004f205-0b48-4f91-8506-37dcb7e99c95.webp",
+        "mobile_main_image": "shopify://shop_images/28_1x_5ac5f222-275c-49d0-b693-a08d1f196723.webp",
         "background_color": "#f1f1f1",
         "section_padding": 0
       }
@@ -74,7 +70,7 @@
         "v_slider_b3mmpM": {
           "type": "v-slider",
           "settings": {
-            "autoplay": true,
+            "autoplay": false,
             "delay": 3000,
             "loop": true,
             "show_nav": true,

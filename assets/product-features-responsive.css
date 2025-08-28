@@ -59,10 +59,12 @@
 
 .product-features-responsive-title {
   font-family: MiSans;
+  font-size: 24px;
   font-weight: 600;
   line-height: normal;
+  text-align: center;
   letter-spacing: 0em;
-    
+
   font-variation-settings: "opsz" auto;
   font-feature-settings: "kern" on;
   color: #3D3D3D;
@@ -70,10 +72,11 @@
 
 .product-features-responsive-description {
   font-family: MiSans;
+  font-size: 18px;
   font-weight: normal;
   line-height: normal;
   letter-spacing: 0em;
-    
+
   font-variation-settings: "opsz" auto;
   font-feature-settings: "kern" on;
   color: #797979;
@@ -88,14 +91,6 @@
   .product-features-responsive-item.image-right .product-features-responsive-text {
     text-align: left;
     width: 418px;
-  }
-
-  .product-features-responsive-title {
-    font-size: 24px;
-  }
-  
-  .product-features-responsive-description {
-    font-size: 18px;
   }
 }
 
@@ -134,10 +129,28 @@
   }
 
   .product-features-responsive-title {
+    font-family: MiSans;
     font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0em;
+
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #3D3D3D;
   }
   
   .product-features-responsive-description {
+    font-family: MiSans;
     font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0em;
+
+    font-variation-settings: "opsz" auto;
+    font-feature-settings: "kern" on;
+    color: #797979;
   }
 }
