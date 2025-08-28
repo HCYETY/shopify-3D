@@ -165,6 +165,7 @@
   
   .product-hero-banner-mask {
     height: 305px; /* 与移动端主图高度一致 */
+    top: 45%;
   }
   
   .product-hero-banner-bottom-section {
@@ -200,6 +201,10 @@
   .product-hero-banner-main-image-desktop,
   .product-hero-banner-bottom-image-desktop {
     display: none;
+  }
+
+  .product-hero-banner-main-image-mobile {
+    height: 100%;
   }
 }
 
