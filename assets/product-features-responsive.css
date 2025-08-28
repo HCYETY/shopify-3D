@@ -128,7 +128,7 @@
 
   .product-features-responsive-text {
     width: 100%;
-    padding: 0;
+    padding: 0 20px;
     text-align: center;
     max-width: 100%;
   }

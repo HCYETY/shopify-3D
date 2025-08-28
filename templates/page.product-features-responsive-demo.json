@@ -59,7 +59,9 @@
       "type": "product-hero-banner",
       "settings": {
         "main_image": "shopify://shop_images/45_1x_d0d04463-c31f-452d-be83-52cc732ba719.webp",
+        "mobile_main_image": "shopify://shop_images/7_1x_1.png",
         "bottom_image": "shopify://shop_images/16_1x_ba4c818a-6e20-46bc-96a1-8c48846602bf.webp",
+        "mobile_bottom_image": "shopify://shop_images/16_1x_087a19b9-7c54-4b7d-bf7e-80502c889ae8.png",
         "main_title": "16K Standard Resin",
         "sub_title": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red",
         "background_color": "#f1f1f1",
@@ -86,9 +88,10 @@
               "type": "home-blog-card",
               "settings": {
                 "image": "shopify://shop_images/18_1x_90f49683-a0fb-48da-ab56-c7e7b5d01a5d.webp",
+                "mobile_image": "shopify://shop_images/4_1x_9e2e2370-140d-4842-b06b-4f177b46c678.png",
                 "title": "High Stability and Hardness",
                 "sub_title": "With enhanced stability and hardness, 16K Standard Resin delivers the right balance of strength and rigidity — so your prints not only look accurate but hold up under pressure.",
-                "link": "shopify://blogs/news/laser-engraved-tumbler"
+                "link": ""
               },
               "blocks": {}
             },
@@ -96,9 +99,10 @@
               "type": "home-blog-card",
               "settings": {
                 "image": "shopify://shop_images/6_1x_34c495ce-0af2-4854-b096-26294d796a2a.webp",
+                "mobile_image": "shopify://shop_images/6_1x_c81d11a1-a45d-42bc-9b9d-797357ab2c47.png",
                 "title": "Low Odor, Comfortable to Use",
                 "sub_title": "Formulated with a low-odor recipe, this resin creates a safer, more pleasant printing environment from start to finish.",
-                "link": "shopify://blogs/crealityfalcon-tutorial/christmas-cards-with-laser-engraver"
+                "link": ""
               },
               "blocks": {}
             },
@@ -106,9 +110,10 @@
               "type": "home-blog-card",
               "settings": {
                 "image": "shopify://shop_images/5_1x_f59e5a38-b51f-4a68-9817-85a9e657e727.webp",
+                "mobile_image": "shopify://shop_images/5_1x_8cf59a12-96c1-431a-a0a1-3a2e9fb3f16b.png",
                 "title": "Precision Printing, Consistent Accuracy",
                 "sub_title": "Designed for excellent dimensional accuracy, this resin features low volume shrinkage for smooth surfaces, sharp details, and reliable precision.",
-                "link": "shopify://blogs/crealityfalcon-tutorial/laser-air-assist-enhancing-efficiency-safety-crealityfalcon"
+                "link": ""
               },
               "blocks": {}
             }
@@ -136,6 +141,7 @@
           "type": "feature_item",
           "settings": {
             "image": "shopify://shop_images/9_1x_b53f4fd9-493c-4388-a001-49802f87b905.webp",
+            "mobile_image": "shopify://shop_images/9_1x_02903139-1e38-442f-a8e4-eca2f092f669.png",
             "image_position": "right",
             "title": "Universal Printer Compatibility",
             "description": "Whether you're working with the HALOT-X1 or another LCD/DLP 3D printer, this resin integrates seamlessly into your setup. It's also available in multiple colors, making it easy to match your creative vision or production needs."
@@ -145,6 +151,7 @@
           "type": "feature_item",
           "settings": {
             "image": "shopify://shop_images/10_1x_959387be-6b3d-4e44-ac52-7da7aa87924f.webp",
+            "mobile_image": "shopify://shop_images/10_1x_6ed55df9-7e32-4b64-bb44-7d350bfcf413.png",
             "image_position": "left",
             "title": "Smooth Flow, Clean Release",
             "description": "With optimized fluidity and low viscosity, the resin flows easily into fine details and cures efficiently, improving print success rates and reducing adhesion to the FEP film — for smoother printing and easier model removal."
