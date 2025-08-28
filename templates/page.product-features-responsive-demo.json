@@ -11,12 +11,6 @@
   "sections": {
     "compliance_standards": {
       "type": "compliance-standards",
-      "settings": {
-        "title": "",
-        "background_color": "#ffffff",
-        "heading_color": "#000000",
-        "text_color": "#333333"
-      },
       "blocks": {
         "rohs_compliant": {
           "type": "compliance_item",
@@ -53,11 +47,19 @@
         "rohs_compliant",
         "reach_compliant",
         "msds_available"
-      ]
+      ],
+      "settings": {
+        "title": "",
+        "background_color": "#ffffff",
+        "heading_color": "#000000",
+        "text_color": "#333333"
+      }
     },
     "product_hero_banner": {
       "type": "product-hero-banner",
       "settings": {
+        "main_image": "shopify://shop_images/45_1x_d0d04463-c31f-452d-be83-52cc732ba719.webp",
+        "bottom_image": "shopify://shop_images/16_1x_ba4c818a-6e20-46bc-96a1-8c48846602bf.webp",
         "main_title": "16K Standard Resin",
         "sub_title": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red",
         "background_color": "#ffffff",
@@ -72,7 +74,7 @@
           "settings": {
             "autoplay": true,
             "delay": 3000,
-            "loop": false,
+            "loop": true,
             "show_nav": true,
             "nav_position": "inside",
             "show_pagination": true,
@@ -83,7 +85,7 @@
             "home_blog_card_Ptzjwt": {
               "type": "home-blog-card",
               "settings": {
-                "image": "shopify://shop_images/laser-engraved-tumbler.jpg",
+                "image": "shopify://shop_images/18_1x_90f49683-a0fb-48da-ab56-c7e7b5d01a5d.webp",
                 "title": "High Stability and Hardness",
                 "sub_title": "With enhanced stability and hardness, 16K Standard Resin delivers the right balance of strength and rigidity — so your prints not only look accurate but hold up under pressure.",
                 "link": "shopify://blogs/news/laser-engraved-tumbler"
@@ -93,7 +95,7 @@
             "home_blog_card_mRqaNY": {
               "type": "home-blog-card",
               "settings": {
-                "image": "shopify://shop_images/laser-cut-christmas-cards.jpg",
+                "image": "shopify://shop_images/6_1x_34c495ce-0af2-4854-b096-26294d796a2a.webp",
                 "title": "Low Odor, Comfortable to Use",
                 "sub_title": "Formulated with a low-odor recipe, this resin creates a safer, more pleasant printing environment from start to finish.",
                 "link": "shopify://blogs/crealityfalcon-tutorial/christmas-cards-with-laser-engraver"
@@ -103,7 +105,7 @@
             "home_blog_card_TMPCjW": {
               "type": "home-blog-card",
               "settings": {
-                "image": "shopify://shop_images/laser-air-assist.jpg",
+                "image": "shopify://shop_images/5_1x_f59e5a38-b51f-4a68-9817-85a9e657e727.webp",
                 "title": "Precision Printing, Consistent Accuracy",
                 "sub_title": "Designed for excellent dimensional accuracy, this resin features low volume shrinkage for smooth surfaces, sharp details, and reliable precision.",
                 "link": "shopify://blogs/crealityfalcon-tutorial/laser-air-assist-enhancing-efficiency-safety-crealityfalcon"
@@ -129,45 +131,40 @@
     },
     "product_features_responsive": {
       "type": "product-features-responsive",
-      "settings": {
-        "title": "",
-        "background_color": "#F1F1F1",
-        "group_gap_desktop": 20,
-        "group_gap_mobile": 35,
-        "section_margin": 0
-      },
       "blocks": {
         "feature_1": {
           "type": "feature_item",
           "settings": {
+            "image": "shopify://shop_images/9_1x_b53f4fd9-493c-4388-a001-49802f87b905.webp",
+            "image_position": "right",
             "title": "Universal Printer Compatibility",
-            "description": "Whether you're working with the HALOT-X1 or another LCD/DLP 3D printer, this resin integrates seamlessly into your setup. It's also available in multiple colors, making it easy to match your creative vision or production needs.",
-            "image_position": "right"
+            "description": "Whether you're working with the HALOT-X1 or another LCD/DLP 3D printer, this resin integrates seamlessly into your setup. It's also available in multiple colors, making it easy to match your creative vision or production needs."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
+            "image": "shopify://shop_images/10_1x_959387be-6b3d-4e44-ac52-7da7aa87924f.webp",
+            "image_position": "left",
             "title": "Smooth Flow, Clean Release",
-            "description": "With optimized fluidity and low viscosity, the resin flows easily into fine details and cures efficiently, improving print success rates and reducing adhesion to the FEP film — for smoother printing and easier model removal.",
-            "image_position": "left"
+            "description": "With optimized fluidity and low viscosity, the resin flows easily into fine details and cures efficiently, improving print success rates and reducing adhesion to the FEP film — for smoother printing and easier model removal."
           }
         }
       },
       "block_order": [
         "feature_1",
         "feature_2"
-      ]
+      ],
+      "settings": {
+        "title": "",
+        "background_color": "#f1f1f1",
+        "section_margin": 0,
+        "group_gap_desktop": 20,
+        "group_gap_mobile": 35
+      }
     },
     "faq_section": {
       "type": "faq-section",
-      "settings": {
-        "heading": "General FAQ",
-        "color_bg": "#ffffff",
-        "color_heading": "#1a1c1d",
-        "color_text": "#2c2d2e",
-        "color_border": "#DADCE0"
-      },
       "blocks": {
         "logistics_category": {
           "type": "faq_category",
@@ -180,6 +177,7 @@
         },
         "preorder_category": {
           "type": "faq_category",
+          "disabled": true,
           "settings": {
             "category_name": "Pre-order",
             "show_more_link": true,
@@ -189,6 +187,7 @@
         },
         "coupon_category": {
           "type": "faq_category",
+          "disabled": true,
           "settings": {
             "category_name": "Coupon & Payment",
             "show_more_link": true,
@@ -198,6 +197,7 @@
         },
         "returns_category": {
           "type": "faq_category",
+          "disabled": true,
           "settings": {
             "category_name": "Returns & Exchanges",
             "show_more_link": true,
@@ -207,6 +207,7 @@
         },
         "software_category": {
           "type": "faq_category",
+          "disabled": true,
           "settings": {
             "category_name": "Software problem",
             "show_more_link": true,
@@ -216,6 +217,7 @@
         },
         "hardware_category": {
           "type": "faq_category",
+          "disabled": true,
           "settings": {
             "category_name": "Hardware problem",
             "show_more_link": true,
@@ -225,6 +227,7 @@
         },
         "print_quality_category": {
           "type": "faq_category",
+          "disabled": true,
           "settings": {
             "category_name": "Print Quality",
             "show_more_link": true,
@@ -237,7 +240,8 @@
           "settings": {
             "category_id": "logistics_category",
             "question": "Q1: Why only receive a partial of the order?",
-            "answer": "<p>Sometimes orders may be split into multiple shipments due to inventory availability or shipping restrictions. You will receive notification for each shipment.</p>"
+            "answer": "<p>Sometimes orders may be split into multiple shipments due to inventory availability or shipping restrictions. You will receive notification for each shipment.</p>",
+            "open": false
           }
         },
         "logistics_q2": {
@@ -245,7 +249,8 @@
           "settings": {
             "category_id": "logistics_category",
             "question": "Q2: When can I expect to receive my package?",
-            "answer": "<p>Standard shipping typically takes 3-7 business days. Express shipping takes 1-3 business days. You will receive tracking information once your order ships.</p>"
+            "answer": "<p>Standard shipping typically takes 3-7 business days. Express shipping takes 1-3 business days. You will receive tracking information once your order ships.</p>",
+            "open": false
           }
         },
         "logistics_q3": {
@@ -253,7 +258,8 @@
           "settings": {
             "category_id": "logistics_category",
             "question": "Q3: No shipping movement for days",
-            "answer": "<p>Shipping delays can occur due to weather, holidays, or carrier issues. Please allow extra time for delivery during peak periods.</p>"
+            "answer": "<p>Shipping delays can occur due to weather, holidays, or carrier issues. Please allow extra time for delivery during peak periods.</p>",
+            "open": false
           }
         },
         "logistics_q4": {
@@ -261,7 +267,8 @@
           "settings": {
             "category_id": "logistics_category",
             "question": "Q4: Is there a shipment notification email?",
-            "answer": "<p>Yes, you will receive an email confirmation when your order ships, including tracking information and estimated delivery date.</p>"
+            "answer": "<p>Yes, you will receive an email confirmation when your order ships, including tracking information and estimated delivery date.</p>",
+            "open": false
           }
         },
         "preorder_q1": {
@@ -269,7 +276,8 @@
           "settings": {
             "category_id": "preorder_category",
             "question": "Q1: How does pre-order work?",
-            "answer": "<p>Pre-orders allow you to reserve items before they're officially released. You'll be charged when the item ships, not when you place the order.</p>"
+            "answer": "<p>Pre-orders allow you to reserve items before they're officially released. You'll be charged when the item ships, not when you place the order.</p>",
+            "open": false
           }
         },
         "preorder_q2": {
@@ -277,7 +285,8 @@
           "settings": {
             "category_id": "preorder_category",
             "question": "Q2: When will pre-order items ship?",
-            "answer": "<p>Pre-order items typically ship on or shortly after the official release date. You'll receive updates on any changes to the shipping timeline.</p>"
+            "answer": "<p>Pre-order items typically ship on or shortly after the official release date. You'll receive updates on any changes to the shipping timeline.</p>",
+            "open": false
           }
         },
         "coupon_q1": {
@@ -285,7 +294,8 @@
           "settings": {
             "category_id": "coupon_category",
             "question": "Q1: How to use coupon codes?",
-            "answer": "<p>Enter your coupon code during checkout in the designated field. Valid codes will automatically apply discounts to your order total.</p>"
+            "answer": "<p>Enter your coupon code during checkout in the designated field. Valid codes will automatically apply discounts to your order total.</p>",
+            "open": false
           }
         },
         "coupon_q2": {
@@ -293,7 +303,8 @@
           "settings": {
             "category_id": "coupon_category",
             "question": "Q2: What payment methods do you accept?",
-            "answer": "<p>We accept major credit cards, PayPal, and other secure payment methods. All transactions are encrypted for your security.</p>"
+            "answer": "<p>We accept major credit cards, PayPal, and other secure payment methods. All transactions are encrypted for your security.</p>",
+            "open": false
           }
         },
         "returns_q1": {
@@ -301,7 +312,8 @@
           "settings": {
             "category_id": "returns_category",
             "question": "Q1: What is your return policy?",
-            "answer": "<p>We offer a 30-day return policy for most items. Products must be unused and in original packaging. Some restrictions apply.</p>"
+            "answer": "<p>We offer a 30-day return policy for most items. Products must be unused and in original packaging. Some restrictions apply.</p>",
+            "open": false
           }
         },
         "software_q1": {
@@ -309,7 +321,8 @@
           "settings": {
             "category_id": "software_category",
             "question": "Q1: How to update printer firmware?",
-            "answer": "<p>Download the latest firmware from our website and follow the step-by-step instructions. Always backup your settings before updating.</p>"
+            "answer": "<p>Download the latest firmware from our website and follow the step-by-step instructions. Always backup your settings before updating.</p>",
+            "open": false
           }
         },
         "hardware_q1": {
@@ -317,7 +330,8 @@
           "settings": {
             "category_id": "hardware_category",
             "question": "Q1: What if my printer won't turn on?",
-            "answer": "<p>Check the power supply, ensure all connections are secure, and verify the power switch is in the correct position. Contact support if issues persist.</p>"
+            "answer": "<p>Check the power supply, ensure all connections are secure, and verify the power switch is in the correct position. Contact support if issues persist.</p>",
+            "open": false
           }
         },
         "print_quality_q1": {
@@ -325,7 +339,8 @@
           "settings": {
             "category_id": "print_quality_category",
             "question": "Q1: How to improve print quality?",
-            "answer": "<p>Ensure proper bed leveling, use high-quality filament, maintain optimal temperature settings, and regularly clean your printer components.</p>"
+            "answer": "<p>Ensure proper bed leveling, use high-quality filament, maintain optimal temperature settings, and regularly clean your printer components.</p>",
+            "open": false
           }
         }
       },
@@ -349,7 +364,14 @@
         "software_q1",
         "hardware_q1",
         "print_quality_q1"
-      ]
+      ],
+      "settings": {
+        "heading": "General FAQ",
+        "color_bg": "#ffffff",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_border": "#dadce0"
+      }
     }
   },
   "order": [
