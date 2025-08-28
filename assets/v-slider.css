@@ -101,6 +101,38 @@
   opacity: 0.9;
 }
 
+/* 轮播图居中显示样式 */
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* 确保轮播图内容居中 */
+.swiper-slide img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 轮播图容器样式优化 */
+.v-slider-container .swiper {
+  overflow: visible;
+}
+
+.v-slider-container .swiper-wrapper {
+  align-items: center;
+}
+
+/* 确保轮播图在容器中居中 */
+.v-slider-container .swiper-slide {
+  text-align: center;
+}
+
 .v-slider__button {
   display: inline-block;
   padding: 12px 32px;

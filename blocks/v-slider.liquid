@@ -256,6 +256,8 @@
       swiper = new Swiper('#{{ block.id }}-swiper', {
         slidesPerView: 'auto',
         loop: {{ block.settings.loop }},
+        centeredSlides: true,
+        centerInsufficientSlides: true,
         navigation: {
           nextEl: '#{{ block.id }}-swiper-button-next',
           prevEl: '#{{ block.id }}-swiper-button-prev',
