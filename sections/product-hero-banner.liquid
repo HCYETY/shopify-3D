@@ -3,14 +3,37 @@
 <div class="product-hero-banner-container" style="--background-color: {{ section.settings.background_color }}; --section-padding: {{ section.settings.section_padding }}px;">
   <div class="product-hero-banner-content">
     <!-- 上方大图片区域 -->
-    {% if section.settings.main_image != blank %}
+    {% if section.settings.main_image != blank or section.settings.mobile_main_image != blank %}
       <div class="product-hero-banner-main-image-wrapper">
-        {%- render 'responsive-image', 
-        image: section.settings.main_image,
-        sizes: '1200x, 800x, 600x',
-        class: 'product-hero-banner-main-image',
-        priority: true
-        -%}
+        {% if section.settings.main_image != blank %}
+          <!-- PC端主图片 -->
+          <div class="product-hero-banner-main-image-desktop">
+            {%- render 'responsive-image', 
+            image: section.settings.main_image,
+            sizes: '1200x, 800x, 600x',
+            class: 'product-hero-banner-main-image',
+            priority: true
+            -%}
+          </div>
+        {% endif %}
+        
+        {% if section.settings.mobile_main_image != blank %}
+          <!-- 移动端主图片 -->
+          <div class="product-hero-banner-main-image-mobile">
+            {%- render 'responsive-image', 
+            image: section.settings.mobile_main_image,
+            sizes: '800x, 600x, 400x',
+            class: 'product-hero-banner-main-image',
+            priority: true
+            -%}
+          </div>
+        {% endif %}
+        
+        {% if section.settings.main_image == blank and section.settings.mobile_main_image == blank %}
+          <div class="product-hero-banner-main-image-placeholder">
+            {{ 'image' | placeholder_svg_tag: 'product-hero-banner-main-image placeholder' }}
+          </div>
+        {% endif %}
       </div>
     {% else %}
       <div class="product-hero-banner-main-image-wrapper">
@@ -22,14 +45,37 @@
     <div class="product-hero-banner-bottom-section">
       <div class="product-hero-banner-bottom-content">
         <!-- 小图片 -->
-        {% if section.settings.bottom_image != blank %}
+        {% if section.settings.bottom_image != blank or section.settings.mobile_bottom_image != blank %}
           <div class="product-hero-banner-bottom-image-wrapper">
-            {%- render 'responsive-image', 
-            image: section.settings.bottom_image,
-            sizes: '400x, 300x, 200x',
-            class: 'product-hero-banner-bottom-image',
-            priority: false
-            -%}
+            {% if section.settings.bottom_image != blank %}
+              <!-- PC端底部图片 -->
+              <div class="product-hero-banner-bottom-image-desktop">
+                {%- render 'responsive-image', 
+                image: section.settings.bottom_image,
+                sizes: '400x, 300x, 200x',
+                class: 'product-hero-banner-bottom-image',
+                priority: false
+                -%}
+              </div>
+            {% endif %}
+            
+            {% if section.settings.mobile_bottom_image != blank %}
+              <!-- 移动端底部图片 -->
+              <div class="product-hero-banner-bottom-image-mobile">
+                {%- render 'responsive-image', 
+                image: section.settings.mobile_bottom_image,
+                sizes: '300x, 200x, 150x',
+                class: 'product-hero-banner-bottom-image',
+                priority: false
+                -%}
+              </div>
+            {% endif %}
+            
+            {% if section.settings.bottom_image == blank and section.settings.mobile_bottom_image == blank %}
+              <div class="product-hero-banner-bottom-image-placeholder">
+                {{ 'image' | placeholder_svg_tag: 'product-hero-banner-bottom-image placeholder' }}
+              </div>
+            {% endif %}
           </div>
         {% else %}
           <div class="product-hero-banner-bottom-image-wrapper">
@@ -60,12 +106,22 @@
     {
       "type": "image_picker",
       "id": "main_image",
-      "label": "主图片（大图）"
+      "label": "PC端主图片（大图）"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_main_image",
+      "label": "移动端主图片（大图）"
     },
     {
       "type": "image_picker",
       "id": "bottom_image",
-      "label": "底部小图片"
+      "label": "PC端底部小图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bottom_image",
+      "label": "移动端底部小图片"
     },
     {
       "type": "text",

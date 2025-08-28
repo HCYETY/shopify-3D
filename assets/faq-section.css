@@ -73,6 +73,12 @@
   flex-direction: column;
 }
 
+/* 当只有一个分类时的内容样式 - 占据整个宽度 */
+.faq-content.single-category {
+  flex: 1;
+  max-width: 100%;
+}
+
 .faq-category-content {
   display: none;
   flex: 1;
@@ -83,19 +89,22 @@
   flex-direction: column;
   border: 1px solid var(--color-border, #DADCE0);
   border-radius: 5px;
+  min-height: 400px; /* 确保内容区域有足够的高度 */
 }
 
 .faq-questions {
   padding: 0 15px;
   background: #ffffff;
-  overflow-y: auto;
+  overflow-y: auto; /* 垂直滚动 */
+  overflow-x: hidden; /* 隐藏水平滚动 */
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 300px;
+  min-height: 300px; /* 最小高度 */
+  max-height: 500px; /* 最大高度，超出时显示滚动条 */
 }
 
-/* 自定义滚动条样式 */
+/* 自定义滚动条样式 - 确保在所有浏览器中都能看到 */
 .faq-questions::-webkit-scrollbar {
   width: 8px;
 }
@@ -103,19 +112,32 @@
 .faq-questions::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 4px;
+  margin: 2px 0;
 }
 
 .faq-questions::-webkit-scrollbar-thumb {
   background: var(--color-border, #DADCE0);
   border-radius: 4px;
+  border: 1px solid #f1f1f1;
 }
 
 .faq-questions::-webkit-scrollbar-thumb:hover {
   background: var(--color-heading, #EAF2FF);
 }
 
+/* Firefox 滚动条样式 */
+.faq-questions {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border, #DADCE0) #f1f1f1;
+}
+
 .faq-question-item {
   border-bottom: 1px solid var(--color-border, #DADCE0);
+  flex-shrink: 0; /* 防止问题项被压缩 */
+}
+
+.faq-question-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -127,6 +149,7 @@
   font-weight: 500;
   color: var(--color-text, #2c2d2e);
   transition: background-color 0.3s ease;
+  min-height: 60px; /* 确保问题项有足够的高度 */
 }
 
 .faq-question:hover {
@@ -136,6 +159,7 @@
 .faq-question-text {
   flex: 1;
   margin-right: 15px;
+  line-height: 1.4;
 }
 
 .faq-arrow {
@@ -152,6 +176,7 @@
   line-height: 1.6;
   border-top: 1px solid #f0f0f0;
   margin: 0 20px;
+  background-color: #fafafa; /* 轻微的背景色区分 */
 }
 
 .faq-answer p {
@@ -165,6 +190,9 @@
 .faq-more-link {
   text-align: center;
   margin-top: auto;
+  padding: 15px;
+  border-top: 1px solid var(--color-border, #DADCE0);
+  background-color: #f8f9fa;
 }
 
 .faq-more-text {
@@ -175,6 +203,7 @@
   background: transparent;
   border: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .faq-more-text:hover {
@@ -223,6 +252,16 @@
   .faq-category-item:last-child {
     border-right: none;
   }
+  
+  /* 移动端调整问题列表高度 */
+  .faq-questions {
+    min-height: 250px;
+    max-height: 400px;
+  }
+  
+  .faq-category-content.active {
+    min-height: 350px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -232,10 +271,16 @@
   
   .faq-question {
     padding: 15px;
+    min-height: 50px;
   }
   
   .faq-answer {
     padding: 0 15px 15px 15px;
     margin: 0 15px;
+  }
+  
+  .faq-questions {
+    min-height: 200px;
+    max-height: 350px;
   }
 }

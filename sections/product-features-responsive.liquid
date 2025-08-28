@@ -1,6 +1,5 @@
 {{- 'product-features-responsive.css' | asset_url | stylesheet_tag -}}
 
-<div class="row">
   <div class="product-features-responsive-container" style="--section-margin: {{ section.settings.section_margin }}px; --group-gap-desktop: {{ section.settings.group_gap_desktop }}px; --group-gap-mobile: {{ section.settings.group_gap_mobile }}px; --background-color: {{ section.settings.background_color }};">
     {% render 'section-header', section_heading: section.settings.title %}
 
@@ -8,14 +7,37 @@
       {% for block in section.blocks %}
         {% if block.type == 'feature_item' %}
           <div class="product-features-responsive-item {% if block.settings.image_position == 'right' %}image-right{% else %}image-left{% endif %}" {{ block.shopify_attributes }}>
-            {% if block.settings.image != blank %}
+            {% if block.settings.image != blank or block.settings.mobile_image != blank %}
               <div class="product-features-responsive-image-wrapper">
-                {%- render 'responsive-image', 
-                image: block.settings.image,
-                sizes: '375x, 500x, 768x',
-                class: 'product-features-responsive-image',
-                priority: true
-                -%}
+                {% if block.settings.image != blank %}
+                  <!-- PC端图片 -->
+                  <div class="product-features-responsive-image-desktop">
+                    {%- render 'responsive-image', 
+                    image: block.settings.image,
+                    sizes: '375x, 500x, 768x',
+                    class: 'product-features-responsive-image',
+                    priority: true
+                    -%}
+                  </div>
+                {% endif %}
+                
+                {% if block.settings.mobile_image != blank %}
+                  <!-- 移动端图片 -->
+                  <div class="product-features-responsive-image-mobile">
+                    {%- render 'responsive-image', 
+                    image: block.settings.mobile_image,
+                    sizes: '375x, 500x',
+                    class: 'product-features-responsive-image',
+                    priority: true
+                    -%}
+                  </div>
+                {% endif %}
+                
+                {% if block.settings.image == blank and block.settings.mobile_image == blank %}
+                  <div class="product-features-responsive-image-placeholder">
+                    {{ 'image' | placeholder_svg_tag: 'product-features-responsive-image placeholder' }}
+                  </div>
+                {% endif %}
               </div>
             {% else %}
               <div class="product-features-responsive-image-wrapper">
@@ -38,7 +60,6 @@
       {% endfor %}
     </div>
   </div>
-</div>
 
 {% schema %}
 {
@@ -93,7 +114,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "图片"
+          "label": "PC端图片"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "移动端图片"
         },
         {
           "type": "select",

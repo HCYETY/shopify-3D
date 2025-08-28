@@ -1,7 +1,6 @@
 {{- 'faq-section.css' | asset_url | stylesheet_tag -}}
 
-<div class="row">
-  <div class="small-12 columns">
+  <div class="small-12">
     <div class="faq-section section-spacing" style="--color-bg: {{ section.settings.color_bg }}; --color-heading: {{ section.settings.color_heading }}; --color-text: {{ section.settings.color_text }}; --color-border: {{ section.settings.color_border }};">
       {% if section.settings.heading != blank %}
         <div class="faq-section__header">
@@ -10,20 +9,25 @@
       {% endif %}
       
       <div class="faq-section__content">
-        <div class="faq-navigation">
-          <div class="faq-categories">
-            {% assign categories = section.blocks | where: "type", "faq_category" %}
-            {% for category in categories %}
-              <div class="faq-category-item {% if forloop.first %}active{% endif %}" 
-                   data-category="{{ category.id }}" 
-                   onclick="switchFaqCategory('{{ category.id }}')">
-                {{ category.settings.category_name }}
-              </div>
-            {% endfor %}
+        {% assign categories = section.blocks | where: "type", "faq_category" %}
+        {% assign category_count = categories.size %}
+        
+        {% if category_count > 1 %}
+          <!-- 只有当分类数量大于1时才显示导航 -->
+          <div class="faq-navigation">
+            <div class="faq-categories">
+              {% for category in categories %}
+                <div class="faq-category-item {% if forloop.first %}active{% endif %}" 
+                     data-category="{{ category.id }}" 
+                     onclick="switchFaqCategory('{{ category.id }}')">
+                  {{ category.settings.category_name }}
+                </div>
+              {% endfor %}
+            </div>
           </div>
-        </div>
+        {% endif %}
 
-        <div class="faq-content">
+        <div class="faq-content {% if category_count <= 1 %}single-category{% endif %}">
           {% for category in categories %}
             <div class="faq-category-content {% if forloop.first %}active{% endif %}" id="content-{{ category.id }}">
               <div class="faq-questions">
@@ -56,7 +60,6 @@
       </div>
     </div>
   </div>
-</div>
 
 <script>
 function switchFaqCategory(categoryId) {

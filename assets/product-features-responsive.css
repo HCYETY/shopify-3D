@@ -1,7 +1,6 @@
 .product-features-responsive-container {
   max-width: 1200px;
-  margin: 0 auto;
-  margin: var(--section-margin, 30px);
+  margin: var(--section-margin, 30px) auto;
   background-color: var(--background-color, #F1F1F1);
 }
 
@@ -25,7 +24,6 @@
   flex: 0 0 50%;
   height: 335px;
   min-height: 320px;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -40,8 +38,18 @@
   transform: scale(1.03);
 }
 
+/* 移动端和PC端图片显示控制 */
+.product-features-responsive-image-mobile {
+  display: none;
+}
+
+.product-features-responsive-image-desktop {
+  display: block;
+}
+
 .product-features-responsive-text-container {
   margin: auto;
+  padding: 0 14px;
 }
 
 .product-features-responsive-text {
@@ -107,6 +115,15 @@
     flex: none;
     width: 100%;
     min-height: 280px;
+  }
+
+  /* 移动端图片显示，PC端图片隐藏 */
+  .product-features-responsive-image-mobile {
+    display: block;
+  }
+  
+  .product-features-responsive-image-desktop {
+    display: none;
   }
 
   .product-features-responsive-text {

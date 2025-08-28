@@ -17,11 +17,29 @@
     transform: scale(1.05);
   }
 
+  /* 移动端和PC端图片显示控制 */
+  .home-gallery-card .mobile-img {
+    display: none;
+  }
+
+  .home-gallery-card .pc-img {
+    display: block;
+  }
+
   @media (max-width: 900px) {
     .home-gallery-card {
       width: 42.667vw;
       height: 30.4vw;
       border-radius: 2.133vw;
+    }
+    
+    /* 移动端图片显示，PC端图片隐藏 */
+    .home-gallery-card .mobile-img {
+      display: block;
+    }
+    
+    .home-gallery-card .pc-img {
+      display: none;
     }
   }
 
@@ -43,7 +61,38 @@
     data-src="{{ block.settings.image | img_url: 'master' }}"
   {% endif %}
 >
-  <img src="{{ block.settings.image | img_url: 'master' }}" width="100%" height="100%" alt="">
+  {% if block.settings.image != blank %}
+    <!-- PC端图片 -->
+    <img 
+      class="pc-img"
+      src="{{ block.settings.image | img_url: 'master' }}" 
+      width="100%" 
+      height="100%" 
+      alt="{{ block.settings.title | default: 'Gallery Image' }}"
+    >
+  {% endif %}
+  
+  {% if block.settings.mobile_image != blank %}
+    <!-- 移动端图片 -->
+    <img 
+      class="mobile-img"
+      src="{{ block.settings.mobile_image | img_url: 'master' }}" 
+      width="100%" 
+      height="100%" 
+      alt="{{ block.settings.title | default: 'Gallery Image' }}"
+    >
+  {% endif %}
+  
+  {% if block.settings.image == blank and block.settings.mobile_image == blank %}
+    <!-- 占位符图片 -->
+    <img 
+      class="pc-img"
+      src="{{ 'image' | placeholder_svg_tag }}" 
+      width="100%" 
+      height="100%" 
+      alt="Placeholder Image"
+    >
+  {% endif %}
 </a>
 
 {% schema %}
@@ -54,7 +103,18 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "PC端图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "移动端图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "图片标题",
+      "default": "Gallery Image"
     },
     {
       "type": "url",

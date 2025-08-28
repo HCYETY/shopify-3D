@@ -27,12 +27,24 @@
   transform: scale(1.02);
 }
 
+/* 移动端和PC端图片显示控制 */
+.product-hero-banner-main-image-mobile,
+.product-hero-banner-bottom-image-mobile {
+  display: none;
+}
+
+.product-hero-banner-main-image-desktop,
+.product-hero-banner-bottom-image-desktop {
+  display: block;
+}
+
 /* 下方小图片和标题区域 */
 .product-hero-banner-bottom-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 44px 0 33px 0;
+  background: linear-gradient(180deg, #D6D8DB 23%, rgba(255, 255, 255, 0) 100%);
 }
 
 .product-hero-banner-bottom-content {
@@ -41,7 +53,7 @@
   align-items: center;
   text-align: center;
   gap: 4px;
-  max-width: 800px;
+  max-width: 80%;
 }
 
 /* 底部小图片 */
@@ -154,6 +166,17 @@
     font-size: 18px;
     font-weight: 300;
     max-width: 600px;
+  }
+  
+  /* 移动端图片显示，PC端图片隐藏 */
+  .product-hero-banner-main-image-mobile,
+  .product-hero-banner-bottom-image-mobile {
+    display: block;
+  }
+  
+  .product-hero-banner-main-image-desktop,
+  .product-hero-banner-bottom-image-desktop {
+    display: none;
   }
 }
 
