@@ -265,7 +265,7 @@
         "product_eFYAhr": {
           "type": "product",
           "settings": {
-            "product": "standard-resin-colored-multi-packs-sale"
+            "product": "standard-resin-colored-multi-packs-sale-printer-3d-resin"
           }
         }
       },
@@ -356,13 +356,13 @@
         "product_gGfxnt": {
           "type": "product",
           "settings": {
-            "product": "standard-resin-10kg"
+            "product": "standard-resin-10kg-best-resin-for-3d-printers"
           }
         },
         "product_tQE4ry": {
           "type": "product",
           "settings": {
-            "product": "water-washable-resin-10kg"
+            "product": "water-washable-resin-10kg-best-resin-for-3d-resin-printers"
           }
         }
       },

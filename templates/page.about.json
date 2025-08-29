@@ -91,7 +91,13 @@
           "settings": {
             "enable_gallery_video": false,
             "enable_hover_play": true,
-            "title": "Gallery item"
+            "subheading": "",
+            "title": "Gallery item",
+            "text": "Gallery item description",
+            "link_label": "Learn more",
+            "link": "",
+            "use_text_button": false,
+            "block_link": ""
           }
         },
         "1661619177c83c7652-1": {
@@ -99,7 +105,13 @@
           "settings": {
             "enable_gallery_video": false,
             "enable_hover_play": true,
-            "title": "Gallery item"
+            "subheading": "",
+            "title": "Gallery item",
+            "text": "Gallery item description",
+            "link_label": "Learn more",
+            "link": "",
+            "use_text_button": false,
+            "block_link": ""
           }
         },
         "4614f273-2ac5-4a81-823d-dd4b3761ea19": {
@@ -107,7 +119,13 @@
           "settings": {
             "enable_gallery_video": false,
             "enable_hover_play": true,
-            "title": "Gallery item"
+            "subheading": "",
+            "title": "Gallery item",
+            "text": "Gallery item description",
+            "link_label": "Learn more",
+            "link": "",
+            "use_text_button": false,
+            "block_link": ""
           }
         }
       },
@@ -122,6 +140,7 @@
         "mobile_swipe": true,
         "image_ratio": "adapt",
         "content_position": "middle-center",
+        "text_alignment": "center",
         "column_spacing": "large",
         "heading_size": "h3",
         "description_size": "small",
@@ -254,7 +273,7 @@
         "template--17918040834330__76bbe0bf-7501-455a-acd8-8418cd712356-1676976677d37e1c8b-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Rich text description</p>",
+            "text": "<p>Rich text description<\/p>",
             "size": "text-size-large"
           }
         }
@@ -303,7 +322,7 @@
         "template--17918040834330__8653503a-90e7-446a-8f99-8905e1d4a2ac-16769132332abda0ff-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Image with text description</p>"
+            "text": "<p>Image with text description<\/p>"
           }
         }
       },
@@ -314,7 +333,7 @@
       ],
       "settings": {
         "use_video": false,
-        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -357,7 +376,7 @@
         "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Image with text description</p>"
+            "text": "<p>Image with text description<\/p>"
           }
         }
       },
@@ -368,7 +387,7 @@
       ],
       "settings": {
         "use_video": false,
-        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -438,7 +457,7 @@
             "image_full_width": false,
             "image_link": "",
             "title": "",
-            "text": "<p>Multicolumn description</p>",
+            "text": "<p>Multicolumn description<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -449,7 +468,7 @@
             "image_full_width": false,
             "image_link": "",
             "title": "",
-            "text": "<p>Multicolumn description</p>",
+            "text": "<p>Multicolumn description<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -460,7 +479,7 @@
             "image_full_width": false,
             "image_link": "",
             "title": "",
-            "text": "<p>Multicolumn description</p>",
+            "text": "<p>Multicolumn description<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -471,7 +490,7 @@
             "image_full_width": false,
             "image_link": "",
             "title": "",
-            "text": "<p>Multicolumn description</p>",
+            "text": "<p>Multicolumn description<\/p>",
             "link_label": "",
             "link": ""
           }

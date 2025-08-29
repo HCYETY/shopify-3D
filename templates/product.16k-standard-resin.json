@@ -248,6 +248,122 @@
         "disable_bottom_spacing": false
       }
     },
+    "product_hero_banner_aHq7JP": {
+      "type": "product-hero-banner",
+      "disabled": true,
+      "name": "产品横幅",
+      "settings": {
+        "main_image": "shopify://shop_images/1x_ae9ef7af-82c4-493a-871c-fe3442744a3f.webp",
+        "mobile_main_image": "shopify://shop_images/1x.webp",
+        "background_color": "#ffffff",
+        "section_padding": 0
+      }
+    },
+    "home_s_blogs_Vii7kW": {
+      "type": "home-s-blogs",
+      "blocks": {
+        "v_slider_w3BBDq": {
+          "type": "v-slider",
+          "disabled": true,
+          "settings": {
+            "autoplay": true,
+            "delay": 3000,
+            "loop": true,
+            "show_nav": true,
+            "nav_position": "outside",
+            "show_pagination": false,
+            "pagination_position": "outside",
+            "show_scrollbar": true
+          },
+          "blocks": {
+            "home_blog_card_f6zkhp": {
+              "type": "home-blog-card",
+              "settings": {
+                "image": "shopify://shop_images/18_1x_90f49683-a0fb-48da-ab56-c7e7b5d01a5d.webp",
+                "mobile_image": "shopify://shop_images/18_1x_a2a8861f-f4b6-4f70-b5ca-114d29cbc5ef.webp",
+                "title": "High Stability and Hardness",
+                "sub_title": "With enhanced stability and hardness, 16K Standard Resin delivers the right balance of strength and rigidity — so your prints not only look accurate but hold up under pressure.",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_blog_card_Jjk7Yt": {
+              "type": "home-blog-card",
+              "settings": {
+                "image": "shopify://shop_images/6_1x_34c495ce-0af2-4854-b096-26294d796a2a.webp",
+                "mobile_image": "shopify://shop_images/6_1x_a5e02389-4ed0-4d75-9350-e6cf55682e6e.webp",
+                "title": "Low Odor, Comfortable to Use",
+                "sub_title": "Formulated with a low-odor recipe, this resin creates a safer, more pleasant printing environment from start to finish.",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_blog_card_zRqQUe": {
+              "type": "home-blog-card",
+              "settings": {
+                "image": "shopify://shop_images/5_1x_f59e5a38-b51f-4a68-9817-85a9e657e727.webp",
+                "mobile_image": "shopify://shop_images/5_1x_9055feb5-698d-4952-93d2-648656903917.webp",
+                "title": "Precision Printing, Consistent Accuracy",
+                "sub_title": "Designed for excellent dimensional accuracy, this resin features low volume shrinkage for smooth surfaces, sharp details, and reliable precision.",
+                "link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_blog_card_f6zkhp",
+            "home_blog_card_Jjk7Yt",
+            "home_blog_card_zRqQUe"
+          ]
+        }
+      },
+      "block_order": [
+        "v_slider_w3BBDq"
+      ],
+      "disabled": true,
+      "name": "Home S Blogs or Other",
+      "settings": {
+        "title": ""
+      }
+    },
+    "product_features_responsive_fhCqCb": {
+      "type": "product-features-responsive",
+      "blocks": {
+        "feature_item_xdPE4x": {
+          "type": "feature_item",
+          "settings": {
+            "image": "shopify://shop_images/9_1x_b53f4fd9-493c-4388-a001-49802f87b905.webp",
+            "mobile_image": "shopify://shop_images/9_1x_1.webp",
+            "image_position": "left",
+            "title": "Universal Printer Compatibility",
+            "description": "Whether you’re working with the HALOT-X1 or another LCD/DLP 3D printer, this resin integrates seamlessly into your setup. It’s also available in multiple colors, making it easy to match your creative vision or production needs."
+          }
+        },
+        "feature_item_DbjkWb": {
+          "type": "feature_item",
+          "settings": {
+            "image": "shopify://shop_images/10_1x_6ed55df9-7e32-4b64-bb44-7d350bfcf413.png",
+            "mobile_image": "shopify://shop_images/10_1x_1.webp",
+            "image_position": "right",
+            "title": "Smooth Flow, Clean Release",
+            "description": "With optimized fluidity and low viscosity, the resin flows easily into fine details and cures efficiently, improving print success rates and reducing adhesion to the FEP film — for smoother printing and easier model removal."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_xdPE4x",
+        "feature_item_DbjkWb"
+      ],
+      "disabled": true,
+      "name": "图片文字布局",
+      "settings": {
+        "title": "",
+        "background_color": "#f1f1f1",
+        "section_margin": 0,
+        "group_gap_desktop": 60,
+        "group_gap_mobile": 40
+      }
+    },
     "16623743398765981b": {
       "type": "rich-text",
       "blocks": {
@@ -416,6 +532,9 @@
     "main-product",
     "16623877721f33fb14",
     "promotion_blocks_APXQf6",
+    "product_hero_banner_aHq7JP",
+    "home_s_blogs_Vii7kW",
+    "product_features_responsive_fhCqCb",
     "16623743398765981b",
     "spacer_QFFf3f",
     "16623873609e87da8b",
