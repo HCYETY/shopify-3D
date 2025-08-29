@@ -49,9 +49,15 @@
               
               {% if category.settings.show_more_link %}
                 <div class="faq-more-link">
-                  <span class="faq-more-text">
-                    {{ category.settings.more_link_text | default: 'find more >' }}
-                  </span>
+                  {% if category.settings.more_link_url != blank %}
+                    <a href="{{ category.settings.more_link_url }}" class="faq-more-text" target="_blank">
+                      {{ category.settings.more_link_text | default: 'find more >' }}
+                    </a>
+                  {% else %}
+                    <span class="faq-more-text">
+                      {{ category.settings.more_link_text | default: 'find more >' }}
+                    </span>
+                  {% endif %}
                 </div>
               {% endif %}
             </div>
