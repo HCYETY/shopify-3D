@@ -35,12 +35,38 @@
             {{ 'image' | placeholder_svg_tag: 'product-hero-banner-image__img placeholder' }}
           </div>
         {% endif %}
+
+        <!-- 标题覆盖层 -->
+        <div class="product-hero-banner-overlay">
+          <div class="product-hero-banner-text-content">
+            {% if section.settings.main_title != blank %}
+              <h2 class="product-hero-banner-title">{{ section.settings.main_title }}</h2>
+            {% endif %}
+            
+            {% if section.settings.subtitle != blank %}
+              <p class="product-hero-banner-subtitle">{{ section.settings.subtitle }}</p>
+            {% endif %}
+          </div>
+        </div>
       </div>
     {% else %}
       <!-- 默认占位图片 -->
       <div class="product-hero-banner-image-wrapper">
         <div class="product-hero-banner-image product-hero-banner-image--placeholder">
           {{ 'image' | placeholder_svg_tag: 'product-hero-banner-image__img placeholder' }}
+        </div>
+        
+        <!-- 标题覆盖层 -->
+        <div class="product-hero-banner-overlay">
+          <div class="product-hero-banner-text-content">
+            {% if section.settings.main_title != blank %}
+              <h2 class="product-hero-banner-title">{{ section.settings.main_title }}</h2>
+            {% endif %}
+            
+            {% if section.settings.subtitle != blank %}
+              <p class="product-hero-banner-subtitle">{{ section.settings.subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       </div>
     {% endif %}
@@ -61,6 +87,18 @@
       "type": "image_picker",
       "id": "mobile_main_image",
       "label": "移动端图片"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "主标题",
+      "default": "16K Standard Resin"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red"
     },
     {
       "type": "color",
