@@ -69,8 +69,8 @@
 
 /* 副标题样式 */
 .product-hero-banner-subtitle {
+  font-family: HarmonyOS Sans SC;
   /* font-size: clamp(18px, 4vw, 34px); */
-  font-family: MiSans;
   font-size: calc(34/1920 * 100vw);
   font-weight: normal;
   line-height: normal;
@@ -78,20 +78,19 @@
   letter-spacing: normal;
   color: #797979;
   margin-bottom: 0;
-  color: blue
 }
 
 /* 主标题样式 */
 .product-hero-banner-title {
+  font-family: HarmonyOS Sans SC;
   /* font-size: clamp(32px, 8vw, 64px); */
-  font-family: MiSans;
   font-size: calc(64/1920 * 100vw);
-  font-weight: 600;
+  font-weight: bold;
   line-height: normal;
+  text-align: center;
   letter-spacing: normal;
-  color: #3D3D3D;
   margin-bottom: 0;
-  color: blue
+  color: #3D3D3D;
 }
 
 /* 响应式设计 - 移动端图片显示控制 */

@@ -22,8 +22,6 @@
 .product-features-responsive-image-wrapper {
   background-color: #fff;
   flex: 0 0 50%;
-  height: 335px;
-  min-height: 320px;
   overflow: hidden;
 }
 
@@ -58,27 +56,22 @@
 }
 
 .product-features-responsive-title {
-  font-family: MiSans;
+  font-family: HarmonyOS Sans SC;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: bold;
   line-height: normal;
   text-align: center;
-  letter-spacing: 0em;
-
-  font-variation-settings: "opsz" auto;
-  font-feature-settings: "kern" on;
+  letter-spacing: normal;
   color: #3D3D3D;
 }
 
 .product-features-responsive-description {
-  font-family: MiSans;
+  font-family: HarmonyOS Sans SC;
   font-size: 18px;
   font-weight: normal;
   line-height: normal;
   letter-spacing: 0em;
-
-  font-variation-settings: "opsz" auto;
-  font-feature-settings: "kern" on;
+  letter-spacing: normal;
   color: #797979;
 }
 
@@ -130,28 +123,22 @@
   }
 
   .product-features-responsive-title {
-    font-family: MiSans;
+    font-family: HarmonyOS Sans SC;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: normal;
     text-align: center;
-    letter-spacing: 0em;
-
-    font-variation-settings: "opsz" auto;
-    font-feature-settings: "kern" on;
+    letter-spacing: normal;
     color: #3D3D3D;
   }
   
   .product-features-responsive-description {
-    font-family: MiSans;
+    font-family: HarmonyOS Sans SC;
     font-size: 16px;
     font-weight: 300;
     line-height: normal;
     text-align: center;
-    letter-spacing: 0em;
-
-    font-variation-settings: "opsz" auto;
-    font-feature-settings: "kern" on;
+    letter-spacing: normal;
     color: #797979;
   }
 }

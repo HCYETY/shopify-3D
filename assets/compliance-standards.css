@@ -95,6 +95,7 @@
 }
 
 .compliance-standards__card-title {
+  font-family: HarmonyOS Sans SC;
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-heading);
@@ -116,6 +117,7 @@
 }
 
 .compliance-standards__card-content p {
+  font-family: HarmonyOS Sans SC;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);

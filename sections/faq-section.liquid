@@ -39,7 +39,8 @@
                         <div class="faq-question-text">{{ block.settings.question }}</div>
                         <div class="faq-arrow" id="arrow-{{ block.id }}-{{ section.id }}">▼</div>
                       </div>
-                      <div class="faq-answer" id="answer-{{ block.id }}-{{ section.id }}">
+                      <div class="faq-answer" id="answer-{{ block.id }}-{{ section.id }}" 
+                           {% if block.settings.open %}style="display: block;"{% else %}style="display: none;"{% endif %}>
                         {{ block.settings.answer }}
                       </div>
                     </div>
@@ -68,6 +69,26 @@
   </div>
 
 <script>
+// 页面加载完成后初始化FAQ状态
+document.addEventListener('DOMContentLoaded', function() {
+  initializeFaqState();
+});
+
+function initializeFaqState() {
+  // 查找所有默认展开的FAQ问题
+  const defaultOpenQuestions = document.querySelectorAll('.faq-question-item');
+  
+  defaultOpenQuestions.forEach(questionItem => {
+    const answer = questionItem.querySelector('.faq-answer');
+    const arrow = questionItem.querySelector('.faq-arrow');
+    
+    // 如果答案默认显示，则旋转箭头
+    if (answer && answer.style.display === 'block') {
+      arrow.style.transform = 'rotate(180deg)';
+    }
+  });
+}
+
 function switchFaqCategory(categoryId) {
   // 隐藏所有内容
   document.querySelectorAll('.faq-category-content').forEach(content => {
