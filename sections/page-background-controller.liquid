@@ -1,0 +1,100 @@
+{% comment %}
+  页面背景控制器
+  允许为不同页面设置特定的背景颜色
+{% endcomment %}
+
+{%- style -%}
+  {%- if section.settings.page_background_color != blank -%}
+    body,
+    .page,
+    .template-page,
+    #MainContent,
+    .main-content {
+      background-color: {{ section.settings.page_background_color }} !important;
+    }
+    
+    .shopify-section {
+      background-color: {{ section.settings.page_background_color }} !important;
+    }
+    
+    .section,
+    .section-spacing,
+    .page-content {
+      background-color: {{ section.settings.page_background_color }} !important;
+    }
+  {%- endif -%}
+  
+  {%- if section.settings.page_text_color != blank -%}
+    body,
+    .page,
+    .template-page {
+      color: {{ section.settings.page_text_color }} !important;
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+{%- if section.settings.show_debug_info -%}
+  <div class="page-background-debug" style="padding: 10px; background: #f0f0f0; border: 1px solid #ccc; margin: 10px 0; font-size: 12px;">
+    <strong>页面背景控制器已激活</strong><br>
+    背景颜色: {{ section.settings.page_background_color | default: '未设置' }}<br>
+    文字颜色: {{ section.settings.page_text_color | default: '未设置' }}<br>
+    页面模板: {{ template.name }}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "页面背景控制器",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "页面背景设置"
+    },
+    {
+      "type": "color",
+      "id": "page_background_color",
+      "label": "页面背景颜色",
+      "default": "#f1f1f1",
+      "info": "设置整个页面的背景颜色"
+    },
+    {
+      "type": "color",
+      "id": "page_text_color",
+      "label": "页面文字颜色",
+      "default": "#333333",
+      "info": "设置页面的默认文字颜色"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_debug_info",
+      "label": "显示调试信息",
+      "default": false,
+      "info": "在页面上显示背景设置信息（仅管理员可见）"
+    },
+    {
+      "type": "header",
+      "content": "页面匹配规则"
+    },
+    {
+      "type": "text",
+      "id": "page_handle",
+      "label": "页面Handle",
+      "info": "留空则应用到所有页面，或输入特定页面的handle"
+    },
+    {
+      "type": "text",
+      "id": "template_name",
+      "label": "模板名称",
+      "info": "留空则应用到所有模板，或输入特定模板名称（如：page.product-features-responsive-demo）"
+    }
+  ],
+  "presets": [
+    {
+      "name": "页面背景控制器",
+      "category": "页面设置"
+    }
+  ]
+}
+{% endschema %}

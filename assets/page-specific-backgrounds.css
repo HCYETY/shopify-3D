@@ -1,0 +1,45 @@
+/* 页面特定的背景颜色设置 */
+
+/* 产品特性演示页面 - 使用页面URL或模板名称 */
+.page-product-features-responsive-demo,
+.template-page-product-features-responsive-demo,
+[data-page-template="page.product-features-responsive-demo"] {
+  background-color: #f1f1f1 !important;
+}
+
+/* 确保该页面的所有section都有正确的背景 */
+.page-product-features-responsive-demo .shopify-section,
+.template-page-product-features-responsive-demo .shopify-section,
+[data-page-template="page.product-features-responsive-demo"] .shopify-section {
+  background-color: #f1f1f1 !important;
+}
+
+/* 页面容器背景 */
+.page-product-features-responsive-demo #MainContent,
+.template-page-product-features-responsive-demo #MainContent,
+[data-page-template="page.product-features-responsive-demo"] #MainContent {
+  background-color: #f1f1f1 !important;
+}
+
+/* 响应式支持 */
+@media screen and (max-width: 768px) {
+  .page-product-features-responsive-demo,
+  .template-page-product-features-responsive-demo,
+  [data-page-template="page.product-features-responsive-demo"] {
+    background-color: #f1f1f1 !important;
+  }
+}
+
+/* 其他页面的背景颜色示例 */
+.page-about {
+  background-color: #ffffff !important;
+}
+
+.page-contact {
+  background-color: #f8f9fa !important;
+}
+
+/* 通用页面背景重置 */
+.page-default {
+  background-color: #ffffff !important;
+}

@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "page_background": {
+      "type": "page-background-controller",
+      "settings": {
+        "page_background_color": "#f1f1f1",
+        "page_text_color": "#333333",
+        "show_debug_info": false,
+        "template_name": "page.product-features-responsive-demo"
+      }
+    },
     "compliance_standards": {
       "type": "compliance-standards",
       "blocks": {
@@ -380,6 +389,7 @@
     }
   },
   "order": [
+    "page_background",
     "compliance_standards",
     "product_hero_banner",
     "home_s_blogs_YD4VnB",
