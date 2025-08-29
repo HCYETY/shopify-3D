@@ -250,11 +250,12 @@
     },
     "product_hero_banner_aHq7JP": {
       "type": "product-hero-banner",
-      "disabled": true,
       "name": "产品横幅",
       "settings": {
         "main_image": "shopify://shop_images/1x_ae9ef7af-82c4-493a-871c-fe3442744a3f.webp",
         "mobile_main_image": "shopify://shop_images/1x.webp",
+        "main_title": "16K Standard Resin",
+        "subtitle": "Standard Resin Sea Mist Gray & Standard Resin Sunset Red",
         "background_color": "#ffffff",
         "section_padding": 0
       }
@@ -264,16 +265,15 @@
       "blocks": {
         "v_slider_w3BBDq": {
           "type": "v-slider",
-          "disabled": true,
           "settings": {
             "autoplay": true,
             "delay": 3000,
             "loop": true,
             "show_nav": true,
             "nav_position": "outside",
-            "show_pagination": false,
+            "show_pagination": true,
             "pagination_position": "outside",
-            "show_scrollbar": true
+            "show_scrollbar": false
           },
           "blocks": {
             "home_blog_card_f6zkhp": {
@@ -290,7 +290,7 @@
             "home_blog_card_Jjk7Yt": {
               "type": "home-blog-card",
               "settings": {
-                "image": "shopify://shop_images/6_1x_34c495ce-0af2-4854-b096-26294d796a2a.webp",
+                "image": "shopify://shop_images/6_1x_044c14aa-b72c-4f0f-9b91-27536aaacae0.webp",
                 "mobile_image": "shopify://shop_images/6_1x_a5e02389-4ed0-4d75-9350-e6cf55682e6e.webp",
                 "title": "Low Odor, Comfortable to Use",
                 "sub_title": "Formulated with a low-odor recipe, this resin creates a safer, more pleasant printing environment from start to finish.",
@@ -320,7 +320,6 @@
       "block_order": [
         "v_slider_w3BBDq"
       ],
-      "disabled": true,
       "name": "Home S Blogs or Other",
       "settings": {
         "title": ""
@@ -342,7 +341,7 @@
         "feature_item_DbjkWb": {
           "type": "feature_item",
           "settings": {
-            "image": "shopify://shop_images/10_1x_6ed55df9-7e32-4b64-bb44-7d350bfcf413.png",
+            "image": "shopify://shop_images/10_1x_7ea3bf6b-1dba-47c3-9dbd-f4c9883109f0.webp",
             "mobile_image": "shopify://shop_images/10_1x_1.webp",
             "image_position": "right",
             "title": "Smooth Flow, Clean Release",
@@ -354,7 +353,6 @@
         "feature_item_xdPE4x",
         "feature_item_DbjkWb"
       ],
-      "disabled": true,
       "name": "图片文字布局",
       "settings": {
         "title": "",
@@ -390,6 +388,7 @@
         "1662374339c00286b1-1",
         "1662374339c00286b1-2"
       ],
+      "disabled": true,
       "settings": {
         "text_width": "grid",
         "text_position": "center",
@@ -441,6 +440,7 @@
         "1662387360fb14d4f3-0",
         "1662387360fb14d4f3-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "marker_style": "style1",
