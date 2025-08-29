@@ -16,7 +16,6 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  transition: height 0.3s ease;
 }
 
 /* 图片基础样式 */
@@ -30,11 +29,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.product-hero-banner-image__img:hover {
-  transform: scale(1.02);
 }
 
 /* 占位图片样式 */
@@ -57,6 +51,49 @@
   display: block;
 }
 
+/* 标题覆盖层样式 */
+.product-hero-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+    margin-bottom: calc(33 / 1920 * 100vw);
+}
+
+.product-hero-banner-text-content {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 副标题样式 */
+.product-hero-banner-subtitle {
+  /* font-size: clamp(18px, 4vw, 34px); */
+  font-family: MiSans;
+  font-size: calc(34/1920 * 100vw);
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: normal;
+  color: #797979;
+  margin-bottom: 0;
+  color: blue
+}
+
+/* 主标题样式 */
+.product-hero-banner-title {
+  /* font-size: clamp(32px, 8vw, 64px); */
+  font-family: MiSans;
+  font-size: calc(64/1920 * 100vw);
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3D3D3D;
+  margin-bottom: 0;
+  color: blue
+}
+
 /* 响应式设计 - 移动端图片显示控制 */
 @media screen and (max-width: 767px) {
   /* 移动端显示移动端图片，隐藏PC端图片 */
@@ -67,21 +104,32 @@
   .product-hero-banner-image--desktop {
     display: none;
   }
+
+  .product-hero-banner-overlay {
+    margin-bottom: calc(37 / 375 * 100vw);
+  }
+  .product-hero-banner-title {
+    font-size: calc(32/375 * 100vw);
+  }
+
+.product-hero-banner-subtitle {
+    font-size: calc(18/375 * 100vw);
+    font-weight: 300;
+  }  
 }
 
-/* 横屏模式优化 */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  .product-hero-banner-image-wrapper {
-    height: 200px;
+/* 平板端样式 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .product-hero-banner-title {
+    font-size: calc(32/850 * 100vw);
+    line-height: 1.2;
   }
-}
+  
+  .product-hero-banner-subtitle {
+    font-size: calc(18/850 * 100vw);
+    font-weight: 300;
+  }  
 
-/* 打印样式优化 */
-@media print {
-  .product-hero-banner-image-wrapper {
-    height: auto;
-    max-height: 400px;
-  }
 }
 
 /* 性能优化 */
