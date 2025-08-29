@@ -1,6 +1,7 @@
 {%- liquid
   assign max_columns = mega_menu_block.settings.max_columns
   assign limit_columns = mega_menu_block.settings.limit_columns
+  assign disabled_second_link = mega_menu_block.settings.disabled_second_link
 -%}
 <div class="sub-menu mega-menu-container" tabindex="-1">
   <ul
@@ -11,7 +12,11 @@
     {% if link.links.size > 0 %}
       {%- for l in link.links -%}
         <li class="{% if l.active %} active{% endif %}" role="none">
-          <a href="{{ l.url }}" class="thb-full-menu--link mega-menu-columns__heading" role="menuitem">{{ l.title }}</a>
+          {% if disabled_second_link %}
+            <span class="thb-full-menu--link mega-menu-columns__heading" role="menuitem">{{ l.title }}</span>
+          {% else %}
+            <a href="{{ l.url }}" class="thb-full-menu--link mega-menu-columns__heading" role="menuitem">{{ l.title }}</a>
+          {% endif %}
           {%- if l.links.size > 0 -%}
             <ul role="menu">
               {%- for sub_link in l.links -%}

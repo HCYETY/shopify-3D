@@ -176,7 +176,7 @@
       "settings": {
         "heading": "Most Wanted",
         "marker_style": "style2",
-        "description": "<p>New savings every week! Hurry to score low, low prices.</p>",
+        "description": "<p>New savings every week! Hurry to score low, low prices.<\/p>",
         "collection": "toys",
         "display_type": "grid",
         "product_limit": 6,
@@ -274,7 +274,7 @@
         "template--18200361664806__a1980c0a-99ea-4140-9a57-16e2ca207146-1679066763cee6c04a-2": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ve got your quick-start guide to finding dog-friendly trails in your neck of the woods. Finding a dog-friendly trail is equal parts art and science, navigating features like water access and steep terrain with leash.</p>",
+            "text": "<p>We’ve got your quick-start guide to finding dog-friendly trails in your neck of the woods. Finding a dog-friendly trail is equal parts art and science, navigating features like water access and steep terrain with leash.<\/p>",
             "description_size": "small"
           }
         },
@@ -335,7 +335,7 @@
             "icon": "ruler",
             "image": "",
             "heading": "Unbeatable Prices",
-            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.</p>"
+            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.<\/p>"
           }
         },
         "template--18200361664806__8a108edf-3f90-4921-9b28-42f32b54b0e0-16790669099bf2a046-1": {
@@ -344,7 +344,7 @@
             "icon": "ruler",
             "image": "",
             "heading": "Natural Ingredients",
-            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.</p>"
+            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.<\/p>"
           }
         },
         "template--18200361664806__8a108edf-3f90-4921-9b28-42f32b54b0e0-16790669099bf2a046-2": {
@@ -353,7 +353,7 @@
             "icon": "ruler",
             "image": "",
             "heading": "Quality Care",
-            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.</p>"
+            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.<\/p>"
           }
         },
         "9659c97e-c5fe-466f-a588-2c236166f94e": {
@@ -362,7 +362,7 @@
             "icon": "ruler",
             "image": "",
             "heading": "Pet Services",
-            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.</p>"
+            "text": "<p>Take advantage of a 30-day trial and make the most informed decision.<\/p>"
           }
         }
       },
@@ -415,7 +415,7 @@
         "template--18200361664806__89ef43a1-d21a-4696-9b5e-d659947e6277-1679067222d268cb68-2": {
           "type": "text",
           "settings": {
-            "text": "<p>From a line of inventors, we merge form with function to solve problems and elevate everyday routines with your dog. </p>",
+            "text": "<p>From a line of inventors, we merge form with function to solve problems and elevate everyday routines with your dog. <\/p>",
             "size": "text-size-regular"
           }
         }
@@ -528,7 +528,14 @@
             "image": "",
             "enable_gallery_video": false,
             "enable_hover_play": false,
+            "subheading": "CAT TOYS",
             "title": "|Quality Things| for Loving Dogs & Cats",
+            "marker_style": "style1",
+            "text": "",
+            "link_label": "Shop Toys",
+            "link": "",
+            "use_text_button": true,
+            "block_link": "",
             "marker_color": "#fd6b62"
           }
         },
@@ -538,7 +545,14 @@
             "image": "",
             "enable_gallery_video": false,
             "enable_hover_play": false,
+            "subheading": "PURINA FOODS",
             "title": "Your Natural Choice for |Your Pet|",
+            "marker_style": "style2",
+            "text": "",
+            "link_label": "Explore",
+            "link": "",
+            "use_text_button": true,
+            "block_link": "",
             "marker_color": "#fff176"
           }
         }
@@ -553,6 +567,7 @@
         "mobile_swipe": false,
         "image_ratio": "adapt",
         "content_position": "top-center",
+        "text_alignment": "center",
         "column_spacing": "large",
         "heading_size": "h2",
         "description_size": "medium",
@@ -599,7 +614,7 @@
         "mobile_height": "mobile-height-350",
         "full_width": false,
         "video_controls": true,
-        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "overlay_color": "#000000",
         "overlay_opacity": 10,
         "disable_top_spacing": false,
@@ -680,7 +695,7 @@
         "heading": "",
         "marker_style": "style1",
         "description": "",
-        "article": "news/ensuring-safe-travel-with-your-emotional-support-dog",
+        "article": "news\/ensuring-safe-travel-with-your-emotional-support-dog",
         "layout": "text_first",
         "image_ratio": "landscape",
         "show_date": true,

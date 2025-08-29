@@ -18,8 +18,8 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "🔥🔥 Flash Sale!   Standard Resin Colored 1Kg — Only $16.99  ->>",
-            "link": "shopify://products/standard-resin-1kg",
+            "text": "🔥 Super Resin Flash Sale --- Only $16.99/1kg  ->> 🔥",
+            "link": "shopify://collections/resins",
             "color_bg": "#279a4b",
             "color_text": "#ffffff"
           }
@@ -85,6 +85,7 @@
             "position": "2",
             "limit_columns": false,
             "max_columns": "4",
+            "disabled_second_link": false,
             "promo_1_image": "shopify://shop_images/HALOT-X1.jpg",
             "promo_1_heading": "HALOT-X1 16K",
             "promo_1_content": "Auto-Leveling with 16K Precision",
@@ -136,6 +137,7 @@
             "position": "4",
             "limit_columns": false,
             "max_columns": "4",
+            "disabled_second_link": false,
             "promo_1_heading": "Promotion heading",
             "promo_1_content": "",
             "promo_1_link": "",
@@ -156,6 +158,7 @@
             "position": "5",
             "limit_columns": false,
             "max_columns": "4",
+            "disabled_second_link": true,
             "promo_1_heading": "Promotion heading",
             "promo_1_content": "",
             "promo_1_link": "",

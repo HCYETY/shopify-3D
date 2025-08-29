@@ -21,7 +21,7 @@
       "add_order_note": "Add order note",
       "save": "Save",
       "free_shipping": {
-        "spend_more_for_free_shipping_html": "Spend <span>{{ amount }}<\/span> more for FREE shipping.",
+        "spend_more_for_free_shipping_html": "",
         "free_shipping_applied_at_checkout": "FREE shipping will be applied at checkout"
       }
     },
@@ -83,8 +83,8 @@
       "read_more": "Read more",
       "tags": "Tags:",
       "comments_html": {
-        "one": "<span>{{ count }} comment on<\/span> {{ title }}",
-        "other": "<span>{{ count }} comments on<\/span> {{ title }}"
+        "one": "<span>{{ count }} comment on</span> {{ title }}",
+        "other": "<span>{{ count }} comments on</span> {{ title }}"
       },
       "moderated": "Please note, comments need to be approved before they are published.",
       "comment_form_title": "Leave a comment",
@@ -121,7 +121,7 @@
       "unavailable": "Unavailable",
       "pre_order": "Pre-order",
       "price": {
-        "from_price_html": "<span class=\"from\">From<\/span> {{ price }}",
+        "from_price_html": "<span class=\"from\">From</span> {{ price }}",
         "regular_price": "Regular price",
         "sale_price": "Sale price",
         "unit_price": "Unit price"
@@ -153,8 +153,8 @@
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span>{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span>{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Pickup available at <span>{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span>{{ location_name }}</span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh"
       },
@@ -245,9 +245,9 @@
       "ready": "Ready to find your new favorite products?",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "headings": {
         "product": "Product",
@@ -256,7 +256,7 @@
         "quantity": "Quantity"
       },
       "terms": "I agree with the terms and conditions",
-      "terms_html": "I agree with the <a href='{{ url }}' target='_blank'>terms and conditions<\/a>",
+      "terms_html": "I agree with the <a href='{{ url }}' target='_blank'>terms and conditions</a>",
       "terms_confirm": "You must agree with the terms and conditions of sales to check out",
       "shipping_estimator": {
         "estimate_shipping": "Estimate shipping",
@@ -272,7 +272,7 @@
     },
     "collection_template": {
       "empty": "No products found",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"clear-filters text-button\" href=\"{{ link }}\">clear all<\/a>",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"clear-filters text-button\" href=\"{{ link }}\">clear all</a>",
       "load_more": "Load more"
     },
     "password": {
@@ -320,10 +320,10 @@
     }
   },
   "localization": {
-    "country_label": "Country\/region",
+    "country_label": "Country/region",
     "language_label": "Language",
     "update_language": "Update language",
-    "update_country": "Update country\/region"
+    "update_country": "Update country/region"
   },
   "customer": {
     "login_page": {
@@ -418,9 +418,9 @@
       "address1": "Address 1",
       "address2": "Address 2",
       "city": "City",
-      "country": "Country\/region",
+      "country": "Country/region",
       "province": "Province",
-      "zip": "Postal\/ZIP code",
+      "zip": "Postal/ZIP code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",

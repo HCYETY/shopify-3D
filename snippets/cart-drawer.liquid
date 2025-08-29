@@ -16,11 +16,11 @@
 		<div class="side-panel-content">
 			{%- if cart != empty -%}
 				<div class="product-cart-item--container">
-					{%- liquid
+					{% comment %} {%- liquid
 						if free_shipping and settings.free_shipping_minimum != blank
 							render 'free-shipping', free_shipping_minimum: free_shipping_minimum, total: total
 						endif
-					-%}
+					-%} {% endcomment %}
 					{% for item in cart.items %}
 					<div class="product-cart-item" id="CartDrawerItem-{{ item.index | plus: 1 }}">
 						<div class="product-cart-item-image">
