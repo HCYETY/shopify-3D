@@ -1,3 +1,7 @@
+.product-features-responsive-section {
+    background-color: var(--background-color, #F1F1F1);
+}
+
 .product-features-responsive-container {
   max-width: 1200px;
   margin: var(--section-margin, 30px) auto;
