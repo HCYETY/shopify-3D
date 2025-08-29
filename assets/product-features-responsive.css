@@ -109,12 +109,13 @@
   .product-features-responsive-image-wrapper {
     flex: none;
     width: 100%;
-    min-height: 280px;
+    height: 335px;
   }
 
   /* 移动端图片显示，PC端图片隐藏 */
   .product-features-responsive-image-mobile {
     display: block;
+    height: 100%;
   }
   
   .product-features-responsive-image-desktop {
