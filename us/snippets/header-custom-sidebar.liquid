@@ -1,0 +1,77 @@
+{% comment %}
+  {%- liquid
+    assign content_collection_image = mega_menu_block.settings.content_collection_image
+    assign content_product_image = mega_menu_block.settings.content_product_image
+  -%}
+{% endcomment %}
+<div class="sub-menu mega-menu-container" tabindex="-1">
+  <custom-sidebar class="custom-sidebar row">
+    {%- if link.links.size > 0 -%}
+      <ul>
+        {%- for l in link.links -%}
+          {%- liquid
+            assign is_collection = false
+            if l.type == 'collection_link'
+              assign is_collection = true
+            endif
+          -%}
+          <li role="none">
+            <a
+              href="{{ l.url }}"
+              class="custom-sidebar-target{% if forloop.first %} active{% endif %}"
+              data-target="#{{ mega_menu_block.id}}-{{ forloop.index }}"
+            >
+              <span>{{ l.title }}</span>
+              {% comment %} {%- if is_collection -%}{%- render 'svg-icons' with 'thb-dropdown-right' -%}{%- endif -%} {% endcomment %}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- for l in link.links -%}
+        {%- liquid
+          assign is_collection = false
+          assign collection_object = null
+          if l.type == 'collection_link'
+            assign is_collection = true
+            assign collection_object = l.object
+          endif
+        -%}
+
+        <div class="custom-sidebar-content{% if forloop.first %} active{% endif %}">
+          <div class="title-container">
+            <div class="title">{{ l.title }}</div>
+            <a href="{{ l.url }}" class="thb-full-menu--link">
+              View All
+              {%- render 'svg-icons' with 'thb-dropdown-right' -%}
+            </a>
+          </div>
+
+          <ul class="content-contariner">
+            {%- if is_collection and collection_object != blank -%}
+              {%- for product in collection_object.products limit: 10 -%}
+                {%- if product.featured_image != blank -%}
+                  <li class="custom-sidebar-product-item">
+                    <a href="{{ product.url }}">
+                      <div class="custom-sidebar-product-item-image">
+                        {%- render 'responsive-image',
+                          image: product.featured_image,
+                          sizes: '237x237',
+                          priority: 'low'
+                        -%}
+                      </div>
+                      <div class="custom-sidebar-product-item-title">
+                        {{- product.title -}}
+                      </div>
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </custom-sidebar>
+  <script src="{{ 'custom-sidebar.js' | asset_url }}" defer="defer"></script>
+</div>

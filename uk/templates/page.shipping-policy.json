@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_y9XXaV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_k9K8iY": {
+          "type": "heading",
+          "settings": {
+            "text": "Shipping and Delivery",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_jEqFyx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Orders placed onPioCreat Storecan be shipped to the United Kingdom.</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        },
+        "custom_liquid_gUJ8zP": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .shipping-table-wrapper {\n    overflow-x: auto;\n    width: 100%;\n    margin-top: 20px;\n  }\n\n  .shipping-table {\n    width: 100%;\n    border-collapse: collapse;\n    min-width: 800px;\n    font-size: 16px;\n    text-align: center;\n  }\n\n  .shipping-table th,\n  .shipping-table td {\n    border: 1px solid #ddd;\n    padding: 18px 20px;\n    vertical-align: middle;\n  }\n\n  .shipping-table th {\n    background-color: #f5f5f5;\n    font-weight: 600;\n  }\n\n  @media screen and (max-width: 768px) {\n    .shipping-table {\n      font-size: 14px;\n    }\n\n    .shipping-table th,\n    .shipping-table td {\n      padding: 12px 12px;\n    }\n  }\n</style>\n\n<div class=\"shipping-table-wrapper\">\n  <table class=\"shipping-table\">\n    <thead>\n      <tr>\n        <th>Shipping Area</th>\n        <th>Inventory</th>\n        <th>Estimated Delivery Time</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td rowspan=\"2\">UK</td>\n        <td>In Stock</td>\n        <td>3–7 Business Days</td>\n      </tr>\n      <tr>\n        <td>Pre-order</td>\n        <td>\n          Orders placed in advance will be dispatched no later than the date indicated on the product information page, followed by 3–7 business days for delivery after shipment.\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k9K8iY",
+        "text_jEqFyx",
+        "custom_liquid_gUJ8zP"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_pr6wMp": {
+      "type": "rich-text",
+      "blocks": {
+        "text_pyURHr": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Pre-Orders</strong></p><p>1.Pre-order items will be dispatched by the estimated shipping date provided on the product page. Once shipped, they typically arrive within 3 to 7 business days.</p><p><strong>2.HALOT-X1 & Accessories & Resin: Expected to ship at the end of September.</strong><br/><br/>Shipping provider: FedEx<br/>Shipping fee: Free Shipping<br/><br/></p><p><br/><strong>In stock, after shipment</strong><br/><br/>1. After your order is shipped, we recommend keeping a close eye on the tracking status. Please contact us immediately if:<br/><br/>* The tracking information shows no updates for over 7 days, or<br/>* The status indicates delivery, but you haven’t received the package.<br/>* Acting swiftly helps ensure we can work within the logistics provider's claim window.<br/><br/>2. Upon delivery, please confirm that all items are present and undamaged. Should you notice any issues or have questions related to shipping, don’t hesitate to reach out.</p><p><strong>Shipping Limitations</strong><br/><br/>* We ship to all EU countries (except remote areas and islands).<br/>* Each order can only be shipped to one address. If you need shipments sent to multiple locations, please place separate orders for each address.</p><p><strong>Ownership, Responsibility, and Shipping Terms</strong></p><p>1. Address Accuracy: Please double-check your shipping details before submitting your order. Once your order ships, we cannot change the address. We are not responsible for losses resulting from incorrect addresses or fraudulent transactions.</p><p><strong>Note</strong>: Orders with P.O. Box addresses will not be processed by couriers.</p><p> </p><p>2. Order Modification & Cancellation: Orders (excluding pre-orders) are typically sent to the warehouse within 8 hours of purchase. After that, changes or cancellations are unlikely. We'll try to assist where possible, but results are not guaranteed. Fees arising from address errors or cancellations fall under our <a href=\"/pages/return-policy\" target=\"_blank\" title=\"Return Policy\"><strong>Return & Refund Policy</strong></a>.</p><p> </p><p>3. Returns Due to Delivery Issues because:</p><ul><li>The recipient didn’t contact the courier within 5 days of a delivery attempt, or</li><li>An incorrect address was provided,</li><li>we may charge additional fees for reshipping.</li></ul><p> </p><p><strong>Order Tracking</strong></p><p>Once your order has been shipped, you’ll receive an email with tracking information. Click the link to follow your shipment via the carrier’s official website. You can also check the status by logging into your PioCreat account under \"My Orders\" or by contacting our support team.</p><p><strong>Taxes & Duties</strong></p><p>Please note that our product prices do not include import duties, VAT, or other applicable fees. These may be charged upon delivery depending on your local regulations.</p><p> </p><p><strong>FAQs</strong></p><p><strong>Can I change my shipping address after placing an order?</strong></p><p>Address changes are only possible before your order ships. Please contact our support team as soon as possible.</p><p><strong>Why hasn’t the tracking info updated?  </strong></p><p>If more than 7 days have passed without updates, contact us. If it’s been less than 7 days, we recommend waiting a bit longer, as some updates may be delayed.</p><p><strong>I only received part of my order. What now?  </strong></p><p>Your order may have been split into multiple shipments due to product availability. Items may arrive at different times. Please wait a few days and check tracking before contacting us.</p><p><strong>The tracking says “delivered” but I didn’t get it. What should I do?  </strong></p><p>Start by checking with your local post office and inspecting the delivery area. If you still can’t locate it, contact us—we’re happy to help.</p><p><strong>Will multiple items ship together?  </strong></p><p>We try to consolidate shipments whenever possible, but depending on logistics and stock, your order may arrive in separate packages. You’ll receive tracking for each.</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_pyURHr"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_y9XXaV",
+    "rich_text_pr6wMp"
+  ]
+}

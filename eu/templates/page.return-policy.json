@@ -1,0 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_PEqd9V": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_z8z6kC": {
+          "type": "heading",
+          "settings": {
+            "text": "Return & Warranty Policy",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        }
+      },
+      "block_order": [
+        "heading_z8z6kC"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "rich_text_JAJyx7": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rEwtfE": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Service Scope</strong></p><p>This After-Sales Service Policy applies to PioCreat products sold through official channels. PioCreat reserves the final right of interpretation.</p><p> <strong>2. Return & Exchange Policy</strong></p><p>Customers are eligible to return or exchange within 14 calendar days of receiving the product. The following conditions and policies apply:</p><p> <strong>2.1 Unconditional Return or Exchange</strong></p><p>You can request a return or exchange within 14 calendar days of receipt without reason, providing the product is in its original condition and fully functional. The product itself, along with its original packaging, accessories, gifts, manuals, trademark labels, etc., must be intact and undamaged, and must not affect resale.</p><p>Shipping and any taxes incurred during return shipping shall be borne by the customer.</p><p><strong>Order Cancellation Policy</strong></p><p>Customers may request to cancel their order within <strong>1 day (24 hours)</strong> after placing it. Our team typically processes and ships orders on the <strong>next business day</strong> after the order is placed.</p><p>If a cancellation request is made <strong>before the order has been shipped</strong> and <strong>within the allowed cancellation period</strong>, we will approve and process the cancellation.</p><p>To cancel an order, please contact us via email at <strong>[your support email]</strong> before your order has been shipped.</p><p>Overseas Warehouse Address:<br/>Wihelm-Mauser-Straße 40<br/>City: Köln<br/>State/Province: Nordrhein-Westfalen<br/>Postal Code: 50827<br/>Country: Germany</p><p> <strong>2.2 Return or Exchange Due to Quality Issues</strong></p><p>If the product fails to work properly due to a fault that isn't caused by human damage or misuse, you can request a return or exchange within 14 calendar days of receipt. PioCreat will be responsible for the return shipping cost.</p><p><strong>Important Notes</strong></p><ul><li>Submission Timeline: Once a return or exchange request is approved, customers must ship the product within 7 calendar days. Failure to do so within this period will result in cancellation of the request. A new return request must be submitted. This will restart the troubleshooting process, and the timeline for resolving the issue will be reset.</li><li>Packaging Requirement: Customers must retain the original packaging for at least 14 calendar days after receipt. All returns must be shipped in the original box.</li><li>Product Inspection: Returned products will undergo inspection by PioCreat upon receipt. If the item fails to meet return criteria, PioCreat reserves the right to decline the return or deduct relevant fees.</li></ul><p><strong>Returns and exchanges are not eligible under the following circumstances:</strong></p><ul><li> The product return and exchange period has passed.</li><li> The product was not sold by PioCreat, valid proof of purchase is missing, or purchase documents have been forged or altered.</li><li>The product's appearance or functionality does not meet the standards required for a return or exchange, including failure to return all items contained in the original packaging, accessories, gifts, manuals, trademark labels, invoices, etc., or any human-caused damage to the appearance.</li><li>Product malfunction caused by improper installation or operation not following the official manual or tutorial.</li><li>Without the technical consent of the company, dismantle, copy, and modify the equipment without authorization, resulting in equipment failure.</li><li>Upon inspection by PioCreat, the product is found to be without quality issues or does not meet the standards for return or exchange.</li><li>The product has quality issues not inherent to the product itself, due to collisions, damages, unauthorized modifications, foreign objects (water, oil, sand, etc.).</li><li>Equipment failure due to force majeure factors (such as natural disasters: fire, earthquake, flood, thunder).</li><li>The return/exchange wasn't sent within 7 calendar days after service was confirmed or another specified timeframe by PioCreat.</li></ul><p> <strong>3. Warranty Policy</strong></p><p><strong>3.1 Warranty Period</strong></p><p>The warranty period begins on the date of delivery. For specific warranty durations for main parts, please refer to the warranty period of main parts as below.</p><p>Product ModelMain PartsWarrantyDJ89Plus / DJ89 / D136 / D128 / D133 / D150 / D158 SeriesComplete unit12 monthsMainboard12 monthsTouch screen12 monthsPower12 monthsMotor12 monthsLCD screen3 monthsResin3 monthsRelease film, U disk, Tempered film, Freebies (nippers, wrenches, spatulas, resin filters, etc.) — No Warranty</p><p><strong>3.2 Warranty Coverage</strong></p><p>You can apply for warranty service if your product has a performance issue that is not caused by misuse or human-caused damage and is still within the warranty period</p><p>If the product has a performance issue that is not caused by misuse or human-caused damage and is still within the warranty period, you can apply for free repair by providing a valid warranty certificate.</p><p><strong>Eligibility for free warranty service includes:</strong></p><ul><li>The product is within the warranty period, without issues due to misuse or human-caused damage.</li><li>Avoid disassembling, modifying, or adding parts that aren’t in the official manuals.</li><li>A valid purchase invoice and machine serial number (SN) is provided.</li></ul><p><strong>Warranty Exclusions</strong></p><p>You will not be eligible for free warranty service under the following circumstances:</p><ul><li>The product is outside of the warranty period.</li><li>Wear and tear or consumable damage due to regular use.</li><li>Failure to install and operate the machine according to the instructions or operation.</li><li>Without the technical consent of the company, dismantle, copy, and modify the equipment without authorization, resulting in equipment failure.</li><li>Due to improper use, the machine is immersed in liquid, resulting in a short circuit of the machine or overloading of the equipment, resulting in equipment failure.</li><li>Equipment failure due to force majeure factors (such as natural disasters: fire, earthquake, flood, thunder).</li><li>Update the firmware or tamper with the device program without the guidance of the technician, causing the machine to malfunction.</li><li>The use of third-party accessories from other companies leads to machine failure.</li><li>Failure to provide a valid machine code, or purchasing a warranty card, altering equipment information without authorization, the handwriting is blurred and unrecognizable.</li><li>When no action is taken within 7 calendar days after contacting PioCreat for warranty service near the end of the warranty period.</li></ul><p> <strong>4. Contact Us</strong></p><p><strong>Online Chat:</strong> Click the customer service icon on the official website to chat online</p><p><strong>WhatsApp:</strong> +8618145846511, or click the link <a href=\"https://wa.me/message/LSVEHHNVRP5ON1\"><span style=\"text-decoration:underline\">https://wa.me/message/LSVEHHNVRP5ON1</span></a></p><p><strong>Order Inquiry Service: </strong>service@piocreat3d.com</p><p><strong>Technical Support Service:</strong> after@piocreat3d.com</p><p><strong>Office Hours:</strong></p><p>Monday to Saturday: 17:00-20:00 and 21:30-02:00 (PST)</p><p>If the return is caused by the consumer, consumer should be responsible for the shipping fee. The specific fee should be based on the express company you choose.</p><p>If due to our reasons, the goods received are damaged or not correct, and the consumer is not required to bear the shipping fee for this reason.</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_rEwtfE"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "grid",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_PEqd9V",
+    "rich_text_JAJyx7"
+  ]
+}

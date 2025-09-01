@@ -1,0 +1,44 @@
+/* transcy */
+#transcySwitcherContainer {
+    position: absolute;
+    top: 28px;
+    z-index: 51;
+}
+
+#transcyBtnSwitcher {
+    position: absolute;
+    top: 6px;
+    font-size: 12px;
+    padding: 0px 10px;
+    border-width: 0px !important;
+    min-height: 30px;
+    width: 210px !important;
+}
+
+#transcySwitcherContainer .transcy-switcher {
+    padding-top: 40px;
+}
+#transcySwitcherContainer .transcy-select-language-items,
+#transcySwitcherContainer .transcy-select-currency-items {
+    bottom: unset;
+    top: 50px;
+}
+
+
+@media screen and (min-width: 1380px) {
+    #transcySwitcherContainer {
+        left: calc(50% + 440px);
+    }
+}
+
+@media screen and (max-width: 1379px) {
+    #transcySwitcherContainer {
+        left: calc(100% - 250px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #transcySwitcherContainer {
+        display: none;
+    }
+}

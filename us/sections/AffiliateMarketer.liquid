@@ -1,0 +1,1088 @@
+
+<style>
+    @charset "UTF-8";
+@font-face {
+  font-family: 'HarmonyOS_Sans_Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/HarmonyOS_Sans_Bold.woff2?v=1745547076") format("woff2"), url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/HarmonyOS_Sans_Bold.ttf?v=1745547076") format("ttf");
+}
+
+@font-face {
+  font-family: 'HarmonyOS_Sans_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/HarmonyOS_Sans_Regular.woff2?v=1745547075") format("woff2"), url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/HarmonyOS_Sans_Regular.ttf?v=1745547076") format("truetype");
+}
+
+@font-face {
+  font-family: 'HarmonyOS_Sans_Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/HarmonyOS_Sans_Medium.woff2?v=1745547075") format("woff2"), url("https://cdn.shopify.com/s/files/1/0580/7482/4865/files/HarmonyOS_Sans_Medium.ttf?v=1745547076") format("ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 961px) {
+  .container .m-image {
+    display: none !important;
+  }
+  .container img {
+    object-fit: contain;
+  }
+  .container .section-one {
+    position: relative;
+  }
+  .container .section-one img {
+    width: 100%;
+  }
+  .container .section-one .section-one-title {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+  }
+  .container .section-one .section-one-title .section-one-title-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .section-one .section-one-title .section-one-title-top .title-top-first {
+    font-family: HarmonyOS_Sans_Bold;
+    font-size: 3.4375vw;
+    color: #2F2F2F;
+    text-align: left;
+  }
+  .container .section-one .section-one-title .section-one-title-top .title-top-second {
+    font-family: HarmonyOS_Sans_Regular;
+    font-size: 1.5625vw;
+    color: #2F2F2F;
+    margin-top: 1.35417vw;
+  }
+  .container .section-one .section-one-title .section-one-title-button {
+    margin-top: 5.9375vw;
+    width: 21.40625vw;
+    height: 5.88542vw;
+  }
+  .container .section-tow {
+    margin-top: 4.375vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.42708vw;
+  }
+  .container .section-tow .tow-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-tow .tow-content-left .tow-content-top-container .content-left-top {
+    display: block;
+    font-family: HarmonyOS_Sans_Bold;
+    font-size: 3.4375vw;
+    color: #2F2F2F;
+    line-height: 3.95833vw;
+    text-align: left;
+  }
+  .container .section-tow .tow-content-left .tow-content-top-container .content-left-center {
+    display: inline-block;
+    width: 38.48958vw;
+    font-family: HarmonyOS_Sans_Regular;
+    margin-top: 1.51042vw;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    line-height: 2.5vw;
+    text-align: left;
+    margin-right: 4.42708vw;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 一行三列，等宽 */
+    gap: 0.83333vw;
+    padding: 2.65625vw 0 0 0;
+    margin-left: -6vw;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom span img {
+    width: 4.63542vw;
+    height: 4.21875vw;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom span span {
+    font-family: HarmonyOS_Sans_Regular;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    text-align: center;
+    line-height: 1.7vw;
+  }
+  .container .section-tow .tow-content-right {
+    width: 21.40625vw;
+    height: 37.8125vw;
+  }
+  .container .section-tow .tow-content-right img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .section-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.375vw;
+    background-color: #e7f0f7;
+    padding: 3.64583vw;
+  }
+  .container .section-three .section-three-title {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 3.4375vw;
+    color: #2F2F2F;
+    line-height: 3.95833vw;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 1.5625vw;
+  }
+  .container .section-three .section-three-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+    margin-top: 2vw;
+    /* 第2个虚线 */
+  }
+  .container .section-three .section-three-container .three-container-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(1) {
+    width: 5.98958vw;
+    height: 5.3125vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2) {
+    width: 14.47917vw;
+    height: 2.76042vw;
+    margin-top: 1vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(3) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    line-height: 1.66667vw;
+    text-align: center;
+    line-height: 1.9vw;
+    margin-top: 2vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2) {
+    position: relative;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 60px;
+    height: 0;
+    border-top: 0.10417vw dashed #3a3a41;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: block;
+  }
+  .container .section-three .section-three-container .three-container-list:nth-child(1) span:nth-child(2)::after {
+    width: 8.6vw;
+    right: -5.91667vw;
+  }
+  .container .section-three .section-three-container .three-container-list:nth-child(2) span:nth-child(2)::after {
+    width: 6.2vw;
+    right: -6.2vw;
+  }
+  .container .section-three .section-three-container .three-container-list:last-child span:nth-child(2)::after {
+    display: none;
+  }
+  .container .section-four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7.55208vw;
+    padding: 7.08333vw;
+  }
+  .container .section-four .four-left img {
+    width: 17.55208vw;
+    height: 6.09375vw;
+  }
+  .container .section-four .four-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+  }
+  .container .section-four .four-right span:nth-child(1) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 3.4375vw;
+    color: #2F2F2F;
+    line-height: 3.02083vw;
+    text-align: center;
+  }
+  .container .section-four .four-right span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    line-height: 1.66667vw;
+    text-align: left;
+    line-height: 1.7vw;
+  }
+  .container .section-four .four-right span:nth-child(3) {
+    display: block;
+    width: 14.94792vw;
+    height: 4.11458vw;
+  }
+  .container .section-four .four-right span:nth-child(3) img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .section-five {
+    background-color: #e7f0f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.64583vw;
+  }
+  .container .section-five .five-title {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 3.4375vw;
+    color: #2F2F2F;
+    line-height: 3.95833vw;
+    text-align: center;
+  }
+  .container .section-five .five-container {
+    display: flex;
+    margin-top: 2vw;
+    gap: 2vw;
+  }
+  .container .section-five .five-container .five-container-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    width: 21.82292vw;
+    height: 28.4375vw;
+    background-color: #f9fcff;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(1) {
+    display: inline-block;
+    width: 7.86458vw;
+    height: 11.875vw;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: bold;
+    font-size: 1.66667vw;
+    color: #383841;
+    line-height: 2.03125vw;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1.7vw;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(3) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #383841;
+    line-height: 1.66667vw;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1.7vw;
+  }
+  .container .section-five .five-container .five-container-list-three span:nth-child(1) {
+    display: inline-block;
+  }
+  .container .section-five .five-container .five-container-list-three span:nth-child(1) img {
+    width: 7.86458vw;
+    height: 11.875vw;
+  }
+  .container .section-five .five-container .five-container-list-three .list-three-span {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .section-five .five-container .five-container-list-three .list-three-span span:nth-child(1) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: bold;
+    font-size: 1.66667vw;
+    color: #383841;
+    line-height: 2.03125vw;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1.7vw;
+    width: 20vw;
+    height: 2vw;
+    margin-bottom: 2vw;
+  }
+  .container .section-five .five-container .five-container-list-three .list-three-span span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #383841;
+    line-height: 1.66667vw;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1.7vw;
+    margin-top: 0.5vw;
+    margin-bottom: -2vw;
+  }
+  .container .secrion-six {
+    display: flex;
+    justify-content: center;
+  }
+  .container .secrion-six .six-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .secrion-six .six-left .here {
+     display: flex;
+    align-items: center;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    line-height: 1.66667vw;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 2vw;
+  }
+  .container .secrion-six .six-left .here img {
+    width: 2.55208vw;
+    height: 1.66667vw;
+    margin-right:1vw;
+  }
+  .container .secrion-six .six-left span:nth-child(1) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 3.4375vw;
+    color: #2F2F2F;
+    line-height: 3.48958vw;
+  }
+  .container .secrion-six .six-left span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    line-height: 1.66667vw;
+    text-align: left;
+    margin-top: 0.83333vw;
+  }
+  .container .secrion-six .six-left span:nth-child(3) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    color: #2F2F2F;
+    line-height: 1.66667vw;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 2vw;
+  }
+  .container .secrion-six .six-left span:nth-child(3) img {
+    width: 2.55208vw;
+    height: 1.66667vw;
+  }
+  .container .secrion-six .six-right {
+    width: 33.4375vw;
+    height: 29.32292vw;
+  }
+  .container .secrion-six .six-right img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .secrion-six .six-left .here .here-bottom{
+    font-family: SourceHanSansCN, SourceHanSansCN;
+  }
+}
+
+@media (max-width: 960px) {
+  .container .pc-image {
+    display: none !important;
+  }
+  .container img {
+    object-fit: contain;
+  }
+  .container .section-one {
+    position: relative;
+  }
+  .container .section-one .section-one-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14vw;
+  }
+  .container .section-one .section-one-title .section-one-title-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 1.06667vw;
+  }
+  .container .section-one .section-one-title .section-one-title-top span:nth-child(1) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    text-align: left;
+  }
+  .container .section-one .section-one-title .section-one-title-top span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 500;
+    font-size: 3vw;
+    color: #2F2F2F;
+  }
+  .container .section-one .section-one-title .section-one-title-button {
+    margin-top: 3.2vw;
+    width: 36.53333vw;
+    height: 10.13333vw;
+  }
+  .container .section-one .section-one-title .section-one-title-button img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .section-one .size-img {
+    width: 100%;
+  }
+  .container .section-tow {
+    margin-top: 11.46667vw;
+  }
+  .container .section-tow .tow-content-left .tow-content-top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-tow .tow-content-left .tow-content-top-container span:nth-child(1) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    text-align: left;
+  }
+  .container .section-tow .tow-content-left .tow-content-top-container span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    text-align: left;
+    margin-top: -1vw;
+  }
+  .container .section-tow .tow-content-left .tow-content-top-container span:nth-child(3) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #2F2F2F;
+    padding: 0 12vw;
+    text-align: center;
+    line-height: 3.8vw;
+    margin-top: 3.2vw;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.83333vw;
+    padding: 0 10vw 0 14vw;
+    margin-left: -6vw;
+    row-gap: 5vw;
+    margin-top: 6vw;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom span img {
+    width: 8vw;
+    height: 7.2vw;
+  }
+  .container .section-tow .tow-content-left .content-left-bottom span span {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #2F2F2F;
+    text-align: center;
+    line-height: 3.8vw;
+    margin-top: 1.33333vw;
+  }
+  .container .section-tow .tow-content-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7vw;
+  }
+  .container .section-tow .tow-content-right img {
+    width: 74.93333vw;
+    height: 112vw;
+  }
+  .container .section-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E7F0F7;
+    margin-top: 8vw;
+    padding: 0 5.33333vw 5.33333vw;
+  }
+  .container .section-three .section-three-title {
+    text-align: center;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    margin-top: 9.86667vw;
+    line-height: 6.8vw;
+  }
+  .container .section-three .section-three-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+    margin-top: 6.66667vw;
+    /* 第2个虚线 */
+  }
+  .container .section-three .section-three-container .three-container-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(1) img {
+    width: 10.13333vw;
+    height: 9.06667vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2) {
+    margin-top: 0.53333vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2) img {
+    width: 21.33333vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(3) {
+    font-size: 2.66667vw;
+    text-align: center;
+    line-height: 3.5vw;
+    height: 8.26667vw;
+    line-height: 2.93333vw;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2) {
+    position: relative;
+  }
+  .container .section-three .section-three-container .three-container-list span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 60px;
+    height: 0;
+    border-top: 0.10417vw dashed #3a3a41;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: block;
+  }
+  .container .section-three .section-three-container .three-container-list:nth-child(1) span:nth-child(2)::after {
+    width: 8.6vw;
+    right: -5.91667vw;
+  }
+  .container .section-three .section-three-container .three-container-list:nth-child(2) span:nth-child(2)::after {
+    width: 6.5vw;
+    right: -6.5vw;
+  }
+  .container .section-three .section-three-container .three-container-list:last-child span:nth-child(2)::after {
+    display: none;
+  }
+  .container .section-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.13333vw;
+  }
+  .container .section-four .four-left img {
+    width: 46.93333vw;
+  }
+  .container .section-four .four-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-four .four-right .four-right-img span img {
+    width: 25.6vw;
+  }
+  .container .section-four .four-right span:nth-child(1) {
+    text-align: center;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    margin-top: 6vw;
+    line-height: 6.8vw;
+  }
+  .container .section-four .four-right span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #2F2F2F;
+    text-align: center;
+    margin-top: 1.6vw;
+    line-height: 2.93333vw;
+  }
+  .container .section-four .four-right span:nth-child(3) {
+    margin-top: 2.93333vw;
+  }
+  .container .section-four .four-right span:nth-child(3) img {
+    width: 25.6vw;
+  }
+  .container .section-five {
+    background-color: #E7F0F7;
+    margin-top: 9.6vw;
+  }
+  .container .section-five .five-title {
+    padding-top: 6vw;
+    text-align: center;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    margin-top: 9.6vw;
+    line-height: 6.66667vw;
+  }
+  .container .section-five .five-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.06667vw;
+    margin-top: 4.8vw;
+    padding: 0 8vw 10.66667vw 8vw;
+    /* 间距 */
+  }
+  .container .section-five .five-container .five-container-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+    width: 37.33333vw;
+    height: 50.13333vw;
+    background-color: #FFF;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(1) img {
+    width: 21.33333vw;
+    height: 24vw;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: bold;
+    font-size: 2.93333vw;
+    color: #383841;
+    text-align: center;
+    line-height: 3.46667vw;
+  }
+  .container .section-five .five-container .five-container-list span:nth-child(3) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 2.4vw;
+    color: #383841;
+    text-align: center;
+    line-height: 2.93333vw;
+    margin-top: 1vw;
+  }
+  .container .section-five .five-container .five-container-list-three {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 34.4vw;
+    justify-content: center;
+    width: 75.46667vw;
+    gap: 7vw;
+  }
+  .container .section-five .five-container .five-container-list-three .list-three-span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section-five .five-container .five-container-list-three .list-three-span span:nth-child(1) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: bold;
+    font-size: 2.93333vw;
+    color: #383841;
+    text-align: center;
+    line-height: 3.46667vw;
+  }
+  .container .section-five .five-container .five-container-list-three .list-three-span span:nth-child(2) {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 400;
+    font-size: 2.4vw;
+    color: #383841;
+    text-align: center;
+    line-height: 2.93333vw;
+    margin-top: 2vw;
+  }
+  .container .secrion-six {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .secrion-six .six-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .secrion-six .six-left .left-contant {
+    text-align: center;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 800;
+    font-size: 5.86667vw;
+    color: #2F2F2F;
+    margin-top: 6.4vw;
+    line-height: 6.8vw;
+  }
+  .container .secrion-six .six-left .still {
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 500;
+    font-size: 3vw;
+    color: #2F2F2F;
+    margin-top: 1.06667vw;
+  }
+  .container .secrion-six .six-left .here {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    font-weight: 500;
+    font-size: 3vw;
+    color: #2F2F2F;
+    top: 46vw;
+    left: -7vw;
+  }
+  .container .secrion-six .six-left .here .here-top {
+    font-weight: 500;
+    font-size: 3vw;
+    color: #2F2F2F;
+    margin-bottom: 2vw;
+  }
+  .container .secrion-six .six-left .here .here-bottom {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.4vw;
+    font-family: SourceHanSansCN, SourceHanSansCN;
+    line-height: 3.5vw;
+    color: #0A71F9;
+  }
+  .container .secrion-six .six-left .here .xinfeng {
+    margin-bottom: 2vw;
+  }
+  .container .secrion-six .six-right {
+    margin-top: 5vw;
+  }
+}
+
+</style>
+
+    <div class="container">
+        <section class="section-one">
+            <div class="section-one-title">
+                <div class="section-one-title-top">
+                    <span class="title-top-first">PioCreat Affiliate Program</span>
+                    <span class="title-top-second">Share Your Passion，Print Possibilities，Earn Rewards</span>
+                </div>
+                <a href="http://app.impact.com/advertiser-advertiser-info/Creality-3D-Technology-LLC.brand">
+                    <div class="section-one-title-button">
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/Join_Now_2x_8e658c7b-4373-4620-b296-2661cc8f5027.png?v=1751963561" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/Join_Now_2x_0b3dc28d-ffe7-41b9-9cdb-f4084746340b.png?v=1751964539" alt="" class="m-image">
+                    </div>
+                </a>
+
+
+            </div>
+            <!-- pc -->
+            <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/0_2x_ed27e5ef-4343-429f-b167-b647fe0e4ca7.png?v=1751963564" alt="" class="pc-image">
+            <!-- m -->
+            <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_2x_589f86d4-279c-4ce9-81b1-d0abbdb84fbc.png?v=1751964542" alt="" class="m-image" style="width: 100%;">
+        </section>
+        <section class="section-tow">
+            <div class="tow-content-left">
+                <div class="tow-content-top-container">
+                    <span class=" content-left-top">Who is Eligible to</span>
+                    <span class=" content-left-top">Become an Affiliate?</span>
+                    <span class="content-left-center">We welcome creators, storytellers, and innovators from all corners
+                        of
+                        the internet.Whether you run a tech forum, write in-depth reviews, manage a blog, or share your
+                        passion on social media — if you love 3D printing and inspiring others, you're exactly who we're
+                        looking for.</span>
+                </div>
+                <div class="content-left-bottom">
+
+                </div>
+            </div>
+            <div class="tow-content-right">
+                <!-- pc -->
+                <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_2x_2ec19b34-ad72-4a72-aa3c-14e120b40f57.png?v=1751963563" alt="" class="pc-image">
+                <!-- m -->
+                <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_2x_280fca3c-6f5a-4e52-b1c5-839da2319cb7.png?v=1751964542" alt="" class="m-image">
+            </div>
+        </section>
+        <section class="section-three">
+            <div class="section-three-title">How to Join the<br> PioCreat Affiliate Program?</div>
+            <div class="section-three-container">
+                <div class="three-container-list">
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon7_2x_fad68a29-06b8-4199-8529-a84b00baac20.png?v=1751964159" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_3674d409-6ee4-48bc-a081-b93ff3f5014a.png?v=1751964539" alt="" class="m-image">
+                    </span>
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_2x_847fdc7e-4f40-42db-b5d0-fa3bfaee85af.png?v=1751963561" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_5daa4a0f-e424-4675-8c27-ae5a889dd797.png?v=1751964539" alt="" class="m-image">
+                    </span>
+                    <span>Join for free —<br> quick and easy.</span>
+                </div>
+                <div class="three-container-list">
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon8_2x_a0a315c4-7d68-4311-8f53-b42bbc81e93c.png?v=1751964159" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2_245f70e1-0707-4d78-a4d8-6b027c0d7649.png?v=1751964539" alt="" class="m-image">
+                    </span>
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2_2x_8c66c6fc-8c44-4046-b041-8a6239ad02d5.png?v=1751963561" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/7.png?v=1751964539" alt="" class="m-image">
+
+                    </span>
+                    <span>Grab your <br class="m-image"> unique<br class="pc-image"> link and<br class="m-image"> start
+                        sharing.</span>
+                </div>
+
+                <div class="three-container-list">
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon9_2x_68981dc8-d871-47de-874e-de0e444df299.png?v=1751964159" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/3_3323c823-bfbf-48cd-b34c-9c572535c143.png?v=1751964538" alt="" class="m-image">
+                    </span>
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/3_2x_09ee3066-9112-493d-a24d-916c32956df4.png?v=1751963560" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/8.png?v=1751964539" alt="" class="m-image">
+                    </span>
+                    <span>Earn every time<br class="m-image"> someone<br> buys through you.</span>
+                </div>
+            </div>
+        </section>
+        <section class="section-four">
+            <div class="four-left">
+                <!-- pc -->
+                <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/Impact.com_logo_2x_7034d1eb-a808-498d-9408-5d8bc040fd07.png?v=1751963561" alt="">
+                <!-- m
+                <img src="../../img/sandi/Impact.com logo@2x.png" alt="" class="m-image"> -->
+            </div>
+            <div class="four-right">
+                <span>Join Us Now!</span>
+                <span>Join us as an affiliate and<br /> start earning money immediately!</span>
+                    <span>
+                <a href="http://app.impact.com/advertiser-advertiser-info/Creality-3D-Technology-LLC.brand" class="four-right-img">
+
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/Join_Now_2x_8e658c7b-4373-4620-b296-2661cc8f5027.png?v=1751963561" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/Join_Now_2x_0b3dc28d-ffe7-41b9-9cdb-f4084746340b.png?v=1751964539" alt="" class="m-image">
+                </a>
+                    </span>
+
+            </div>
+
+        </section>
+        <section class="section-five">
+            <div class="five-title">Why Join the<br /> PioCreat Affiliate Program?</div>
+            <div class="five-container">
+                <div class="five-container-list">
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_a7897060-4a48-4683-a85e-951569eabf46.png?v=1751963561" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_40e76e69-755f-4434-8a44-8b29471fe139.png?v=1751964539" alt="" class="m-image">
+                    </span>
+                    <span> Earn 5%-15%<br> Commission</span>
+                    <span>Every successful<br /> referral puts real<br /> money in
+                        your pocket.</span>
+                </div>
+                <div class="five-container-list">
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_9058cdec-47c1-44a9-ac2c-ad8d2832d565.png?v=1751963561" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_374d6c9a-2b16-47c5-95a0-abdd0ff02f57.png?v=1751964539" alt="" class="m-image">
+                    </span>
+                    <span>High Average<br /> Order Value</span>
+                    <span>Our average order value is<br /> high, ensuring your<br />
+                        commissions are substantial.</span>
+                </div>
+                <div class="five-container-list five-container-list-three">
+                    <span>
+                        <!-- pc -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_e170e05d-7777-4a8b-a351-558e4ad7fcf6.png?v=1751963562" alt="" class="pc-image">
+                        <!-- m -->
+                        <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_77491c0b-e992-4fc5-be7a-63f63b5a2908.png?v=1751964540" alt="" class="m-image">
+                    </span>
+                    <div class="list-three-span">
+                        <span>Partner with a<br /> 3D Printing Innovator</span>
+                        <span>Piocreat is trusted by<br /> makers worldwide. Share<br />
+                            quality products your<br />
+                            audience will want.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="secrion-six">
+            <div class="six-left">
+                <span class="left-contant">Contact Us</span>
+                <!-- pc -->
+                <span class="pc-image">Still have questions? Feel free to reach out anytime.<br />We’re here to
+                    help</span>
+                <!-- m -->
+                <span class="m-image still">Still have questions? Feel free to reach out anytime. </span>
+
+                <span class="here">
+                    <span class="m-image here-top">We're here to help</span>
+                    <!-- pc -->
+                    <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon_2x_5cdc6421-617e-4a89-b57c-e33525a10739.png?v=1751963560" alt="" class="pc-image">
+                    <!-- m -->
+                    <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon_2x_75849ddc-7dd8-481c-89fe-0ea698644bfc.png?v=1751964539" alt="" class="m-image xinfeng">
+                    Email us at:&nbsp;<span class="here-bottom">service@<br class="m-image">piocreat3d.com</span>
+                </span>
+            </div>
+            <div class="six-right">
+                <!-- pc -->
+                <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/2x_ac30a7c5-4e2e-48e0-be8a-6bccc7e520ce.png?v=1751963562" alt="" class="pc-image">
+                <!-- m -->
+                <img src="https://cdn.shopify.com/s/files/1/0580/7482/4865/files/1_2x_0e6180af-1482-4a65-b2cb-dcb266669877.png?v=1751964541" alt="" class="m-image">
+            </div>
+
+        </section>
+    </div>
+<script>
+    const items = [
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon1_2x_fcbe106b-d435-444d-9cd5-bdf8fc6905cc.png?v=1751963560', text: 'Forums &<br> communities' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon2_2x_e8208eb3-6b30-4e91-8c6e-336c0cc3900a.png?v=1751963560', text: 'Blogs &<br> review sites' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon3_2x_1ec100c4-f673-4de7-b506-c61083bc2688.png?v=1751963560', text: 'Social media<br>influencers' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon4_2x_9dbbdfde-b3ad-4c23-afef-1a8cc9103472.png?v=1751963560', text: 'Content<br> creators' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon5_2x_3e237f2f-494f-4a3d-a041-68b0d1a43ed5.png?v=1751963560', text: 'Online<br> publishers' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon6_2x_3ea57caa-2496-4399-a00c-e379dc081b2c.png?v=1751963560', text: 'Anyone passionate<br> about 3D printing' }
+    ];
+    const items2 = [
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon1_2x_b9fc960d-9c6f-432a-aef7-7fa99bccf1cb.png?v=1751964539', text: 'Forums &<br> communities' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon2_2x_957031fe-7597-434c-b0d4-f41c861c0e1a.png?v=1751964538', text: 'Blogs &<br> review sites' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon3_2x_2176bb36-340b-4c2e-8e44-e4b65467f0a7.png?v=1751964539', text: 'Social media<br>influencers' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon4_2x_4559befe-8ee4-4a80-b5ce-c0d97700ba44.png?v=1751964539', text: 'Content<br> creators' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon5_2x_decc077a-5911-4e7d-8300-42cffcca1d72.png?v=1751964539', text: 'Online<br> publishers' },
+        { imgSrc: 'https://cdn.shopify.com/s/files/1/0580/7482/4865/files/icon6_2x_4fc5ee7d-2e16-4ea8-9419-07076731ef4e.png?v=1751964539', text: 'Anyone passionate<br> about 3D printing' }
+
+    ]
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.content-left-bottom');
+        container.innerHTML = '';
+        items.forEach(item => {
+            const span = document.createElement('span');
+            span.classList.add('pc-image');
+            const img = document.createElement('img');
+            img.classList.add('pc-image')
+            img.src = item.imgSrc;
+            img.alt = item.text.replace(/<br>/g, ' ');
+            const textSpan = document.createElement('span');
+            textSpan.classList.add('pc-image')
+            textSpan.innerHTML = item.text;
+            span.appendChild(img);
+            span.appendChild(textSpan);
+            container.appendChild(span);
+        });
+        items2.forEach(item => {
+            const span = document.createElement('span');
+            span.classList.add('m-image');
+            const img = document.createElement('img');
+            img.classList.add('m-image');
+            img.src = item.imgSrc;
+            img.alt = item.text.replace(/<br>/g, ' ');
+            const textSpan = document.createElement('span');
+            textSpan.classList.add('m-image');
+            textSpan.innerHTML = item.text;
+            span.appendChild(img);
+            span.appendChild(textSpan.cloneNode(true));
+            container.appendChild(span);
+        });
+    });
+</script>
+{% schema %}
+{
+  "name": "Affiliate marketer",  
+  "presets": [
+    {
+      "name": "Affiliate marketer section"  
+    }
+  ]
+}
+{% endschema %}

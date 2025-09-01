@@ -1,0 +1,650 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "spacer_9LrAfG": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 15,
+        "spacer_desktop": 0,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "16479477632637c9a7": {
+      "type": "slideshow",
+      "blocks": {
+        "fe3c4f31-61b1-4931-bde1-e46ecb72a090": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1389-542_60673ec4-e9d7-422b-8307-d35cf1ef6591.png",
+            "mobile_image": "shopify://shop_images/20250728-175422.png",
+            "slide_link": "",
+            "video_background": false,
+            "badge_text": "",
+            "subheading": "PioCreat HALOT-X1",
+            "subheading_size": "h5",
+            "mobile_subheading_size": "h5",
+            "subheading_color": "#000000",
+            "heading": "Level-Free, Worry-Free",
+            "heading_size": "h2",
+            "mobile_heading_size": "h2",
+            "heading_color": "#000000",
+            "content": "",
+            "description_size": "large",
+            "mobile_description_size": "medium",
+            "price": "579",
+            "price_size": "medium",
+            "mobile_price_size": "medium",
+            "description_color": "",
+            "content_position": "middle-left",
+            "mobile_content_position": "top-center",
+            "text_alignment": "left",
+            "mobile_text_alignment": "center",
+            "content_size": "large",
+            "mobile_content_size": "medium",
+            "color_slidebg": "rgba(0,0,0,0)",
+            "color_slidebg_opacity": 0,
+            "color_slidebg_blur": 0,
+            "color_text": "#ffffff",
+            "color_badge_bg": "#3f72e5",
+            "color_badge_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "",
+            "button_1_text": "Buy Now",
+            "button_1_color": "accent",
+            "button_1_link": "shopify://products/halot-x1-resin-3d-printer-for-miniatures",
+            "use_text_button_1": false,
+            "button_2_text": "",
+            "button_2_color": "white",
+            "button_2_link": "",
+            "use_text_button_2": true
+          }
+        }
+      },
+      "block_order": [
+        "fe3c4f31-61b1-4931-bde1-e46ecb72a090"
+      ],
+      "custom_css": [
+        ".slideshow__slide-inner {max-width: 1200px;}"
+      ],
+      "settings": {
+        "desktop_height": "desktop-height-550",
+        "mobile_height": "mobile-height-500",
+        "full_width": true,
+        "autoplay": true,
+        "autoplay_length": 10,
+        "transition": "zoom",
+        "mobile_transition": "fade",
+        "controls": "arrows-with-numbers",
+        "mobile_controls": "dots",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "8f6ed916-ced8-44f6-9ef8-b60fd327ae31": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 10,
+        "spacer_desktop": 30,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "8670c6b1-68f6-405f-bfff-2c6ff1e89099": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 50,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "16614195534fb74bc3": {
+      "type": "collection-tabs",
+      "blocks": {
+        "1661419552da8d37a7-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-selling-printer",
+            "enable_promotion": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "content_position": "bottom-left",
+            "text_alignment": "center",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        },
+        "fa3602da-b8c8-451e-be39-d6664a432ae0": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-selling-resin",
+            "enable_promotion": false,
+            "title": "Promotion",
+            "text": "Advertise a promotion or a sale",
+            "link_label": "Explore",
+            "content_position": "bottom-left",
+            "text_alignment": "left",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        },
+        "collection_FDaEgB": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories",
+            "enable_promotion": false,
+            "title": "Promotion",
+            "text": "Advertise a promotion or a sale",
+            "link_label": "Explore",
+            "content_position": "bottom-left",
+            "text_alignment": "left",
+            "link": "",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        }
+      },
+      "block_order": [
+        "1661419552da8d37a7-0",
+        "fa3602da-b8c8-451e-be39-d6664a432ae0",
+        "collection_FDaEgB"
+      ],
+      "settings": {
+        "heading": "Best Selling",
+        "marker_style": "style1",
+        "description": "",
+        "product_limit": 8,
+        "columns_desktop": 5,
+        "show_progress_bar": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_w4a9hQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bza76a": {
+          "type": "heading",
+          "settings": {
+            "text": "Explore the Possibilities",
+            "marker_style": "style1",
+            "size": "h3",
+            "marker_color": "#fd6262"
+          }
+        },
+        "text_K7keDn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unleash your creativity and innovation and turn every idea into reality</p>",
+            "custom_liquid": "",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bza76a",
+        "text_K7keDn"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_width": "medium",
+        "text_position": "left",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "gallery_AggBRd": {
+      "type": "gallery",
+      "blocks": {
+        "image_xCLGN8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20250718-113953.png",
+            "image3D": "shopify://shop_images/20250718-114000.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Miniatures",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_GEUfYr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Architecture",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_nN9bKw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_1b2bae07-fb80-4df6-9880-cf71cc5d906d.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Jewelry",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_bxLF4h": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_e8fb36d9-c0cc-4957-b4a9-5e5bedefcef4.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Prototypes",
+            "marker_color": "#fd6262"
+          }
+        },
+        "image_7NWMqe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_55ec0546-8e41-4d08-ad79-fe9bf12f76fe.png",
+            "enable_gallery_video": false,
+            "enable_hover_play": false,
+            "title": "Education",
+            "marker_color": "#fd6262"
+          }
+        }
+      },
+      "block_order": [
+        "image_xCLGN8",
+        "image_GEUfYr",
+        "image_nN9bKw",
+        "image_bxLF4h",
+        "image_7NWMqe"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "columns_desktop": 3,
+        "full_width": false,
+        "mobile_swipe": false,
+        "image_ratio": "adapt",
+        "content_position": "bottom-left",
+        "column_spacing": "small",
+        "heading_size": "h4",
+        "heading_color": "#ffffff",
+        "description_size": "medium",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "09fbaadd-eaad-4e04-9edb-42de8cc123f0": {
+      "type": "scrolling-content",
+      "blocks": {
+        "template--17918041129242__09fbaadd-eaad-4e04-9edb-42de8cc123f0-16765666512e2d52c2-0": {
+          "type": "section",
+          "settings": {
+            "badge": "Security Locks",
+            "subheading": "",
+            "heading": "A key that works |everywhere|",
+            "marker_style": "style4",
+            "heading_size": "h3",
+            "content": "<p><strong>Auto-Unlock detects when you arrive and unlocks the door. Enable Auto-Lock to lock when the door closes.</strong></p><p>Welcome home to an even smarter home. Upgrade your deadbolt with the all-new August Wi-Fi Smart Lock, a lock so smart, it simplifies your daily life and the way your family lives. And with built-in WiFi, our lock requires no additional bridge to connect.</p>",
+            "description_size": "medium",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "marker_color": "#3fb1e5",
+            "color_bg_badge": "#cdf3fb",
+            "color_badge": "#2c2d2e"
+          }
+        },
+        "template--17918041129242__09fbaadd-eaad-4e04-9edb-42de8cc123f0-16765666512e2d52c2-1": {
+          "type": "section",
+          "settings": {
+            "badge": "Smart Lighting",
+            "subheading": "",
+            "heading": "|Control| your house lights",
+            "marker_style": "style1",
+            "heading_size": "h3",
+            "content": "<p><strong>Smart home lighting refers to the use of connected and programmable lights in a residential setting. </strong></p><p>Smart home lighting can also be customized based on the room or area of the house. For example, a living room might have brighter lights for entertainment purposes, while a bedroom might have dimmer lights to create a relaxing atmosphere.</p>",
+            "description_size": "medium",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "marker_color": "#fd9962",
+            "color_bg_badge": "#fadcce",
+            "color_badge": "#2c2d2e"
+          }
+        },
+        "template--17918041129242__09fbaadd-eaad-4e04-9edb-42de8cc123f0-16765666512e2d52c2-2": {
+          "type": "section",
+          "settings": {
+            "badge": "Video Doorbell",
+            "subheading": "",
+            "heading": "A |smart home| starts at the front door",
+            "marker_style": "style3",
+            "heading_size": "h3",
+            "content": "<p><strong>A smart home video doorbell is a device that allows you to see and speak with anyone who comes to your door, whether you are at home or away.</strong></p><p>It is a small camera that is mounted on or near your front door and connected to your home Wi-Fi network. When someone rings the doorbell, you get a notification on your smartphone, tablet, or computer, and you can see and communicate with the person at the door.</p>",
+            "description_size": "medium",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "marker_color": "#8662fd",
+            "color_bg_badge": "#e7e3fc",
+            "color_badge": "#151515"
+          }
+        }
+      },
+      "block_order": [
+        "template--17918041129242__09fbaadd-eaad-4e04-9edb-42de8cc123f0-16765666512e2d52c2-0",
+        "template--17918041129242__09fbaadd-eaad-4e04-9edb-42de8cc123f0-16765666512e2d52c2-1",
+        "template--17918041129242__09fbaadd-eaad-4e04-9edb-42de8cc123f0-16765666512e2d52c2-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_layout": "text_first",
+        "mobile_swipe": true,
+        "dots": true,
+        "color_bg": "#f5f5f5",
+        "color_heading": "#252f35",
+        "color_text": "#303c43",
+        "color_links": "#3f72e5",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "6b1d3b5d-a0fa-4928-834a-d82c491bc99d": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 10,
+        "spacer_desktop": 40,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c": {
+      "type": "image-with-text-slideshow",
+      "blocks": {
+        "template--15740419506331__66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c-1675597966c663c19a-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/20250730-170046.png",
+            "subheading": "",
+            "heading": "All-in-One Ecosystem for Seamless Integration",
+            "heading_size": "h2",
+            "content": "HALOT-X1 offers a closed-loop ecosystem that unifies software, hardware, and resin. With 16K Ultra HD resolution and the AFU Auto-Feed System, enjoy smarter resin handling and smoother 3D creation.",
+            "button_text": "Shop Now",
+            "button_link": "shopify://products/halot-x1-resin-3d-printer-for-miniatures",
+            "color_bg": "#f5eadf",
+            "color_text": "#d3643f",
+            "color_button": "#d3643f"
+          }
+        },
+        "template--15740419506331__66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c-1675597966c663c19a-1": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/3.1.jpg",
+            "subheading": "SETTING THE STANDARDS",
+            "heading": "Save money, save time, simplify living",
+            "heading_size": "h2",
+            "content": "Smart TVs and speakers allow you to stream content from the internet and control your media using voice commands. You can also set up multi-room audio.",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "color_bg": "#dfe9f5",
+            "color_text": "#3f7bd3",
+            "color_button": "#3f7bd3"
+          }
+        },
+        "template--15740419506331__66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c-1675597966c663c19a-2": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "subheading": "THE FUTURE OF MEMORY",
+            "heading": "The perfect automation solution for your home",
+            "heading_size": "h2",
+            "content": "Smart bulbs are a simple way to add automation to your home. You can control them using your smartphone or voice commands.",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "color_bg": "#e0e9e3",
+            "color_text": "#1a9b6d",
+            "color_button": "#1a9b6d"
+          }
+        }
+      },
+      "block_order": [
+        "template--15740419506331__66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c-1675597966c663c19a-0",
+        "template--15740419506331__66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c-1675597966c663c19a-1",
+        "template--15740419506331__66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c-1675597966c663c19a-2"
+      ],
+      "settings": {
+        "mobile_height": "mobile-height-400",
+        "desktop_height": "desktop-height-650",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_position": "text-center",
+        "autoplay": true,
+        "autoplay_length": 10,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "video_mFyVyx": {
+      "type": "video",
+      "name": "Video",
+      "settings": {
+        "heading": "",
+        "marker_style": "style1",
+        "description": "",
+        "full_width": false,
+        "video": "",
+        "video_hosted": "shopify://files/videos/Halot-X1预热视频.mp4",
+        "video_autoplay": true,
+        "aspect_ratio": "16-9",
+        "marker_color": "#fd6262",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "f8f12940-5782-4827-9b55-eab9b8fc3988": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "e64d388d-d7ce-40d4-9265-98b1b32fb9de": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0671.png",
+            "link": ""
+          }
+        },
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0673.png",
+            "link": ""
+          }
+        },
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0675.png",
+            "link": ""
+          }
+        },
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0672.png",
+            "link": ""
+          }
+        },
+        "0b1d878e-ab59-4405-b5bd-9bd8556dde4c": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0674.png",
+            "link": ""
+          }
+        },
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/7L4A0676.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-0",
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-1",
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-2",
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-3",
+        "0b1d878e-ab59-4405-b5bd-9bd8556dde4c",
+        "template--17918041129242__e64d388d-d7ce-40d4-9265-98b1b32fb9de-167646146150cde377-4"
+      ],
+      "settings": {
+        "heading": "Creative Model Showcase",
+        "marker_style": "style1",
+        "description": "<p>Print Showcase: Exceptional Detail, Every Time</p>",
+        "columns": 6,
+        "mobile_swipe": true,
+        "center_align": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false,
+        "color_logo_bg": "#ffffff",
+        "marker_color": "#fd6262"
+      }
+    },
+    "featured_blog_8zHpRG": {
+      "type": "featured-blog",
+      "name": "Blog posts",
+      "settings": {
+        "heading": "Latest Blogs",
+        "marker_style": "style1",
+        "description": "",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "mobile_swipe": true,
+        "image_ratio": "square",
+        "show_date": false,
+        "show_excerpt": false,
+        "show_read_more": true,
+        "show_view_all": true,
+        "marker_color": "#fd6262",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "spacer_ePrTae": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 30,
+        "spacer_desktop": 55,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "16620983071df6eb29": {
+      "type": "text-with-icons",
+      "blocks": {
+        "1662098307788ca717-0": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/5.webp",
+            "heading": "Fast Shipping",
+            "text": ""
+          }
+        },
+        "1662098307788ca717-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/4.webp",
+            "heading": "100% Secure Payment",
+            "text": ""
+          }
+        },
+        "1662098307788ca717-2": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/1.webp",
+            "heading": "14 Days Return & Refund Service",
+            "text": ""
+          }
+        },
+        "2c4a636c-cb89-4faf-82e6-13a0e7241006": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/2.webp",
+            "heading": "Lifetime Customer Support",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1662098307788ca717-0",
+        "1662098307788ca717-1",
+        "1662098307788ca717-2",
+        "2c4a636c-cb89-4faf-82e6-13a0e7241006"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "icon_position": "top",
+        "icon_size": "large",
+        "heading_size": "small",
+        "mobile_swipe": true,
+        "color_bg": "#ffffff",
+        "color_heading": "#252f35",
+        "color_text": "#303c43",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    }
+  },
+  "order": [
+    "spacer_9LrAfG",
+    "16479477632637c9a7",
+    "8f6ed916-ced8-44f6-9ef8-b60fd327ae31",
+    "8670c6b1-68f6-405f-bfff-2c6ff1e89099",
+    "16614195534fb74bc3",
+    "rich_text_w4a9hQ",
+    "gallery_AggBRd",
+    "09fbaadd-eaad-4e04-9edb-42de8cc123f0",
+    "6b1d3b5d-a0fa-4928-834a-d82c491bc99d",
+    "66e51d40-1da7-4a8a-8d7c-2e5b727c5f4c",
+    "video_mFyVyx",
+    "f8f12940-5782-4827-9b55-eab9b8fc3988",
+    "e64d388d-d7ce-40d4-9265-98b1b32fb9de",
+    "featured_blog_8zHpRG",
+    "spacer_ePrTae",
+    "16620983071df6eb29"
+  ]
+}

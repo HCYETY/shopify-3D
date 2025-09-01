@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "Free shipping on all orders",
+            "link": "",
+            "color_bg": "#3f72e5",
+            "color_text": "#ffffff"
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "Returns extended to 60 days",
+            "link": "",
+            "color_bg": "#4327ac",
+            "color_text": "#ffffff"
+          }
+        },
+        "text-3": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "PIOCREAT20: for €20 OFF your Halot-X1 Resin 3D Printer.",
+            "link": "",
+            "color_bg": "#fd6262",
+            "color_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "text-1",
+        "text-2",
+        "text-3"
+      ],
+      "settings": {
+        "announcement_bar": true,
+        "announcement_bar_homepage_only": false,
+        "announcement_bar_layout": "carousel",
+        "direction": "left",
+        "speed": "20s",
+        "use_block_colors": true,
+        "autoplay": true,
+        "autoplay_length": 5
+      }
+    },
+    "header-secondary-menu": {
+      "type": "header-secondary-menu",
+      "settings": {
+        "full_width": false,
+        "secondary_menu": "",
+        "show_language_switcher": false,
+        "show_currency_switcher": true,
+        "show_social_media": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "megamenu_sidebar_RHxX3y": {
+          "type": "megamenu_sidebar",
+          "disabled": true,
+          "settings": {
+            "position": "1",
+            "content_collection_image": false,
+            "content_product_image": true
+          }
+        },
+        "menu_badge": {
+          "type": "menu_badge",
+          "settings": {
+            "badge_position": "1",
+            "text": "NEW",
+            "color_bg": "#f56a35",
+            "color_text": "#ffffff"
+          }
+        },
+        "megamenu_sidebar_knRAt7": {
+          "type": "megamenu_sidebar",
+          "settings": {
+            "position": "2",
+            "content_collection_image": false,
+            "content_product_image": true
+          }
+        },
+        "megamenu_sidebar_pnjKCR": {
+          "type": "megamenu_sidebar",
+          "settings": {
+            "position": "3",
+            "content_collection_image": false,
+            "content_product_image": true
+          }
+        },
+        "custom_sidebar_W4AbKQ": {
+          "type": "custom_sidebar",
+          "settings": {
+            "position": "2"
+          }
+        },
+        "custom_sidebar_xR6gek": {
+          "type": "custom_sidebar",
+          "settings": {
+            "position": "3"
+          }
+        },
+        "menu_badge_Yy9JLR": {
+          "type": "menu_badge",
+          "disabled": true,
+          "settings": {
+            "badge_position": "2",
+            "text": "",
+            "color_bg": "#d3ece2",
+            "color_text": "#272422"
+          }
+        },
+        "megamenu_MMWh3Q": {
+          "type": "megamenu",
+          "settings": {
+            "position": "4",
+            "limit_columns": false,
+            "max_columns": "4",
+            "disabled_second_link": false,
+            "promo_1_heading": "Promotion heading",
+            "promo_1_content": "",
+            "promo_1_link": "",
+            "promo_2_heading": "Promotion heading",
+            "promo_2_content": "",
+            "promo_2_link": "",
+            "promo_3_heading": "Promotion heading",
+            "promo_3_content": "",
+            "promo_3_link": "",
+            "promo_4_heading": "Promotion heading",
+            "promo_4_content": "",
+            "promo_4_link": ""
+          }
+        },
+        "megamenu": {
+          "type": "megamenu",
+          "settings": {
+            "position": "5",
+            "limit_columns": false,
+            "max_columns": "4",
+            "disabled_second_link": true,
+            "promo_1_heading": "Security Cameras",
+            "promo_1_content": "Securing Every Moment, Protecting <br>Every Space.",
+            "promo_1_link": "",
+            "promo_2_heading": "Doorbells",
+            "promo_2_content": "Answer Every Knock, No Matter<br>Where You Are.",
+            "promo_2_link": "",
+            "promo_3_heading": "Smart Speakers",
+            "promo_3_content": "Your Personal Assistant, Just a <br>Voice Away.",
+            "promo_3_link": "",
+            "promo_4_heading": "Smart Watches",
+            "promo_4_content": "Your Health, Fitness, and Life<br>All in One.",
+            "promo_4_link": ""
+          }
+        },
+        "secondary_nav_yYbJbx": {
+          "type": "secondary_nav",
+          "disabled": true,
+          "settings": {
+            "menu": ""
+          }
+        },
+        "mobile_secondary_menu_AjC9EX": {
+          "type": "mobile_secondary_menu",
+          "settings": {
+            "menu": ""
+          }
+        }
+      },
+      "block_order": [
+        "megamenu_sidebar_RHxX3y",
+        "menu_badge",
+        "megamenu_sidebar_knRAt7",
+        "megamenu_sidebar_pnjKCR",
+        "custom_sidebar_W4AbKQ",
+        "custom_sidebar_xR6gek",
+        "menu_badge_Yy9JLR",
+        "megamenu_MMWh3Q",
+        "megamenu",
+        "secondary_nav_yYbJbx",
+        "mobile_secondary_menu_AjC9EX"
+      ],
+      "settings": {
+        "sticky_header": true,
+        "full_width": true,
+        "logo": "shopify://shop_images/RGB.png",
+        "logo_height_range": 50,
+        "logo_height_range_mobile": 50,
+        "style": "style2",
+        "header_shadow": "header--shadow-small",
+        "menu": "main-menu",
+        "cart_icon": "bag",
+        "minimized_search": true,
+        "transparent_header": false,
+        "logo_light": "shopify://shop_images/1691a9c1139225a6379a6f11b4bcbf7c.png",
+        "show_social_links": true,
+        "show_language_switcher": true,
+        "show_currency_switcher": false
+      }
+    },
+    "header-mobile-navigation": {
+      "type": "header-mobile-navigation",
+      "disabled": true,
+      "settings": {
+        "mobile_nav": "main-menu",
+        "color_links": "#ffffff",
+        "color_bg": "#919999"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header-secondary-menu",
+    "header",
+    "header-mobile-navigation"
+  ]
+}

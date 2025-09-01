@@ -1,0 +1,316 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {}
+    },
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "2b609eea-6cce-4efe-b447-c5560de1d797": {
+          "type": "label",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_products_rating": true,
+            "show_products_rating_average": true,
+            "show_custom_badges": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_picker": true,
+            "color_picker_size": "regular",
+            "color_picker_use_variants": false,
+            "variant_is_disabled": true,
+            "sizing_guide_variant": "Size",
+            "sizing_guide_text": "Sizing guide",
+            "sizing_guide_icon": "ruler",
+            "sizing_guide_page": ""
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "text_XQYnh4": {
+          "type": "text",
+          "settings": {
+            "text": "Shipping Information: Expected to ship at the end of September.",
+            "text_style": "style_body"
+          }
+        },
+        "386f7e4a-6127-4141-928b-9cb4614ee18c": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "open": false,
+            "content": "<p>Row content</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "d56924f2-0137-4e3b-8c33-49b1f28391c6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Compatibility",
+            "open": false,
+            "content": "<p>Row content</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "4fd23485-293f-46a0-8a4c-34d0e25ea41b": {
+          "type": "share",
+          "settings": {}
+        },
+        "fc6da228-45eb-4a6e-aa68-d6ec477bec34": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "product_list_limit": 6
+          }
+        }
+      },
+      "block_order": [
+        "2b609eea-6cce-4efe-b447-c5560de1d797",
+        "title",
+        "variant_picker",
+        "quantity",
+        "buy_buttons",
+        "text_XQYnh4",
+        "386f7e4a-6127-4141-928b-9cb4614ee18c",
+        "d56924f2-0137-4e3b-8c33-49b1f28391c6",
+        "4fd23485-293f-46a0-8a4c-34d0e25ea41b",
+        "fc6da228-45eb-4a6e-aa68-d6ec477bec34"
+      ],
+      "settings": {
+        "enable_sticky_add_to_cart": true,
+        "show_taxes_included": true,
+        "thumbnail_position": "left",
+        "media_aspect_ratio": "adapt",
+        "display_captions": true,
+        "hide_variants": false,
+        "lightbox": true,
+        "enable_video_looping": false,
+        "media_fullwidth_mobile": true,
+        "media_show_prevnext_mobile": true
+      }
+    },
+    "16623877721f33fb14": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 35,
+        "spacer_desktop": 90,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "single_image_gmFexh": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_71_HALOT-R6-_-PC_01.jpg",
+        "image_mobile": "shopify://shop_images/imgi_71_HALOT-R6-_-PC_01.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_hWWNeh": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_72_HALOT-R6-_-PC_02.jpg",
+        "image_mobile": "shopify://shop_images/imgi_72_HALOT-R6-_-PC_02.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_8RwxNg": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_73_HALOT-R6-_-PC_03.jpg",
+        "image_mobile": "shopify://shop_images/imgi_73_HALOT-R6-_-PC_03.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_UnEzMC": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_29_HALOT-R6-_-PC_04.jpg",
+        "image_mobile": "shopify://shop_images/imgi_29_HALOT-R6-_-PC_04.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_WYiXaw": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_30_HALOT-R6-_-PC_05.jpg",
+        "image_mobile": "shopify://shop_images/imgi_30_HALOT-R6-_-PC_05.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_97TjWH": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_31_HALOT-R6-_-PC_06.jpg",
+        "image_mobile": "shopify://shop_images/imgi_31_HALOT-R6-_-PC_06.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_7A4CGX": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_32_HALOT-R6-_-PC_07.jpg",
+        "image_mobile": "shopify://shop_images/imgi_32_HALOT-R6-_-PC_07.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_aEQj7m": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_33_HALOT-R6-_-PC_08.jpg",
+        "image_mobile": "shopify://shop_images/imgi_33_HALOT-R6-_-PC_08.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_jMxeAm": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_34_HALOT-R6-_-PC_09.jpg",
+        "image_mobile": "shopify://shop_images/imgi_34_HALOT-R6-_-PC_09.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_HDXAcj": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_35_HALOT-R6-_-PC_10.jpg",
+        "image_mobile": "shopify://shop_images/imgi_35_HALOT-R6-_-PC_10.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_6kqUMN": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_36_HALOT-R6-_-PC_11.jpg",
+        "image_mobile": "shopify://shop_images/imgi_36_HALOT-R6-_-PC_11.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_fLhXWN": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_37_HALOT-R6-_-PC_12.jpg",
+        "image_mobile": "shopify://shop_images/imgi_37_HALOT-R6-_-PC_12.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_QrcRqR": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_38_HALOT-R6-_-PC_13.jpg",
+        "image_mobile": "shopify://shop_images/imgi_38_HALOT-R6-_-PC_13.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "single_image_NaGgDD": {
+      "type": "single-image",
+      "name": "Single image",
+      "settings": {
+        "image": "shopify://shop_images/imgi_39_HALOT-R6-_-PC_14.jpg",
+        "image_mobile": "shopify://shop_images/imgi_39_HALOT-R6-_-PC_14.jpg",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "description": "<p>Combine your style with these products</p>",
+        "mobile_swipe": true,
+        "product_limit": 4,
+        "columns_desktop": 4,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main-product",
+    "16623877721f33fb14",
+    "single_image_gmFexh",
+    "single_image_hWWNeh",
+    "single_image_8RwxNg",
+    "single_image_UnEzMC",
+    "single_image_WYiXaw",
+    "single_image_97TjWH",
+    "single_image_7A4CGX",
+    "single_image_aEQj7m",
+    "single_image_jMxeAm",
+    "single_image_HDXAcj",
+    "single_image_6kqUMN",
+    "single_image_fLhXWN",
+    "single_image_QrcRqR",
+    "single_image_NaGgDD",
+    "product-recommendations"
+  ]
+}

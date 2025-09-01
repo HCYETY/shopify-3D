@@ -1,0 +1,384 @@
+<!-- Site Switch 组件 - 弹框形式 -->
+<style>
+    .site-switch {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .site-switch:hover .site-switch-value {
+      opacity: 0.8;
+    }
+
+    .site-switch-lang,
+    .site-switch-nation {
+      font-size: 14px;
+    }
+
+    .site-switch-value {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .site-switch-value img {
+      margin-right: 5px;
+      border-radius: 50%;
+      height: 18px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 18px;
+    }
+
+    .site-switch-nation svg {
+      height: 20px;
+      width: 20px;
+      stroke: none;
+      fill: none;
+      rotate: 90deg;
+    }
+
+    /* 弹框背景遮罩 */
+    .site-switch-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .site-switch-modal-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* 弹框容器 */
+    .site-switch-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: max-content;
+      max-width: 80%;
+      z-index: 1000;
+      display: none;
+      opacity: 0;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .site-switch-modal.active {
+      display: block;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* 弹框头部 */
+    .site-switch-modal-header {
+      position: relative;
+      padding: 30px 20px 0 20px;
+    }
+
+    .site-switch-modal-title {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+      white-space: normal;
+      margin: 0;
+      color: #333;
+    }
+
+    .site-switch-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 30px;
+      color: #666;
+      line-height: 1;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      transition: background-color 0.2s;
+    }
+
+    .site-switch-modal-close:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* 弹框内容 */
+    .site-switch-modal-body {
+      padding: 25px 60px 50px 60px;
+    }
+
+    /* 国家/地区选项列表 */
+    .site-switch-modal-list {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .site-switch-modal-item {
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .site-switch-modal-item a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-switch-modal-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+
+    .site-switch-modal-item-content {
+      flex: 1;
+    }
+
+    .site-switch-modal-item-title {
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .site-switch-modal-item-subtitle {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .site-switch-modal-item-currency {
+      font-size: 14px;
+      color: #666;
+    }
+
+
+    @media (max-width: 900px) {
+      .site-switch-modal-title {
+        font-size: 20px;
+      }
+
+      .site-switch-modal-body {
+        padding: 25px 3%0px 30px 30px;
+      }
+
+      .site-switch-modal-list {
+        gap: 30px;
+        justify-content: space-between;
+      }
+
+      .site-switch-modal-item-title {
+        font-size: ;
+      }
+    }
+
+
+</style>
+
+<div class="site-switch">
+  <a class="site-switch-nation">
+    <div class="site-switch-value">
+      {% assign current_domain = request.host %}
+      {% assign current_country = 'EU' %}
+      {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_EU.png?v=1731584909' %}
+      {% assign country_language = 'English' %}
+      {% assign country_currency = '€ EUR' %}
+      {% if current_domain contains 'store.' %}
+        {% assign current_country = 'US' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_US.png?v=1731584909' %}
+        {% assign country_language = 'English' %}
+        {% assign country_currency = '$ USD' %}
+      {% elsif current_domain contains 'uk.' %}
+        {% assign current_country = 'UK' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_UK.png?v=1731584909' %}
+        {% assign country_language = 'English' %}
+        {% assign country_currency = '£ GBP' %}
+      {% endif %}
+
+      <img
+        alt="{{ current_country }}"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="{{ country_img_src }}"
+      >
+      <span class="site-value-name">{{ current_country }}</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="rotate-90">
+        <path d="M10 17L15 12L10 7" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+  </a>
+</div>
+
+<!-- 弹框容器 -->
+<div class="site-switch-modal-overlay" id="siteSwitchOverlay"></div>
+<div class="site-switch-modal" id="siteSwitchModal">
+  <div class="site-switch-modal-header">
+    <h3 class="site-switch-modal-title">PioCreat 3D Official Store</h3>
+    <button class="site-switch-modal-close" id="siteSwitchClose">&times;</button>
+  </div>
+  <div class="site-switch-modal-body">
+    <ul class="site-switch-modal-list">
+      <li class="site-switch-modal-item">
+        <a href="https://store.piocreat3d.com/" data-country="US" data-currency="$ USD" data-language="English">
+          <img
+            alt="United States"
+            decoding="async"
+            loading="lazy"
+            width="24"
+            height="24"
+            src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_US.png?v=1731584909"
+          >
+          <div class="site-switch-modal-item-content">
+            <div class="site-switch-modal-item-title">United States</div>
+            <div class="site-switch-modal-item-subtitle">English</div>
+            <div class="site-switch-modal-item-currency">$ USD</div>
+          </div>
+        </a>
+      </li>
+      <li class="site-switch-modal-item">
+        <a href="https://eu.piocreat3d.com/" data-country="EU" data-currency="€ EUR" data-language="English">
+          <img
+            alt="Europe"
+            decoding="async"
+            loading="lazy"
+            width="24"
+            height="24"
+            src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_EU.png?v=1731584909"
+          >
+          <div class="site-switch-modal-item-content">
+            <div class="site-switch-modal-item-title">Europe</div>
+            <div class="site-switch-modal-item-subtitle">English</div>
+            <div class="site-switch-modal-item-currency">€ EUR</div>
+          </div>
+        </a>
+      </li>
+      <li class="site-switch-modal-item">
+        <a href="https://uk.piocreat3d.com/" data-country="UK" data-currency="£ GBP" data-language="English">
+          <img
+            alt="United Kingdom"
+            decoding="async"
+            loading="lazy"
+            width="24"
+            height="24"
+            src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_UK.png?v=1731584909"
+          >
+          <div class="site-switch-modal-item-content">
+            <div class="site-switch-modal-item-title">United Kingdom</div>
+            <div class="site-switch-modal-item-subtitle">English</div>
+            <div class="site-switch-modal-item-currency">£ GBP</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script
+  defer
+>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 获取DOM元素
+    const siteSwitchElements = document.querySelectorAll('.site-switch');
+    const overlay = document.getElementById('siteSwitchOverlay');
+    const modal = document.getElementById('siteSwitchModal');
+    const closeButton = document.getElementById('siteSwitchClose');
+    const modalItems = document.querySelectorAll('.site-switch-modal-item a');
+
+    // 打开弹框
+    function openModal() {
+      overlay.classList.add('active');
+      modal.classList.add('active');
+    }
+
+    // 关闭弹框
+    function closeModal() {
+      overlay.classList.remove('active');
+      modal.classList.remove('active');
+    }
+
+    // 为切换按钮添加点击事件
+    siteSwitchElements.forEach((siteSwitch) => {
+      siteSwitch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        openModal();
+      });
+    });
+
+    // 为关闭按钮添加点击事件
+    closeButton.addEventListener('click', closeModal);
+
+    // 点击遮罩层关闭弹框
+    overlay.addEventListener('click', closeModal);
+
+    // 为弹框内选项添加点击事件
+    modalItems.forEach((item) => {
+      item.addEventListener('click', function (event) {
+        // 获取选中的国家信息
+        const countryName = this.getAttribute('data-country');
+        const currency = this.getAttribute('data-currency');
+        const language = this.getAttribute('data-language');
+        const imgSrc = this.querySelector('img').src;
+
+        // 更新切换按钮显示
+        siteSwitchElements.forEach((siteSwitch) => {
+          const switchValue = siteSwitch.querySelector('.site-switch-value');
+          if (switchValue) {
+            const valueImg = switchValue.querySelector('img');
+            const valueName = switchValue.querySelector('.site-value-name');
+
+            if (valueImg) {
+              valueImg.src = imgSrc;
+              valueImg.alt = countryName;
+            }
+
+            if (valueName) {
+              valueName.textContent = countryName;
+            }
+          }
+        });
+
+        // 关闭弹框
+        closeModal();
+      });
+    });
+
+    // 按ESC键关闭弹框
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  });
+</script>
